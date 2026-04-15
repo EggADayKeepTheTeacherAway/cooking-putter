@@ -6,6 +6,7 @@ public abstract class EntityState
     protected float stateTimer;
     protected Animator anim;
 
+    protected Rigidbody2D rb;
 
     public string animParam { get; private set; }
 
