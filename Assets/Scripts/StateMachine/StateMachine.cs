@@ -11,9 +11,7 @@ public class StateMachine
     }
 
     public void ChangeState(EntityState newState)
-    {
-        Debug.Log("Are you still there");
-        
+    {        
         currentState.Exit();
 
         currentState = newState;

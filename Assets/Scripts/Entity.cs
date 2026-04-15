@@ -36,7 +36,6 @@ public class Entity : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(moveInput);
         stateMachine.CallUpdateCurrentState();
     }
 

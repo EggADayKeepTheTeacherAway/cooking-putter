@@ -14,14 +14,9 @@ public class SceneTransitionManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void TownToRestaurant()
+    public void StartTransition(string sceneName)
     {
-        TransitionCo("RestaurantScene");
-    }
-
-    public void RestaurantToTown()
-    {
-        TransitionCo("TownScene");
+        StartCoroutine(TransitionCo(sceneName));
     }
 
 

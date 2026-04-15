@@ -18,8 +18,6 @@ public class Entity_IdleState : EntityState
     {
         base.Update();
 
-        Debug.Log(entity.moveInput != Vector2.zero);
-
         if (entity.moveInput != Vector2.zero)
         {
             stateMachine.ChangeState(entity.moveState);

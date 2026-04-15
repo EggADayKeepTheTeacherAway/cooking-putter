@@ -28,9 +28,6 @@ public abstract class EntityState
     public virtual void Enter()
     {
         anim.SetBool(animParam, true);
-
-        Debug.Log(stateMachine.currentState);
-
     }
 
     public virtual void Update()
