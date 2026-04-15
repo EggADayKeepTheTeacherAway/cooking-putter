@@ -50,7 +50,7 @@ public class Entity : MonoBehaviour
         input.Enable();
 
         input.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
-        input.Player.Move.canceled += context => moveInput = Vector2.zero;
+        input.Player.Move.canceled += ctx => moveInput = Vector2.zero;
 
     }
 
