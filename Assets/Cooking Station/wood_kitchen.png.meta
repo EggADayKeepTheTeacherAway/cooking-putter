@@ -1,0 +1,4849 @@
+fileFormatVersion: 2
+guid: d3ba7e934957928459eda77703a1d524
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4429000873638830052
+    second: wood_kitchen_0
+  - first:
+      213: -5697629206500693160
+    second: wood_kitchen_1
+  - first:
+      213: 4582656149542207215
+    second: wood_kitchen_2
+  - first:
+      213: -7476706495074053399
+    second: wood_kitchen_3
+  - first:
+      213: 8004469800991702579
+    second: wood_kitchen_4
+  - first:
+      213: 4356611978445407101
+    second: wood_kitchen_5
+  - first:
+      213: 9215025619818918720
+    second: wood_kitchen_6
+  - first:
+      213: 1757334626772853750
+    second: wood_kitchen_7
+  - first:
+      213: 4822023949327639951
+    second: wood_kitchen_8
+  - first:
+      213: 6296750274557693887
+    second: wood_kitchen_9
+  - first:
+      213: 1204874607911475733
+    second: wood_kitchen_10
+  - first:
+      213: 5714647210688506369
+    second: wood_kitchen_11
+  - first:
+      213: 4637338096602199916
+    second: wood_kitchen_12
+  - first:
+      213: -6812339570445423092
+    second: wood_kitchen_13
+  - first:
+      213: 7896339367669184383
+    second: wood_kitchen_14
+  - first:
+      213: 7257420492880000583
+    second: wood_kitchen_15
+  - first:
+      213: 1023817035938995937
+    second: wood_kitchen_16
+  - first:
+      213: -3768264750090354496
+    second: wood_kitchen_17
+  - first:
+      213: -6303813130829591456
+    second: wood_kitchen_18
+  - first:
+      213: 637826967886497222
+    second: wood_kitchen_19
+  - first:
+      213: 2411218371393976287
+    second: wood_kitchen_20
+  - first:
+      213: 5428440123884736410
+    second: wood_kitchen_21
+  - first:
+      213: -8454108064799171218
+    second: wood_kitchen_22
+  - first:
+      213: -1934182631849480795
+    second: wood_kitchen_23
+  - first:
+      213: -1970374938177814335
+    second: wood_kitchen_24
+  - first:
+      213: -1492756181298089310
+    second: wood_kitchen_25
+  - first:
+      213: 2928673553676212971
+    second: wood_kitchen_26
+  - first:
+      213: 696829242309810744
+    second: wood_kitchen_27
+  - first:
+      213: -7795831728305500566
+    second: wood_kitchen_28
+  - first:
+      213: -4849874635765635152
+    second: wood_kitchen_29
+  - first:
+      213: -1390085426141533313
+    second: wood_kitchen_30
+  - first:
+      213: -8968035712174793488
+    second: wood_kitchen_31
+  - first:
+      213: -8495653413343195255
+    second: wood_kitchen_32
+  - first:
+      213: 6594302609012904414
+    second: wood_kitchen_33
+  - first:
+      213: 8061344062960320809
+    second: wood_kitchen_34
+  - first:
+      213: -4969875942880431781
+    second: wood_kitchen_35
+  - first:
+      213: -1898177024521985460
+    second: wood_kitchen_36
+  - first:
+      213: 5470750662996099160
+    second: wood_kitchen_37
+  - first:
+      213: -3265569827066373620
+    second: wood_kitchen_38
+  - first:
+      213: 4212838323844832578
+    second: wood_kitchen_39
+  - first:
+      213: -217840707537798631
+    second: wood_kitchen_40
+  - first:
+      213: 406094830647773969
+    second: wood_kitchen_41
+  - first:
+      213: -539436444942576517
+    second: wood_kitchen_42
+  - first:
+      213: 1429692126918291673
+    second: wood_kitchen_43
+  - first:
+      213: -6177544204834398564
+    second: wood_kitchen_44
+  - first:
+      213: 9135658525835077740
+    second: wood_kitchen_45
+  - first:
+      213: -6677966502966357573
+    second: wood_kitchen_46
+  - first:
+      213: 6165915858983168727
+    second: wood_kitchen_47
+  - first:
+      213: 690969359418976020
+    second: wood_kitchen_48
+  - first:
+      213: 8334763319199308872
+    second: wood_kitchen_49
+  - first:
+      213: 9152674613025143501
+    second: wood_kitchen_50
+  - first:
+      213: -269667456722408551
+    second: wood_kitchen_51
+  - first:
+      213: 8659400813886332239
+    second: wood_kitchen_52
+  - first:
+      213: -94119452646315264
+    second: wood_kitchen_53
+  - first:
+      213: -1021809115938084884
+    second: wood_kitchen_54
+  - first:
+      213: 5793213217508420195
+    second: wood_kitchen_55
+  - first:
+      213: -5264723205084783598
+    second: wood_kitchen_56
+  - first:
+      213: 8332421600598773242
+    second: wood_kitchen_57
+  - first:
+      213: -4049617356985916972
+    second: wood_kitchen_58
+  - first:
+      213: -2797782625604818515
+    second: wood_kitchen_59
+  - first:
+      213: 9014658127120826726
+    second: wood_kitchen_60
+  - first:
+      213: 9000100803752218948
+    second: wood_kitchen_61
+  - first:
+      213: 7422847602727068887
+    second: wood_kitchen_62
+  - first:
+      213: -7292408640549351541
+    second: wood_kitchen_63
+  - first:
+      213: 4872628277652443437
+    second: wood_kitchen_64
+  - first:
+      213: 1229883723671841464
+    second: wood_kitchen_65
+  - first:
+      213: 8380357362337614930
+    second: wood_kitchen_66
+  - first:
+      213: -976546292938262733
+    second: wood_kitchen_67
+  - first:
+      213: 1510071062791595682
+    second: wood_kitchen_68
+  - first:
+      213: 2351189096821762946
+    second: wood_kitchen_69
+  - first:
+      213: -4488717316053744622
+    second: wood_kitchen_70
+  - first:
+      213: 6860991345365635
+    second: wood_kitchen_71
+  - first:
+      213: -7514770665097612901
+    second: wood_kitchen_72
+  - first:
+      213: -2712304715038124428
+    second: wood_kitchen_73
+  - first:
+      213: 7201149485522159952
+    second: wood_kitchen_74
+  - first:
+      213: 1612313630646364955
+    second: wood_kitchen_75
+  - first:
+      213: 173374993355704994
+    second: wood_kitchen_76
+  - first:
+      213: -5976869239201707029
+    second: wood_kitchen_77
+  - first:
+      213: -5835085391505773762
+    second: wood_kitchen_78
+  - first:
+      213: -5914357202618468916
+    second: wood_kitchen_79
+  - first:
+      213: 5253271949233187696
+    second: wood_kitchen_80
+  - first:
+      213: 5329102049370085815
+    second: wood_kitchen_81
+  - first:
+      213: 6873869398352693718
+    second: wood_kitchen_82
+  - first:
+      213: -7790285647473746305
+    second: wood_kitchen_83
+  - first:
+      213: 2165757474545210441
+    second: wood_kitchen_84
+  - first:
+      213: 2415686915939411224
+    second: wood_kitchen_85
+  - first:
+      213: -6389662706524111266
+    second: wood_kitchen_86
+  - first:
+      213: -5069142778757173034
+    second: wood_kitchen_87
+  - first:
+      213: 4936000057923282094
+    second: wood_kitchen_88
+  - first:
+      213: 5531563079740050445
+    second: wood_kitchen_89
+  - first:
+      213: -8669148779486711451
+    second: wood_kitchen_90
+  - first:
+      213: -3797469270985013818
+    second: wood_kitchen_91
+  - first:
+      213: 2033665227758280367
+    second: wood_kitchen_92
+  - first:
+      213: 6833443463868556260
+    second: wood_kitchen_93
+  - first:
+      213: -9176181529509148986
+    second: wood_kitchen_94
+  - first:
+      213: 4989231016992303915
+    second: wood_kitchen_95
+  - first:
+      213: 1191018650292680474
+    second: wood_kitchen_96
+  - first:
+      213: 1988291238261201809
+    second: wood_kitchen_97
+  - first:
+      213: 4975002714881514779
+    second: wood_kitchen_98
+  - first:
+      213: -2017507043299052118
+    second: wood_kitchen_99
+  - first:
+      213: -7090325851234443882
+    second: wood_kitchen_100
+  - first:
+      213: -4861469692757768118
+    second: wood_kitchen_101
+  - first:
+      213: 2696197853994547549
+    second: wood_kitchen_102
+  - first:
+      213: 570866079272290228
+    second: wood_kitchen_103
+  - first:
+      213: -3658440020453025757
+    second: wood_kitchen_104
+  - first:
+      213: -5112100062415546422
+    second: wood_kitchen_105
+  - first:
+      213: 717694618644864024
+    second: wood_kitchen_106
+  - first:
+      213: -338655129133484717
+    second: wood_kitchen_107
+  - first:
+      213: -1324093034196246667
+    second: wood_kitchen_108
+  - first:
+      213: 4280759041191880072
+    second: wood_kitchen_109
+  - first:
+      213: 3541562699160491283
+    second: wood_kitchen_110
+  - first:
+      213: -2729359425149061004
+    second: wood_kitchen_111
+  - first:
+      213: -8613202072053377832
+    second: wood_kitchen_112
+  - first:
+      213: 3683045902507839822
+    second: wood_kitchen_113
+  - first:
+      213: 7361579299299764893
+    second: wood_kitchen_114
+  - first:
+      213: -6453025249350739225
+    second: wood_kitchen_115
+  - first:
+      213: -4790465332747385151
+    second: wood_kitchen_116
+  - first:
+      213: 472014488583357863
+    second: wood_kitchen_117
+  - first:
+      213: -3293788576306097089
+    second: wood_kitchen_118
+  - first:
+      213: -1880037852909456939
+    second: wood_kitchen_119
+  - first:
+      213: 2827752753337606106
+    second: wood_kitchen_120
+  - first:
+      213: 4226950646358191194
+    second: wood_kitchen_121
+  - first:
+      213: -841662052954265840
+    second: wood_kitchen_122
+  - first:
+      213: 5626262044176334790
+    second: wood_kitchen_123
+  - first:
+      213: -4376409498359328141
+    second: wood_kitchen_124
+  - first:
+      213: 7108119653019348481
+    second: wood_kitchen_125
+  - first:
+      213: -7089940289520372139
+    second: wood_kitchen_126
+  - first:
+      213: 3909730409843706554
+    second: wood_kitchen_127
+  - first:
+      213: -7145512266311421154
+    second: wood_kitchen_128
+  - first:
+      213: -2145664869792290702
+    second: wood_kitchen_129
+  - first:
+      213: -4240351681235465422
+    second: wood_kitchen_130
+  - first:
+      213: -1267683425138706980
+    second: wood_kitchen_131
+  - first:
+      213: -4449502313938942444
+    second: wood_kitchen_132
+  - first:
+      213: -93438407193415997
+    second: wood_kitchen_133
+  - first:
+      213: 1522296225407820496
+    second: wood_kitchen_134
+  - first:
+      213: -8884200758356581230
+    second: wood_kitchen_135
+  - first:
+      213: 7221408453461632516
+    second: wood_kitchen_136
+  - first:
+      213: -6264066592607266071
+    second: wood_kitchen_137
+  - first:
+      213: 3523997144925661873
+    second: wood_kitchen_138
+  - first:
+      213: -3529639137860022334
+    second: wood_kitchen_139
+  - first:
+      213: -4982262023327674091
+    second: wood_kitchen_140
+  - first:
+      213: 5456157918960890577
+    second: wood_kitchen_141
+  - first:
+      213: -1788549058358248857
+    second: wood_kitchen_142
+  - first:
+      213: 6717338722557818083
+    second: wood_kitchen_143
+  - first:
+      213: 244776236500604423
+    second: wood_kitchen_144
+  - first:
+      213: 8252472330068042953
+    second: wood_kitchen_145
+  - first:
+      213: 4641804231752195448
+    second: wood_kitchen_146
+  - first:
+      213: 8818752459578877757
+    second: wood_kitchen_147
+  - first:
+      213: -2445765604401479728
+    second: wood_kitchen_148
+  - first:
+      213: 184361141062666025
+    second: wood_kitchen_149
+  - first:
+      213: -8686362919018090937
+    second: wood_kitchen_150
+  - first:
+      213: -4201941936534793847
+    second: wood_kitchen_151
+  - first:
+      213: -5088799240054060789
+    second: wood_kitchen_152
+  - first:
+      213: -4278765718855783689
+    second: wood_kitchen_153
+  - first:
+      213: 4292105760710872717
+    second: wood_kitchen_154
+  - first:
+      213: 2229831986911482470
+    second: wood_kitchen_155
+  - first:
+      213: -3564341030705225283
+    second: wood_kitchen_156
+  - first:
+      213: -6732757647198545727
+    second: wood_kitchen_157
+  - first:
+      213: 112974633125606063
+    second: wood_kitchen_158
+  - first:
+      213: -4389989947581477781
+    second: wood_kitchen_159
+  - first:
+      213: -3332535513268701105
+    second: wood_kitchen_160
+  - first:
+      213: -8334998857721978957
+    second: wood_kitchen_161
+  - first:
+      213: -4813608503530770680
+    second: wood_kitchen_162
+  - first:
+      213: -5060751224431447470
+    second: wood_kitchen_163
+  - first:
+      213: -6335203401350213104
+    second: wood_kitchen_164
+  - first:
+      213: -2436147644864580915
+    second: wood_kitchen_165
+  - first:
+      213: -5155034227691656516
+    second: wood_kitchen_166
+  - first:
+      213: -1747809018869448970
+    second: wood_kitchen_167
+  - first:
+      213: 7154236756335160155
+    second: wood_kitchen_168
+  - first:
+      213: 1509373683559548295
+    second: wood_kitchen_169
+  - first:
+      213: -2734977625451530926
+    second: wood_kitchen_170
+  - first:
+      213: 5969324931203157975
+    second: wood_kitchen_171
+  - first:
+      213: 6025773076784149750
+    second: wood_kitchen_172
+  - first:
+      213: 8138886077202484140
+    second: wood_kitchen_173
+  - first:
+      213: -4666458662149047444
+    second: wood_kitchen_174
+  - first:
+      213: -7834659197217463227
+    second: wood_kitchen_175
+  - first:
+      213: -4136227151658412336
+    second: wood_kitchen_176
+  - first:
+      213: 4076604265519829643
+    second: wood_kitchen_177
+  - first:
+      213: 1224502598842305642
+    second: wood_kitchen_178
+  - first:
+      213: 654951363265726881
+    second: wood_kitchen_179
+  - first:
+      213: -1256303182386111480
+    second: wood_kitchen_180
+  - first:
+      213: 4043568528211096444
+    second: wood_kitchen_181
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wood_kitchen_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 561
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10ecd8db270982c0800000000000000
+      internalID: -4429000873638830052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 563
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ba2ac8c64fde0b0800000000000000
+      internalID: -5697629206500693160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 561
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feef831fc7dd89f30800000000000000
+      internalID: 4582656149542207215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 561
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e251475e076d3890800000000000000
+      internalID: -7476706495074053399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 562
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33eb37fdfd6951f60800000000000000
+      internalID: 8004469800991702579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_5
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 561
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d734377138bc57c30800000000000000
+      internalID: 4356611978445407101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 544
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0433e695af852ef70800000000000000
+      internalID: 9215025619818918720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 560
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f32a44488e436810800000000000000
+      internalID: 1757334626772853750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 545
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85a916db354be240800000000000000
+      internalID: 4822023949327639951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 560
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbfca5a530d826750800000000000000
+      internalID: 6296750274557693887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 545
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a937b721398b010800000000000000
+      internalID: 1204874607911475733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 560
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ae3c15c518e4f40800000000000000
+      internalID: 5714647210688506369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_12
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 560
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c673c5fdd622b5040800000000000000
+      internalID: 4637338096602199916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_13
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 544
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e63460145b571a0800000000000000
+      internalID: -6812339570445423092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_14
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 560
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f77badb71de659d60800000000000000
+      internalID: 7896339367669184383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_15
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 560
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746b0cf9c7987b460800000000000000
+      internalID: 7257420492880000583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_16
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 559
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee13267b24553e00800000000000000
+      internalID: 1023817035938995937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 560
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c00d37cc2f64bbc0800000000000000
+      internalID: -3768264750090354496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_18
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 561
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c85764b5b5488a0800000000000000
+      internalID: -6303813130829591456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_19
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 560
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c50a097f340ad800800000000000000
+      internalID: 637826967886497222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_20
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 562
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd775d6655e567120800000000000000
+      internalID: 2411218371393976287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_21
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 543
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f80a41881b55b40800000000000000
+      internalID: 5428440123884736410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_22
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 548
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d51e0c189fcaa80800000000000000
+      internalID: -8454108064799171218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_23
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 548
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ada1e1e4276825e0800000000000000
+      internalID: -1934182631849480795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_24
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 545
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c04497ee62d7a4e0800000000000000
+      internalID: -1970374938177814335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_25
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 548
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2757d792aa84be0800000000000000
+      internalID: -1492756181298089310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_26
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 543
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea93fd841db4a820800000000000000
+      internalID: 2928673553676212971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 546
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a1bf00182aba900800000000000000
+      internalID: 696829242309810744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_28
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 545
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e81a1e854afc390800000000000000
+      internalID: -7795831728305500566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_29
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 545
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7230ae6b8c1bcb0800000000000000
+      internalID: -4849874635765635152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_30
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 545
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7be26f7bac65bce0800000000000000
+      internalID: -1390085426141533313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_31
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 547
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fcddc2d8032b8380800000000000000
+      internalID: -8968035712174793488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_32
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 546
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f08d28b30691a80800000000000000
+      internalID: -8495653413343195255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_33
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 545
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed155a7e84ba38b50800000000000000
+      internalID: 6594302609012904414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_34
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 545
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92144f4e6b5afdf60800000000000000
+      internalID: 8061344062960320809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_35
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 544
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b513ad65924770bb0800000000000000
+      internalID: -4969875942880431781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 543
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c422f8c9d0258a5e0800000000000000
+      internalID: -1898177024521985460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_37
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 544
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8508d922eb20ceb40800000000000000
+      internalID: 5470750662996099160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_38
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 545
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a99744b8d5ea2d0800000000000000
+      internalID: -3265569827066373620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_39
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 544
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d5cec8222077a30800000000000000
+      internalID: 4212838323844832578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_40
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 544
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91af699d7031afcf0800000000000000
+      internalID: -217840707537798631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_41
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 544
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b02edc81db2a500800000000000000
+      internalID: 406094830647773969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 532
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b745c4059698388f0800000000000000
+      internalID: -539436444942576517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_43
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 529
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d033232a6947d310800000000000000
+      internalID: 1429692126918291673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_44
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 528
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e92969644f44aa0800000000000000
+      internalID: -6177544204834398564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_45
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 528
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c682ba5c60168ce70800000000000000
+      internalID: 9135658525835077740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_46
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 528
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb19bb0d8d81353a0800000000000000
+      internalID: -6677966502966357573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_47
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 512
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7daa3a92ecbb19550800000000000000
+      internalID: 6165915858983168727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_48
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 512
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 417e8d2b8f0d69900800000000000000
+      internalID: 690969359418976020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c94df44170ba370800000000000000
+      internalID: 8334763319199308872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_50
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 512
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca791e4115d40f70800000000000000
+      internalID: 9152674613025143501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_51
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 512
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99be39a70e2f14cf0800000000000000
+      internalID: -269667456722408551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_52
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 512
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d5c67292f5c2870800000000000000
+      internalID: 8659400813886332239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_53
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bef824bde91bef0800000000000000
+      internalID: -94119452646315264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_54
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 528
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce72148d50ec1d1f0800000000000000
+      internalID: -1021809115938084884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_55
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 530
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36aefa14ab0a56050800000000000000
+      internalID: 5793213217508420195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 520
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c5a208322ffe6b0800000000000000
+      internalID: -5264723205084783598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_57
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 518
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd4b767c45b2a370800000000000000
+      internalID: 8332421600598773242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_58
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 511
+        width: 49
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d12998387edcc7c0800000000000000
+      internalID: -4049617356985916972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_59
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 511
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9a01a76874c29d0800000000000000
+      internalID: -2797782625604818515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_60
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 504
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66100ae0ecf7a1d70800000000000000
+      internalID: 9014658127120826726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_61
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 495
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441db561ff7c6ec70800000000000000
+      internalID: 9000100803752218948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_62
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 511
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d428661190430760800000000000000
+      internalID: 7422847602727068887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_63
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 511
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f011f6af82cca90800000000000000
+      internalID: -7292408640549351541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_64
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 512
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d215ffb2a9d0f9340800000000000000
+      internalID: 4872628277652443437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_65
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 464
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8baae700bbc611110800000000000000
+      internalID: 1229883723671841464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_66
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 512
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c86f8be920d4470800000000000000
+      internalID: 8380357362337614930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_67
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 479
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337b0be025c9272f0800000000000000
+      internalID: -976546292938262733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_68
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 479
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a62a4381a9d4f410800000000000000
+      internalID: 1510071062791595682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_69
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 511
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b25d3c60a11a020800000000000000
+      internalID: 2351189096821762946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_70
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 511
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214c87f126fd4b1c0800000000000000
+      internalID: -4488717316053744622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_71
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 511
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38292f70900681000800000000000000
+      internalID: 6860991345365635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_72
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 495
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b91b45225eb26b790800000000000000
+      internalID: -7514770665097612901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 463
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47619896b35fb5ad0800000000000000
+      internalID: -2712304715038124428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_74
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 463
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0590903cd4f9fe360800000000000000
+      internalID: 7201149485522159952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_75
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 479
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b623564b6106610800000000000000
+      internalID: 1612313630646364955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_76
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 479
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa07eb43a3f76200800000000000000
+      internalID: 173374993355704994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_77
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 495
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb4c600815ed0da0800000000000000
+      internalID: -5976869239201707029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_78
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 498
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b2a3580cc950fa0800000000000000
+      internalID: -5835085391505773762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_79
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 479
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc53727b57bfbeda0800000000000000
+      internalID: -5914357202618468916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_80
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 480
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b619a310f57e840800000000000000
+      internalID: 5253271949233187696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_81
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 415
+        width: 33
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b992804416c4f940800000000000000
+      internalID: 5329102049370085815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_82
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 415
+        width: 33
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d98d396cc3e46f50800000000000000
+      internalID: 6873869398352693718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_83
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 416
+        width: 29
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ed0837a7853e390800000000000000
+      internalID: -7790285647473746305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_84
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 463
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9441aebc2f05e0e10800000000000000
+      internalID: 2165757474545210441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_85
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 466
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815a021837e368120800000000000000
+      internalID: 2415686915939411224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_86
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 416
+        width: 27
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5eb11f4f9b5357a0800000000000000
+      internalID: -6389662706524111266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_87
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 415
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0317c0089c6a9b0800000000000000
+      internalID: -5069142778757173034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_88
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 415
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea423df86e1308440800000000000000
+      internalID: 4936000057923282094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_89
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 416
+        width: 29
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c4294405f04cc40800000000000000
+      internalID: 5531563079740050445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_90
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 456
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561feadbd1ff0b780800000000000000
+      internalID: -8669148779486711451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 415
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c50a7161ddac4bc0800000000000000
+      internalID: -3797469270985013818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_92
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 399
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae9894ffb7093c10800000000000000
+      internalID: 2033665227758280367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_93
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 399
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3a99010a445de50800000000000000
+      internalID: 6833443463868556260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_94
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 399
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c64b133487a7a080800000000000000
+      internalID: -9176181529509148986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_95
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 415
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2bef260d2f4d3540800000000000000
+      internalID: 4989231016992303915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_96
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 399
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a177f83f629578010800000000000000
+      internalID: 1191018650292680474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_97
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 415
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b9496c854d79b10800000000000000
+      internalID: 1988291238261201809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_98
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 416
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ddd194c92ca0540800000000000000
+      internalID: 4975002714881514779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_99
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 367
+        width: 32
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5bf4888006004e0800000000000000
+      internalID: -2017507043299052118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_100
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 379
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69dd667543a1a9d90800000000000000
+      internalID: -7090325851234443882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_101
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 379
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4888d45217988cb0800000000000000
+      internalID: -4861469692757768118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_102
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 383
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59f383c9a1da6520800000000000000
+      internalID: 2696197853994547549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_103
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 383
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b7485dacaf1ce700800000000000000
+      internalID: 570866079272290228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_104
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 367
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32813d44f2c9a3dc0800000000000000
+      internalID: -3658440020453025757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_105
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 368
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7187b041c2e09b0800000000000000
+      internalID: -5112100062415546422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_106
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 367
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c59810473c5f900800000000000000
+      internalID: 717694618644864024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_107
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 359
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35572ae44fadc4bf0800000000000000
+      internalID: -338655129133484717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_108
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 368
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fd9279660ef9de0800000000000000
+      internalID: -1324093034196246667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_109
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 367
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 885a843eaaf486b30800000000000000
+      internalID: 4280759041191880072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_110
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 367
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3151c39c288262130800000000000000
+      internalID: 3541562699160491283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_111
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 367
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47830a7401e5f1ad0800000000000000
+      internalID: -2729359425149061004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_112
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 367
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d49994a952c77880800000000000000
+      internalID: -8613202072053377832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_113
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 351
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4110761cbecc1330800000000000000
+      internalID: 3683045902507839822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_114
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 352
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9aa1a09e55992660800000000000000
+      internalID: 7361579299299764893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_115
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea92dda9bf3276a0800000000000000
+      internalID: -6453025249350739225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_116
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 352
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6c4cc2929d48db0800000000000000
+      internalID: -4790465332747385151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_117
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 304
+        width: 27
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a549d03daeec8600800000000000000
+      internalID: 472014488583357863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_118
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 303
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f341908bdbc1a42d0800000000000000
+      internalID: -3293788576306097089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_119
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 303
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d13b0d9883c8e5e0800000000000000
+      internalID: -1880037852909456939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_120
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 303
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf1257a5223e3720800000000000000
+      internalID: 2827752753337606106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_121
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 303
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ca94fa73529aa30800000000000000
+      internalID: 4226950646358191194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_122
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 303
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0172cb872d0d154f0800000000000000
+      internalID: -841662052954265840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_123
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 303
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cfb46c158f741e40800000000000000
+      internalID: 5626262044176334790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_124
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 303
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37295aa9fbed343c0800000000000000
+      internalID: -4376409498359328141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_125
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 303
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ee03bf92d15a260800000000000000
+      internalID: 7108119653019348481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_126
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 303
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556786ceed87b9d90800000000000000
+      internalID: -7089940289520372139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_127
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 303
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abac646d717224630800000000000000
+      internalID: 3909730409843706554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_128
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 304
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13bf4cc37a06dc90800000000000000
+      internalID: -7145512266311421154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_129
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 226
+        width: 45
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 278eefc4b211932e0800000000000000
+      internalID: -2145664869792290702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_130
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 223
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23bca3dbc9e3725c0800000000000000
+      internalID: -4240351681235465422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_131
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 223
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd5f4fc24a8486ee0800000000000000
+      internalID: -1267683425138706980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_132
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 223
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416046e48313042c0800000000000000
+      internalID: -4449502313938942444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_133
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 223
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ceabd2834a04bef0800000000000000
+      internalID: -93438407193415997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_134
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 226
+        width: 45
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2e95ef958402510800000000000000
+      internalID: 1522296225407820496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_135
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 225
+        width: 21
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29466e41b7af4b480800000000000000
+      internalID: -8884200758356581230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_136
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 225
+        width: 36
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406659e4ab8973460800000000000000
+      internalID: 7221408453461632516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_137
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 225
+        width: 36
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea904a5f909119a0800000000000000
+      internalID: -6264066592607266071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_138
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 225
+        width: 36
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bae8cc7bb0c7e030800000000000000
+      internalID: 3523997144925661873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_139
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 146
+        width: 47
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf898aa7e3340fc0800000000000000
+      internalID: -3529639137860022334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_140
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 146
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51192a146137bdab0800000000000000
+      internalID: -4982262023327674091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_141
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 17
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2391628ba28bb40800000000000000
+      internalID: 5456157918960890577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_142
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 17
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a72398b1ccd27e0800000000000000
+      internalID: -1788549058358248857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_143
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 208
+        width: 49
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4f80a6af7c83d50800000000000000
+      internalID: 6717338722557818083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_144
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 159
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7065312b0be956300800000000000000
+      internalID: 244776236500604423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_145
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 17
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c422785cdba68270800000000000000
+      internalID: 8252472330068042953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_146
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d9e7efa500b6040800000000000000
+      internalID: 4641804231752195448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_147
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d372d4363a0826a70800000000000000
+      internalID: 8818752459578877757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_148
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 143
+        width: 17
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dff7c91425ee0ed0800000000000000
+      internalID: -2445765604401479728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_149
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 144
+        width: 27
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9270d632b7bfe8200800000000000000
+      internalID: 184361141062666025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_150
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 146
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e2dcd82f6d37780800000000000000
+      internalID: -8686362919018090937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_151
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 146
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981d6025214bfa5c0800000000000000
+      internalID: -4201941936534793847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_152
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 144
+        width: 16
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09cc438d04f069b0800000000000000
+      internalID: -5088799240054060789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_153
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 144
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa6b72af35ce94c0800000000000000
+      internalID: -4278765718855783689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_154
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 143
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e4495e27f909b30800000000000000
+      internalID: 4292105760710872717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_155
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 143
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66299a0c064f1fe10800000000000000
+      internalID: 2229831986911482470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_156
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 143
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1277e97bae88ec0800000000000000
+      internalID: -3564341030705225283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_157
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 144
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c89fef67907092a0800000000000000
+      internalID: -6732757647198545727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_158
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2f41c84dd519100800000000000000
+      internalID: 112974633125606063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_159
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 64
+        width: 27
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6cceded66f9313c0800000000000000
+      internalID: -4389989947581477781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_160
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 63
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48be327b9470c1d0800000000000000
+      internalID: -3332535513268701105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_161
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 64
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bfd13a13b2245c80800000000000000
+      internalID: -8334998857721978957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_162
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 63
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80faf33d190a23db0800000000000000
+      internalID: -4813608503530770680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_163
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 63
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252f32b039994c9b0800000000000000
+      internalID: -5060751224431447470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_164
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 66
+        width: 49
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0129ca26216d418a0800000000000000
+      internalID: -6335203401350213104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_165
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 64
+        width: 18
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2317fcf90113ed0800000000000000
+      internalID: -2436147644864580915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_166
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 64
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba6575bea3a578b0800000000000000
+      internalID: -5155034227691656516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_167
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 63
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6feff0725f88eb7e0800000000000000
+      internalID: -1747809018869448970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_168
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 63
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b6664dc64f84360800000000000000
+      internalID: 7154236756335160155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_169
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785c3e14e5f52f410800000000000000
+      internalID: 1509373683559548295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255f15617586b0ad0800000000000000
+      internalID: -2734977625451530926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_171
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df4f39e56d47d250800000000000000
+      internalID: 5969324931203157975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_172
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4f4daffa8df9350800000000000000
+      internalID: 6025773076784149750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_173
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cabc60bf3c123f070800000000000000
+      internalID: 8138886077202484140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_174
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bbf8b12986d3fb0800000000000000
+      internalID: -4666458662149047444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_175
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5442b9d48f2b54390800000000000000
+      internalID: -7834659197217463227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_176
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6131bf15b2996c0800000000000000
+      internalID: -4136227151658412336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_177
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 49
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b82d6201bf1039830800000000000000
+      internalID: 4076604265519829643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_178
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6cc98e30ae4ef010800000000000000
+      internalID: 1224502598842305642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_179
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a98c987bcad61900800000000000000
+      internalID: 654951363265726881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_180
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 0
+        width: 27
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80cdeab69e6b09ee0800000000000000
+      internalID: -1256303182386111480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_kitchen_181
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73b8f41724ad1830800000000000000
+      internalID: 4043568528211096444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wood_kitchen_0: -4429000873638830052
+      wood_kitchen_1: -5697629206500693160
+      wood_kitchen_10: 1204874607911475733
+      wood_kitchen_100: -7090325851234443882
+      wood_kitchen_101: -4861469692757768118
+      wood_kitchen_102: 2696197853994547549
+      wood_kitchen_103: 570866079272290228
+      wood_kitchen_104: -3658440020453025757
+      wood_kitchen_105: -5112100062415546422
+      wood_kitchen_106: 717694618644864024
+      wood_kitchen_107: -338655129133484717
+      wood_kitchen_108: -1324093034196246667
+      wood_kitchen_109: 4280759041191880072
+      wood_kitchen_11: 5714647210688506369
+      wood_kitchen_110: 3541562699160491283
+      wood_kitchen_111: -2729359425149061004
+      wood_kitchen_112: -8613202072053377832
+      wood_kitchen_113: 3683045902507839822
+      wood_kitchen_114: 7361579299299764893
+      wood_kitchen_115: -6453025249350739225
+      wood_kitchen_116: -4790465332747385151
+      wood_kitchen_117: 472014488583357863
+      wood_kitchen_118: -3293788576306097089
+      wood_kitchen_119: -1880037852909456939
+      wood_kitchen_12: 4637338096602199916
+      wood_kitchen_120: 2827752753337606106
+      wood_kitchen_121: 4226950646358191194
+      wood_kitchen_122: -841662052954265840
+      wood_kitchen_123: 5626262044176334790
+      wood_kitchen_124: -4376409498359328141
+      wood_kitchen_125: 7108119653019348481
+      wood_kitchen_126: -7089940289520372139
+      wood_kitchen_127: 3909730409843706554
+      wood_kitchen_128: -7145512266311421154
+      wood_kitchen_129: -2145664869792290702
+      wood_kitchen_13: -6812339570445423092
+      wood_kitchen_130: -4240351681235465422
+      wood_kitchen_131: -1267683425138706980
+      wood_kitchen_132: -4449502313938942444
+      wood_kitchen_133: -93438407193415997
+      wood_kitchen_134: 1522296225407820496
+      wood_kitchen_135: -8884200758356581230
+      wood_kitchen_136: 7221408453461632516
+      wood_kitchen_137: -6264066592607266071
+      wood_kitchen_138: 3523997144925661873
+      wood_kitchen_139: -3529639137860022334
+      wood_kitchen_14: 7896339367669184383
+      wood_kitchen_140: -4982262023327674091
+      wood_kitchen_141: 5456157918960890577
+      wood_kitchen_142: -1788549058358248857
+      wood_kitchen_143: 6717338722557818083
+      wood_kitchen_144: 244776236500604423
+      wood_kitchen_145: 8252472330068042953
+      wood_kitchen_146: 4641804231752195448
+      wood_kitchen_147: 8818752459578877757
+      wood_kitchen_148: -2445765604401479728
+      wood_kitchen_149: 184361141062666025
+      wood_kitchen_15: 7257420492880000583
+      wood_kitchen_150: -8686362919018090937
+      wood_kitchen_151: -4201941936534793847
+      wood_kitchen_152: -5088799240054060789
+      wood_kitchen_153: -4278765718855783689
+      wood_kitchen_154: 4292105760710872717
+      wood_kitchen_155: 2229831986911482470
+      wood_kitchen_156: -3564341030705225283
+      wood_kitchen_157: -6732757647198545727
+      wood_kitchen_158: 112974633125606063
+      wood_kitchen_159: -4389989947581477781
+      wood_kitchen_16: 1023817035938995937
+      wood_kitchen_160: -3332535513268701105
+      wood_kitchen_161: -8334998857721978957
+      wood_kitchen_162: -4813608503530770680
+      wood_kitchen_163: -5060751224431447470
+      wood_kitchen_164: -6335203401350213104
+      wood_kitchen_165: -2436147644864580915
+      wood_kitchen_166: -5155034227691656516
+      wood_kitchen_167: -1747809018869448970
+      wood_kitchen_168: 7154236756335160155
+      wood_kitchen_169: 1509373683559548295
+      wood_kitchen_17: -3768264750090354496
+      wood_kitchen_170: -2734977625451530926
+      wood_kitchen_171: 5969324931203157975
+      wood_kitchen_172: 6025773076784149750
+      wood_kitchen_173: 8138886077202484140
+      wood_kitchen_174: -4666458662149047444
+      wood_kitchen_175: -7834659197217463227
+      wood_kitchen_176: -4136227151658412336
+      wood_kitchen_177: 4076604265519829643
+      wood_kitchen_178: 1224502598842305642
+      wood_kitchen_179: 654951363265726881
+      wood_kitchen_18: -6303813130829591456
+      wood_kitchen_180: -1256303182386111480
+      wood_kitchen_181: 4043568528211096444
+      wood_kitchen_19: 637826967886497222
+      wood_kitchen_2: 4582656149542207215
+      wood_kitchen_20: 2411218371393976287
+      wood_kitchen_21: 5428440123884736410
+      wood_kitchen_22: -8454108064799171218
+      wood_kitchen_23: -1934182631849480795
+      wood_kitchen_24: -1970374938177814335
+      wood_kitchen_25: -1492756181298089310
+      wood_kitchen_26: 2928673553676212971
+      wood_kitchen_27: 696829242309810744
+      wood_kitchen_28: -7795831728305500566
+      wood_kitchen_29: -4849874635765635152
+      wood_kitchen_3: -7476706495074053399
+      wood_kitchen_30: -1390085426141533313
+      wood_kitchen_31: -8968035712174793488
+      wood_kitchen_32: -8495653413343195255
+      wood_kitchen_33: 6594302609012904414
+      wood_kitchen_34: 8061344062960320809
+      wood_kitchen_35: -4969875942880431781
+      wood_kitchen_36: -1898177024521985460
+      wood_kitchen_37: 5470750662996099160
+      wood_kitchen_38: -3265569827066373620
+      wood_kitchen_39: 4212838323844832578
+      wood_kitchen_4: 8004469800991702579
+      wood_kitchen_40: -217840707537798631
+      wood_kitchen_41: 406094830647773969
+      wood_kitchen_42: -539436444942576517
+      wood_kitchen_43: 1429692126918291673
+      wood_kitchen_44: -6177544204834398564
+      wood_kitchen_45: 9135658525835077740
+      wood_kitchen_46: -6677966502966357573
+      wood_kitchen_47: 6165915858983168727
+      wood_kitchen_48: 690969359418976020
+      wood_kitchen_49: 8334763319199308872
+      wood_kitchen_5: 4356611978445407101
+      wood_kitchen_50: 9152674613025143501
+      wood_kitchen_51: -269667456722408551
+      wood_kitchen_52: 8659400813886332239
+      wood_kitchen_53: -94119452646315264
+      wood_kitchen_54: -1021809115938084884
+      wood_kitchen_55: 5793213217508420195
+      wood_kitchen_56: -5264723205084783598
+      wood_kitchen_57: 8332421600598773242
+      wood_kitchen_58: -4049617356985916972
+      wood_kitchen_59: -2797782625604818515
+      wood_kitchen_6: 9215025619818918720
+      wood_kitchen_60: 9014658127120826726
+      wood_kitchen_61: 9000100803752218948
+      wood_kitchen_62: 7422847602727068887
+      wood_kitchen_63: -7292408640549351541
+      wood_kitchen_64: 4872628277652443437
+      wood_kitchen_65: 1229883723671841464
+      wood_kitchen_66: 8380357362337614930
+      wood_kitchen_67: -976546292938262733
+      wood_kitchen_68: 1510071062791595682
+      wood_kitchen_69: 2351189096821762946
+      wood_kitchen_7: 1757334626772853750
+      wood_kitchen_70: -4488717316053744622
+      wood_kitchen_71: 6860991345365635
+      wood_kitchen_72: -7514770665097612901
+      wood_kitchen_73: -2712304715038124428
+      wood_kitchen_74: 7201149485522159952
+      wood_kitchen_75: 1612313630646364955
+      wood_kitchen_76: 173374993355704994
+      wood_kitchen_77: -5976869239201707029
+      wood_kitchen_78: -5835085391505773762
+      wood_kitchen_79: -5914357202618468916
+      wood_kitchen_8: 4822023949327639951
+      wood_kitchen_80: 5253271949233187696
+      wood_kitchen_81: 5329102049370085815
+      wood_kitchen_82: 6873869398352693718
+      wood_kitchen_83: -7790285647473746305
+      wood_kitchen_84: 2165757474545210441
+      wood_kitchen_85: 2415686915939411224
+      wood_kitchen_86: -6389662706524111266
+      wood_kitchen_87: -5069142778757173034
+      wood_kitchen_88: 4936000057923282094
+      wood_kitchen_89: 5531563079740050445
+      wood_kitchen_9: 6296750274557693887
+      wood_kitchen_90: -8669148779486711451
+      wood_kitchen_91: -3797469270985013818
+      wood_kitchen_92: 2033665227758280367
+      wood_kitchen_93: 6833443463868556260
+      wood_kitchen_94: -9176181529509148986
+      wood_kitchen_95: 4989231016992303915
+      wood_kitchen_96: 1191018650292680474
+      wood_kitchen_97: 1988291238261201809
+      wood_kitchen_98: 4975002714881514779
+      wood_kitchen_99: -2017507043299052118
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

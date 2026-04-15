@@ -1,0 +1,2691 @@
+fileFormatVersion: 2
+guid: 88988dc5d5bf210479a1ce33c1731300
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5776867339142016081
+    second: spritesheet_fruits_0
+  - first:
+      213: 5393183430996423389
+    second: spritesheet_fruits_1
+  - first:
+      213: 4908341134607743451
+    second: spritesheet_fruits_2
+  - first:
+      213: 5194338032783067666
+    second: spritesheet_fruits_3
+  - first:
+      213: -4291305646342142787
+    second: spritesheet_fruits_4
+  - first:
+      213: -2759124639112706753
+    second: spritesheet_fruits_5
+  - first:
+      213: -3275159853697710448
+    second: spritesheet_fruits_6
+  - first:
+      213: 8177846315301484729
+    second: spritesheet_fruits_7
+  - first:
+      213: 4320540760550645522
+    second: spritesheet_fruits_8
+  - first:
+      213: 7204428662266149483
+    second: spritesheet_fruits_9
+  - first:
+      213: 8108176465045658027
+    second: spritesheet_fruits_10
+  - first:
+      213: 4732845650242795087
+    second: spritesheet_fruits_11
+  - first:
+      213: -6934443138286229817
+    second: spritesheet_fruits_12
+  - first:
+      213: 4830446795000928939
+    second: spritesheet_fruits_13
+  - first:
+      213: 880597152401363829
+    second: spritesheet_fruits_14
+  - first:
+      213: 780070040583290614
+    second: spritesheet_fruits_15
+  - first:
+      213: -4938164727345448952
+    second: spritesheet_fruits_16
+  - first:
+      213: 7187140260444839577
+    second: spritesheet_fruits_17
+  - first:
+      213: -810204415537263902
+    second: spritesheet_fruits_18
+  - first:
+      213: 2413729251206457670
+    second: spritesheet_fruits_19
+  - first:
+      213: 3005163436297370187
+    second: spritesheet_fruits_20
+  - first:
+      213: -2665026128185533041
+    second: spritesheet_fruits_21
+  - first:
+      213: 4279054891548972347
+    second: spritesheet_fruits_22
+  - first:
+      213: 8454709084720486313
+    second: spritesheet_fruits_23
+  - first:
+      213: 7438913182735220028
+    second: spritesheet_fruits_24
+  - first:
+      213: -9026083832717619835
+    second: spritesheet_fruits_25
+  - first:
+      213: 5328303168700989949
+    second: spritesheet_fruits_26
+  - first:
+      213: 9165352225034568462
+    second: spritesheet_fruits_27
+  - first:
+      213: 4195908421503143484
+    second: spritesheet_fruits_28
+  - first:
+      213: 2505607389791942126
+    second: spritesheet_fruits_29
+  - first:
+      213: 1660961932301417370
+    second: spritesheet_fruits_30
+  - first:
+      213: 1067422791139600630
+    second: spritesheet_fruits_31
+  - first:
+      213: 555769369576820484
+    second: spritesheet_fruits_32
+  - first:
+      213: 5393980621044227815
+    second: spritesheet_fruits_33
+  - first:
+      213: -405032112474109353
+    second: spritesheet_fruits_34
+  - first:
+      213: -1653740785926321213
+    second: spritesheet_fruits_35
+  - first:
+      213: -1912810978357405560
+    second: spritesheet_fruits_36
+  - first:
+      213: -1801463930997491615
+    second: spritesheet_fruits_37
+  - first:
+      213: -6895483439701033238
+    second: spritesheet_fruits_38
+  - first:
+      213: -7715992349398990423
+    second: spritesheet_fruits_39
+  - first:
+      213: -6204082093157607092
+    second: spritesheet_fruits_40
+  - first:
+      213: -7309635779040929071
+    second: spritesheet_fruits_41
+  - first:
+      213: -8075158925565432123
+    second: spritesheet_fruits_42
+  - first:
+      213: 6819104841740263414
+    second: spritesheet_fruits_43
+  - first:
+      213: 7320074984658363470
+    second: spritesheet_fruits_44
+  - first:
+      213: -8080793026078874410
+    second: spritesheet_fruits_45
+  - first:
+      213: -4954884325466252373
+    second: spritesheet_fruits_46
+  - first:
+      213: 5182742306574686774
+    second: spritesheet_fruits_47
+  - first:
+      213: 8554005132153037850
+    second: spritesheet_fruits_48
+  - first:
+      213: -5449410982245011815
+    second: spritesheet_fruits_49
+  - first:
+      213: 958492046018594326
+    second: spritesheet_fruits_50
+  - first:
+      213: -1374763975091518160
+    second: spritesheet_fruits_51
+  - first:
+      213: 4326951050786086770
+    second: spritesheet_fruits_52
+  - first:
+      213: 7252406054567693877
+    second: spritesheet_fruits_53
+  - first:
+      213: -8820256970345677856
+    second: spritesheet_fruits_54
+  - first:
+      213: -5456131463848366660
+    second: spritesheet_fruits_55
+  - first:
+      213: 1564008679072423817
+    second: spritesheet_fruits_56
+  - first:
+      213: -1124369502900461610
+    second: spritesheet_fruits_57
+  - first:
+      213: -8245223217417051757
+    second: spritesheet_fruits_58
+  - first:
+      213: 6152835493557681165
+    second: spritesheet_fruits_59
+  - first:
+      213: 1095669359558460998
+    second: spritesheet_fruits_60
+  - first:
+      213: -2438667161320450418
+    second: spritesheet_fruits_61
+  - first:
+      213: 1533482768354878130
+    second: spritesheet_fruits_62
+  - first:
+      213: -6998605924872180724
+    second: spritesheet_fruits_63
+  - first:
+      213: 8632407845027596247
+    second: spritesheet_fruits_64
+  - first:
+      213: -3010821411257722851
+    second: spritesheet_fruits_65
+  - first:
+      213: -7107310495510898421
+    second: spritesheet_fruits_66
+  - first:
+      213: 8229883752180228153
+    second: spritesheet_fruits_67
+  - first:
+      213: -5806097189931800675
+    second: spritesheet_fruits_68
+  - first:
+      213: -2105814826989976328
+    second: spritesheet_fruits_69
+  - first:
+      213: 1234041723788024920
+    second: spritesheet_fruits_70
+  - first:
+      213: 2758301431913667797
+    second: spritesheet_fruits_71
+  - first:
+      213: 5333944725624503784
+    second: spritesheet_fruits_72
+  - first:
+      213: 4725067199901949636
+    second: spritesheet_fruits_73
+  - first:
+      213: 4948415521832563299
+    second: spritesheet_fruits_74
+  - first:
+      213: -5484521244341685942
+    second: spritesheet_fruits_75
+  - first:
+      213: -1911447371866352707
+    second: spritesheet_fruits_76
+  - first:
+      213: -7254924268205776050
+    second: spritesheet_fruits_77
+  - first:
+      213: 5134543020769223113
+    second: spritesheet_fruits_78
+  - first:
+      213: 2901602632748773752
+    second: spritesheet_fruits_79
+  - first:
+      213: 6109531345320657493
+    second: spritesheet_fruits_80
+  - first:
+      213: -2851660597406465931
+    second: spritesheet_fruits_81
+  - first:
+      213: -7349643090499651350
+    second: spritesheet_fruits_82
+  - first:
+      213: 7147652446777877818
+    second: spritesheet_fruits_83
+  - first:
+      213: -2093335940710317647
+    second: spritesheet_fruits_84
+  - first:
+      213: -703012468571243562
+    second: spritesheet_fruits_85
+  - first:
+      213: 3520151072529950386
+    second: spritesheet_fruits_86
+  - first:
+      213: -6643357833299743306
+    second: spritesheet_fruits_87
+  - first:
+      213: -4375354600661630989
+    second: spritesheet_fruits_88
+  - first:
+      213: 2843133165349917733
+    second: spritesheet_fruits_89
+  - first:
+      213: 4792270788367378296
+    second: spritesheet_fruits_90
+  - first:
+      213: 6051055308101363520
+    second: spritesheet_fruits_91
+  - first:
+      213: -103335798421164943
+    second: spritesheet_fruits_92
+  - first:
+      213: -5004840741710791748
+    second: spritesheet_fruits_93
+  - first:
+      213: -1189126522773724391
+    second: spritesheet_fruits_94
+  - first:
+      213: -5998849820371062446
+    second: spritesheet_fruits_95
+  - first:
+      213: -3489628342299850115
+    second: spritesheet_fruits_96
+  - first:
+      213: -1142998990884055042
+    second: spritesheet_fruits_97
+  - first:
+      213: 7056952953576101741
+    second: spritesheet_fruits_98
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_fruits_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 195
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15cad10ec3e8b2050800000000000000
+      internalID: 5776867339142016081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 195
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2701591cf68da40800000000000000
+      internalID: 5393183430996423389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 203
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd97bb4a14eed1440800000000000000
+      internalID: 4908341134607743451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_3
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 195
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a06578beef51840800000000000000
+      internalID: 5194338032783067666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 195
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db4062f30483274c0800000000000000
+      internalID: -4291305646342142787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 195
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35c8aa52ce95b9d0800000000000000
+      internalID: -2759124639112706753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_6
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 203
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0964ab1377b4c82d0800000000000000
+      internalID: -3275159853697710448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_7
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 195
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b8384b45eb8d7170800000000000000
+      internalID: 8177846315301484729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_8
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 195
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f97363ee4a5fb30800000000000000
+      internalID: 4320540760550645522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_9
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 195
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a340892b54bf360800000000000000
+      internalID: 7204428662266149483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_10
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 195
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba99a373987068070800000000000000
+      internalID: 8108176465045658027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_11
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 195
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46797f0b027ea140800000000000000
+      internalID: 4732845650242795087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 171
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c6ed4bb4b8e3cf90800000000000000
+      internalID: -6934443138286229817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_13
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 171
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa547a64c1390340800000000000000
+      internalID: 4830446795000928939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_14
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 171
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5739a1bc172883c00800000000000000
+      internalID: 880597152401363829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 171
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe34e4a19d53da00800000000000000
+      internalID: 780070040583290614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_16
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 171
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808f530185d187bb0800000000000000
+      internalID: -4938164727345448952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_17
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 171
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e19bedcf9ddb360800000000000000
+      internalID: 7187140260444839577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_18
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 171
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eac270706391c4f0800000000000000
+      internalID: -810204415537263902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_19
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 171
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 649612a27f94f7120800000000000000
+      internalID: 2413729251206457670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_20
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 171
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a3f78293c74b920800000000000000
+      internalID: 3005163436297370187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_21
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 171
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ddd583bdce30bd0800000000000000
+      internalID: -2665026128185533041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_22
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 147
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b359c21a0c1426b30800000000000000
+      internalID: 4279054891548972347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_23
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 147
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7580a1e19255570800000000000000
+      internalID: 8454709084720486313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_24
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 147
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d37eb60245c3760800000000000000
+      internalID: 7438913182735220028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_25
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 147
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d48fd8398ecb280800000000000000
+      internalID: -9026083832717619835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_26
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 147
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1c20a508fe1f940800000000000000
+      internalID: 5328303168700989949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_27
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 147
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03858ed94fd13f70800000000000000
+      internalID: 9165352225034568462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_28
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 147
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ec3cd7a7cda3a30800000000000000
+      internalID: 4195908421503143484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_29
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 147
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee5742f45a4b5c220800000000000000
+      internalID: 2505607389791942126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_30
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 147
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9bb548c31cec0710800000000000000
+      internalID: 1660961932301417370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_31
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 147
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f828038f5f30de00800000000000000
+      internalID: 1067422791139600630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_32
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 123
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f4baa0c4d76b700800000000000000
+      internalID: 555769369576820484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_33
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 123
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee9eaadbc44bda40800000000000000
+      internalID: 5393980621044227815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_34
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 123
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75aca5d8079016af0800000000000000
+      internalID: -405032112474109353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_35
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 123
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb4940648bbc09e0800000000000000
+      internalID: -1653740785926321213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_36
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 125
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8881a88bc845475e0800000000000000
+      internalID: -1912810978357405560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_37
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 132
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168373d691aeff6e0800000000000000
+      internalID: -1801463930997491615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_38
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 123
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeef70e68525e40a0800000000000000
+      internalID: -6895483439701033238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_39
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 123
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1017cd6d94be490800000000000000
+      internalID: -7715992349398990423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_40
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 123
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c499af7f43ca6e9a0800000000000000
+      internalID: -6204082093157607092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_41
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 123
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da97c0bcf4fe8a90800000000000000
+      internalID: -7309635779040929071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_42
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 123
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cee8d0cdb54fef80800000000000000
+      internalID: -8075158925565432123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_43
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 123
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff131279b352ae50800000000000000
+      internalID: 6819104841740263414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_44
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 99
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44e8c54a61269560800000000000000
+      internalID: 7320074984658363470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_45
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 99
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d46d118e814bdf80800000000000000
+      internalID: -8080793026078874410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_46
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 99
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: babde6545f6bc3bb0800000000000000
+      internalID: -4954884325466252373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_47
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 99
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ad5c12baccce740800000000000000
+      internalID: 5182742306574686774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_48
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 99
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14a9dcb85ee5b670800000000000000
+      internalID: 8554005132153037850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_49
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 99
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e6c28759dcf54b0800000000000000
+      internalID: -5449410982245011815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_50
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 99
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616c9f2007f3d4d00800000000000000
+      internalID: 958492046018594326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_51
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 99
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0358aaec27bdbece0800000000000000
+      internalID: -1374763975091518160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_52
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 99
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f9b963e0b6c0c30800000000000000
+      internalID: 4326951050786086770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_53
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 99
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e4669b1e8b5a460800000000000000
+      internalID: 7252406054567693877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_54
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 75
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebf1e66407289580800000000000000
+      internalID: -8820256970345677856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_55
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 75
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd6c79675de744b0800000000000000
+      internalID: -5456131463848366660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_56
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 75
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f5dbd6b9974b510800000000000000
+      internalID: 1564008679072423817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_57
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 83
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dfd55fe4ef6560f0800000000000000
+      internalID: -1124369502900461610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_58
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 75
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391ad083b25139d80800000000000000
+      internalID: -8245223217417051757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_59
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 75
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0cbbe24843436550800000000000000
+      internalID: 6152835493557681165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_60
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 75
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64603c73a79943f00800000000000000
+      internalID: 1095669359558460998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_61
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 75
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86951c232d182ed0800000000000000
+      internalID: -2438667161320450418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_62
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 75
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b2a9fcf376084510800000000000000
+      internalID: 1533482768354878130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_63
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 75
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0cac05ddf4ffde90800000000000000
+      internalID: -6998605924872180724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_64
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 75
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d74a27d2397cc770800000000000000
+      internalID: 8632407845027596247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_65
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18d7d3e0e96736d0800000000000000
+      internalID: -3010821411257722851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_66
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 60
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09daaea2c2cd5d90800000000000000
+      internalID: -7107310495510898421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_67
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93026773bab663270800000000000000
+      internalID: 8229883752180228153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_68
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d97a8b62e599c6fa0800000000000000
+      internalID: -5806097189931800675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_69
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 61
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f4038a6294a6c2e0800000000000000
+      internalID: -2105814826989976328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_70
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c5568d862302110800000000000000
+      internalID: 1234041723788024920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_71
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc5aa8c984774620800000000000000
+      internalID: 2758301431913667797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_72
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8edba6ea77af50a40800000000000000
+      internalID: 5333944725624503784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_73
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 51
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce5106759fc29140800000000000000
+      internalID: 4725067199901949636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_74
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 51
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362fbd303bd4ca440800000000000000
+      internalID: 4948415521832563299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_75
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 51
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a413eeb8cf013e3b0800000000000000
+      internalID: -5484521244341685942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_76
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 51
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db35d091ebc2975e0800000000000000
+      internalID: -1911447371866352707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_77
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 27
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43eb39f0d4515b90800000000000000
+      internalID: -7254924268205776050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_78
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 36
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c129e46caf814740800000000000000
+      internalID: 5134543020769223113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_79
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 27
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 871345c9830944820800000000000000
+      internalID: 2901602632748773752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_80
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 27
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 552c3fd836a69c450800000000000000
+      internalID: 6109531345320657493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_81
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 27
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5700c9f9bcddc68d0800000000000000
+      internalID: -2851660597406465931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_82
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 36
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae83ddc9c82d00a90800000000000000
+      internalID: -7349643090499651350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_83
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 27
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35a52cc700913360800000000000000
+      internalID: 7147652446777877818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_84
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 27
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1476a8d0af2f2e0800000000000000
+      internalID: -2093335940710317647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_85
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 27
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbf32272e56e36f0800000000000000
+      internalID: -703012468571243562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_86
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 27
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b6abd9ffb61ad030800000000000000
+      internalID: 3520151072529950386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_87
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 27
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd2c56af3d0ec3a0800000000000000
+      internalID: -6643357833299743306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_88
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 27
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff313d1c2e9743c0800000000000000
+      internalID: -4375354600661630989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_89
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52450d1ec86d47720800000000000000
+      internalID: 2843133165349917733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_90
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8776e1834e0918240800000000000000
+      internalID: 4792270788367378296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_91
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 047af9b2ebaa9f350800000000000000
+      internalID: 6051055308101363520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_92
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c668a83a0e09ef0800000000000000
+      internalID: -103335798421164943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_93
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbbfce8bcdb3b8ab0800000000000000
+      internalID: -5004840741710791748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_94
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 3
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913a3115abf5f7fe0800000000000000
+      internalID: -1189126522773724391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_95
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251fdd32fddcfbca0800000000000000
+      internalID: -5998849820371062446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_96
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 3
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a0513f289529fc0800000000000000
+      internalID: -3489628342299850115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_97
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 3
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef7d9b149704320f0800000000000000
+      internalID: -1142998990884055042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_fruits_98
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d671c8a62555fe160800000000000000
+      internalID: 7056952953576101741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheet_fruits_0: 5776867339142016081
+      spritesheet_fruits_1: 5393183430996423389
+      spritesheet_fruits_10: 8108176465045658027
+      spritesheet_fruits_11: 4732845650242795087
+      spritesheet_fruits_12: -6934443138286229817
+      spritesheet_fruits_13: 4830446795000928939
+      spritesheet_fruits_14: 880597152401363829
+      spritesheet_fruits_15: 780070040583290614
+      spritesheet_fruits_16: -4938164727345448952
+      spritesheet_fruits_17: 7187140260444839577
+      spritesheet_fruits_18: -810204415537263902
+      spritesheet_fruits_19: 2413729251206457670
+      spritesheet_fruits_2: 4908341134607743451
+      spritesheet_fruits_20: 3005163436297370187
+      spritesheet_fruits_21: -2665026128185533041
+      spritesheet_fruits_22: 4279054891548972347
+      spritesheet_fruits_23: 8454709084720486313
+      spritesheet_fruits_24: 7438913182735220028
+      spritesheet_fruits_25: -9026083832717619835
+      spritesheet_fruits_26: 5328303168700989949
+      spritesheet_fruits_27: 9165352225034568462
+      spritesheet_fruits_28: 4195908421503143484
+      spritesheet_fruits_29: 2505607389791942126
+      spritesheet_fruits_3: 5194338032783067666
+      spritesheet_fruits_30: 1660961932301417370
+      spritesheet_fruits_31: 1067422791139600630
+      spritesheet_fruits_32: 555769369576820484
+      spritesheet_fruits_33: 5393980621044227815
+      spritesheet_fruits_34: -405032112474109353
+      spritesheet_fruits_35: -1653740785926321213
+      spritesheet_fruits_36: -1912810978357405560
+      spritesheet_fruits_37: -1801463930997491615
+      spritesheet_fruits_38: -6895483439701033238
+      spritesheet_fruits_39: -7715992349398990423
+      spritesheet_fruits_4: -4291305646342142787
+      spritesheet_fruits_40: -6204082093157607092
+      spritesheet_fruits_41: -7309635779040929071
+      spritesheet_fruits_42: -8075158925565432123
+      spritesheet_fruits_43: 6819104841740263414
+      spritesheet_fruits_44: 7320074984658363470
+      spritesheet_fruits_45: -8080793026078874410
+      spritesheet_fruits_46: -4954884325466252373
+      spritesheet_fruits_47: 5182742306574686774
+      spritesheet_fruits_48: 8554005132153037850
+      spritesheet_fruits_49: -5449410982245011815
+      spritesheet_fruits_5: -2759124639112706753
+      spritesheet_fruits_50: 958492046018594326
+      spritesheet_fruits_51: -1374763975091518160
+      spritesheet_fruits_52: 4326951050786086770
+      spritesheet_fruits_53: 7252406054567693877
+      spritesheet_fruits_54: -8820256970345677856
+      spritesheet_fruits_55: -5456131463848366660
+      spritesheet_fruits_56: 1564008679072423817
+      spritesheet_fruits_57: -1124369502900461610
+      spritesheet_fruits_58: -8245223217417051757
+      spritesheet_fruits_59: 6152835493557681165
+      spritesheet_fruits_6: -3275159853697710448
+      spritesheet_fruits_60: 1095669359558460998
+      spritesheet_fruits_61: -2438667161320450418
+      spritesheet_fruits_62: 1533482768354878130
+      spritesheet_fruits_63: -6998605924872180724
+      spritesheet_fruits_64: 8632407845027596247
+      spritesheet_fruits_65: -3010821411257722851
+      spritesheet_fruits_66: -7107310495510898421
+      spritesheet_fruits_67: 8229883752180228153
+      spritesheet_fruits_68: -5806097189931800675
+      spritesheet_fruits_69: -2105814826989976328
+      spritesheet_fruits_7: 8177846315301484729
+      spritesheet_fruits_70: 1234041723788024920
+      spritesheet_fruits_71: 2758301431913667797
+      spritesheet_fruits_72: 5333944725624503784
+      spritesheet_fruits_73: 4725067199901949636
+      spritesheet_fruits_74: 4948415521832563299
+      spritesheet_fruits_75: -5484521244341685942
+      spritesheet_fruits_76: -1911447371866352707
+      spritesheet_fruits_77: -7254924268205776050
+      spritesheet_fruits_78: 5134543020769223113
+      spritesheet_fruits_79: 2901602632748773752
+      spritesheet_fruits_8: 4320540760550645522
+      spritesheet_fruits_80: 6109531345320657493
+      spritesheet_fruits_81: -2851660597406465931
+      spritesheet_fruits_82: -7349643090499651350
+      spritesheet_fruits_83: 7147652446777877818
+      spritesheet_fruits_84: -2093335940710317647
+      spritesheet_fruits_85: -703012468571243562
+      spritesheet_fruits_86: 3520151072529950386
+      spritesheet_fruits_87: -6643357833299743306
+      spritesheet_fruits_88: -4375354600661630989
+      spritesheet_fruits_89: 2843133165349917733
+      spritesheet_fruits_9: 7204428662266149483
+      spritesheet_fruits_90: 4792270788367378296
+      spritesheet_fruits_91: 6051055308101363520
+      spritesheet_fruits_92: -103335798421164943
+      spritesheet_fruits_93: -5004840741710791748
+      spritesheet_fruits_94: -1189126522773724391
+      spritesheet_fruits_95: -5998849820371062446
+      spritesheet_fruits_96: -3489628342299850115
+      spritesheet_fruits_97: -1142998990884055042
+      spritesheet_fruits_98: 7056952953576101741
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
