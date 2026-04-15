@@ -14,7 +14,18 @@ public class Entity_MoveState : EntityState
         {
             stateMachine.ChangeState(entity.idleState);
         }
+        
+        if (entity.input.Player.Sprint.IsPressed())
+        {
+            entity.SetVelocity(
+                entity.moveInput.x * entity.moveSpeed * entity.runSpeedModifier,
+                entity.moveInput.y * entity.moveSpeed * entity.runSpeedModifier
+            );
+        }
 
-        entity.SetVelocity(entity.moveInput.x * entity.moveSpeed, entity.moveInput.y * entity.moveSpeed);
+        else
+        {
+            entity.SetVelocity(entity.moveInput.x * entity.moveSpeed, entity.moveInput.y * entity.moveSpeed);
+        }
     }
 }

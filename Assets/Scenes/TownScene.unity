@@ -408,7 +408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed4f3ce5f4b2af479e7369434635637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Entity
-  moveSpeed: 8
+  moveSpeed: 4
+  runSpeedModifier: 1.5
   rb: {fileID: 886000077}
   anim: {fileID: 1247277854}
 --- !u!1 &1194483661

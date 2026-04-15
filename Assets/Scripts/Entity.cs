@@ -4,6 +4,7 @@ public class Entity : MonoBehaviour
 {
     [Header("Movement Detail")]
     public float moveSpeed;
+    public float runSpeedModifier = 1.5f;
 
     public Rigidbody2D rb;
     public Animator anim;
