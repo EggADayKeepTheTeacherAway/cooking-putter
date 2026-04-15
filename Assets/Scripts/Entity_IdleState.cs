@@ -13,4 +13,16 @@ public class Entity_IdleState : EntityState
 
         rb.linearVelocity = new Vector2(0, 0);
     }
+
+    public override void Update()
+    {
+        base.Update();
+
+        Debug.Log(entity.moveInput != Vector2.zero);
+
+        if (entity.moveInput != Vector2.zero)
+        {
+            stateMachine.ChangeState(entity.moveState);
+        }
+    }
 }

@@ -7,17 +7,18 @@ public class StateMachine
     public void Initialize(EntityState initialState)
     {
         currentState = initialState;
-
+        currentState.Enter();
     }
 
     public void ChangeState(EntityState newState)
     {
-       
+        Debug.Log("Are you still there");
+        
         currentState.Exit();
 
         currentState = newState;
+
         currentState.Enter();
-        
 
     }
 

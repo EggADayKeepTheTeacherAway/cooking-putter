@@ -3,23 +3,26 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     [Header("Movement Detail")]
-    [SerializeField] protected float moveSpeed;
+    public float moveSpeed;
 
-    [SerializeField] protected Rigidbody2D rb;
-    [SerializeField] protected Animator anim;
+    public Rigidbody2D rb;
+    public Animator anim;
 
     public StateMachine stateMachine { get; private set; }
     
     public Entity_IdleState idleState { get; private set; }
     public Entity_MoveState moveState { get; private set; }
 
+    private Vector2 currentVelocity;
     public Vector2 moveInput { get; private set; }
 
-    private PlayerInputSet input;
+    public PlayerInputSet input { get; private set; }
 
 
     private void Awake()
     {
+        input = new PlayerInputSet();
+
 
         stateMachine = new StateMachine();
 
@@ -28,6 +31,16 @@ public class Entity : MonoBehaviour
 
 
         stateMachine.Initialize(idleState);        
+    }
+
+    private void Update()
+    {
+        stateMachine.CallUpdateCurrentState();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.linearVelocity = currentVelocity;
     }
 
     private void OnEnable()
@@ -42,5 +55,10 @@ public class Entity : MonoBehaviour
     private void OnDisable()
     {
         input.Disable();
+    }
+
+    public void SetVelocity(float velocityX, float velocityY)
+    {
+        currentVelocity = new Vector2(velocityX, velocityY);
     }
 }
