@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 5caea38961baa3040be8644abed5d11b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5652426214323122453
+    second: Foodstuffs2-big_0
+  - first:
+      213: -6135568243671734160
+    second: Foodstuffs2-big_1
+  - first:
+      213: -753299319044462536
+    second: Foodstuffs2-big_2
+  - first:
+      213: -418318258524968858
+    second: Foodstuffs2-big_3
+  - first:
+      213: 7304933479488956794
+    second: Foodstuffs2-big_4
+  - first:
+      213: 2392262351477046386
+    second: Foodstuffs2-big_5
+  - first:
+      213: -6945165037892935964
+    second: Foodstuffs2-big_6
+  - first:
+      213: 2089764962515102729
+    second: Foodstuffs2-big_7
+  - first:
+      213: 7323559771132124215
+    second: Foodstuffs2-big_8
+  - first:
+      213: -4863056316160774150
+    second: Foodstuffs2-big_9
+  - first:
+      213: 5258197694800258078
+    second: Foodstuffs2-big_10
+  - first:
+      213: 1953113514188071894
+    second: Foodstuffs2-big_11
+  - first:
+      213: 4164946029990073872
+    second: Foodstuffs2-big_12
+  - first:
+      213: -2798832550328494626
+    second: Foodstuffs2-big_13
+  - first:
+      213: 5411064830875583605
+    second: Foodstuffs2-big_14
+  - first:
+      213: 5323332503945124744
+    second: Foodstuffs2-big_15
+  - first:
+      213: -5425259112267302657
+    second: Foodstuffs2-big_16
+  - first:
+      213: -1971931051724938068
+    second: Foodstuffs2-big_17
+  - first:
+      213: -7145954978325278269
+    second: Foodstuffs2-big_18
+  - first:
+      213: 4348885176310518212
+    second: Foodstuffs2-big_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Foodstuffs2-big_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 489
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee0a205e4c8e81b0800000000000000
+      internalID: -5652426214323122453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_1
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 489
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07867c4a0351adaa0800000000000000
+      internalID: -6135568243671734160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_2
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 489
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 838afcea24ebb85f0800000000000000
+      internalID: -753299319044462536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_3
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 489
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6682f8d92c5d13af0800000000000000
+      internalID: -418318258524968858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_4
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 489
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a792cc0eb46506560800000000000000
+      internalID: 7304933479488956794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_5
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 329
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c74551fe5033120800000000000000
+      internalID: 2392262351477046386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_6
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 329
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eedde1f131dd9f90800000000000000
+      internalID: -6945165037892935964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_7
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 329
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c25ce4926500d10800000000000000
+      internalID: 2089764962515102729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_8
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 329
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73cdba95fc282a560800000000000000
+      internalID: 7323559771132124215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_9
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 329
+        width: 122
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff6488cb04f28cb0800000000000000
+      internalID: -4863056316160774150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 169
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14e85db1fed8f840800000000000000
+      internalID: 5258197694800258078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 169
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3e133a46ada1b10800000000000000
+      internalID: 1953113514188071894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_12
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 169
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0165b32f85cdcc930800000000000000
+      internalID: 4164946029990073872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_13
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 169
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed59ed3df9c8829d0800000000000000
+      internalID: -2798832550328494626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_14
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 169
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574c2fc6bc6f71b40800000000000000
+      internalID: 5411064830875583605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_15
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 9
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b90f645b640e940800000000000000
+      internalID: 5323332503945124744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_16
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 9
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff83bd6e49b95b4b0800000000000000
+      internalID: -5425259112267302657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_17
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 9
+        width: 102
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca46f5cf72b42a4e0800000000000000
+      internalID: -1971931051724938068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_18
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 9
+        width: 142
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1dcffdec774dc90800000000000000
+      internalID: -7145954978325278269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foodstuffs2-big_19
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 9
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c153f6c6085a5c30800000000000000
+      internalID: 4348885176310518212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Foodstuffs2-big_0: -5652426214323122453
+      Foodstuffs2-big_1: -6135568243671734160
+      Foodstuffs2-big_10: 5258197694800258078
+      Foodstuffs2-big_11: 1953113514188071894
+      Foodstuffs2-big_12: 4164946029990073872
+      Foodstuffs2-big_13: -2798832550328494626
+      Foodstuffs2-big_14: 5411064830875583605
+      Foodstuffs2-big_15: 5323332503945124744
+      Foodstuffs2-big_16: -5425259112267302657
+      Foodstuffs2-big_17: -1971931051724938068
+      Foodstuffs2-big_18: -7145954978325278269
+      Foodstuffs2-big_19: 4348885176310518212
+      Foodstuffs2-big_2: -753299319044462536
+      Foodstuffs2-big_3: -418318258524968858
+      Foodstuffs2-big_4: 7304933479488956794
+      Foodstuffs2-big_5: 2392262351477046386
+      Foodstuffs2-big_6: -6945165037892935964
+      Foodstuffs2-big_7: 2089764962515102729
+      Foodstuffs2-big_8: 7323559771132124215
+      Foodstuffs2-big_9: -4863056316160774150
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

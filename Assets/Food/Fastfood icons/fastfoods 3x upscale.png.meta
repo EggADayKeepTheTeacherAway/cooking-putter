@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: 6f503eaaee892c44bba88b95ac45244d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5842337616747232266
+    second: fastfoods 3x upscale_0
+  - first:
+      213: -2342909743152866036
+    second: fastfoods 3x upscale_1
+  - first:
+      213: -484278087631630312
+    second: fastfoods 3x upscale_2
+  - first:
+      213: 6933192632116958113
+    second: fastfoods 3x upscale_3
+  - first:
+      213: -4657007746648831677
+    second: fastfoods 3x upscale_4
+  - first:
+      213: 6775930567831500834
+    second: fastfoods 3x upscale_5
+  - first:
+      213: -5750365361675157356
+    second: fastfoods 3x upscale_6
+  - first:
+      213: -1896043468317509854
+    second: fastfoods 3x upscale_7
+  - first:
+      213: -358326107056010194
+    second: fastfoods 3x upscale_8
+  - first:
+      213: 4685440165061910076
+    second: fastfoods 3x upscale_9
+  - first:
+      213: -952767391179949114
+    second: fastfoods 3x upscale_10
+  - first:
+      213: 4718189451308125770
+    second: fastfoods 3x upscale_11
+  - first:
+      213: -1007621243658916191
+    second: fastfoods 3x upscale_12
+  - first:
+      213: 1547312033183762717
+    second: fastfoods 3x upscale_13
+  - first:
+      213: 8873156021499045504
+    second: fastfoods 3x upscale_14
+  - first:
+      213: -1473441341768245313
+    second: fastfoods 3x upscale_15
+  - first:
+      213: -1061412797922702094
+    second: fastfoods 3x upscale_16
+  - first:
+      213: 8873824852337044749
+    second: fastfoods 3x upscale_17
+  - first:
+      213: -8147730089713918022
+    second: fastfoods 3x upscale_18
+  - first:
+      213: -1917747581217696771
+    second: fastfoods 3x upscale_19
+  - first:
+      213: -2772249767075159935
+    second: fastfoods 3x upscale_20
+  - first:
+      213: -6724271746835777931
+    second: fastfoods 3x upscale_21
+  - first:
+      213: -4866550548091046565
+    second: fastfoods 3x upscale_22
+  - first:
+      213: -788367951902327718
+    second: fastfoods 3x upscale_23
+  - first:
+      213: 1170422138230967742
+    second: fastfoods 3x upscale_24
+  - first:
+      213: 6258884814160942095
+    second: fastfoods 3x upscale_25
+  - first:
+      213: 7316777553284352003
+    second: fastfoods 3x upscale_26
+  - first:
+      213: 3688508382291691574
+    second: fastfoods 3x upscale_27
+  - first:
+      213: 7169927192148166425
+    second: fastfoods 3x upscale_28
+  - first:
+      213: 117229192942133920
+    second: fastfoods 3x upscale_29
+  - first:
+      213: -7125840881815909119
+    second: fastfoods 3x upscale_30
+  - first:
+      213: 4742293139153122727
+    second: fastfoods 3x upscale_31
+  - first:
+      213: 5210566698685742577
+    second: fastfoods 3x upscale_32
+  - first:
+      213: 4108771265143846408
+    second: fastfoods 3x upscale_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 671
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0cfe10cb17241150800000000000000
+      internalID: 5842337616747232266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 674
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d529a70005c7fd0800000000000000
+      internalID: -2342909743152866036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 671
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 810163625af7749f0800000000000000
+      internalID: -484278087631630312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 608
+        width: 241
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3dfac17f5a73060800000000000000
+      internalID: 6933192632116958113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 527
+        width: 145
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34901c8d02cfe5fb0800000000000000
+      internalID: -4657007746648831677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_5
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 575
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228be4673f0f80e50800000000000000
+      internalID: 6775930567831500834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_6
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 578
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49044a89b299230b0800000000000000
+      internalID: -5750365361675157356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_7
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 605
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2273c30e286efa5e0800000000000000
+      internalID: -1896043468317509854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_8
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 527
+        width: 145
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c8d2bdd48f60bf0800000000000000
+      internalID: -358326107056010194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_9
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 527
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3edcde6107060140800000000000000
+      internalID: 4685440165061910076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 527
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbb42f0b1717c2f0800000000000000
+      internalID: -952767391179949114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 527
+        width: 92
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e4734de406a7140800000000000000
+      internalID: 4718189451308125770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_12
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 335
+        width: 35
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aea29741d53402f0800000000000000
+      internalID: -1007621243658916191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_13
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 335
+        width: 35
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d190b9e9818297510800000000000000
+      internalID: 1547312033183762717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_14
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 335
+        width: 44
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086a11ab368c32b70800000000000000
+      internalID: 8873156021499045504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 241
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf578208e84d8be0800000000000000
+      internalID: -1473441341768245313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_16
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 239
+        width: 50
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc83c31faa1541f0800000000000000
+      internalID: -1061412797922702094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_17
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 239
+        width: 41
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d259a00b8262b70800000000000000
+      internalID: 8873824852337044749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_18
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 239
+        width: 41
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf17d4e6a27dee80800000000000000
+      internalID: -8147730089713918022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_19
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 239
+        width: 41
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df397ac4cbac265e0800000000000000
+      internalID: -1917747581217696771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_20
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 239
+        width: 44
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18063dc568df689d0800000000000000
+      internalID: -2772249767075159935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 143
+        width: 337
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57678a419769ea2a0800000000000000
+      internalID: -6724271746835777931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_22
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 191
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55fc838f0a867cb0800000000000000
+      internalID: -4866550548091046565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_23
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 149
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c3f8256872f05f0800000000000000
+      internalID: -788367951902327718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 101
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd828acbbc2e3010800000000000000
+      internalID: 1170422138230967742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_25
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 98
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f045626d3960cd650800000000000000
+      internalID: 6258884814160942095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_26
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 98
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 308c0143b6a6a8560800000000000000
+      internalID: 7316777553284352003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_27
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 98
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6380c85c4d6303330800000000000000
+      internalID: 3688508382291691574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_28
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 98
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917c7691bc2b08360800000000000000
+      internalID: 7169927192148166425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_29
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 47
+        width: 145
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a22f92745b70a100800000000000000
+      internalID: 117229192942133920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 145
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d0869e87deb1d90800000000000000
+      internalID: -7125840881815909119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_31
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 53
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a57efbfb7200d140800000000000000
+      internalID: 4742293139153122727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_32
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 53
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdb4a14ec6af4840800000000000000
+      internalID: 5210566698685742577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fastfoods 3x upscale_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 145
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8063b3a42b9450930800000000000000
+      internalID: 4108771265143846408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fastfoods 3x upscale_0: 5842337616747232266
+      fastfoods 3x upscale_1: -2342909743152866036
+      fastfoods 3x upscale_10: -952767391179949114
+      fastfoods 3x upscale_11: 4718189451308125770
+      fastfoods 3x upscale_12: -1007621243658916191
+      fastfoods 3x upscale_13: 1547312033183762717
+      fastfoods 3x upscale_14: 8873156021499045504
+      fastfoods 3x upscale_15: -1473441341768245313
+      fastfoods 3x upscale_16: -1061412797922702094
+      fastfoods 3x upscale_17: 8873824852337044749
+      fastfoods 3x upscale_18: -8147730089713918022
+      fastfoods 3x upscale_19: -1917747581217696771
+      fastfoods 3x upscale_2: -484278087631630312
+      fastfoods 3x upscale_20: -2772249767075159935
+      fastfoods 3x upscale_21: -6724271746835777931
+      fastfoods 3x upscale_22: -4866550548091046565
+      fastfoods 3x upscale_23: -788367951902327718
+      fastfoods 3x upscale_24: 1170422138230967742
+      fastfoods 3x upscale_25: 6258884814160942095
+      fastfoods 3x upscale_26: 7316777553284352003
+      fastfoods 3x upscale_27: 3688508382291691574
+      fastfoods 3x upscale_28: 7169927192148166425
+      fastfoods 3x upscale_29: 117229192942133920
+      fastfoods 3x upscale_3: 6933192632116958113
+      fastfoods 3x upscale_30: -7125840881815909119
+      fastfoods 3x upscale_31: 4742293139153122727
+      fastfoods 3x upscale_32: 5210566698685742577
+      fastfoods 3x upscale_33: 4108771265143846408
+      fastfoods 3x upscale_4: -4657007746648831677
+      fastfoods 3x upscale_5: 6775930567831500834
+      fastfoods 3x upscale_6: -5750365361675157356
+      fastfoods 3x upscale_7: -1896043468317509854
+      fastfoods 3x upscale_8: -358326107056010194
+      fastfoods 3x upscale_9: 4685440165061910076
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
