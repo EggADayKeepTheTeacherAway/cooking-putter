@@ -5,8 +5,8 @@ public class SceneTransitionData : ScriptableObject
 {
     [SerializeField] private string sceneName;
 
-    public void Execute(SceneTransitionManager manager)
+    public void Execute()
     {
-        manager.StartTransition(sceneName);
+        SceneTransitionManager.Instance.StartTransition(sceneName);
     }
 }

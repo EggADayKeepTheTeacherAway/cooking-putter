@@ -1257,8 +1257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
   player: {fileID: 886000078}
-  transitionManager: {fileID: 930637226}
   action: {fileID: 11400000, guid: 222efbd38822e3c429c41913b4b2beb8, type: 2}
+  needInteract: 1
 --- !u!1 &1640114354
 GameObject:
   m_ObjectHideFlags: 0

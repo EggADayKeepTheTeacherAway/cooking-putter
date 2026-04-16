@@ -21,6 +21,8 @@ public class SceneTransitionManager : MonoBehaviour
             return;
         }
 
+        instance = this;
+
         DontDestroyOnLoad(gameObject);
     }
 
