@@ -7,6 +7,11 @@ public class Shop : MonoBehaviour
 
     public List<ShopItem> shopItems = new List<ShopItem>();
 
+    void Awake()
+    {
+        shopItems = new List<ShopItem>(Resources.LoadAll<ShopItem>("ShopItems"));
+    }
+
     public void BuyItem(ShopItem item)
     {
         if (player.money < item.price)
@@ -15,7 +20,10 @@ public class Shop : MonoBehaviour
             return;
         }
 
+        ItemData baseItem = item.itemData;
         player.money -= item.price;
-        player.AddItem(item, 1);
+        player.AddItem(baseItem, 1);
     }
+
+
 }
