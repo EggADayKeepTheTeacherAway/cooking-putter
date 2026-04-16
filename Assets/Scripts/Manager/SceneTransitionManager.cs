@@ -6,12 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : MonoBehaviour
 {
+    private static SceneTransitionManager instance;
+    public static SceneTransitionManager Instance => instance;
+
     [SerializeField] private Image transitionEffect;
     [SerializeField] private float fadeDuration = 0.5f;
     private bool isTransitioning;
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         DontDestroyOnLoad(gameObject);
     }
 
