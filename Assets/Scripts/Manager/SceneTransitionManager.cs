@@ -8,6 +8,7 @@ public class SceneTransitionManager : MonoBehaviour
 {
     [SerializeField] private Image transitionEffect;
     [SerializeField] private float fadeDuration = 0.5f;
+    private bool isTransitioning;
 
     private void Awake()
     {
@@ -16,12 +17,16 @@ public class SceneTransitionManager : MonoBehaviour
 
     public void StartTransition(string sceneName)
     {
+        if (isTransitioning) return;
+
         StartCoroutine(TransitionCo(sceneName));
     }
 
 
     private IEnumerator TransitionCo(string sceneName)
     {
+        isTransitioning = true;
+
         yield return StartCoroutine(FadeToBlackCo());
 
         AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
@@ -30,6 +35,8 @@ public class SceneTransitionManager : MonoBehaviour
             yield return null;
 
         yield return StartCoroutine(FadeToTranspalentCo());
+
+        isTransitioning = false;
     }
 
 
