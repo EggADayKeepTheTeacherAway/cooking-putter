@@ -123,7 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5593267826812436477}
-  - component: {fileID: 965897136701722600}
+  - component: {fileID: 8786348548281843128}
   - component: {fileID: 4449289451147719731}
   - component: {fileID: 516042143552406938}
   m_Layer: 7
@@ -149,7 +149,7 @@ Transform:
   - {fileID: 4204255779619698911}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &965897136701722600
+--- !u!114 &8786348548281843128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,13 +158,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3994847169410038924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed4f3ce5f4b2af479e7369434635637, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ad5c0ad8d1f97c4694754be474d9aa2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Entity
+  m_EditorClassIdentifier: Assembly-CSharp::Player
   moveSpeed: 4
-  runSpeedModifier: 1.5
   rb: {fileID: 4449289451147719731}
   anim: {fileID: 7824925530358476418}
+  runSpeedModifier: 1.5
+  money: 100
+  inventory: []
 --- !u!50 &4449289451147719731
 Rigidbody2D:
   serializedVersion: 5
