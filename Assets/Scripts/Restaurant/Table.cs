@@ -13,8 +13,12 @@ public class Table : MonoBehaviour
 
     private void Awake()
     {
-        seats = GetComponentsInChildren<Seat>().ToList();
 
+        seats = GetComponentsInChildren<Seat>().ToList();
+    }
+
+    private void Start()
+    {
         RestaurantManager.Instance.RegisterTable(this);
     }
 

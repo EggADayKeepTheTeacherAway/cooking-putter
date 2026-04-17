@@ -232,7 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Customer
   moveSpeed: 4
   rb: {fileID: 192538921}
-  anim: {fileID: 0}
+  anim: {fileID: 1251661144}
 --- !u!1001 &293007107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -729,6 +729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251661142}
   - component: {fileID: 1251661143}
+  - component: {fileID: 1251661144}
   m_Layer: 0
   m_Name: Animator
   m_TagString: Untagged
@@ -745,7 +746,7 @@ Transform:
   m_GameObject: {fileID: 1251661141}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.43, y: 2.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -810,6 +811,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &1251661144
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251661141}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a315f48cd5c8654dbc0b2a5010121a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1562369139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -895,13 +918,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3994847169410038924, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5593267826812436477, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5593267826812436477, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.21
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 5593267826812436477, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
       propertyPath: m_LocalPosition.z

@@ -23,7 +23,9 @@ public class Customer_LookingForSeatState : CustomerState
     {
         base.Update();
 
-      
+        Vector2 direction = (seat.GetSeatPos() - (Vector2)customer.transform.position).normalized;
+        rb.linearVelocity = direction * customer.moveSpeed;
+
     }
 
     private void ChooseTable()
