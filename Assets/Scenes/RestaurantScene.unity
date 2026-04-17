@@ -128,8 +128,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 192538920}
+  - component: {fileID: 192538923}
+  - component: {fileID: 192538922}
+  - component: {fileID: 192538921}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Customer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,6 +154,85 @@ Transform:
   - {fileID: 1251661142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &192538921
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192538919}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!70 &192538922
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192538919}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
+--- !u!114 &192538923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192538919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4c695e256617a4693cfc6164c9f145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Customer
+  moveSpeed: 4
+  rb: {fileID: 192538921}
+  anim: {fileID: 0}
 --- !u!1001 &293007107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -366,6 +448,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 791bfcd7ba5f4b84c8e06f9d1bb512ea, type: 3}
+--- !u!1 &692484789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692484791}
+  - component: {fileID: 692484790}
+  m_Layer: 0
+  m_Name: RestaurantManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &692484790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692484789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86499b72b5f175408f43ed3f9fc40f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RestaurantManager
+--- !u!4 &692484791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692484789}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.70403, y: -0.66056, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &909528478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -903,6 +1029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1723359294}
+  - component: {fileID: 1723359295}
   m_Layer: 0
   m_Name: NpcSpawner
   m_TagString: Untagged
@@ -925,6 +1052,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723359295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723359292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0956a8c3c8495294c92f3a491795a61c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCSpawner
 --- !u!1 &1940252354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,18 +1214,6 @@ PrefabInstance:
       value: Table-2-Seats
       objectReference: {fileID: 0}
     - target: {fileID: 4723626924919214495, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4723626924919214495, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4723626924919214495, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4723626924919214495, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.81
       objectReference: {fileID: 0}
@@ -1126,10 +1253,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8825255755506769649, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1146,18 +1269,6 @@ PrefabInstance:
     - target: {fileID: 5502073311274703899, guid: 791bfcd7ba5f4b84c8e06f9d1bb512ea, type: 3}
       propertyPath: m_Name
       value: 'Table-4-Seats '
-      objectReference: {fileID: 0}
-    - target: {fileID: 6833903789164215342, guid: 791bfcd7ba5f4b84c8e06f9d1bb512ea, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 6833903789164215342, guid: 791bfcd7ba5f4b84c8e06f9d1bb512ea, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 6833903789164215342, guid: 791bfcd7ba5f4b84c8e06f9d1bb512ea, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 6833903789164215342, guid: 791bfcd7ba5f4b84c8e06f9d1bb512ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1221,3 +1332,4 @@ SceneRoots:
   - {fileID: 192538920}
   - {fileID: 949013464}
   - {fileID: 1616034430}
+  - {fileID: 692484791}

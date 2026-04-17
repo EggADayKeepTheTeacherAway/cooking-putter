@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6945078017388349813}
   - component: {fileID: 2219553713476004251}
+  - component: {fileID: 5732533122549774103}
   m_Layer: 0
   m_Name: Seat (1)
   m_TagString: Untagged
@@ -91,6 +92,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &5732533122549774103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370148102269073477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e9371a8d62189489987115dcfd94c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seat
 --- !u!1 &1381024210303492431
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8396401945464400224}
   - component: {fileID: 1600504584331770144}
+  - component: {fileID: 7035165962726307405}
   m_Layer: 0
   m_Name: Seat (2)
   m_TagString: Untagged
@@ -182,6 +196,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &7035165962726307405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381024210303492431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e9371a8d62189489987115dcfd94c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seat
 --- !u!1 &4891245587879329464
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6833903789164215342}
+  - component: {fileID: 5916761128230929440}
   m_Layer: 0
   m_Name: 'Table-4-Seats '
   m_TagString: Untagged
@@ -299,7 +326,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.05, y: 0.0751, z: 0}
-  m_LocalScale: {x: 0.72, y: 0.72, z: 0.72}
+  m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6945078017388349813}
@@ -309,6 +336,18 @@ Transform:
   - {fileID: 6327761780390790963}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5916761128230929440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5502073311274703899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e95103e98d8a24a9935a04f428561b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Table
 --- !u!1 &5629673057193819036
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5808925250711286327}
   - component: {fileID: 5041120203862112292}
+  - component: {fileID: 8029243888888925683}
   m_Layer: 0
   m_Name: Seat (3)
   m_TagString: Untagged
@@ -400,6 +440,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8029243888888925683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5629673057193819036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e9371a8d62189489987115dcfd94c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seat
 --- !u!1 &8542611220478908296
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924370233639933986}
   - component: {fileID: 4430662267357469419}
+  - component: {fileID: 6524939503005905642}
   m_Layer: 0
   m_Name: Seat (4)
   m_TagString: Untagged
@@ -491,3 +544,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &6524939503005905642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8542611220478908296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e9371a8d62189489987115dcfd94c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seat

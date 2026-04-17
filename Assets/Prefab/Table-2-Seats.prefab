@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4817276637786866293}
   - component: {fileID: 5648583318722762730}
+  - component: {fileID: 668298604717561136}
   m_Layer: 0
   m_Name: Seat (1)
   m_TagString: Untagged
@@ -91,6 +92,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &668298604717561136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945724746725372414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e9371a8d62189489987115dcfd94c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seat
 --- !u!1 &1540467949480379451
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1732755558210013768}
   - component: {fileID: 8825255755506769649}
+  - component: {fileID: 5620652390595304963}
   m_Layer: 0
   m_Name: Seat
   m_TagString: Untagged
@@ -170,7 +184,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1168732703172291444, guid: 68128d35ed5048a409a41248686a907d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -182,6 +196,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &5620652390595304963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540467949480379451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e9371a8d62189489987115dcfd94c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seat
 --- !u!1 &2749530505920752822
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4723626924919214495}
+  - component: {fileID: 4997744040155622372}
   m_Layer: 0
   m_Name: Table-2-Seats
   m_TagString: Untagged
@@ -299,7 +326,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.54, y: 0.0751, z: 0}
-  m_LocalScale: {x: 0.82, y: 0.82, z: 0.82}
+  m_LocalScale: {x: 0.76, y: 0.76, z: 0.76}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1732755558210013768}
@@ -307,3 +334,15 @@ Transform:
   - {fileID: 7605474345748636478}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4997744040155622372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3219750983493531600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e95103e98d8a24a9935a04f428561b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Table
