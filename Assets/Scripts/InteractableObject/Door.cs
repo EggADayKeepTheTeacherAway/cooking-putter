@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Entity player;
+    [SerializeField] private Player player;
     [SerializeField] private SceneTransitionData action;
     [SerializeField] private bool needInteract = true;
 
