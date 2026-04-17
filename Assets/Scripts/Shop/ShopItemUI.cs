@@ -10,6 +10,8 @@ public class ShopItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public Button button;
     public Image icon;
 
+    public GameObject coinPrefab;
+
     private bool isHovering = false;
     private Vector2 startPos;
 
@@ -19,7 +21,21 @@ public class ShopItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         itemName.text = item.itemData.itemName;
         priceText.text = item.price.ToString();
 
-        button.onClick.AddListener(() => shop.BuyItem(item));
+        button.onClick.AddListener(() => 
+        {
+            shop.BuyItem(item);
+            SpawnCoin();
+        });
+    }   
+
+    void SpawnCoin() 
+    {
+    Canvas canvas = GetComponentInParent<Canvas>();
+    // Get the ROOT canvas in case this is a nested canvas
+
+    GameObject coin = Instantiate(coinPrefab, canvas.transform);
+    coin.transform.SetAsLastSibling(); // Now truly on top of everything
+    coin.transform.position = icon.transform.position;
     }
 
     void Start()

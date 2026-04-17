@@ -14,6 +14,8 @@ public class Shop : MonoBehaviour
 
     public void BuyItem(ShopItem item)
     {
+        /*Checks if player has enough money, then adds item to inventory and deducts money.
+        
         if (player.money < item.price)
         {
             Debug.Log("Not enough money!");
@@ -23,6 +25,8 @@ public class Shop : MonoBehaviour
         ItemData baseItem = item.itemData;
         player.money -= item.price;
         player.AddItem(baseItem, 1);
+        */
+        return;
     }
 
 
