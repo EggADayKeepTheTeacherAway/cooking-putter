@@ -18,8 +18,12 @@ public class RestaurantManager : MonoBehaviour
         }
 
         instance = this;
+
+        tables = new List<Table>();
     }
 
     public void RegisterTable(Table table) => tables.Add(table);
+
+    public List<Table> GetAvailableTables() => tables.FindAll(table => !table.isTaken);
 
 }
