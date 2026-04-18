@@ -26,11 +26,15 @@ public class CustomerPool : MonoBehaviour
 
         customers.RemoveAt(customers.Count - 1);
 
+        customer.gameObject.SetActive(true);
+
         return customer;
     }
 
     private void ReturnCustomer(Customer c)
     {
+        c.gameObject.SetActive(false);
+
         customers.Add(c);
     }
 }
