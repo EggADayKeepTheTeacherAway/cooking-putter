@@ -22,6 +22,11 @@ public class CustomerPool : MonoBehaviour
 
     public Customer GetCustomer()
     {
+        if (customers.Count <= 0)
+        {
+            Debug.Log("Oi Oi Oi, not enough customer in the pool dude!!!");
+        }
+
         Customer customer = customers[customers.Count - 1];
 
         customers.RemoveAt(customers.Count - 1);
