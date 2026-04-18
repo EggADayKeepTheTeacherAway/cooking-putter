@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class ShopItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -15,18 +16,34 @@ public class ShopItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     private bool isHovering = false;
     private Vector2 startPos;
 
+    Transform noMoney;   // No money text
+
     public void Setup(ShopItem item, Shop shop)
     {
         icon.sprite = item.itemData.itemIcon;
         itemName.text = item.itemData.itemName;
         priceText.text = item.price.ToString();
 
+        noMoney = FindFirstObjectByType<NoMoneyText>().transform;
+
         button.onClick.AddListener(() => 
         {
-            shop.BuyItem(item);
-            SpawnCoin();
+            BuyItemLogic(item, shop);
         });
     }   
+
+    void BuyItemLogic(ShopItem item, Shop shop)
+    {
+        bool success = shop.BuyItem(item);
+        if (success)
+        {
+            SpawnCoin();
+        }   
+        else
+        {
+            noMoney.GetComponent<NoMoneyText>().ShowNoMoney();
+        }
+    }
 
     void SpawnCoin() 
     {
@@ -35,7 +52,7 @@ public class ShopItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     GameObject coin = Instantiate(coinPrefab, canvas.transform);
     coin.transform.SetAsLastSibling(); // Now truly on top of everything
-    coin.transform.position = icon.transform.position;
+    coin.transform.position = icon.transform.position + new Vector3(50f, 30f, 0f);
     }
 
     void Start()

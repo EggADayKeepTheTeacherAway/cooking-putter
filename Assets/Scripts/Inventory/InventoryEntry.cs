@@ -1,7 +1,6 @@
-using UnityEngine;
-
-public class InventoryEntry : ScriptableObject
+[System.Serializable]
+public class InventoryEntry
 {
     public ItemData item;
-    public float quantity;
+    public int quantity;
 }

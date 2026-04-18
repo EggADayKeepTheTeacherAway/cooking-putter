@@ -7,26 +7,34 @@ public class Shop : MonoBehaviour
 
     public List<ShopItem> shopItems = new List<ShopItem>();
 
+    public ShopInventory shopInventory;
+
     void Awake()
     {
+        player = FindFirstObjectByType<Player>();
         shopItems = new List<ShopItem>(Resources.LoadAll<ShopItem>("ShopItems"));
     }
 
-    public void BuyItem(ShopItem item)
+    public bool BuyItem(ShopItem item)
     {
-        /*Checks if player has enough money, then adds item to inventory and deducts money.
+        // Checks if player has enough money, then adds item to inventory and deducts money.
         
         if (player.money < item.price)
         {
             Debug.Log("Not enough money!");
-            return;
+            return false;
         }
 
         ItemData baseItem = item.itemData;
         player.money -= item.price;
         player.AddItem(baseItem, 1);
-        */
-        return;
+
+        // After buying successfully
+
+        shopInventory.GenerateInventoryUI();
+
+
+        return true;
     }
 
 

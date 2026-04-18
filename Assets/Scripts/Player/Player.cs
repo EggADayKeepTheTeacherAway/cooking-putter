@@ -14,7 +14,7 @@ public class Player : Entity
 
     public PlayerInputSet input { get; private set; }
 
-    public int money = 100;
+    public int money = 1000;
 
     public List<InventoryEntry> inventory = new List<InventoryEntry>();
 

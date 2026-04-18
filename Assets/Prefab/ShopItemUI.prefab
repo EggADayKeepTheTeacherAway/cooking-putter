@@ -394,7 +394,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 8265911604115492676}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -415,6 +415,7 @@ MonoBehaviour:
   button: {fileID: 5459715587987082053}
   icon: {fileID: 868403298913772997}
   coinPrefab: {fileID: 1420309206557148603, guid: f1368113510685a42ad691a334fb7c2e, type: 3}
+  noMoneyText: {fileID: 0}
 --- !u!114 &8265911604115492676
 MonoBehaviour:
   m_ObjectHideFlags: 0
