@@ -6,7 +6,7 @@ using UnityEngine;
 public class Table : MonoBehaviour
 {
     public List<Seat> seats { get; private set; }
-
+    public int seatAmount { get; private set; }
 
     public bool isTaken { get; private set; } = false;
 
@@ -15,6 +15,7 @@ public class Table : MonoBehaviour
     {
 
         seats = GetComponentsInChildren<Seat>().ToList();
+        seatAmount = seats.Count();
     }
 
     private void Start()

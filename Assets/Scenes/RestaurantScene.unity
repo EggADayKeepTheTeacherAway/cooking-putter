@@ -363,6 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86499b72b5f175408f43ed3f9fc40f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RestaurantManager
+  selfishRate: 0.2
   spawner: {fileID: 1723359295}
   spawnDelay:
     minSecond: 15
