@@ -233,6 +233,7 @@ MonoBehaviour:
   moveSpeed: 4
   rb: {fileID: 192538921}
   anim: {fileID: 1251661144}
+  sr: {fileID: 1251661143}
 --- !u!1001 &293007107
 PrefabInstance:
   m_ObjectHideFlags: 0

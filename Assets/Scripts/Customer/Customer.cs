@@ -4,6 +4,7 @@ public class Customer : Entity
 {
     public Entity_IdleState idleState;
     public Customer_LookingForSeatState findSeatState;
+    public SpriteRenderer sr;
  
     protected override void Awake()
     {

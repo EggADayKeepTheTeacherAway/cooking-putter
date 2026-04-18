@@ -9,6 +9,9 @@ public class RestaurantManager : MonoBehaviour
 
     private List<Table> tables;
 
+    private List<Customer[]> customerGroups;
+
+
     private void Awake()
     {
         if (instance != null && instance != this)

@@ -20,7 +20,7 @@ public class CustomerPool : MonoBehaviour
         }
     }
 
-    private Customer GetCustomer()
+    public Customer GetCustomer()
     {
         Customer customer = customers[customers.Count - 1];
 
@@ -31,7 +31,7 @@ public class CustomerPool : MonoBehaviour
         return customer;
     }
 
-    private void ReturnCustomer(Customer c)
+    public void ReturnCustomer(Customer c)
     {
         c.gameObject.SetActive(false);
 
