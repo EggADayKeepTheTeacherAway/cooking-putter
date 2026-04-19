@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Table : MonoBehaviour
 {
+    [SerializeField] private GameObject approachPoint;
+
+    public Vector2 ApproachPoint => approachPoint.transform.position;
     public List<Seat> seats { get; private set; }
     public int seatAmount { get; private set; }
 

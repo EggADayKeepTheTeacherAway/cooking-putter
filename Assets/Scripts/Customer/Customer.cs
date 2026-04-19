@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class Customer : Entity
 {
+    [SerializeField] private SpriteRenderer sr;
+    private CustomerGroup group;
+    private Vector2 moveTarget;
+
     public Entity_IdleState idleState;
     public Customer_LookingForSeatState findSeatState;
     
-    [SerializeField] private SpriteRenderer sr;
-    private CustomerGroup group;
 
 
     protected override void Awake()
@@ -23,6 +25,14 @@ public class Customer : Entity
         stateMachine.Initialize(findSeatState);
     }
 
+    private void FixedUpdate()
+    {
+        Vector2 current = rb.position;
+
+        Vector2 newPos = Vector2.MoveTowards(current, moveTarget, moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(newPos);
+    }
+
     public void SetGroup(CustomerGroup group)
     {
         this.group = group;
@@ -32,6 +42,10 @@ public class Customer : Entity
     {
         return group.table;
     }
+
+    public void SetMoveTarget(Vector2 newTarget) => moveTarget = newTarget;
+    public Vector2 GetMoveTarget() => moveTarget;
+
 
     public void ResetSortingOrder() => sr.sortingOrder = 0;
   
