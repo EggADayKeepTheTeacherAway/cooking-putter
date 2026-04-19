@@ -40,6 +40,8 @@ public class CustomerPool : MonoBehaviour
     {
         c.gameObject.SetActive(false);
 
+        c.ResetSortingOrder();
+
         customers.Add(c);
     }
 }

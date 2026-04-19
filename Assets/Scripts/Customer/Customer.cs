@@ -5,7 +5,7 @@ public class Customer : Entity
     public Entity_IdleState idleState;
     public Customer_LookingForSeatState findSeatState;
     
-    public SpriteRenderer sr;
+    [SerializeField] private SpriteRenderer sr;
     private CustomerGroup group;
 
 
@@ -32,4 +32,11 @@ public class Customer : Entity
     {
         return group.table;
     }
+
+    public void ResetSortingOrder() => sr.sortingOrder = 0;
+  
+    public void TopSortingOrder() => sr.sortingOrder = 1;
+
+
+    public void BottomSortingOrder() => sr.sortingOrder = -1;
 }

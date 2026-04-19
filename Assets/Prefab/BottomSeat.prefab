@@ -104,3 +104,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e9371a8d62189489987115dcfd94c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Seat
+  seatType: 1

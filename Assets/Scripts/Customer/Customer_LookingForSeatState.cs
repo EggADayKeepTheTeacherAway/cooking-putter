@@ -19,6 +19,15 @@ public class Customer_LookingForSeatState : CustomerState
         }
 
         ChooseSeat();
+
+        if (seat.seatType == SeatTypes.Bottom)
+        {
+            customer.TopSortingOrder();
+        }
+        else if (seat.seatType == SeatTypes.Top)
+        {
+            customer.BottomSortingOrder();
+        }
     }
 
     public override void Update()
@@ -28,6 +37,11 @@ public class Customer_LookingForSeatState : CustomerState
         Vector2 direction = (seat.GetSeatPos() - (Vector2)customer.transform.position).normalized;
         rb.linearVelocity = direction * customer.moveSpeed;
 
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
     }
 
     private void ChooseSeat() => seat = customer.GetTable().GetRandomSeat();
