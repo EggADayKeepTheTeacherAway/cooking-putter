@@ -13,6 +13,11 @@ public class Customer_LookingForSeatState : CustomerState
     {
         base.Enter();
 
+        if (customer.GetTable() == null)
+        {
+            stateMachine.ChangeState(customer.idleState);
+        }
+
         ChooseSeat();
     }
 

@@ -399,7 +399,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -2164,13 +2164,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: midcentury_modern_furnitureset_78
+      name: table_top
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 129
         width: 33
-        height: 44
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3024,7 +3024,6 @@ TextureImporter:
       midcentury_modern_furnitureset_105: 4197014827738316155
       midcentury_modern_furnitureset_106: -2600576161554679712
       midcentury_modern_furnitureset_107: -7590595699671340510
-      midcentury_modern_furnitureset_108: -4543732817758975592
       midcentury_modern_furnitureset_109: 3569531527942714685
       midcentury_modern_furnitureset_11: 7771429456970735958
       midcentury_modern_furnitureset_110: 3264970663494353447
@@ -3106,7 +3105,6 @@ TextureImporter:
       midcentury_modern_furnitureset_75: -5955161794593212297
       midcentury_modern_furnitureset_76: 6502513751525355056
       midcentury_modern_furnitureset_77: -7463044774733905001
-      midcentury_modern_furnitureset_78: 8539616988422254501
       midcentury_modern_furnitureset_79: -4421219072351518658
       midcentury_modern_furnitureset_8: -2301738383737941735
       midcentury_modern_furnitureset_80: 2673204624954638492
@@ -3130,6 +3128,8 @@ TextureImporter:
       midcentury_modern_furnitureset_97: -2150093667409524708
       midcentury_modern_furnitureset_98: -1689223053070626243
       midcentury_modern_furnitureset_99: 3998938132889506001
+      table_bottom: -4543732817758975592
+      table_top: 8539616988422254501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
