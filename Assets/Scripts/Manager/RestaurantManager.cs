@@ -59,11 +59,11 @@ public class RestaurantManager : MonoBehaviour
 
             Table t = AssignedTable(group.Count);
 
-            if (t == null) return false;
-
-            group.AssignedTable(t);
-
-            t.Take();
+            if (t != null)
+            {
+                group.AssignedTable(t);
+                t.Take();
+            }
 
             foreach (var c in customers)
             {

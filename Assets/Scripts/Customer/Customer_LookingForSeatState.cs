@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Customer_LookingForSeatState : CustomerState
 {
     private Seat seat;
@@ -13,53 +14,92 @@ public class Customer_LookingForSeatState : CustomerState
     {
         base.Enter();
 
+        customer.OnReachedTarget += OnMovementFinished;
+
         Table table = customer.GetTable();
 
         if (table == null)
         {
             stateMachine.ChangeState(customer.idleState);
+            return;
         }
 
         ChooseSeat();
 
-        if (table.seatAmount <= 2)
-        {
-            customer.SetMoveTarget(RestaurantManager.Instance.RowEntryUpper);
-        }
+        List<Vector2> path = BuildPath(table, seat);
 
-        else
-        {
-            customer.SetMoveTarget(RestaurantManager.Instance.RowEntryBottom);
-        }
+        customer.SetPath(path);
 
-
-        if (seat.seatType == SeatType.Bottom)
-        {
-            customer.TopSortingOrder();
-        }
-        else if (seat.seatType == SeatType.Top)
-        {
-            customer.BottomSortingOrder();
-        }
     }
 
     public override void Update()
     {
         base.Update();
-
-        if (Vector2.Distance(customer.transform.position, customer.GetMoveTarget()) <= 0.02f)
-        {
-            customer.SetMoveTarget(customer.GetTable().ApproachPoint);
-            //customer.SetMoveTarget(seat.GetSeatPos());
-        }
-
+        
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        customer.OnReachedTarget += OnMovementFinished;
+    }
+
+    private void OnMovementFinished()
+    {
+        if (seat.seatType == SeatType.Bottom)
+        {
+            customer.SetTopSortingOrder();
+        }
+        else if (seat.seatType == SeatType.Top)
+        {
+            customer.SetBottomSortingOrder();
+        }
+
+        stateMachine.ChangeState(customer.waitFoodState);
     }
 
     private void ChooseSeat() => seat = customer.GetTable().GetRandomSeat();
 
+    private List<Vector2> BuildPath(Table table, Seat seat)
+    {
+        float seatOffsetX = 1f;
+        float bottomSeatOffset = 0.7f;
+
+        List<Vector2> path = new List<Vector2>();
+
+        Vector2 entry = customer.GetGroup().GetEntryPoint();
+        Vector2 tablePos = table.transform.position;
+        Vector2 seatPos = seat.GetSeatPos();
+
+        path.Add(new Vector2(customer.transform.position.x, entry.y));
+
+        path.Add(entry);
+
+        // CUSTOMER GO TO BOTTOM RIGHT POINT OF THE TABLE
+        path.Add(table.ApproachPoint);
+
+
+        if (seat.approachSide == ApproachSide.Left) seatOffsetX = -seatOffsetX;
+
+        // Walking to the side of seat
+        path.Add(new Vector2(seatPos.x + seatOffsetX, table.ApproachPoint.y));
+
+
+        if (seat.seatType == SeatType.Top) // if seat top go to the top 
+        {
+            path.Add(new Vector2(seatPos.x + seatOffsetX, seatPos.y));
+        }
+
+        if (seat.seatType == SeatType.Bottom)
+        {
+            path.Add(new Vector2(seatPos.x, seatPos.y + bottomSeatOffset));
+        }
+
+        else if (seat.seatType == SeatType.Top)
+        {
+            path.Add(seatPos);
+        }
+        return path;
+    }
 }

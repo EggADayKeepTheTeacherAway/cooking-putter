@@ -1,13 +1,18 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Customer : Entity
 {
     [SerializeField] private SpriteRenderer sr;
     private CustomerGroup group;
-    private Vector2 moveTarget;
+    private Queue<Vector2> moveQueue = new Queue<Vector2>();
+    private Vector2 currentTarget;
+    private bool hasTarget;
+    public System.Action OnReachedTarget;
 
     public Entity_IdleState idleState;
     public Customer_LookingForSeatState findSeatState;
+    public Customer_WaitForFoodState waitFoodState;
     
 
 
@@ -17,6 +22,7 @@ public class Customer : Entity
 
         idleState = new Entity_IdleState(this, stateMachine, "idle");
         findSeatState = new Customer_LookingForSeatState(this, stateMachine, "walk");
+        waitFoodState = new Customer_WaitForFoodState(this, stateMachine, "idle");
 
     }
 
@@ -27,10 +33,20 @@ public class Customer : Entity
 
     private void FixedUpdate()
     {
-        Vector2 current = rb.position;
+        if (!hasTarget) return;
 
-        Vector2 newPos = Vector2.MoveTowards(current, moveTarget, moveSpeed * Time.fixedDeltaTime);
+        Vector2 newPos = Vector2.MoveTowards(
+            rb.position,
+            currentTarget,
+            moveSpeed * Time.fixedDeltaTime
+        );
+
         rb.MovePosition(newPos);
+
+        if (Vector2.Distance(rb.position, currentTarget) < 0.05f)
+        {
+            SetNextTarget();
+        }
     }
 
     public void SetGroup(CustomerGroup group)
@@ -38,19 +54,38 @@ public class Customer : Entity
         this.group = group;
     }
 
-    public Table GetTable()
+    public CustomerGroup GetGroup() => group;
+
+    public Table GetTable() => group.table;
+
+    public void SetPath(List<Vector2> points)
     {
-        return group.table;
+        moveQueue.Clear();
+
+        foreach (var p in points)
+            moveQueue.Enqueue(p);
+
+        SetNextTarget();
     }
 
-    public void SetMoveTarget(Vector2 newTarget) => moveTarget = newTarget;
-    public Vector2 GetMoveTarget() => moveTarget;
+    private void SetNextTarget()
+    {
+        if (moveQueue.Count == 0)
+        {
+            hasTarget = false;
+            OnReachedTarget?.Invoke();
+            return;
+        }
+
+        currentTarget = moveQueue.Dequeue();
+        hasTarget = true;
+    }
 
 
-    public void ResetSortingOrder() => sr.sortingOrder = 0;
+    public void ResetSortingOrder() => sr.sortingOrder = 5;
   
-    public void TopSortingOrder() => sr.sortingOrder = 1;
+    public void SetTopSortingOrder() => sr.sortingOrder = 1;
 
 
-    public void BottomSortingOrder() => sr.sortingOrder = -1;
+    public void SetBottomSortingOrder() => sr.sortingOrder = -1;
 }
