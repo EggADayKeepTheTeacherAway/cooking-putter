@@ -10,12 +10,15 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] private Vector2 customerSpawnGap = new Vector2(1, 2);
     [SerializeField] private int maxPerRow = 2;
 
+    private float groupOffset = 0.5f;
 
     public List<Customer> SpawnCustomer()
     {
         int totalCustomerInGroup = Random.Range(1, maximumCustomerInGroup + 1);
 
         List<Customer> customers = new List<Customer>();
+
+        if (totalCustomerInGroup == 1) groupOffset = 0;
 
         for (int i = 0; i < totalCustomerInGroup; i++)
         {
@@ -24,7 +27,7 @@ public class CustomerSpawner : MonoBehaviour
             int column = i % maxPerRow; 
             int row = i / maxPerRow;    
 
-            Vector3 offset = new Vector3(column * customerSpawnGap.x, -row * customerSpawnGap.y, 0);
+            Vector3 offset = new Vector3(column * customerSpawnGap.x - groupOffset, -row * customerSpawnGap.y, 0);
 
             c.transform.position = transform.position + offset;
 

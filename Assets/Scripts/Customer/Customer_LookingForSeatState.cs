@@ -74,11 +74,6 @@ public class Customer_LookingForSeatState : CustomerState
 
         path.Add(new Vector2(customer.transform.position.x, entry.y));
 
-        path.Add(entry);
-
-        // CUSTOMER GO TO BOTTOM RIGHT POINT OF THE TABLE
-        path.Add(table.ApproachPoint);
-
 
         if (seat.approachSide == ApproachSide.Left) seatOffsetX = -seatOffsetX;
 
