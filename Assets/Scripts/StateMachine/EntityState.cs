@@ -31,10 +31,17 @@ public abstract class EntityState
     public virtual void Update()
     {
         stateTimer -= Time.deltaTime;
+
+        UpdateAnimationParameters();
     }
 
     public virtual void Exit()
     {
         anim.SetBool(animParam, false);
+    }
+
+    public virtual void UpdateAnimationParameters()
+    {
+
     }
 }
