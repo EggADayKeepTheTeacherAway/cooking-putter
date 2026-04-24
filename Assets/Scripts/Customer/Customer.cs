@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Customer : Entity
 {
-    [SerializeField] private SpriteRenderer sr;
     private CustomerGroup group;
     private Queue<Vector2> moveQueue = new Queue<Vector2>();
     private Vector2 currentTarget;

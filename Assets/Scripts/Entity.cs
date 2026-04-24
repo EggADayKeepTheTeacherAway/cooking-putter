@@ -7,6 +7,7 @@ public class Entity : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator anim;
+    public SpriteRenderer sr;
 
     public StateMachine stateMachine { get; private set; }   
 
