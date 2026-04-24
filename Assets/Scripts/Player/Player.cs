@@ -9,7 +9,7 @@ public class Player : Entity
 
     public Player_MoveState moveState { get; private set; }
 
-    private Vector2 currentVelocity;
+    public Vector2 currentVelocity { get; private set; }
     public Vector2 moveInput { get; private set; }
 
     public PlayerInputSet input { get; private set; }
@@ -18,9 +18,12 @@ public class Player : Entity
 
     public List<InventoryEntry> inventory = new List<InventoryEntry>();
 
+
     protected override void Awake()
     {
         base.Awake();
+
+        SetFacingDirection(FacingDirection.Down);
 
         input = new PlayerInputSet();
 
@@ -34,6 +37,8 @@ public class Player : Entity
     protected override void Update()
     {
         base.Update();
+
+        UpdateFacingDirection(moveInput);
     }
     
     private void FixedUpdate()
@@ -54,6 +59,7 @@ public class Player : Entity
     {
         input.Disable();
     }
+
 
     public void AddItem(ItemData item, int amount = 1)
     {

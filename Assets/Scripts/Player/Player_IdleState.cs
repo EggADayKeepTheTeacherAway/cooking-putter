@@ -1,5 +1,5 @@
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
+
 
 public class Player_IdleState : PlayerState
 {
