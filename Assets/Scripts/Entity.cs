@@ -13,7 +13,7 @@ public class Entity : MonoBehaviour
     public StateMachine stateMachine { get; private set; }
 
     public enum FacingDirection { Up, Down, Left, Right }
-    public FacingDirection facingDirection;
+    public FacingDirection facingDirection { get; private set; }
 
 
     protected virtual void Awake()
@@ -38,4 +38,6 @@ public class Entity : MonoBehaviour
         sr.flipX = (facingDirection == FacingDirection.Right);
 
     }
+
+    public void SetFacingDirection(FacingDirection newDir) => facingDirection = newDir;
 }

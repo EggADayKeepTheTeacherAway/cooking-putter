@@ -9,12 +9,6 @@ public class RestaurantManager : MonoBehaviour
     [SerializeField] private CustomerSpawner spawner;
     [SerializeField] private RandomTimer spawnDelay;
 
-    [SerializeField] private Transform rowEntryUpper;
-    [SerializeField] private Transform rowEntryBottom;
-
-    public Vector2 RowEntryUpper => rowEntryUpper.position;
-    public Vector2 RowEntryBottom => rowEntryBottom.position;
-
     private float spawnTimer;
 
     private static RestaurantManager instance;

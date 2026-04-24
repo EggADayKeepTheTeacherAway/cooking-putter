@@ -16,19 +16,4 @@ public class CustomerGroup
 
     public void AssignedTable(Table table) => this.table = table;
 
-    public Vector2 GetEntryPoint()
-    {
-        float getUpperDistance = Mathf.Abs(RestaurantManager.Instance.RowEntryUpper.y - table.transform.position.y);
-        float getBottomDistance = Mathf.Abs(RestaurantManager.Instance.RowEntryBottom.y - table.transform.position.y);
-
-        if (getUpperDistance < getBottomDistance)
-        {
-            return RestaurantManager.Instance.RowEntryUpper;
-        }
-
-        else
-        {
-            return RestaurantManager.Instance.RowEntryBottom;
-        }
-    }
 }

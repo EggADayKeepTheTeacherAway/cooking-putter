@@ -90,6 +90,10 @@ public class Customer : Entity
   
     public void SetTopSortingOrder() => sr.sortingOrder = 1;
 
-
     public void SetBottomSortingOrder() => sr.sortingOrder = -1;
+
+    public void SetCustomerSkin(AnimatorOverrideController controller)
+    {
+        anim.runtimeAnimatorController = controller;
+    }
 }

@@ -49,12 +49,12 @@ public class Customer_LookingForSeatState : CustomerState
     {
         if (seat.seatType == SeatType.Bottom)
         {
-            customer.facingDirection = Entity.FacingDirection.Up;
+            customer.SetFacingDirection(Entity.FacingDirection.Up);
             customer.SetTopSortingOrder();
         }
         else if (seat.seatType == SeatType.Top)
         {
-            customer.facingDirection = Entity.FacingDirection.Down;
+            customer.SetFacingDirection(Entity.FacingDirection.Down);
             customer.SetBottomSortingOrder();
         }
 
@@ -70,11 +70,9 @@ public class Customer_LookingForSeatState : CustomerState
 
         List<Vector2> path = new List<Vector2>();
 
-        Vector2 entry = customer.GetGroup().GetEntryPoint();
-        Vector2 tablePos = table.transform.position;
         Vector2 seatPos = seat.GetSeatPos();
 
-        path.Add(new Vector2(customer.transform.position.x, entry.y));
+        path.Add(new Vector2(customer.transform.position.x, table.ApproachPoint.y));
 
 
         if (seat.approachSide == ApproachSide.Left) seatOffsetX = -seatOffsetX;

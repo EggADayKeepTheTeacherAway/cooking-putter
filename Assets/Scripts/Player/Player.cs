@@ -23,7 +23,7 @@ public class Player : Entity
     {
         base.Awake();
 
-        facingDirection = FacingDirection.Down;
+        SetFacingDirection(FacingDirection.Down);
 
         input = new PlayerInputSet();
 

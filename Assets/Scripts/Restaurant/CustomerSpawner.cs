@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CustomerSpawner : MonoBehaviour
 {
+    [SerializeField] private AnimatorOverrideController[] npcSkins;
     [SerializeField] private Sprite[] allCustomerSprites;
     [SerializeField] private int maximumCustomerInGroup = 4;
     [SerializeField] private CustomerPool customerPool;
@@ -30,6 +31,9 @@ public class CustomerSpawner : MonoBehaviour
             Vector3 offset = new Vector3(column * customerSpawnGap.x - groupOffset, -row * customerSpawnGap.y, 0);
 
             c.transform.position = transform.position + offset;
+
+            if (npcSkins.Length > 0)
+                c.SetCustomerSkin(npcSkins[Random.Range(0, npcSkins.Length)]);
 
             customers.Add(c);
         }
