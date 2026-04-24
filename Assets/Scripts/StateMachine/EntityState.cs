@@ -5,6 +5,8 @@ public abstract class EntityState
 {
     public StateMachine stateMachine { get; private set; }
 
+    private Entity entity;
+
     protected float stateTimer;
     protected Animator anim;
 
@@ -18,6 +20,7 @@ public abstract class EntityState
         this.stateMachine = stateMachine;
         this.animParam = animParam;
 
+        this.entity = entity;
         this.anim = entity.anim;
         this.rb = entity.rb;
 
@@ -43,5 +46,9 @@ public abstract class EntityState
     public virtual void UpdateAnimationParameters()
     {
 
+        anim.SetFloat("idleX", entity.facingDirection == Entity.FacingDirection.Right ? 1 :
+                        entity.facingDirection == Entity.FacingDirection.Left ? -1 : 0);
+        anim.SetFloat("idleY", entity.facingDirection == Entity.FacingDirection.Up ? 1 :
+                                entity.facingDirection == Entity.FacingDirection.Down ? -1 : 0);
     }
 }

@@ -12,10 +12,6 @@ public class Player : Entity
     public Vector2 currentVelocity { get; private set; }
     public Vector2 moveInput { get; private set; }
 
-    public enum FacingDirection { Up, Down, Left, Right }
-    public FacingDirection facingDirection { get; private set; } = FacingDirection.Down;
-
-
     public PlayerInputSet input { get; private set; }
 
     public int money = 100;
@@ -41,8 +37,6 @@ public class Player : Entity
         base.Update();
 
         UpdateFacingDirection(moveInput);
-
-        Debug.Log(facingDirection);
     }
     
     private void FixedUpdate()
@@ -64,18 +58,6 @@ public class Player : Entity
         input.Disable();
     }
 
-    public void UpdateFacingDirection(Vector2 input)
-    {
-        if (input == Vector2.zero) return;
-
-        if (Mathf.Abs(input.x) >= Mathf.Abs(input.y))
-            facingDirection = input.x > 0 ? FacingDirection.Right : FacingDirection.Left;
-        else
-            facingDirection = input.y > 0 ? FacingDirection.Up : FacingDirection.Down;
-
-        sr.flipX = (facingDirection == FacingDirection.Right);
-
-    }
 
     public void AddItem(ItemData item, int amount = 1)
     {

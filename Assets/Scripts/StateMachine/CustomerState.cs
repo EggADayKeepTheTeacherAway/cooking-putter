@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Player;
 
 public class CustomerState : EntityState
 {
@@ -8,4 +9,9 @@ public class CustomerState : EntityState
         this.customer = customer;
     }
 
+    public override void UpdateAnimationParameters()
+    {
+        anim.SetFloat("xSpeed", rb.linearVelocity.x);
+        anim.SetFloat("ySpeed", rb.linearVelocity.y);
+    }
 }

@@ -34,11 +34,16 @@ public class Customer : Entity
     {
         if (!hasTarget) return;
 
+        Vector2 dir = (currentTarget - rb.position).normalized;
+        UpdateFacingDirection(dir);
+
+
         Vector2 newPos = Vector2.MoveTowards(
             rb.position,
             currentTarget,
             moveSpeed * Time.fixedDeltaTime
         );
+
 
         rb.MovePosition(newPos);
 
