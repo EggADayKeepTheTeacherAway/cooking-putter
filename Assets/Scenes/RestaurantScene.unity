@@ -739,26 +739,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Customer (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 3644600363480723888, guid: c926ca81624b6a54ebbc14b0ad11dc62, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714612637928924429, guid: c926ca81624b6a54ebbc14b0ad11dc62, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714612637928924429, guid: c926ca81624b6a54ebbc14b0ad11dc62, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761907818665586014, guid: c926ca81624b6a54ebbc14b0ad11dc62, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2096004713, guid: 7a90d02ba42ccfb4d8477252a6b82e2d, type: 3}
-    - target: {fileID: 6761907818665586014, guid: c926ca81624b6a54ebbc14b0ad11dc62, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

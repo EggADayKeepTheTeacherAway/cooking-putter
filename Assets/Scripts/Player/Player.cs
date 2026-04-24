@@ -9,7 +9,7 @@ public class Player : Entity
 
     public Player_MoveState moveState { get; private set; }
 
-    private Vector2 currentVelocity;
+    public Vector2 currentVelocity { get; private set; }
     public Vector2 moveInput { get; private set; }
 
     public PlayerInputSet input { get; private set; }
@@ -17,6 +17,7 @@ public class Player : Entity
     public int money = 100;
 
     public List<InventoryEntry> inventory = new List<InventoryEntry>();
+
 
     protected override void Awake()
     {

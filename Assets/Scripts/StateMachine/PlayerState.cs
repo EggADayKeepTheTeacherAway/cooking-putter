@@ -8,5 +8,9 @@ public class PlayerState : EntityState
         this.player = player;
     }
 
- 
+    public override void UpdateAnimationParameters()
+    {
+        anim.SetFloat("xSpeed", player.moveInput.x);
+        anim.SetFloat("ySpeed", player.moveInput.y);
+    }
 }

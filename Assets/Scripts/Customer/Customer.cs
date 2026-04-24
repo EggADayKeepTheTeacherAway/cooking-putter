@@ -21,7 +21,7 @@ public class Customer : Entity
         base.Awake();
 
         idleState = new Entity_IdleState(this, stateMachine, "idle");
-        findSeatState = new Customer_LookingForSeatState(this, stateMachine, "walk");
+        findSeatState = new Customer_LookingForSeatState(this, stateMachine, "move");
         waitFoodState = new Customer_WaitForFoodState(this, stateMachine, "idle");
 
     }
