@@ -11,11 +11,6 @@ public class CustomerState : EntityState
 
     public override void UpdateAnimationParameters()
     {
-        Debug.Log(customer.facingDirection);
-        //anim.SetFloat("xSpeed", customer.currentTarget.x);
-        //anim.SetFloat("ySpeed", customer.currentTarget.y);
-
-
         anim.SetFloat("facingX", customer.facingDirection == Entity.FacingDirection.Right ? 1 :
                      customer.facingDirection == Entity.FacingDirection.Left ? -1 : 0);
         anim.SetFloat("facingY", customer.facingDirection == Entity.FacingDirection.Up ? 1 :

@@ -1,7 +1,3 @@
-using UnityEngine;
-using static Player;
-using static UnityEngine.EventSystems.EventTrigger;
-
 public class PlayerState : EntityState
 {
     protected Player player;

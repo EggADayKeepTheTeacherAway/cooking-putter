@@ -4,7 +4,6 @@ public class Player_MoveState : PlayerState
 {
     public Player_MoveState(Player player, StateMachine stateMachine, string animParam) : base(player, stateMachine, animParam)
     {
-        this.player = player;
     }
 
     public override void Update()
