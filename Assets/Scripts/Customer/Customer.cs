@@ -5,7 +5,7 @@ public class Customer : Entity
 {
     private CustomerGroup group;
     private Queue<Vector2> moveQueue = new Queue<Vector2>();
-    private Vector2 currentTarget;
+    public Vector2 currentTarget { get; private set; }
     private bool hasTarget;
     public System.Action OnReachedTarget;
 

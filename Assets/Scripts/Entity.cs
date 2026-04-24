@@ -13,7 +13,7 @@ public class Entity : MonoBehaviour
     public StateMachine stateMachine { get; private set; }
 
     public enum FacingDirection { Up, Down, Left, Right }
-    public FacingDirection facingDirection { get; private set; } = FacingDirection.Down;
+    public FacingDirection facingDirection;
 
 
     protected virtual void Awake()

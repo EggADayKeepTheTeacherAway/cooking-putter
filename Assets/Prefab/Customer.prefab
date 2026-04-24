@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1301589784978832981
 Transform:
   m_ObjectHideFlags: 0
@@ -51,6 +51,7 @@ MonoBehaviour:
   rb: {fileID: 3094479831491152238}
   anim: {fileID: 1434288272084674729}
   sr: {fileID: 6761907818665586014}
+  facingDirection: 0
 --- !u!70 &3213288328438281572
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,7 +196,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 702366407
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 9079905429464953686, guid: 38603c4ee08bf41b6952e928c30aade8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

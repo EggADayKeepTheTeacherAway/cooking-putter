@@ -23,6 +23,8 @@ public class Player : Entity
     {
         base.Awake();
 
+        facingDirection = FacingDirection.Down;
+
         input = new PlayerInputSet();
 
         idleState = new Player_IdleState(this, stateMachine, "idle");

@@ -42,17 +42,19 @@ public class Customer_LookingForSeatState : CustomerState
     {
         base.Exit();
 
-        customer.OnReachedTarget += OnMovementFinished;
+        customer.OnReachedTarget -= OnMovementFinished;
     }
 
     private void OnMovementFinished()
     {
         if (seat.seatType == SeatType.Bottom)
         {
+            customer.facingDirection = Entity.FacingDirection.Up;
             customer.SetTopSortingOrder();
         }
         else if (seat.seatType == SeatType.Top)
         {
+            customer.facingDirection = Entity.FacingDirection.Down;
             customer.SetBottomSortingOrder();
         }
 
