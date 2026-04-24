@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1966981321
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
@@ -164,6 +164,7 @@ MonoBehaviour:
   moveSpeed: 4
   rb: {fileID: 4449289451147719731}
   anim: {fileID: 7824925530358476418}
+  sr: {fileID: 7072502151050927130}
   runSpeedModifier: 1.5
   money: 100
   inventory: []
