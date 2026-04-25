@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip restaurantBGM;
     [SerializeField] private AudioClip forestBGM;
 
+    private float maximumVolume = 0.4f;
     private Coroutine bgmCoroutine;
 
     private void Awake()
@@ -46,13 +47,19 @@ public class AudioManager : MonoBehaviour
         {
             case "MainMenu":
                 PlayBGM(menuBGM);
+                maximumVolume = 0.4f;
                 break;
 
             case "TownScene":
                 PlayBGM(townBGM);
+                maximumVolume = 0.2f;
                 break;
             case "RestaurantScene":
                 PlayBGM(restaurantBGM);
+                maximumVolume = 0.6f;
+                break;
+            case "ForestScene":
+                PlayBGM(forestBGM);
                 break;
         }
     }
@@ -83,10 +90,10 @@ public class AudioManager : MonoBehaviour
         while (time < fadeDuration)
         {
             time += Time.deltaTime;
-            bgmSource.volume = Mathf.Lerp(0f, 0.4f, time / fadeDuration);
+            bgmSource.volume = Mathf.Lerp(0f, maximumVolume, time / fadeDuration);
             yield return null;
         }
 
-        bgmSource.volume = 0.4f;
+        bgmSource.volume = maximumVolume;
     }
 }

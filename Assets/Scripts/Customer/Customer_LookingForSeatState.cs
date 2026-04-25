@@ -66,7 +66,7 @@ public class Customer_LookingForSeatState : CustomerState
     private List<Vector2> BuildPath(Table table, Seat seat)
     {
         float seatOffsetX = 1f;
-        float bottomSeatOffset = 0.7f;
+        float bottomSeatOffset = 0.5f;
 
         List<Vector2> path = new List<Vector2>();
 

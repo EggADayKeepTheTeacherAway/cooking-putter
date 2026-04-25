@@ -659,8 +659,8 @@ MonoBehaviour:
   fadeDuration: 1.5
   menuBGM: {fileID: 8300000, guid: 148542947b49ca342902caf2b8a2ac92, type: 3}
   townBGM: {fileID: 8300000, guid: 6f0edae0439d23f4a90c6869bd8897e7, type: 3}
-  restaurantBGM: {fileID: 8300000, guid: 6f0edae0439d23f4a90c6869bd8897e7, type: 3}
-  forestBGM: {fileID: 8300000, guid: 6f0edae0439d23f4a90c6869bd8897e7, type: 3}
+  restaurantBGM: {fileID: 8300000, guid: 2c0f8f523d7961b4cb4c5006a12fdfc4, type: 3}
+  forestBGM: {fileID: 8300000, guid: 1988944c9f08a314faf74804d0d9bacb, type: 3}
 --- !u!4 &1005863865
 Transform:
   m_ObjectHideFlags: 0
