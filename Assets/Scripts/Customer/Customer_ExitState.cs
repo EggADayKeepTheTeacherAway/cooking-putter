@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class Customer_ExitState : MonoBehaviour
+public class Customer_ExitState : CustomerState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Customer_ExitState(Customer customer, StateMachine stateMachine, string animParam) : base(customer, stateMachine, animParam)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

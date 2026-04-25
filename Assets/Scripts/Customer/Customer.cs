@@ -15,6 +15,8 @@ public class Customer : Entity
     public Entity_IdleState idleState;
     public Customer_LookingForSeatState findSeatState;
     public Customer_WaitForFoodState waitFoodState;
+    public Customer_EattingState eattingState;
+    public Customer_ExitState exitState;
     
 
 
@@ -25,6 +27,8 @@ public class Customer : Entity
         idleState = new Entity_IdleState(this, stateMachine, "idle");
         findSeatState = new Customer_LookingForSeatState(this, stateMachine, "move");
         waitFoodState = new Customer_WaitForFoodState(this, stateMachine, "idle");
+        eattingState = new Customer_EattingState(this, stateMachine, "idle");
+        exitState = new Customer_ExitState(this, stateMachine, "move");
 
     }
 

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Customer_WaitForFoodState : CustomerState
 {
+    private Food selectedFood;
+
     public Customer_WaitForFoodState(Customer customer, StateMachine stateMachine, string animParam) : base(customer, stateMachine, animParam)
     {
     }
@@ -16,6 +18,7 @@ public class Customer_WaitForFoodState : CustomerState
 
     }
 
+
     public override void Exit()
     {
         base.Exit();
@@ -23,9 +26,11 @@ public class Customer_WaitForFoodState : CustomerState
         customer.OnRecievedFood -= EattingFood;
     }
 
-    private void EattingFood(Food food)
+    private void EattingFood(Food recievedFood)
     {
+        if (recievedFood != selectedFood) return;
 
+        stateMachine.ChangeState(customer.eattingState);
     }
 
     private void OrderedFood()
@@ -34,7 +39,7 @@ public class Customer_WaitForFoodState : CustomerState
 
         int randomFoodIndex = Random.Range(0, foodList.Length);
 
-        Food selectedFood = foodList[randomFoodIndex];
+        selectedFood = foodList[randomFoodIndex];
 
         customer.OnOrderedFood?.Invoke(selectedFood);
     }
