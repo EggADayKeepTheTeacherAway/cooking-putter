@@ -10,5 +10,33 @@ public class Customer_WaitForFoodState : CustomerState
     {
         base.Enter();
 
+        customer.OnRecievedFood += EattingFood;
+
+        OrderedFood();
+
     }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        customer.OnRecievedFood -= EattingFood;
+    }
+
+    private void EattingFood(Food food)
+    {
+
+    }
+
+    private void OrderedFood()
+    {
+        Food[] foodList = RestaurantManager.Instance.GetAvailableFoodList();
+
+        int randomFoodIndex = Random.Range(0, foodList.Length);
+
+        Food selectedFood = foodList[randomFoodIndex];
+
+        customer.OnOrderedFood?.Invoke(selectedFood);
+    }
+
 }

@@ -9,6 +9,9 @@ public class Customer : Entity
     private bool hasTarget;
     public System.Action OnReachedTarget;
 
+    public System.Action<Food> OnOrderedFood;
+    public System.Action<Food> OnRecievedFood;
+
     public Entity_IdleState idleState;
     public Customer_LookingForSeatState findSeatState;
     public Customer_WaitForFoodState waitFoodState;
