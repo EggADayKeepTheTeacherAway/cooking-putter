@@ -348,6 +348,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RestaurantManager
   selfishRate: 0.2
+  foodList:
+  - Omelette
+  - Fried Egg
+  - Pad Kra Pao
+  - Pork Curry
+  - Porkchop
+  - Human Flesh
   spawner: {fileID: 1723359295}
   spawnDelay:
     minSecond: 5
