@@ -7,6 +7,11 @@ public class Material : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (this.gameObject.GetComponentInChildren<ParticleSystem>() != null)
+        {
+            this.gameObject.GetComponentInChildren<ParticleSystem>().gameObject.SetActive(false);
+            player.AddItem(new ItemData { itemName = gameObject.name }, 1);
+        }
         Debug.Log("Interacted with material: " + gameObject.name);
     }
 
