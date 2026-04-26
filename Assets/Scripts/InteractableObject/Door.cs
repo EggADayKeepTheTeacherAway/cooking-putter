@@ -13,7 +13,7 @@ public class Door : MonoBehaviour, IInteractable
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (player.input.Player.Interact.IsPressed() || !needInteract)
+        if (player.input.Player.Interact.IsPressed() || !needInteract && collision.CompareTag("Player"))
         {
             Interact();
         }
