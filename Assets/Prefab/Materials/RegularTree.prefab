@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.5000005, y: 0}
-  m_SizeDelta: {x: -0.57143, y: 0}
+  m_AnchoredPosition: {x: -0.39285773, y: 0}
+  m_SizeDelta: {x: -0.78571546, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3091640250962918773
 CanvasRenderer:
@@ -65,10 +65,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Material Collected x1
+  m_text: Lemon Collected
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9304c707596df1e47a143060b23c8bdb, type: 2}
-  m_sharedMaterial: {fileID: 8435763839074377451, guid: 9304c707596df1e47a143060b23c8bdb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.14
-  m_fontSizeBase: 0.14
+  m_fontSize: 0.2
+  m_fontSizeBase: 0.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -290,7 +290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42e16d134de1cf43a39657407c9325f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Material
-  player: {fileID: 0}
+  itemToDrop: {fileID: 11400000, guid: 290e10f78d6dece46bfac6a970cd120f, type: 2}
+  minDropAmount: 1
+  maxDropAmount: 3
   sr: {fileID: 496019212545702626}
   activeSprite: {fileID: -6611588512128272999, guid: 6d5f1ed871d03504cbc4fa66cae21d6a, type: 3}
   inactiveSprite: {fileID: 5354429476588687777, guid: 7eb68c63fbd4a1940aa2f52edf8d7272, type: 3}
@@ -314,7 +316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7439543263542903080
 RectTransform:
   m_ObjectHideFlags: 0
@@ -333,7 +335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.2}
+  m_AnchoredPosition: {x: 0, y: 1.4}
   m_SizeDelta: {x: 2, y: 0.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1046939137385733097
@@ -414,7 +416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1559802332585103262
 Transform:
   m_ObjectHideFlags: 0

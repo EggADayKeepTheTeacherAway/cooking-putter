@@ -6,6 +6,7 @@ public class Material : MonoBehaviour, IInteractable
     [SerializeField] private ItemData itemToDrop;
     [SerializeField] private int minDropAmount = 1;
     [SerializeField] private int maxDropAmount = 3;
+    private int dropAmount;
 
     [Header("References")]
     [SerializeField] private SpriteRenderer sr;
@@ -46,7 +47,7 @@ public class Material : MonoBehaviour, IInteractable
             return;
         }
 
-        int dropAmount = Random.Range(minDropAmount, maxDropAmount + 1); // +1 for inclusive max
+        dropAmount = Random.Range(minDropAmount, maxDropAmount + 1); // +1 for inclusive max
 
         if (this.gameObject.GetComponentInChildren<ParticleSystem>() != null)
         {
@@ -68,6 +69,7 @@ public class Material : MonoBehaviour, IInteractable
         if (collectionPopup != null)
         {
             collectionPopup.SetActive(true);
+            collectionPopup.gameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = $"{itemToDrop.itemName} x{dropAmount}";
             // Hide the popup after some time
             Invoke(nameof(HideCollectionPopup), popupDisplayTime);
         }
