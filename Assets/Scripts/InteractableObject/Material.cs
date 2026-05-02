@@ -2,7 +2,12 @@
 
 public class Material : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Player player;
+    [Header("Data Mapping")]
+    [SerializeField] private ItemData itemToDrop;
+    [SerializeField] private int minDropAmount = 1;
+    [SerializeField] private int maxDropAmount = 3;
+
+    [Header("References")]
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Sprite activeSprite;
     [SerializeField] private Sprite inactiveSprite;
@@ -27,12 +32,32 @@ public class Material : MonoBehaviour, IInteractable
     {
         if (!canInteract) return; // Prevent interaction if not active
 
+        // Safety check: ensure PlayerDataManager exists
+        if (PlayerDataManager.Instance == null)
+        {
+            Debug.LogError("Material.Interact: PlayerDataManager not found in scene!");
+            return;
+        }
+
+        // Safety check: ensure itemToDrop is assigned
+        if (itemToDrop == null)
+        {
+            Debug.LogError("Material.Interact: itemToDrop not assigned in Inspector!");
+            return;
+        }
+
+        int dropAmount = Random.Range(minDropAmount, maxDropAmount + 1); // +1 for inclusive max
+
         if (this.gameObject.GetComponentInChildren<ParticleSystem>() != null)
         {
             this.gameObject.GetComponentInChildren<ParticleSystem>().gameObject.SetActive(false);
-            player.AddItem(new ItemData { itemName = gameObject.name }, 1);
+
+            // Add item directly to PlayerDataManager
+            PlayerDataManager.Instance.AddItem(itemToDrop, dropAmount);
         }
-        Debug.Log("Interacted with material: " + gameObject.name);
+
+        Debug.Log($"Collected {dropAmount}x {itemToDrop.itemName}!");
+
         ShowCollectionPopup();
 
         SetInactiveState();
@@ -68,9 +93,14 @@ public class Material : MonoBehaviour, IInteractable
     private void Update()
     {
         // Only allow interaction input if the object is still interactable
-        if (canInteract && isPlayerInRange && player.input.Player.Interact.WasPressedThisFrame())
+        if (canInteract && isPlayerInRange)
         {
-            Interact();
+            // Get player input directly from PlayerInputSet
+            Player player = FindFirstObjectByType<Player>();
+            if (player != null && player.input.Player.Interact.WasPressedThisFrame())
+            {
+                Interact();
+            }
         }
     }
 

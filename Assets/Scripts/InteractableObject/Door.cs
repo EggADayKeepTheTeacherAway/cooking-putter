@@ -10,6 +10,7 @@ public class Door : MonoBehaviour, IInteractable
     public void Interact()
     {
         action.Execute();
+        PlayerDataManager.Instance.SaveData();
     }
 
     private void Update()
