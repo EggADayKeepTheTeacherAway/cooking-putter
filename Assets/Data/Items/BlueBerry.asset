@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: BlueBerry
   itemDescription: To make blue berry menu
-  itemIcon: {fileID: 3579979325370944529, guid: ceaecdaa9158a73449e6c961d27c389e, type: 3}
+  itemIcon: {fileID: 3579979325370944529, guid: 0c50d6a5d79a39a46bea5e0ef616da72, type: 3}

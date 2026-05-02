@@ -31,16 +31,14 @@ public class Material : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (!canInteract) return; // Prevent interaction if not active
+        if (!canInteract) return;
 
-        // Safety check: ensure PlayerDataManager exists
         if (PlayerDataManager.Instance == null)
         {
             Debug.LogError("Material.Interact: PlayerDataManager not found in scene!");
             return;
         }
 
-        // Safety check: ensure itemToDrop is assigned
         if (itemToDrop == null)
         {
             Debug.LogError("Material.Interact: itemToDrop not assigned in Inspector!");
@@ -94,7 +92,6 @@ public class Material : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        // Only allow interaction input if the object is still interactable
         if (canInteract && isPlayerInRange)
         {
             // Get player input directly from PlayerInputSet

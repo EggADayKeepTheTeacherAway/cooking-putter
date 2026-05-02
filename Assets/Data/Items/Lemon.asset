@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Lemon
   itemDescription: To make sour or lemon menu
-  itemIcon: {fileID: -4588854041495768185, guid: 2edc2f6923916d64386e086825c4e645, type: 3}
+  itemIcon: {fileID: -4588854041495768185, guid: df87120fa4398cb4580d039986f479e4, type: 3}
