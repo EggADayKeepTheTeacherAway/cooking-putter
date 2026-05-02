@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Interact
@@ -44,6 +44,15 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 995881039
+    locked: 0
+  - name: Ground
+    uniqueID: 2748565265
+    locked: 0
+  - name: Wall
+    uniqueID: 3424295171
+    locked: 0
+  - name: Stuff
+    uniqueID: 3009341623
     locked: 0
   - name: Customer
     uniqueID: 702366407

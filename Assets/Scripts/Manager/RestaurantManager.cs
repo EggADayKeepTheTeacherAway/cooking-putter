@@ -4,8 +4,8 @@ using UnityEngine;
 public class RestaurantManager : MonoBehaviour
 {
     // 80% people choose smallest table 20% selfish
-    [SerializeField, Range(0f, 1f)] private float selfishRate = 0.2f; 
-
+    [SerializeField, Range(0f, 1f)] private float selfishRate = 0.2f;
+    [SerializeField] private string[] foodList;
     [SerializeField] private CustomerSpawner spawner;
     [SerializeField] private RandomTimer spawnDelay;
 
@@ -38,6 +38,8 @@ public class RestaurantManager : MonoBehaviour
     {
         SpawnCustomer();
     }
+
+    public string[] GetAvailableFoodList() => foodList;
 
     private bool SpawnCustomer()
     {
