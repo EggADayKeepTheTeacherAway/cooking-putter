@@ -8,6 +8,8 @@ public class CustomerPool : MonoBehaviour
 
     private List<Customer> customers;
 
+    public int AvailableCount => customers.Count;
+
     private void Awake()
     {
         customers = new List<Customer>();
@@ -25,6 +27,8 @@ public class CustomerPool : MonoBehaviour
         if (customers.Count <= 0)
         {
             Debug.Log("Oi Oi Oi, not enough customer in the pool dude!!!");
+            Debug.Log(customers.Count);
+            return null;
         }
 
         Customer customer = customers[customers.Count - 1];
@@ -36,10 +40,12 @@ public class CustomerPool : MonoBehaviour
 
     public void ReturnCustomer(Customer c)
     {
-        c.gameObject.SetActive(false);
+        customers.Add(c);
 
         c.ResetSortingOrder();
 
-        customers.Add(c);
+        c.gameObject.SetActive(false);
+
+        Debug.Log(customers.Count);
     }
 }

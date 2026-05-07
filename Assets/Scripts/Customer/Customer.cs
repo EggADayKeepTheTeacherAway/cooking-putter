@@ -33,7 +33,7 @@ public class Customer : Entity
 
     }
 
-    private void OnEnable()
+    public void Initialize()
     {
         stateMachine.Initialize(findSeatState);
     }
@@ -93,6 +93,15 @@ public class Customer : Entity
         hasTarget = true;
     }
 
+    public void ResetVal()
+    {
+        seat = null;
+        group = null;
+        hasTarget = false;
+        moveQueue.Clear();
+        currentTarget = Vector2.zero;
+        ResetSortingOrder();
+    }
 
     public void ResetSortingOrder() => sr.sortingOrder = 5;
   

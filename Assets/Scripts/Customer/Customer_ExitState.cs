@@ -21,13 +21,7 @@ public class Customer_ExitState : CustomerState
         WalkToExit();
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-
-        customer.OnReachedTarget -= OnMovementFinished;
-        customer.GetGroup().RemoveCustomer(customer);
-    }
+  
 
     private void WalkToExit()
     {
@@ -46,7 +40,13 @@ public class Customer_ExitState : CustomerState
         customer.SetPath(path);
     }
 
-    private void OnMovementFinished() => RestaurantManager.Instance.Spawner.ReturnCustomer(customer);
+    private void OnMovementFinished()
+    {
+        customer.OnReachedTarget -= OnMovementFinished;
+        customer.GetGroup().RemoveCustomer(customer);
+
+        RestaurantManager.Instance.Spawner.ReturnCustomer(customer);
+    }
 
     private List<Vector2> BuildPath(Table table)
     {

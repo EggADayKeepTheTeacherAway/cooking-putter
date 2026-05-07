@@ -52,6 +52,8 @@ public class RestaurantManager : MonoBehaviour
 
             List<Customer> customers = spawner.SpawnCustomer();
 
+            if (customers == null) return false;
+
             CustomerGroup group = new CustomerGroup(customers);
 
             Table t = AssignedTable(group.Count);
@@ -65,7 +67,10 @@ public class RestaurantManager : MonoBehaviour
             foreach (var c in customers)
             {
                 c.SetGroup(group);
+
                 c.gameObject.SetActive(true);
+
+                c.Initialize();
 
             }
 
