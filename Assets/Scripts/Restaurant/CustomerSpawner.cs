@@ -17,16 +17,39 @@ public class CustomerSpawner : MonoBehaviour
     {
         int totalCustomerInGroup = Random.Range(1, maximumCustomerInGroup + 1);
 
+        Debug.Log($"Trying to spawn group of {totalCustomerInGroup}, pool has {customerPool.AvailableCount}");
+
+
         List<Customer> customers = new List<Customer>();
 
-        if (totalCustomerInGroup == 1) groupOffset = 0;
+        if (totalCustomerInGroup == 1)
+        {
+            groupOffset = 0;
+        }
+
+        else
+        {
+            groupOffset = 0.5f;
+        }
 
         for (int i = 0; i < totalCustomerInGroup; i++)
         {
             Customer c = customerPool.GetCustomer();
 
-            int column = i % maxPerRow; 
-            int row = i / maxPerRow;    
+            if (c == null)  
+            {
+                foreach (Customer grabbed in customers)
+                    customerPool.ReturnCustomer(grabbed);
+                return null;
+            }
+
+            Debug.Log($"Got customer {i + 1}, pool now has {customerPool.AvailableCount}");
+
+            c.ResetVal();
+
+
+            int column = i % maxPerRow;
+            int row = i / maxPerRow;
 
             Vector3 offset = new Vector3(column * customerSpawnGap.x - groupOffset, -row * customerSpawnGap.y, 0);
 
@@ -41,11 +64,9 @@ public class CustomerSpawner : MonoBehaviour
         return customers;
     }
 
-    public void ReturnCustomer(List<Customer> customers)
+    public void ReturnCustomer(Customer c)
     {
-        foreach (var c in customers)
-        {
-            customerPool.ReturnCustomer(c);
-        }
+       customerPool.ReturnCustomer(c);
+        
     }
 }

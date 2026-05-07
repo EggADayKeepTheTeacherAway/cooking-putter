@@ -4,15 +4,23 @@ using UnityEngine;
 public class Customer : Entity
 {
     private CustomerGroup group;
+    public Seat seat { get; private set; }
     private Queue<Vector2> moveQueue = new Queue<Vector2>();
     public Vector2 currentTarget { get; private set; }
     private bool hasTarget;
     public System.Action OnReachedTarget;
 
+    public System.Action<Food> OnOrderedFood;
+    public System.Action<Food> OnRecievedFood;
+
     public Entity_IdleState idleState;
     public Customer_LookingForSeatState findSeatState;
     public Customer_WaitForFoodState waitFoodState;
-    
+    public Customer_EattingState eattingState;
+    public Customer_ExitState exitState;
+    public Customer_NoTableState noTableState;
+
+
 
 
     protected override void Awake()
@@ -22,10 +30,14 @@ public class Customer : Entity
         idleState = new Entity_IdleState(this, stateMachine, "idle");
         findSeatState = new Customer_LookingForSeatState(this, stateMachine, "move");
         waitFoodState = new Customer_WaitForFoodState(this, stateMachine, "idle");
+        eattingState = new Customer_EattingState(this, stateMachine, "idle");
+        exitState = new Customer_ExitState(this, stateMachine, "move");
+        noTableState = new Customer_NoTableState(this, stateMachine, "move");
+        
 
     }
 
-    private void Start()
+    public void Initialize()
     {
         stateMachine.Initialize(findSeatState);
     }
@@ -85,12 +97,26 @@ public class Customer : Entity
         hasTarget = true;
     }
 
+    public void ResetVal()
+    {
+        seat = null;
+        group = null;
+        hasTarget = false;
+        moveQueue.Clear();
+        currentTarget = Vector2.zero;
+        OnReachedTarget = null;
+        OnOrderedFood = null;
+        OnRecievedFood = null;
+        ResetSortingOrder();
+    }
 
     public void ResetSortingOrder() => sr.sortingOrder = 5;
   
     public void SetTopSortingOrder() => sr.sortingOrder = 1;
 
     public void SetBottomSortingOrder() => sr.sortingOrder = -1;
+
+    public void RandomSeat() => seat = GetTable().GetRandomSeat();
 
     public void SetCustomerSkin(AnimatorOverrideController controller)
     {

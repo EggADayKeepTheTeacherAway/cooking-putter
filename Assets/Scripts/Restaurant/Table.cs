@@ -42,7 +42,10 @@ public class Table : MonoBehaviour
         return chosenSeat;
     }
 
-    public void ReturnSeat(Seat returnSeat) => seats.Add(returnSeat);
-
+    public void ReturnSeat(Seat returnSeat)
+    {
+        seats.Add(returnSeat);
+        seatAmount = seats.Count;
+    }
 
 }

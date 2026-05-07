@@ -1,13 +1,22 @@
 using UnityEngine;
-using static Player;
 
 public class CustomerState : EntityState
 {
     protected Customer customer;
+
     public CustomerState(Customer customer, StateMachine stateMachine, string animParam) : base(customer, stateMachine, animParam)
     {
         this.customer = customer;
     }
+
+    public override void Enter()
+    {
+        base.Enter();
+
+        Debug.Log(stateMachine.currentState);
+    }
+
+    protected void ChooseSeat() => customer.RandomSeat();
 
     public override void UpdateAnimationParameters()
     {

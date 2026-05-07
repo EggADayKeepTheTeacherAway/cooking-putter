@@ -5,9 +5,10 @@ public class RestaurantManager : MonoBehaviour
 {
     // 80% people choose smallest table 20% selfish
     [SerializeField, Range(0f, 1f)] private float selfishRate = 0.2f;
-    [SerializeField] private string[] foodList;
+    [SerializeField] private Food[] foodList;
     [SerializeField] private CustomerSpawner spawner;
     [SerializeField] private RandomTimer spawnDelay;
+    [SerializeField] private Transform noTablePoint;
 
     private float spawnTimer;
 
@@ -19,6 +20,9 @@ public class RestaurantManager : MonoBehaviour
 
     private List<CustomerGroup> customerGroups;
 
+    public CustomerSpawner Spawner => spawner;
+
+    public Vector2 NoTablePoint => noTablePoint.position;
 
     private void Awake()
     {
@@ -39,7 +43,7 @@ public class RestaurantManager : MonoBehaviour
         SpawnCustomer();
     }
 
-    public string[] GetAvailableFoodList() => foodList;
+    public Food[] GetAvailableFoodList() => foodList;
 
     private bool SpawnCustomer()
     {
@@ -50,6 +54,8 @@ public class RestaurantManager : MonoBehaviour
             spawnTimer = spawnDelay.GetRandomDelay();
 
             List<Customer> customers = spawner.SpawnCustomer();
+
+            if (customers == null) return false;
 
             CustomerGroup group = new CustomerGroup(customers);
 
@@ -64,6 +70,11 @@ public class RestaurantManager : MonoBehaviour
             foreach (var c in customers)
             {
                 c.SetGroup(group);
+
+                c.gameObject.SetActive(true);
+
+                c.Initialize();
+
             }
 
             customerGroups.Add(group);
