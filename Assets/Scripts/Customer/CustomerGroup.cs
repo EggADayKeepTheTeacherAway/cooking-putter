@@ -25,14 +25,25 @@ public class CustomerGroup
 
         if (Count <= 0)
         {
-            table.UnTake();
-            OnGroupFinishedEatting.Invoke();
+            // Do not UnTake here, wait until they return the seats
+            OnGroupFinishedEatting?.Invoke();
         }
     }
 
     public void RemoveCustomer(Customer c)
     {
-        table.ReturnSeat(c.seat);
+        if (c.seat != null)
+        {
+            table.ReturnSeat(c.seat);
+        }
         customers.Remove(c);
+
+        if (customers.Count == 0)
+        {
+            if (table != null)
+            {
+                table.UnTake();
+            }
+        }
     }
 }

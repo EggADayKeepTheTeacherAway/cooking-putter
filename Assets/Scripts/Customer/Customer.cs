@@ -100,6 +100,9 @@ public class Customer : Entity
         hasTarget = false;
         moveQueue.Clear();
         currentTarget = Vector2.zero;
+        OnReachedTarget = null;
+        OnOrderedFood = null;
+        OnRecievedFood = null;
         ResetSortingOrder();
     }
 

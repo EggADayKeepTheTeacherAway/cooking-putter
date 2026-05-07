@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 public class Customer_ExitState : CustomerState
 {
@@ -14,6 +13,8 @@ public class Customer_ExitState : CustomerState
     {
         base.Enter();
 
+        seat = null;
+
         customer.OnReachedTarget += OnMovementFinished;
 
         customer.ResetSortingOrder();
@@ -21,21 +22,28 @@ public class Customer_ExitState : CustomerState
         WalkToExit();
     }
 
-  
-
     private void WalkToExit()
     {
+        float exitOffset = 2f;
+
         Table table = customer.GetTable();
 
-        if (table == null)
+        List<Vector2> path;
+
+        if (table == null || customer.seat == null)
         {
-            stateMachine.ChangeState(customer.idleState);
-            return;
+            CustomerSpawner spawner = RestaurantManager.Instance.Spawner;
+ 
+            path = new List<Vector2>();
+
+            path.Add(new Vector2(customer.transform.position.x, spawner.transform.position.y - exitOffset));
         }
+        else
+        {
+            seat = customer.seat;
 
-        seat = customer.seat;
-
-        List<Vector2> path = BuildPath(table);
+            path = BuildPath(table);
+        }
 
         customer.SetPath(path);
     }
@@ -43,7 +51,12 @@ public class Customer_ExitState : CustomerState
     private void OnMovementFinished()
     {
         customer.OnReachedTarget -= OnMovementFinished;
-        customer.GetGroup().RemoveCustomer(customer);
+        CustomerGroup group = customer.GetGroup();
+
+        if (group != null)
+        {
+            group.RemoveCustomer(customer);
+        }
 
         RestaurantManager.Instance.Spawner.ReturnCustomer(customer);
     }

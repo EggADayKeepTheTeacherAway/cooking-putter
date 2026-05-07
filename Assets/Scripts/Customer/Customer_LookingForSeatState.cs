@@ -14,13 +14,15 @@ public class Customer_LookingForSeatState : CustomerState
     {
         base.Enter();
 
+        seat = null;
+
         customer.OnReachedTarget += OnMovementFinished;
 
         Table table = customer.GetTable();
 
         if (table == null)
         {
-            stateMachine.ChangeState(customer.idleState);
+            stateMachine.ChangeState(customer.exitState);
             return;
         }
 
@@ -28,6 +30,11 @@ public class Customer_LookingForSeatState : CustomerState
 
         seat = customer.seat;
 
+        if (seat == null)
+        {
+            stateMachine.ChangeState(customer.exitState);
+            return;
+        }
 
         List<Vector2> path = BuildPath(table);
 

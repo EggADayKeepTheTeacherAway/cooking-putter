@@ -8710,7 +8710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomerPool
   customerPrefab: {fileID: 8913215248140119676, guid: c926ca81624b6a54ebbc14b0ad11dc62, type: 3}
-  amountOfCustomer: 4
+  amountOfCustomer: 1000
 --- !u!4 &1155674149
 Transform:
   m_ObjectHideFlags: 0
