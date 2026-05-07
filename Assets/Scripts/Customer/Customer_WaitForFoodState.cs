@@ -43,6 +43,7 @@ public class Customer_WaitForFoodState : CustomerState
 
         customer.OnOrderedFood?.Invoke(selectedFood);
 
+        // TODO Remove this line of code when serve feature is implemented
         customer.OnRecievedFood?.Invoke(selectedFood);
     }
 

@@ -33,7 +33,7 @@ public class Customer : Entity
 
     }
 
-    private void Start()
+    private void OnEnable()
     {
         stateMachine.Initialize(findSeatState);
     }

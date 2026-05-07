@@ -65,6 +65,8 @@ public class RestaurantManager : MonoBehaviour
             foreach (var c in customers)
             {
                 c.SetGroup(group);
+                c.gameObject.SetActive(true);
+
             }
 
             customerGroups.Add(group);

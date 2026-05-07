@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Customer_ExitState : CustomerState
 {
@@ -15,6 +16,21 @@ public class Customer_ExitState : CustomerState
 
         customer.OnReachedTarget += OnMovementFinished;
 
+        customer.ResetSortingOrder();
+
+        WalkToExit();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        customer.OnReachedTarget -= OnMovementFinished;
+        customer.GetGroup().RemoveCustomer(customer);
+    }
+
+    private void WalkToExit()
+    {
         Table table = customer.GetTable();
 
         if (table == null)
@@ -28,13 +44,6 @@ public class Customer_ExitState : CustomerState
         List<Vector2> path = BuildPath(table);
 
         customer.SetPath(path);
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-
-        customer.OnReachedTarget -= OnMovementFinished;
     }
 
     private void OnMovementFinished() => RestaurantManager.Instance.Spawner.ReturnCustomer(customer);

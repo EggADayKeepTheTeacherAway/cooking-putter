@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Customer_EattingState : CustomerState
 {
+    private bool finishedEating = false;
+
     private int minEattingTime = 15;
     private int maxEattingTime = 20;
 
@@ -14,6 +16,10 @@ public class Customer_EattingState : CustomerState
     {
         base.Enter();
 
+        finishedEating = false;
+
+        customer.GetGroup().OnGroupFinishedEatting += OnGroupFinishedEatting;
+
         int randomEattingTime = Random.Range(minEattingTime, maxEattingTime);
 
         stateTimer = randomEattingTime;
@@ -23,9 +29,22 @@ public class Customer_EattingState : CustomerState
     {
         base.Update();
 
-        if (stateTimer <= 0)
+        if (stateTimer <= 0 && !finishedEating)
         {
-            stateMachine.ChangeState(customer.exitState);
+            finishedEating = true;
+            customer.GetGroup().FinishedEatting();
         }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        customer.GetGroup().OnGroupFinishedEatting -= OnGroupFinishedEatting;
+    }
+
+    private void OnGroupFinishedEatting()
+    {
+        stateMachine.ChangeState(customer.exitState);
     }
 }
