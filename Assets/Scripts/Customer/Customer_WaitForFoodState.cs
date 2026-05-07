@@ -42,6 +42,8 @@ public class Customer_WaitForFoodState : CustomerState
         selectedFood = foodList[randomFoodIndex];
 
         customer.OnOrderedFood?.Invoke(selectedFood);
+
+        customer.OnRecievedFood?.Invoke(selectedFood);
     }
 
 }

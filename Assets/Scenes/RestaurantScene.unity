@@ -349,12 +349,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RestaurantManager
   selfishRate: 0.2
   foodList:
-  - Omelette
-  - Fried Egg
-  - Pad Kra Pao
-  - Pork Curry
-  - Porkchop
-  - Human Flesh
+  - {fileID: 11400000, guid: cdaa25c0b78cd864db1e47fb4246ffb2, type: 2}
+  - {fileID: 11400000, guid: 4377ea728e37b0d4f94f2f3a8ab51cf6, type: 2}
+  - {fileID: 11400000, guid: 5a6a01ec4c61bc04c85bc23896e29276, type: 2}
+  - {fileID: 11400000, guid: df2b2981595e50d478005992e8a6117c, type: 2}
+  - {fileID: 11400000, guid: 9736930839ae3ba49aba72a57a8a26da, type: 2}
   spawner: {fileID: 1723359295}
   spawnDelay:
     minSecond: 5
@@ -652,6 +651,10 @@ PrefabInstance:
     - target: {fileID: 3644600363480723888, guid: c926ca81624b6a54ebbc14b0ad11dc62, type: 3}
       propertyPath: m_Name
       value: Customer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644600363480723888, guid: c926ca81624b6a54ebbc14b0ad11dc62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

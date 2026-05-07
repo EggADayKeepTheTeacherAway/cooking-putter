@@ -4,6 +4,7 @@ using UnityEngine;
 public class Customer : Entity
 {
     private CustomerGroup group;
+    public Seat seat { get; private set; }
     private Queue<Vector2> moveQueue = new Queue<Vector2>();
     public Vector2 currentTarget { get; private set; }
     private bool hasTarget;
@@ -98,6 +99,8 @@ public class Customer : Entity
     public void SetTopSortingOrder() => sr.sortingOrder = 1;
 
     public void SetBottomSortingOrder() => sr.sortingOrder = -1;
+
+    public void RandomSeat() => seat = GetTable().GetRandomSeat();
 
     public void SetCustomerSkin(AnimatorOverrideController controller)
     {

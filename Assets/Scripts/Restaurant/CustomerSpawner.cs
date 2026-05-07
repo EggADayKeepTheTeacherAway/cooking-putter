@@ -41,11 +41,9 @@ public class CustomerSpawner : MonoBehaviour
         return customers;
     }
 
-    public void ReturnCustomer(List<Customer> customers)
+    public void ReturnCustomer(Customer c)
     {
-        foreach (var c in customers)
-        {
-            customerPool.ReturnCustomer(c);
-        }
+       customerPool.ReturnCustomer(c);
+        
     }
 }

@@ -26,7 +26,10 @@ public class Customer_LookingForSeatState : CustomerState
 
         ChooseSeat();
 
-        List<Vector2> path = BuildPath(table, seat);
+        seat = customer.seat;
+
+
+        List<Vector2> path = BuildPath(table);
 
         customer.SetPath(path);
 
@@ -61,9 +64,7 @@ public class Customer_LookingForSeatState : CustomerState
         stateMachine.ChangeState(customer.waitFoodState);
     }
 
-    private void ChooseSeat() => seat = customer.GetTable().GetRandomSeat();
-
-    private List<Vector2> BuildPath(Table table, Seat seat)
+    private List<Vector2> BuildPath(Table table)
     {
         float seatOffsetX = 1f;
         float bottomSeatOffset = 0.5f;

@@ -19,6 +19,7 @@ public class RestaurantManager : MonoBehaviour
 
     private List<CustomerGroup> customerGroups;
 
+    public CustomerSpawner Spawner => spawner;
 
     private void Awake()
     {
