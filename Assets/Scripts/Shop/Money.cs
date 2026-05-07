@@ -3,19 +3,19 @@ using TMPro;
 
 public class Money : MonoBehaviour
 {   
-    public Player player;          // drag your Player here
     public TMP_Text moneyText;     // drag your TextMeshPro UI here
-
-    void Awake()
-    {
-        player = FindFirstObjectByType<Player>();
-    }
 
     void Update()
     {
-        if (player != null && moneyText != null)
+        if (moneyText == null)
         {
-            moneyText.text = player.money.ToString();
+            Debug.LogError("Money: moneyText not assigned in Inspector!");
+            return;
+        }
+
+        if (PlayerDataManager.Instance != null)
+        {
+            moneyText.text = PlayerDataManager.Instance.money.ToString();
         }
     }
 }

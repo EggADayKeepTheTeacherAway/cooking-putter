@@ -14,10 +14,9 @@ public class Player : Entity
 
     public PlayerInputSet input { get; private set; }
 
-    public int money = 1000;
-
-    public List<InventoryEntry> inventory = new List<InventoryEntry>();
-
+    // Use PlayerDataManager instead of local storage
+    public int money => PlayerDataManager.Instance.money;
+    public List<InventoryEntry> inventory => PlayerDataManager.Instance.inventory;
 
     protected override void Awake()
     {
@@ -31,7 +30,6 @@ public class Player : Entity
         moveState = new Player_MoveState(this, stateMachine, "move");
 
         stateMachine.Initialize(idleState);
-
     }
 
     protected override void Update()
@@ -52,7 +50,6 @@ public class Player : Entity
 
         input.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         input.Player.Move.canceled += ctx => moveInput = Vector2.zero;
-
     }
 
     private void OnDisable()
@@ -60,19 +57,9 @@ public class Player : Entity
         input.Disable();
     }
 
-
     public void AddItem(ItemData item, int amount = 1)
     {
-        foreach (var entry in inventory)
-        {
-            if (entry.item == item)
-            {
-                entry.quantity += amount;
-                return;
-            }
-        }
-
-        inventory.Add(new InventoryEntry { item = item, quantity = amount });
+        PlayerDataManager.Instance.AddItem(item, amount);
     }
 
     public void SetVelocity(float velocityX, float velocityY)
@@ -80,4 +67,8 @@ public class Player : Entity
         currentVelocity = new Vector2(velocityX, velocityY);
     }
 
+    private void OnApplicationQuit()
+    {
+        PlayerDataManager.Instance.SaveData();
+    }
 }

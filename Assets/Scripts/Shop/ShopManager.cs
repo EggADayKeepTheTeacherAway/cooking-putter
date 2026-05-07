@@ -19,23 +19,18 @@ public class Shop : MonoBehaviour
     {
         // Checks if player has enough money, then adds item to inventory and deducts money.
         
-        if (player.money < item.price)
+        if (!PlayerDataManager.Instance.TrySpendMoney(item.price))
         {
             Debug.Log("Not enough money!");
             return false;
         }
 
         ItemData baseItem = item.itemData;
-        player.money -= item.price;
-        player.AddItem(baseItem, 1);
+        PlayerDataManager.Instance.AddItem(baseItem, 1);
 
         // After buying successfully
-
         shopInventory.GenerateInventoryUI();
-
 
         return true;
     }
-
-
 }
