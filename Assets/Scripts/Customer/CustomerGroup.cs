@@ -25,7 +25,6 @@ public class CustomerGroup
 
         if (Count <= 0)
         {
-            // Do not UnTake here, wait until they return the seats
             OnGroupFinishedEatting?.Invoke();
         }
     }

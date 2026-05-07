@@ -22,7 +22,7 @@ public class Customer_LookingForSeatState : CustomerState
 
         if (table == null)
         {
-            stateMachine.ChangeState(customer.exitState);
+            stateMachine.ChangeState(customer.noTableState);
             return;
         }
 
@@ -32,7 +32,7 @@ public class Customer_LookingForSeatState : CustomerState
 
         if (seat == null)
         {
-            stateMachine.ChangeState(customer.exitState);
+            stateMachine.ChangeState(customer.noTableState);
             return;
         }
 

@@ -18,7 +18,9 @@ public class Customer : Entity
     public Customer_WaitForFoodState waitFoodState;
     public Customer_EattingState eattingState;
     public Customer_ExitState exitState;
-    
+    public Customer_NoTableState noTableState;
+
+
 
 
     protected override void Awake()
@@ -30,6 +32,8 @@ public class Customer : Entity
         waitFoodState = new Customer_WaitForFoodState(this, stateMachine, "idle");
         eattingState = new Customer_EattingState(this, stateMachine, "idle");
         exitState = new Customer_ExitState(this, stateMachine, "move");
+        noTableState = new Customer_NoTableState(this, stateMachine, "move");
+        
 
     }
 

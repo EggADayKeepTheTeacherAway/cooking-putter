@@ -8,6 +8,7 @@ public class RestaurantManager : MonoBehaviour
     [SerializeField] private Food[] foodList;
     [SerializeField] private CustomerSpawner spawner;
     [SerializeField] private RandomTimer spawnDelay;
+    [SerializeField] private Transform noTablePoint;
 
     private float spawnTimer;
 
@@ -20,6 +21,8 @@ public class RestaurantManager : MonoBehaviour
     private List<CustomerGroup> customerGroups;
 
     public CustomerSpawner Spawner => spawner;
+
+    public Vector2 NoTablePoint => noTablePoint.position;
 
     private void Awake()
     {
