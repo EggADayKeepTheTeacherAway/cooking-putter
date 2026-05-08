@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 public class Player : Entity
 {
+    [SerializeField] private Transform playerHead;
+    [SerializeField] private float interactLine;
+    [SerializeField] private LayerMask interactableObjectLayer;
+
     public float runSpeedModifier = 1.5f;
 
     public Player_IdleState idleState { get; private set; }
@@ -55,6 +59,17 @@ public class Player : Entity
     private void OnDisable()
     {
         input.Disable();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.lightGreen;
+        Gizmos.DrawLine(transform.position, transform.position + ConvertFacingDirToVector() * interactLine);
+    }
+
+    protected bool ObjectDetected()
+    {
+        return Physics2D.Raycast(transform.position, ConvertFacingDirToVector(), interactLine, interactableObjectLayer);
     }
 
     public void AddItem(ItemData item, int amount = 1)
