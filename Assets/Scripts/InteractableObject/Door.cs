@@ -15,10 +15,9 @@ public class Door : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        if (isPlayerInRange && (player.input.Player.Interact.IsPressed() || !needInteract))
+        if (isPlayerInRange && !needInteract)
         {
             Interact();
-            Debug.Log("Player interacted with door: " + gameObject.name);
         }
     }
 
@@ -27,7 +26,6 @@ public class Door : MonoBehaviour, IInteractable
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            Debug.Log("Player entered door area.");
         }
     }
 
@@ -36,7 +34,6 @@ public class Door : MonoBehaviour, IInteractable
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            Debug.Log("Player left door area.");
         }
     }
 }

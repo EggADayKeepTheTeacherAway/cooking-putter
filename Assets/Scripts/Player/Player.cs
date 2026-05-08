@@ -1,8 +1,13 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
+    [SerializeField] private Transform playerHead;
+    [SerializeField] private float interactLine;
+    [SerializeField] private LayerMask interactableObjectLayer;
+
     public float runSpeedModifier = 1.5f;
 
     public Player_IdleState idleState { get; private set; }
@@ -37,6 +42,7 @@ public class Player : Entity
         base.Update();
 
         UpdateFacingDirection(moveInput);
+        HandleInteraction();
     }
     
     private void FixedUpdate()
@@ -50,11 +56,56 @@ public class Player : Entity
 
         input.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         input.Player.Move.canceled += ctx => moveInput = Vector2.zero;
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneTransitionManager.Instance.OnSceneTransitioning += OnChangeScene;
+
     }
 
     private void OnDisable()
     {
         input.Disable();
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneTransitionManager.Instance.OnSceneTransitioning -= OnChangeScene;
+
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"Scene loaded: {scene.name}, last pos: {SceneTransitionManager.Instance.playerLastPosition}");
+        if (scene.name == "TownScene")
+        {
+            transform.position = SceneTransitionManager.Instance.playerLastPosition;
+        }
+    }
+
+    private void OnChangeScene(string sceneName)
+    {
+        Debug.Log($"Scene unloaded: {sceneName}, saving pos: {transform.position}");
+        if (sceneName != "TownScene")
+        {
+            SceneTransitionManager.Instance.SetPlayerLastPosition(transform.position);
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.lightGreen;
+        Gizmos.DrawLine(playerHead.position, playerHead.position + ConvertFacingDirToVector() * interactLine);
+    }
+
+    protected RaycastHit2D ObjectDetected()
+    {
+        return Physics2D.Raycast(playerHead.position, ConvertFacingDirToVector(), interactLine, interactableObjectLayer);
+    }
+
+    private void HandleInteraction()
+    {
+        RaycastHit2D hit = ObjectDetected();
+        if (hit.collider != null && input.Player.Interact.WasPressedThisFrame())
+        {
+            hit.collider.GetComponent<IInteractable>()?.Interact();
+        }
     }
 
     public void AddItem(ItemData item, int amount = 1)

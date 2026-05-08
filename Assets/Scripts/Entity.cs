@@ -40,4 +40,22 @@ public class Entity : MonoBehaviour
     }
 
     public void SetFacingDirection(FacingDirection newDir) => facingDirection = newDir;
+
+    protected Vector3 ConvertFacingDirToVector()
+    {
+        switch (facingDirection)
+        {
+            case (FacingDirection.Up):
+                return Vector2.up;
+            case (FacingDirection.Down):
+                return Vector2.down;
+            case (FacingDirection.Left):
+                return Vector2.left;
+            case (FacingDirection.Right):
+                return Vector2.right;
+            default:
+                return Vector2.zero;
+        }
+
+    }
 }
