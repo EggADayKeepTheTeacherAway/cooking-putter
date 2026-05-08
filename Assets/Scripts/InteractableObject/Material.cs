@@ -17,7 +17,6 @@ public class Material : MonoBehaviour, IInteractable
     [SerializeField] private GameObject collectionPopup; // Assign a UI Canvas child object here
     [SerializeField] private float popupDisplayTime = 1.5f;
 
-    private bool isPlayerInRange = false;
     private bool canInteract = true; // State to track if it's active
 
     private void Start()
@@ -90,32 +89,4 @@ public class Material : MonoBehaviour, IInteractable
         }
     }
 
-    private void Update()
-    {
-        if (canInteract && isPlayerInRange)
-        {
-            // Get player input directly from PlayerInputSet
-            Player player = FindFirstObjectByType<Player>();
-            if (player != null && player.input.Player.Interact.WasPressedThisFrame())
-            {
-                Interact();
-            }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            isPlayerInRange = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            isPlayerInRange = false;
-        }
-    }
 }

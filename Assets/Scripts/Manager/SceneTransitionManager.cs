@@ -11,7 +11,12 @@ public class SceneTransitionManager : MonoBehaviour
 
     [SerializeField] private Image transitionEffect;
     [SerializeField] private float fadeDuration = 0.5f;
+
     private bool isTransitioning;
+
+    public System.Action<string> OnSceneTransitioning;
+
+    public Vector3 playerLastPosition { get; private set; }
 
     private void Awake()
     {
@@ -30,9 +35,12 @@ public class SceneTransitionManager : MonoBehaviour
     {
         if (isTransitioning) return;
 
+        OnSceneTransitioning?.Invoke(sceneName);
+
         StartCoroutine(TransitionCo(sceneName));
     }
 
+    public void SetPlayerLastPosition(Vector3 playerPos) => playerLastPosition = playerPos;
 
     private IEnumerator TransitionCo(string sceneName)
     {

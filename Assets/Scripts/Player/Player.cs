@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
@@ -56,13 +57,37 @@ public class Player : Entity
         input.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         input.Player.Move.canceled += ctx => moveInput = Vector2.zero;
 
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneTransitionManager.Instance.OnSceneTransitioning += OnChangeScene;
+
     }
 
     private void OnDisable()
     {
         input.Disable();
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneTransitionManager.Instance.OnSceneTransitioning -= OnChangeScene;
+
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"Scene loaded: {scene.name}, last pos: {SceneTransitionManager.Instance.playerLastPosition}");
+        if (scene.name == "TownScene")
+        {
+            transform.position = SceneTransitionManager.Instance.playerLastPosition;
+        }
+    }
+
+    private void OnChangeScene(string sceneName)
+    {
+        Debug.Log($"Scene unloaded: {sceneName}, saving pos: {transform.position}");
+        if (sceneName != "TownScene")
+        {
+            SceneTransitionManager.Instance.SetPlayerLastPosition(transform.position);
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.lightGreen;
