@@ -41,6 +41,7 @@ public class Player : Entity
         base.Update();
 
         UpdateFacingDirection(moveInput);
+        HandleInteraction();
     }
     
     private void FixedUpdate()
@@ -54,6 +55,7 @@ public class Player : Entity
 
         input.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         input.Player.Move.canceled += ctx => moveInput = Vector2.zero;
+
     }
 
     private void OnDisable()
@@ -64,12 +66,21 @@ public class Player : Entity
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.lightGreen;
-        Gizmos.DrawLine(transform.position, transform.position + ConvertFacingDirToVector() * interactLine);
+        Gizmos.DrawLine(playerHead.position, playerHead.position + ConvertFacingDirToVector() * interactLine);
     }
 
-    protected bool ObjectDetected()
+    protected RaycastHit2D ObjectDetected()
     {
-        return Physics2D.Raycast(transform.position, ConvertFacingDirToVector(), interactLine, interactableObjectLayer);
+        return Physics2D.Raycast(playerHead.position, ConvertFacingDirToVector(), interactLine, interactableObjectLayer);
+    }
+
+    private void HandleInteraction()
+    {
+        RaycastHit2D hit = ObjectDetected();
+        if (hit.collider != null && input.Player.Interact.WasPressedThisFrame())
+        {
+            hit.collider.GetComponent<IInteractable>()?.Interact();
+        }
     }
 
     public void AddItem(ItemData item, int amount = 1)
