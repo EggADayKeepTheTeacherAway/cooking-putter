@@ -456,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4312990825288704819, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5052206316391875732, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
       propertyPath: m_Pivot.x
@@ -540,23 +540,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6328792818490198565, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6328792818490198565, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8143817829528121796, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8143817829528121796, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8143817829528121796, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
