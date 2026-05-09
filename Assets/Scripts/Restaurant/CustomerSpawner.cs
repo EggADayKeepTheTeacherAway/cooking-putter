@@ -17,9 +17,6 @@ public class CustomerSpawner : MonoBehaviour
     {
         int totalCustomerInGroup = Random.Range(1, maximumCustomerInGroup + 1);
 
-        Debug.Log($"Trying to spawn group of {totalCustomerInGroup}, pool has {customerPool.AvailableCount}");
-
-
         List<Customer> customers = new List<Customer>();
 
         if (totalCustomerInGroup == 1)
@@ -43,7 +40,6 @@ public class CustomerSpawner : MonoBehaviour
                 return null;
             }
 
-            Debug.Log($"Got customer {i + 1}, pool now has {customerPool.AvailableCount}");
 
             c.ResetVal();
 

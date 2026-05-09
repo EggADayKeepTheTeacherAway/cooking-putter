@@ -73,7 +73,6 @@ public class Player : Entity
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log($"Scene loaded: {scene.name}, last pos: {SceneTransitionManager.Instance.playerLastPosition}");
         if (scene.name == "TownScene")
         {
             transform.position = SceneTransitionManager.Instance.playerLastPosition;
@@ -82,7 +81,6 @@ public class Player : Entity
 
     private void OnChangeScene(string sceneName)
     {
-        Debug.Log($"Scene unloaded: {sceneName}, saving pos: {transform.position}");
         if (sceneName != "TownScene")
         {
             SceneTransitionManager.Instance.SetPlayerLastPosition(transform.position);
