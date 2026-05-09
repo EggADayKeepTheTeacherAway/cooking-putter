@@ -13,7 +13,6 @@ public class CustomerState : EntityState
     {
         base.Enter();
 
-        Debug.Log(stateMachine.currentState);
     }
 
     protected void ChooseSeat() => customer.RandomSeat();

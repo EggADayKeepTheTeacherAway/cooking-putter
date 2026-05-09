@@ -27,7 +27,6 @@ public class CustomerPool : MonoBehaviour
         if (customers.Count <= 0)
         {
             Debug.Log("Oi Oi Oi, not enough customer in the pool dude!!!");
-            Debug.Log(customers.Count);
             return null;
         }
 
@@ -46,6 +45,5 @@ public class CustomerPool : MonoBehaviour
 
         c.gameObject.SetActive(false);
 
-        Debug.Log(customers.Count);
     }
 }
