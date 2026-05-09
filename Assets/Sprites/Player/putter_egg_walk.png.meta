@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: 7211b00ec00fbf04180a94535345f204
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6743183912610891313
+    second: putter_egg_walk_0
+  - first:
+      213: 8741399264693321486
+    second: putter_egg_walk_1
+  - first:
+      213: -1825121325491783166
+    second: putter_egg_walk_2
+  - first:
+      213: 2271831339987344593
+    second: putter_egg_walk_3
+  - first:
+      213: 7274187228629569163
+    second: putter_egg_walk_4
+  - first:
+      213: 8724925330680575239
+    second: putter_egg_walk_5
+  - first:
+      213: -6528550632273124157
+    second: putter_egg_walk_6
+  - first:
+      213: -504690235371073554
+    second: putter_egg_walk_7
+  - first:
+      213: 6614855523220868742
+    second: putter_egg_walk_8
+  - first:
+      213: 8031195073892815086
+    second: putter_egg_walk_9
+  - first:
+      213: -5480587806731756173
+    second: putter_egg_walk_10
+  - first:
+      213: -5878007125659353714
+    second: putter_egg_walk_11
+  - first:
+      213: 1583713611397520505
+    second: putter_egg_walk_12
+  - first:
+      213: 5374397633972128505
+    second: putter_egg_walk_13
+  - first:
+      213: 4806770505217030223
+    second: putter_egg_walk_14
+  - first:
+      213: -6724693440831536284
+    second: putter_egg_walk_15
+  - first:
+      213: 3685477065548873086
+    second: putter_egg_walk_16
+  - first:
+      213: -5751483197672299476
+    second: putter_egg_walk_17
+  - first:
+      213: 7076667710158921802
+    second: putter_egg_walk_18
+  - first:
+      213: 2436791059073115310
+    second: putter_egg_walk_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: putter_egg_walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1653
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9f2b955f56b62a0800000000000000
+      internalID: -6743183912610891313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1653
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ff7eb3150bf4970800000000000000
+      internalID: 8741399264693321486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1653
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a721a03dddba6e0800000000000000
+      internalID: -1825121325491783166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1653
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc9b89219a278f10800000000000000
+      internalID: 2271831339987344593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1653
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e06208eba13f460800000000000000
+      internalID: 7274187228629569163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1106
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705f5039c59251970800000000000000
+      internalID: 8724925330680575239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_6
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1106
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c465392acde565a0800000000000000
+      internalID: -6528550632273124157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_7
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1106
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef4917a7eafef8f0800000000000000
+      internalID: -504690235371073554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_8
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1106
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e4c162d00bccb50800000000000000
+      internalID: 6614855523220868742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_9
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1106
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee09f3d5e59847f60800000000000000
+      internalID: 8031195073892815086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 559
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d9a6b5d6a01f3b0800000000000000
+      internalID: -5480587806731756173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 559
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8dfbd789af1d6ea0800000000000000
+      internalID: -5878007125659353714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_12
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 559
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cdc41832b7af510800000000000000
+      internalID: 1583713611397520505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 559
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9facb9e5c22b59a40800000000000000
+      internalID: 5374397633972128505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_14
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 559
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f483940ae4415b240800000000000000
+      internalID: 4806770505217030223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46346dbc1f61da2a0800000000000000
+      internalID: -6724693440831536284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_16
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 12
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7db3e75dd1752330800000000000000
+      internalID: 3685477065548873086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_17
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 12
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c246d1f1180ae20b0800000000000000
+      internalID: -5751483197672299476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_18
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 12
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a40ef71e9cf553260800000000000000
+      internalID: 7076667710158921802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_walk_19
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 12
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4a6ebbe8831d120800000000000000
+      internalID: 2436791059073115310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 559df35e53a47d641bb229d48dc96b29
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":640.0,"y":547.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      putter_egg_walk_0: -6743183912610891313
+      putter_egg_walk_1: 8741399264693321486
+      putter_egg_walk_10: -5480587806731756173
+      putter_egg_walk_11: -5878007125659353714
+      putter_egg_walk_12: 1583713611397520505
+      putter_egg_walk_13: 5374397633972128505
+      putter_egg_walk_14: 4806770505217030223
+      putter_egg_walk_15: -6724693440831536284
+      putter_egg_walk_16: 3685477065548873086
+      putter_egg_walk_17: -5751483197672299476
+      putter_egg_walk_18: 7076667710158921802
+      putter_egg_walk_19: 2436791059073115310
+      putter_egg_walk_2: -1825121325491783166
+      putter_egg_walk_3: 2271831339987344593
+      putter_egg_walk_4: 7274187228629569163
+      putter_egg_walk_5: 8724925330680575239
+      putter_egg_walk_6: -6528550632273124157
+      putter_egg_walk_7: -504690235371073554
+      putter_egg_walk_8: 6614855523220868742
+      putter_egg_walk_9: 8031195073892815086
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
