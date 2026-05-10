@@ -36,46 +36,49 @@ public class DayCycleManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateClock();
+        RefreshClock();
     }
 
     public void AdvanceTime()
     {
-        currentTime++;
-
-        // Passed 12
-        if (currentTime >= 12)
+        // If currently at 11 o'clock
+        // next pickup ends the day
+        if (currentTime == 10)
         {
-            currentTime = 0;
+            currentTime = 11;
+
+            RefreshClock();
+
+            Debug.Log("Current Hour: 12");
+
+            EndDay();
+
+            return;
         }
 
-        UpdateClock();
-
-        Debug.Log("Current Hour: " + GetDisplayedHour());
-
-        // Returned to 12 again
+        // Normal hour progression
         if (currentTime == 11)
         {
-            if (!firstCycle)
-            {
-                EndDay();
-            }
-
-            firstCycle = false;
+            // 12 -> 1
+            currentTime = 0;
         }
+        else
+        {
+            currentTime++;
+        }
+
+        RefreshClock();
+
+        Debug.Log("Current Hour: " + GetDisplayedHour());
     }
 
     private void EndDay()
     {
         Debug.Log("Day Ended!");
-
-        // Reset variables here
         ResetEndOfDayVariables();
 
         // Reset clock back to 12
         currentTime = 11;
-
-        // Load restaurant scene
         SceneManager.LoadScene(restaurantSceneName);
     }
 
@@ -85,13 +88,21 @@ public class DayCycleManager : MonoBehaviour
         Debug.Log("Resetting end-of-day variables");
     }
 
-    private void UpdateClock()
+    public void RefreshClock()
     {
         if (clockImage != null &&
             clockSprites.Length > currentTime)
         {
             clockImage.sprite = clockSprites[currentTime];
         }
+    }
+
+    public void ResetToTwelve()
+    {
+        currentTime = 11;
+        RefreshClock();
+
+        Debug.Log("Clock reset to 12");
     }
 
     public int GetDisplayedHour()
