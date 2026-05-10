@@ -32,6 +32,10 @@ public class Customer_EattingState : CustomerState
         if (stateTimer <= 0 && !finishedEating)
         {
             finishedEating = true;
+            
+            // Change food to dirty dish
+            FoodServiceManager.GetOrCreateInstance().ChangeFoodToDirtyDish(customer);
+            
             customer.GetGroup().FinishedEatting();
         }
     }

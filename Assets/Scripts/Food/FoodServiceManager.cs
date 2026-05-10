@@ -14,6 +14,7 @@ public class FoodServiceManager : MonoBehaviour
 
     private Queue<(Customer customer, Food food)> pendingOrders = new();
     private readonly Dictionary<Customer, GameObject> customerOrderPreviews = new();
+    private readonly Dictionary<Customer, GameObject> foodOnTableObjects = new();
     private GameObject serviceWindowPreview;
     private GameObject carriedFoodPreview;
     private Food carriedFood;
@@ -35,6 +36,10 @@ public class FoodServiceManager : MonoBehaviour
     [SerializeField] private int previewSortingOrder = 50;
     [SerializeField] private string foodOnTableSortingLayerName = "Default";
     [SerializeField] private int foodOnTableSortingOrder = 10;
+    [SerializeField] private string dirtyDishSortingLayerName = "Default";
+    [SerializeField] private int dirtyDishSortingOrder = 10;
+    [SerializeField] private float dirtyDishScale = 0.8f;
+    [SerializeField] private ItemData dirtyDishItem; // Reference to Dirty Dish item (ItemData)
 
     public bool HasCarriedFood => carriedFood != null;
 
@@ -432,6 +437,49 @@ public class FoodServiceManager : MonoBehaviour
         Vector3 foodPosition = GetFoodOnTablePosition(customer);
 
         GameObject foodObject = CreateFoodObjectWithSorting($"{food.FoodName} OnTable", food.Icon, foodPosition, null, foodOnTableScale, foodOnTableSortingLayerName, foodOnTableSortingOrder);
+        
+        // Store reference to update later when eating is finished
+        foodOnTableObjects[customer] = foodObject;
+    }
+
+    public void ChangeFoodToDirtyDish(Customer customer)
+    {
+        if (customer == null) return;
+        
+        if (!foodOnTableObjects.TryGetValue(customer, out var foodObject) || foodObject == null)
+        {
+            Debug.LogWarning($"ChangeFoodToDirtyDish: no spawned food object found for customer {customer?.name}");
+            return;
+        }
+
+        if (dirtyDishItem == null || dirtyDishItem.itemIcon == null)
+        {
+            Debug.LogWarning("DirtyDish item not assigned or has no icon. Falling back to gray tint.");
+        }
+
+        var spriteRenderer = foodObject.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            if (dirtyDishItem != null && dirtyDishItem.itemIcon != null)
+            {
+                spriteRenderer.sprite = dirtyDishItem.itemIcon;
+                Debug.Log($"Changed {customer.name}'s food to dirty dish (sprite swap)");
+            }
+            else
+            {
+                // Fallback: tint the existing sprite to indicate dirty dish
+                spriteRenderer.color = new Color(0.7f, 0.7f, 0.7f, 1f);
+                Debug.Log($"Changed {customer.name}'s food to dirty dish (tinted fallback)");
+            }
+
+            if (!string.IsNullOrWhiteSpace(dirtyDishSortingLayerName))
+            {
+                spriteRenderer.sortingLayerName = dirtyDishSortingLayerName;
+            }
+
+            spriteRenderer.sortingOrder = dirtyDishSortingOrder;
+            foodObject.transform.localScale = Vector3.one * dirtyDishScale;
+        }
     }
 
     private Vector3 GetFoodOnTablePosition(Customer customer)
@@ -473,5 +521,17 @@ public class FoodServiceManager : MonoBehaviour
 
         customerOrderPreviews.Clear();
         ClearServiceWindowPreview();
+    }
+
+    public void RemoveFoodFromTable(Customer customer)
+    {
+        if (customer == null) return;
+
+        if (foodOnTableObjects.TryGetValue(customer, out var foodObject) && foodObject != null)
+        {
+            Destroy(foodObject);
+        }
+
+        foodOnTableObjects.Remove(customer);
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Human Flesh
   m_EditorClassIdentifier: Assembly-CSharp::Food
   foodName: Human Flesh
-  sprite: {fileID: 0}
+  sprite: {fileID: 6641743146072007805, guid: bbd40f3ecba426d4493f3ab93328b613, type: 3}

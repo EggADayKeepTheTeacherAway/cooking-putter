@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ed47818ce622e349bad4f85263c3541, type: 3}
-  m_Name: Apple
+  m_Name: Dirty Dish
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Apple
-  itemDescription: To make apple menu
-  itemIcon: {fileID: -9182177788924653191, guid: 9a236f66ec071b7439019739b386059c, type: 3}
+  itemName: Dirty Dish
+  itemDescription: A dish after customer ate
+  itemIcon: {fileID: 6533115755915052667, guid: ad02639de0beca84ca5b6a43db2840ae, type: 3}
