@@ -1,66 +1,61 @@
 using UnityEngine;
+using static Player;
 
 public class Entity : MonoBehaviour
 {
     [Header("Movement Detail")]
     public float moveSpeed;
-    public float runSpeedModifier = 1.5f;
 
     public Rigidbody2D rb;
     public Animator anim;
+    public SpriteRenderer sr;
 
     public StateMachine stateMachine { get; private set; }
-    
-    public Entity_IdleState idleState { get; private set; }
-    public Entity_MoveState moveState { get; private set; }
 
-    private Vector2 currentVelocity;
-    public Vector2 moveInput { get; private set; }
-
-    public PlayerInputSet input { get; private set; }
+    public enum FacingDirection { Up, Down, Left, Right }
+    public FacingDirection facingDirection { get; private set; }
 
 
-    private void Awake()
+    protected virtual void Awake()
     {
-        input = new PlayerInputSet();
-
-
         stateMachine = new StateMachine();
-
-        idleState = new Entity_IdleState (this, stateMachine, "idle");
-        moveState = new Entity_MoveState(this, stateMachine, "move");
-
-
-        stateMachine.Initialize(idleState);        
     }
 
-    private void Update()
+    protected virtual void Update()
     {
-        Debug.Log(moveInput);
         stateMachine.CallUpdateCurrentState();
     }
 
-    private void FixedUpdate()
+    protected void UpdateFacingDirection(Vector2 input)
     {
-        rb.linearVelocity = currentVelocity;
+        if (input == Vector2.zero) return;
+
+        if (Mathf.Abs(input.x) >= Mathf.Abs(input.y))
+            facingDirection = input.x > 0 ? FacingDirection.Right : FacingDirection.Left;
+        else
+            facingDirection = input.y > 0 ? FacingDirection.Up : FacingDirection.Down;
+
+        sr.flipX = (facingDirection == FacingDirection.Right);
+
     }
 
-    private void OnEnable()
+    public void SetFacingDirection(FacingDirection newDir) => facingDirection = newDir;
+
+    protected Vector3 ConvertFacingDirToVector()
     {
-        input.Enable();
+        switch (facingDirection)
+        {
+            case (FacingDirection.Up):
+                return Vector2.up;
+            case (FacingDirection.Down):
+                return Vector2.down;
+            case (FacingDirection.Left):
+                return Vector2.left;
+            case (FacingDirection.Right):
+                return Vector2.right;
+            default:
+                return Vector2.zero;
+        }
 
-        input.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
-        input.Player.Move.canceled += context => moveInput = Vector2.zero;
-
-    }
-
-    private void OnDisable()
-    {
-        input.Disable();
-    }
-
-    public void SetVelocity(float velocityX, float velocityY)
-    {
-        currentVelocity = new Vector2(velocityX, velocityY);
     }
 }

@@ -1,0 +1,125 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Customer : Entity
+{
+    private CustomerGroup group;
+    public Seat seat { get; private set; }
+    private Queue<Vector2> moveQueue = new Queue<Vector2>();
+    public Vector2 currentTarget { get; private set; }
+    private bool hasTarget;
+    public System.Action OnReachedTarget;
+
+    public System.Action<Food> OnOrderedFood;
+    public System.Action<Food> OnRecievedFood;
+
+    public Entity_IdleState idleState;
+    public Customer_LookingForSeatState findSeatState;
+    public Customer_WaitForFoodState waitFoodState;
+    public Customer_EattingState eattingState;
+    public Customer_ExitState exitState;
+    public Customer_NoTableState noTableState;
+
+
+
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        idleState = new Entity_IdleState(this, stateMachine, "idle");
+        findSeatState = new Customer_LookingForSeatState(this, stateMachine, "move");
+        waitFoodState = new Customer_WaitForFoodState(this, stateMachine, "idle");
+        eattingState = new Customer_EattingState(this, stateMachine, "idle");
+        exitState = new Customer_ExitState(this, stateMachine, "move");
+        noTableState = new Customer_NoTableState(this, stateMachine, "move");
+        
+
+    }
+
+    public void Initialize()
+    {
+        stateMachine.Initialize(findSeatState);
+    }
+
+    private void FixedUpdate()
+    {
+        if (!hasTarget) return;
+
+        Vector2 dir = (currentTarget - rb.position).normalized;
+        UpdateFacingDirection(dir);
+
+
+        Vector2 newPos = Vector2.MoveTowards(
+            rb.position,
+            currentTarget,
+            moveSpeed * Time.fixedDeltaTime
+        );
+
+
+        rb.MovePosition(newPos);
+
+        if (Vector2.Distance(rb.position, currentTarget) < 0.05f)
+        {
+            SetNextTarget();
+        }
+    }
+
+    public void SetGroup(CustomerGroup group)
+    {
+        this.group = group;
+    }
+
+    public CustomerGroup GetGroup() => group;
+
+    public Table GetTable() => group.table;
+
+    public void SetPath(List<Vector2> points)
+    {
+        moveQueue.Clear();
+
+        foreach (var p in points)
+            moveQueue.Enqueue(p);
+
+        SetNextTarget();
+    }
+
+    private void SetNextTarget()
+    {
+        if (moveQueue.Count == 0)
+        {
+            hasTarget = false;
+            OnReachedTarget?.Invoke();
+            return;
+        }
+
+        currentTarget = moveQueue.Dequeue();
+        hasTarget = true;
+    }
+
+    public void ResetVal()
+    {
+        seat = null;
+        group = null;
+        hasTarget = false;
+        moveQueue.Clear();
+        currentTarget = Vector2.zero;
+        OnReachedTarget = null;
+        OnOrderedFood = null;
+        OnRecievedFood = null;
+        ResetSortingOrder();
+    }
+
+    public void ResetSortingOrder() => sr.sortingOrder = 5;
+  
+    public void SetTopSortingOrder() => sr.sortingOrder = 1;
+
+    public void SetBottomSortingOrder() => sr.sortingOrder = -1;
+
+    public void RandomSeat() => seat = GetTable().GetRandomSeat();
+
+    public void SetCustomerSkin(AnimatorOverrideController controller)
+    {
+        anim.runtimeAnimatorController = controller;
+    }
+}

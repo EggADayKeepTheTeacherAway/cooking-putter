@@ -5,6 +5,6 @@ public class UI_MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("TownScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("TownScene");
     }
 }

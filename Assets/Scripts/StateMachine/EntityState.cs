@@ -5,7 +5,6 @@ public abstract class EntityState
 {
     public StateMachine stateMachine { get; private set; }
 
-    protected Entity entity;
     protected float stateTimer;
     protected Animator anim;
 
@@ -16,7 +15,6 @@ public abstract class EntityState
 
     protected EntityState(Entity entity, StateMachine stateMachine, string animParam)
     {
-        this.entity = entity;
         this.stateMachine = stateMachine;
         this.animParam = animParam;
 
@@ -28,18 +26,22 @@ public abstract class EntityState
     public virtual void Enter()
     {
         anim.SetBool(animParam, true);
-
-        Debug.Log(stateMachine.currentState);
-
     }
 
     public virtual void Update()
     {
         stateTimer -= Time.deltaTime;
+
+        UpdateAnimationParameters();
     }
 
     public virtual void Exit()
     {
         anim.SetBool(animParam, false);
+    }
+
+    public virtual void UpdateAnimationParameters()
+    {
+
     }
 }
