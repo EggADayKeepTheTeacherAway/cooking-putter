@@ -47,7 +47,7 @@ public class ServeInput : MonoBehaviour
         }
         else
         {
-            manager.TryPickupNextFoodForPlayer(playerTransform);
+            manager.TryPickupNextFoodForPlayer(playerTransform, false);
         }
     }
 }

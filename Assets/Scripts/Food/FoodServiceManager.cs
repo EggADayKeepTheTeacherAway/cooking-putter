@@ -15,6 +15,9 @@ public class FoodServiceManager : MonoBehaviour
     private Queue<(Customer customer, Food food)> pendingOrders = new();
     private readonly Dictionary<Customer, GameObject> customerOrderPreviews = new();
     private readonly Dictionary<Customer, GameObject> foodOnTableObjects = new();
+    private GameObject carriedItemObject;
+    private ItemData carriedItemData;
+    private Transform carriedItemCarrier;
     private GameObject serviceWindowPreview;
     private GameObject carriedFoodPreview;
     private Food carriedFood;
@@ -30,15 +33,15 @@ public class FoodServiceManager : MonoBehaviour
     [SerializeField] private Vector3 foodOnTableOffset = new Vector3(0f, 0.3f, 0f);
     [SerializeField] private bool requirePickupRange = true;
     [SerializeField] private float pickupDistance = 1.4f;
-    [SerializeField] private float previewScale = 0.6f;
-    [SerializeField] private float foodOnTableScale = 0.8f;
-    [SerializeField] private string previewSortingLayerName = "Default";
+    [SerializeField] private float previewScale = 1.5f;
+    [SerializeField] private float foodOnTableScale = 1.6f;
+    [SerializeField] private string previewSortingLayerName = "Foreground";
     [SerializeField] private int previewSortingOrder = 50;
-    [SerializeField] private string foodOnTableSortingLayerName = "Default";
-    [SerializeField] private int foodOnTableSortingOrder = 10;
+    [SerializeField] private string foodOnTableSortingLayerName = "Customers";
+    [SerializeField] private int foodOnTableSortingOrder = 0;
     [SerializeField] private string dirtyDishSortingLayerName = "Default";
-    [SerializeField] private int dirtyDishSortingOrder = 10;
-    [SerializeField] private float dirtyDishScale = 0.8f;
+    [SerializeField] private int dirtyDishSortingOrder = 1;
+    [SerializeField] private float dirtyDishScale = 1.6f;
     [SerializeField] private ItemData dirtyDishItem; // Reference to Dirty Dish item (ItemData)
 
     public bool HasCarriedFood => carriedFood != null;
@@ -479,7 +482,63 @@ public class FoodServiceManager : MonoBehaviour
 
             spriteRenderer.sortingOrder = dirtyDishSortingOrder;
             foodObject.transform.localScale = Vector3.one * dirtyDishScale;
+            // mark as dirty dish for interaction
+            var dd = foodObject.AddComponent<DirtyDish>();
+            dd.owner = customer;
+            dd.item = dirtyDishItem;
+            // ensure there's a collider for clicks
+            if (foodObject.GetComponent<Collider2D>() == null)
+            {
+                var col = foodObject.AddComponent<CircleCollider2D>();
+                col.isTrigger = false;
+            }
         }
+    }
+
+    // Player picks up a dirty dish GameObject
+    public bool PickupDirtyDish(GameObject dishObject, Transform carrier)
+    {
+        if (dishObject == null || carrier == null) return false;
+        var dd = dishObject.GetComponent<DirtyDish>();
+        if (dd == null) return false;
+
+        // parent to carrier and position at carriedPreviewOffset
+        dishObject.transform.SetParent(carrier);
+        dishObject.transform.localPosition = carriedPreviewOffset;
+        dishObject.transform.localScale = Vector3.one * dirtyDishScale;
+
+        carriedItemObject = dishObject;
+        carriedItemData = dd.item;
+        carriedItemCarrier = carrier;
+
+        // remove mapping from table so it won't be considered on-table anymore
+        if (dd.owner != null)
+        {
+            foodOnTableObjects.Remove(dd.owner);
+            dd.owner = null;
+        }
+
+        Debug.Log($"Picked up dirty dish: {carriedItemData?.itemName}");
+        return true;
+    }
+
+    // Try to drop carried dirty dish into sink
+    public bool TryDropCarriedDishAtSink(SinkBehaviour sink)
+    {
+        if (sink == null) return false;
+        if (carriedItemObject == null) return false;
+
+        // inform sink
+        sink.Fill();
+
+        // destroy carried object and clear state
+        Destroy(carriedItemObject);
+        carriedItemObject = null;
+        carriedItemData = null;
+        carriedItemCarrier = null;
+
+        Debug.Log("Dropped dirty dish into sink");
+        return true;
     }
 
     private Vector3 GetFoodOnTablePosition(Customer customer)

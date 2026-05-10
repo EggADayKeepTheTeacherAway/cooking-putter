@@ -5065,7 +5065,6 @@ GameObject:
   - component: {fileID: 692484791}
   - component: {fileID: 692484790}
   - component: {fileID: 692484793}
-  - component: {fileID: 692484792}
   m_Layer: 0
   m_Name: RestaurantManager
   m_TagString: Untagged
@@ -5112,20 +5111,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &692484792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692484789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5df9935e870a842c995e2e96a1123c32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ServeInput
-  serveDistance: 1.6
-  playerTransform: {fileID: 1983525439}
 --- !u!114 &692484793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5143,14 +5128,18 @@ MonoBehaviour:
   servicePreviewOffset: {x: 0, y: 0, z: 0}
   carriedPreviewOffset: {x: 0, y: 0.9, z: 0}
   foodOnTableOffset: {x: 0, y: -0.8, z: 0}
-  requirePickupRange: 1
+  requirePickupRange: 0
   pickupDistance: 1.4
   previewScale: 1.5
   foodOnTableScale: 1.6
   previewSortingLayerName: Foreground
   previewSortingOrder: 50
   foodOnTableSortingLayerName: Customer
-  foodOnTableSortingOrder: 1
+  foodOnTableSortingOrder: 0
+  dirtyDishSortingLayerName: Customer
+  dirtyDishSortingOrder: 1
+  dirtyDishScale: 1.6
+  dirtyDishItem: {fileID: 11400000, guid: 373b01048dcca4b239c08c8ec484c3b1, type: 2}
 --- !u!1 &716952433
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,6 +5231,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &875224313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3994847169410038924, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
+  m_PrefabInstance: {fileID: 1050675532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &891983335
 GameObject:
   m_ObjectHideFlags: 0
@@ -8627,14 +8621,20 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3994847169410038924, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1983525442}
+    - targetCorrespondingSourceObject: {fileID: 3994847169410038924, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1983525443}
   m_SourcePrefab: {fileID: 100100000, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
 --- !u!114 &1050675533 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8786348548281843128, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
   m_PrefabInstance: {fileID: 1050675532}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 875224313}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad5c0ad8d1f97c4694754be474d9aa2, type: 3}
@@ -13984,6 +13984,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5593267826812436477, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
   m_PrefabInstance: {fileID: 1050675532}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1983525442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875224313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c8f162672b244a9a96aa7f30979e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDishInteraction
+  interactDistance: 2
+--- !u!114 &1983525443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875224313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df9935e870a842c995e2e96a1123c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ServeInput
+  serveDistance: 1.6
+  playerTransform: {fileID: 1983525439}
 --- !u!1 &2041662531
 GameObject:
   m_ObjectHideFlags: 0
