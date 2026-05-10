@@ -52,6 +52,10 @@ public class Material : MonoBehaviour, IInteractable
 
             // Add item directly to PlayerDataManager
             PlayerDataManager.Instance.AddItem(itemToDrop, dropAmount);
+            if (DayCycleManager.Instance != null)
+            {
+                DayCycleManager.Instance.AdvanceTime();
+            }
         }
 
         Debug.Log($"Collected {dropAmount}x {itemToDrop.itemName}!");
