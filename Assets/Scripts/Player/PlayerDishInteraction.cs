@@ -1,23 +1,30 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// Attach to Player GameObject. Press Space to pick up dirty dishes and click sink to drop.
+// Attach to Player GameObject. Press Space to pick up dirty dishes or drop a carried dish into a nearby sink.
 public class PlayerDishInteraction : MonoBehaviour
 {
     [SerializeField] private float interactDistance = 2.0f;
 
     private void Update()
     {
+        var manager = FoodServiceManager.GetOrCreateInstance();
+
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            TryPickupNearbyDirtyDish();
+            if (manager.HasCarriedDirtyDish)
+            {
+                TryDropAtNearbySink();
+            }
+            else
+            {
+                TryPickupNearbyDirtyDish();
+            }
         }
 
-        if (Mouse.current == null) return;
-
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && manager.HasCarriedDirtyDish)
         {
-            TryDropAtClickedSink();
+            TryDropAtNearbySink();
         }
     }
 
@@ -50,12 +57,9 @@ public class PlayerDishInteraction : MonoBehaviour
         }
     }
 
-    private void TryDropAtClickedSink()
+    private void TryDropAtNearbySink()
     {
-        Vector2 mousePos = Mouse.current.position.ReadValue();
-        Vector3 wp = Camera.main != null ? Camera.main.ScreenToWorldPoint(mousePos) : new Vector3(mousePos.x, mousePos.y, 0f);
-        Vector2 point = new Vector2(wp.x, wp.y);
-        var hits = Physics2D.OverlapPointAll(point);
+        var hits = Physics2D.OverlapCircleAll(transform.position, interactDistance);
         if (hits == null || hits.Length == 0) return;
 
         SinkBehaviour foundSink = null;

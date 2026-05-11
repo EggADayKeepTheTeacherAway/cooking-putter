@@ -52,6 +52,7 @@ public class FoodServiceManager : MonoBehaviour
     [SerializeField] private ItemData dirtyDishItem; // Reference to Dirty Dish item (ItemData)
 
     public bool HasCarriedFood => carriedFood != null;
+    public bool HasCarriedDirtyDish => carriedItemObject != null;
 
     private void Awake()
     {
@@ -169,7 +170,7 @@ public class FoodServiceManager : MonoBehaviour
         return true;
     }
 
-    public bool TryPickupNextFoodForPlayer(Transform carrier, bool ignorePickupRange = true)
+    public bool TryPickupNextFoodForPlayer(Transform carrier, bool ignorePickupRange = false)
     {
         if (carrier == null)
         {
@@ -180,6 +181,12 @@ public class FoodServiceManager : MonoBehaviour
         if (HasCarriedFood)
         {
             Debug.Log("Player is already carrying food.");
+            return false;
+        }
+
+        if (!ignorePickupRange && requirePickupRange && serviceWindowPosition == null)
+        {
+            Debug.LogWarning("Service window position is not assigned on FoodServiceManager. Assign serviceWindowPosition to enforce pickup range.");
             return false;
         }
 
@@ -231,7 +238,7 @@ public class FoodServiceManager : MonoBehaviour
 
     public bool IsWithinPickupRange(Vector2 position)
     {
-        if (serviceWindowPosition == null) return true;
+        if (serviceWindowPosition == null) return false;
 
         float sq = ((Vector2)serviceWindowPosition.position - position).sqrMagnitude;
         return sq <= pickupDistance * pickupDistance;

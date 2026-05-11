@@ -5124,7 +5124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodServiceManager
   serviceWindowPosition: {fileID: 1548414526}
-  customerPreviewOffset: {x: 0, y: 1.3, z: 0}
+  customerPreviewOffset: {x: 0, y: 1.4, z: 0}
   servicePreviewOffset: {x: 0, y: 0, z: 0}
   carriedPreviewOffset: {x: 0, y: 0.9, z: 0}
   foodOnTableOffset: {x: 0, y: -0.8, z: 0}
@@ -5134,10 +5134,16 @@ MonoBehaviour:
   foodOnTableScale: 1.6
   previewSortingLayerName: Foreground
   previewSortingOrder: 50
+  bubbleSprite: {fileID: -7959383132838621803, guid: d86546c7260ef458caecfe4d668072ff, type: 3}
+  bubbleColor: {r: 1, g: 1, b: 1, a: 1}
+  bubbleOffset: {x: 0, y: -0.06, z: 0}
+  bubbleScale: 0.1
+  bubbleSortingLayerName: Foreground
+  bubbleSortingOrderOffset: -1
   foodOnTableSortingLayerName: Customer
   foodOnTableSortingOrder: 0
   dirtyDishSortingLayerName: Customer
-  dirtyDishSortingOrder: 1
+  dirtyDishSortingOrder: 0
   dirtyDishScale: 1.6
   dirtyDishItem: {fileID: 11400000, guid: 373b01048dcca4b239c08c8ec484c3b1, type: 2}
 --- !u!1 &716952433
