@@ -51,6 +51,7 @@ public class FoodServiceManager : MonoBehaviour
     [SerializeField] private float dirtyDishScale = 1.6f;
     [SerializeField] private ItemData dirtyDishItem; // Reference to Dirty Dish item (ItemData)
     [SerializeField] private Vector3 dishStackOffset = new Vector3(0f, 0.4f, 0f); // Vertical offset per stacked dish
+    [SerializeField] private int maxDirtyDishesCarried = 4;
 
     public bool HasCarriedFood => carriedFood != null;
     public bool HasCarriedDirtyDish => carriedDishObjects.Count > 0;
@@ -332,7 +333,7 @@ public class FoodServiceManager : MonoBehaviour
 
         var parent = serviceWindowPosition != null ? serviceWindowPosition : transform;
         var offset = serviceWindowPosition != null ? servicePreviewOffset : Vector3.zero;
-        serviceWindowPreview = CreatePreviewObject($"{food.FoodName} Service Preview", food.Icon, offset, parent, previewScale);
+        serviceWindowPreview = CreatePreviewObject($"{food.FoodName} Service Preview", food.Icon, offset, parent, previewScale, false);
     }
 
     private void RefreshServiceWindowPreview()
@@ -354,12 +355,12 @@ public class FoodServiceManager : MonoBehaviour
         carriedFoodPreview = CreatePreviewObject($"{food.FoodName} Carried", food.Icon, carriedPreviewOffset, carrier, previewScale);
     }
 
-    private GameObject CreatePreviewObject(string objectName, Sprite icon, Vector3 offset, Transform parent, float scale)
+    private GameObject CreatePreviewObject(string objectName, Sprite icon, Vector3 offset, Transform parent, float scale, bool createBubble = true)
     {
-        return CreateFoodObjectWithSorting(objectName, icon, offset, parent, scale, previewSortingLayerName, previewSortingOrder);
+        return CreateFoodObjectWithSorting(objectName, icon, offset, parent, scale, previewSortingLayerName, previewSortingOrder, createBubble);
     }
 
-    private GameObject CreateFoodObjectWithSorting(string objectName, Sprite icon, Vector3 offset, Transform parent, float scale, string sortingLayerName, int sortingOrder)
+    private GameObject CreateFoodObjectWithSorting(string objectName, Sprite icon, Vector3 offset, Transform parent, float scale, string sortingLayerName, int sortingOrder, bool createBubble = true)
     {
         var preview = new GameObject(objectName);
         preview.transform.SetParent(parent);
@@ -376,7 +377,7 @@ public class FoodServiceManager : MonoBehaviour
         preview.transform.localScale = Vector3.one * scale;
 
         // Create optional bubble background behind the icon
-        if (bubbleSprite != null)
+        if (createBubble && bubbleSprite != null)
         {
             var bubble = new GameObject(objectName + " Bubble");
             bubble.transform.SetParent(preview.transform);
@@ -569,6 +570,12 @@ public class FoodServiceManager : MonoBehaviour
         if (dishObject == null || carrier == null) return false;
         var dd = dishObject.GetComponent<DirtyDish>();
         if (dd == null) return false;
+
+        if (carriedDishObjects.Count >= maxDirtyDishesCarried)
+        {
+            Debug.Log($"Cannot pick up more dirty dishes. Max carried dishes is {maxDirtyDishesCarried}.");
+            return false;
+        }
 
         // parent to carrier and position with stack offset
         dishObject.transform.SetParent(carrier);
