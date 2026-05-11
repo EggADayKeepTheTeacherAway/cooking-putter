@@ -22,8 +22,6 @@ public class Door : MonoBehaviour, IInteractable
 
         action.Execute();
 
-        AudioManager.Instance.PlayGlobalSFX(openDoorSFX);
-
         if (PlayerDataManager.Instance != null)
             PlayerDataManager.Instance.SaveData();
         else
@@ -38,6 +36,8 @@ public class Door : MonoBehaviour, IInteractable
         }
         else if (isPlayerInRange && needInteract && player.input.Player.Interact.WasPressedThisFrame())
         {
+            AudioManager.Instance.PlayGlobalSFX(openDoorSFX);
+
             Interact();
         }
     }

@@ -19,7 +19,7 @@ MonoBehaviour:
   env:
   - audioName: door
     clip: {fileID: 8300000, guid: 6b33de69ce04783479a851e3a4dd54c0, type: 3}
-    maxVolume: 0.6
+    maxVolume: 0.4
   uiAudio:
   - audioName: button_click
     clip: {fileID: 8300000, guid: d77f2c70bb4709d40b4cab91bc439deb, type: 3}
