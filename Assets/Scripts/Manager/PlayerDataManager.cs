@@ -76,6 +76,7 @@ public class PlayerDataManager : MonoBehaviour
     public void AddMoney(int amount)
     {
         money += amount;
+        MoneyPopupUI.Instance.Show(amount);
     }
 
     public bool TrySpendMoney(int amount)
