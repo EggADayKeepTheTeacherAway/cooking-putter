@@ -583,6 +583,11 @@ public class FoodServiceManager : MonoBehaviour
         dishObject.transform.localPosition = stackPosition;
         dishObject.transform.localScale = Vector3.one * dirtyDishScale;
 
+        foreach (var col in dishObject.GetComponentsInChildren<Collider2D>(true))
+        {
+            col.enabled = false;
+        }
+
         carriedDishObjects.Add(dishObject);
         carriedDishItems.Add(dd.item);
         carriedDishCarrier = carrier;

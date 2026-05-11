@@ -39,6 +39,7 @@ public class PlayerDishInteraction : MonoBehaviour
         foreach (var col in hits)
         {
             if (col == null) continue;
+            if (col.transform.IsChildOf(transform)) continue;
 
             var dd = col.GetComponent<DirtyDish>();
             if (dd == null) continue;

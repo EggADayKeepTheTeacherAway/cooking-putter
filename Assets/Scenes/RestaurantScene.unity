@@ -5194,6 +5194,7 @@ MonoBehaviour:
   dirtyDishScale: 1
   dirtyDishItem: {fileID: 11400000, guid: 373b01048dcca4b239c08c8ec484c3b1, type: 2}
   dishStackOffset: {x: 0, y: 0.1, z: 0}
+  maxDirtyDishesCarried: 4
 --- !u!1 &716952433
 GameObject:
   m_ObjectHideFlags: 0
@@ -15055,7 +15056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 432367718024040016, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 432367718024040016, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
       propertyPath: m_SortingLayerID
@@ -15127,7 +15128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822313252560604028, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6822313252560604028, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
       propertyPath: m_SortingLayerID
