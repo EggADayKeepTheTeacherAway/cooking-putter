@@ -37,9 +37,16 @@ public class FoodServiceManager : MonoBehaviour
     [SerializeField] private float foodOnTableScale = 1.6f;
     [SerializeField] private string previewSortingLayerName = "Foreground";
     [SerializeField] private int previewSortingOrder = 50;
-    [SerializeField] private string foodOnTableSortingLayerName = "Customers";
+    [Header("Bubble Background")]
+    [SerializeField] private Sprite bubbleSprite;
+    [SerializeField] private Color bubbleColor = new Color(1f,1f,1f,1f);
+    [SerializeField] private Vector3 bubbleOffset = Vector3.zero;
+    [SerializeField] private float bubbleScale = 1.0f;
+    [SerializeField] private string bubbleSortingLayerName = "Foreground";
+    [SerializeField] private int bubbleSortingOrderOffset = -1;
+    [SerializeField] private string foodOnTableSortingLayerName = "Customer";
     [SerializeField] private int foodOnTableSortingOrder = 0;
-    [SerializeField] private string dirtyDishSortingLayerName = "Default";
+    [SerializeField] private string dirtyDishSortingLayerName = "Customer";
     [SerializeField] private int dirtyDishSortingOrder = 1;
     [SerializeField] private float dirtyDishScale = 1.6f;
     [SerializeField] private ItemData dirtyDishItem; // Reference to Dirty Dish item (ItemData)
@@ -360,6 +367,28 @@ public class FoodServiceManager : MonoBehaviour
         
         preview.transform.localScale = Vector3.one * scale;
 
+        // Create optional bubble background behind the icon
+        if (bubbleSprite != null)
+        {
+            var bubble = new GameObject(objectName + " Bubble");
+            bubble.transform.SetParent(preview.transform);
+            if (parent != null)
+            {
+                bubble.transform.localPosition = bubbleOffset;
+            }
+            else
+            {
+                bubble.transform.position = offset + bubbleOffset;
+            }
+            bubble.transform.localScale = Vector3.one * scale * bubbleScale;
+
+            var bubbleSr = bubble.AddComponent<SpriteRenderer>();
+            bubbleSr.sprite = bubbleSprite;
+            bubbleSr.color = bubbleColor;
+            if (!string.IsNullOrWhiteSpace(bubbleSortingLayerName)) bubbleSr.sortingLayerName = bubbleSortingLayerName;
+            bubbleSr.sortingOrder = sortingOrder + bubbleSortingOrderOffset;
+        }
+
         var spriteRenderer = preview.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = icon;
         if (!string.IsNullOrWhiteSpace(sortingLayerName))
@@ -440,7 +469,9 @@ public class FoodServiceManager : MonoBehaviour
         Vector3 foodPosition = GetFoodOnTablePosition(customer);
 
         GameObject foodObject = CreateFoodObjectWithSorting($"{food.FoodName} OnTable", food.Icon, foodPosition, null, foodOnTableScale, foodOnTableSortingLayerName, foodOnTableSortingOrder);
-        
+        // remove bubble background for placed food so it doesn't show on table
+        RemoveBubbleFromObject(foodObject);
+
         // Store reference to update later when eating is finished
         foodOnTableObjects[customer] = foodObject;
     }
@@ -454,6 +485,9 @@ public class FoodServiceManager : MonoBehaviour
             Debug.LogWarning($"ChangeFoodToDirtyDish: no spawned food object found for customer {customer?.name}");
             return;
         }
+
+        // ensure bubble background removed when converting to dirty dish
+        RemoveBubbleFromObject(foodObject);
 
         if (dirtyDishItem == null || dirtyDishItem.itemIcon == null)
         {
@@ -491,6 +525,32 @@ public class FoodServiceManager : MonoBehaviour
             {
                 var col = foodObject.AddComponent<CircleCollider2D>();
                 col.isTrigger = false;
+            }
+        }
+    }
+
+    private void RemoveBubbleFromObject(GameObject obj)
+    {
+        if (obj == null) return;
+        // If no bubble sprite configured, nothing to remove
+        if (bubbleSprite == null) return;
+
+        foreach (Transform child in obj.transform)
+        {
+            if (child == null) continue;
+            var sr = child.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                if (sr.sprite == bubbleSprite || child.name.EndsWith(" Bubble"))
+                {
+                    Destroy(child.gameObject);
+                    return;
+                }
+            }
+            else if (child.name.EndsWith(" Bubble"))
+            {
+                Destroy(child.gameObject);
+                return;
             }
         }
     }
