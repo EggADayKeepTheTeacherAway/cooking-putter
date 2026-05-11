@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
-  m_Name: Fried Egg
+  m_Name: Sushi
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  foodName: Fried Egg
+  foodName: 
   sprite: {fileID: 0}
   ingredients: []
