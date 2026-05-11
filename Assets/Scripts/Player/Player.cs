@@ -4,9 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
+    [Header("Collision Detector")]
     [SerializeField] private Transform playerHead;
     [SerializeField] private float interactLine;
     [SerializeField] private LayerMask interactableObjectLayer;
+
+    [Header("Sound")]
+    [SerializeField] private AudioSource audioSource;
+    [Header("SFX name")]
+    [SerializeField] private string roadFootStep;
+    [SerializeField] private string grassFootStep;
 
     public float runSpeedModifier = 1.5f;
 
@@ -120,4 +127,5 @@ public class Player : Entity
     {
         PlayerDataManager.Instance.SaveData();
     }
+
 }

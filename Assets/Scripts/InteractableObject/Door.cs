@@ -5,6 +5,10 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] private Player player;
     [SerializeField] private SceneTransitionData action;
     [SerializeField] private bool needInteract = true;
+
+    [Header("Sound")]
+    [SerializeField] private string openDoorSFX;
+
     private bool isPlayerInRange = false;
 
     public void Interact()
@@ -15,7 +19,11 @@ public class Door : MonoBehaviour, IInteractable
             return;
         }
 
+
         action.Execute();
+
+        AudioManager.Instance.PlayGlobalSFX(openDoorSFX);
+
         if (PlayerDataManager.Instance != null)
             PlayerDataManager.Instance.SaveData();
         else

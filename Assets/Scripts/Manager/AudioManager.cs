@@ -91,6 +91,19 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(data.clip);
     }
 
+    public void PlayGlobalSFX(string soundName)
+    {
+        AudioClipData data = audioDB.Get(soundName);
+
+        if (data == null) return;
+
+        if (data.clip == null) return;
+
+        sfxSource.clip = data.clip;
+        sfxSource.pitch = Random.Range(0.95f, 1.1f);
+        sfxSource.volume = data.maxVolume;
+        sfxSource.PlayOneShot(data.clip);
+    }
 
     private IEnumerator FadeInBGM(AudioClip newClip)
     {
