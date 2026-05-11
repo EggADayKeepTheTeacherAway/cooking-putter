@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Dirty Dish
   itemDescription: A dish after customer ate
-  itemIcon: {fileID: 6533115755915052667, guid: ad02639de0beca84ca5b6a43db2840ae, type: 3}
+  itemIcon: {fileID: 3953940736394885530, guid: 18832f0675d073c4eaa571722c918598, type: 3}

@@ -12,7 +12,7 @@ public class PlayerDishInteraction : MonoBehaviour
 
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            if (manager.HasCarriedDirtyDish)
+            if (manager.HasCarriedDirtyDish && IsNearSink())
             {
                 TryDropAtNearbySink();
             }
@@ -59,11 +59,22 @@ public class PlayerDishInteraction : MonoBehaviour
 
     private void TryDropAtNearbySink()
     {
-        var hits = Physics2D.OverlapCircleAll(transform.position, interactDistance);
-        if (hits == null || hits.Length == 0) return;
+        var foundSink = FindNearbySink();
+        if (foundSink != null)
+        {
+            FoodServiceManager.GetOrCreateInstance().TryDropCarriedDishAtSink(foundSink);
+        }
+    }
 
-        SinkBehaviour foundSink = null;
-        Collider2D target = null;
+    private bool IsNearSink()
+    {
+        return FindNearbySink() != null;
+    }
+
+    private SinkBehaviour FindNearbySink()
+    {
+        var hits = Physics2D.OverlapCircleAll(transform.position, interactDistance);
+        if (hits == null || hits.Length == 0) return null;
 
         foreach (var col in hits)
         {
@@ -71,18 +82,14 @@ public class PlayerDishInteraction : MonoBehaviour
             var sink = col.GetComponent<SinkBehaviour>();
             if (sink != null)
             {
-                foundSink = sink;
-                target = col;
-                break;
+                float sq = ((Vector2)transform.position - (Vector2)col.transform.position).sqrMagnitude;
+                if (sq <= interactDistance * interactDistance)
+                {
+                    return sink;
+                }
             }
         }
 
-        if (foundSink == null || target == null) return;
-
-        float sq = ((Vector2)transform.position - (Vector2)target.transform.position).sqrMagnitude;
-        if (sq <= interactDistance * interactDistance)
-        {
-            FoodServiceManager.GetOrCreateInstance().TryDropCarriedDishAtSink(foundSink);
-        }
+        return null;
     }
 }

@@ -15,9 +15,9 @@ public class FoodServiceManager : MonoBehaviour
     private Queue<(Customer customer, Food food)> pendingOrders = new();
     private readonly Dictionary<Customer, GameObject> customerOrderPreviews = new();
     private readonly Dictionary<Customer, GameObject> foodOnTableObjects = new();
-    private GameObject carriedItemObject;
-    private ItemData carriedItemData;
-    private Transform carriedItemCarrier;
+    private readonly List<GameObject> carriedDishObjects = new();
+    private readonly List<ItemData> carriedDishItems = new();
+    private Transform carriedDishCarrier;
     private GameObject serviceWindowPreview;
     private GameObject carriedFoodPreview;
     private Food carriedFood;
@@ -50,9 +50,10 @@ public class FoodServiceManager : MonoBehaviour
     [SerializeField] private int dirtyDishSortingOrder = 1;
     [SerializeField] private float dirtyDishScale = 1.6f;
     [SerializeField] private ItemData dirtyDishItem; // Reference to Dirty Dish item (ItemData)
+    [SerializeField] private Vector3 dishStackOffset = new Vector3(0f, 0.4f, 0f); // Vertical offset per stacked dish
 
     public bool HasCarriedFood => carriedFood != null;
-    public bool HasCarriedDirtyDish => carriedItemObject != null;
+    public bool HasCarriedDirtyDish => carriedDishObjects.Count > 0;
 
     private void Awake()
     {
@@ -569,14 +570,15 @@ public class FoodServiceManager : MonoBehaviour
         var dd = dishObject.GetComponent<DirtyDish>();
         if (dd == null) return false;
 
-        // parent to carrier and position at carriedPreviewOffset
+        // parent to carrier and position with stack offset
         dishObject.transform.SetParent(carrier);
-        dishObject.transform.localPosition = carriedPreviewOffset;
+        Vector3 stackPosition = carriedPreviewOffset + dishStackOffset * carriedDishObjects.Count;
+        dishObject.transform.localPosition = stackPosition;
         dishObject.transform.localScale = Vector3.one * dirtyDishScale;
 
-        carriedItemObject = dishObject;
-        carriedItemData = dd.item;
-        carriedItemCarrier = carrier;
+        carriedDishObjects.Add(dishObject);
+        carriedDishItems.Add(dd.item);
+        carriedDishCarrier = carrier;
 
         // remove mapping from table so it won't be considered on-table anymore
         if (dd.owner != null)
@@ -585,26 +587,29 @@ public class FoodServiceManager : MonoBehaviour
             dd.owner = null;
         }
 
-        Debug.Log($"Picked up dirty dish: {carriedItemData?.itemName}");
+        Debug.Log($"Picked up dirty dish: {dd.item?.itemName}. Carrying {carriedDishObjects.Count} dishes.");
         return true;
     }
 
-    // Try to drop carried dirty dish into sink
+    // Try to drop all carried dirty dishes into sink
     public bool TryDropCarriedDishAtSink(SinkBehaviour sink)
     {
         if (sink == null) return false;
-        if (carriedItemObject == null) return false;
+        if (carriedDishObjects.Count == 0) return false;
 
-        // inform sink
+        // inform sink how many dishes we're dropping
         sink.Fill();
 
-        // destroy carried object and clear state
-        Destroy(carriedItemObject);
-        carriedItemObject = null;
-        carriedItemData = null;
-        carriedItemCarrier = null;
+        // destroy all carried objects and clear state
+        foreach (var dish in carriedDishObjects)
+        {
+            Destroy(dish);
+        }
+        carriedDishObjects.Clear();
+        carriedDishItems.Clear();
+        carriedDishCarrier = null;
 
-        Debug.Log("Dropped dirty dish into sink");
+        Debug.Log("Dropped all dirty dishes into sink");
         return true;
     }
 
