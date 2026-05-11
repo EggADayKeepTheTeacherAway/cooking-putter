@@ -5250,7 +5250,7 @@ MonoBehaviour:
   foodOnTableSortingLayerName: Customer
   foodOnTableSortingOrder: 0
   dirtyDishSortingLayerName: Customer
-  dirtyDishSortingOrder: 1
+  dirtyDishSortingOrder: 0
   dirtyDishScale: 1
   dirtyDishItem: {fileID: 11400000, guid: 373b01048dcca4b239c08c8ec484c3b1, type: 2}
   dishStackOffset: {x: 0, y: 0.1, z: 0}
