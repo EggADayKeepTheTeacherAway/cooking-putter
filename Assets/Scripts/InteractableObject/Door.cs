@@ -9,8 +9,17 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (action == null)
+        {
+            Debug.LogWarning($"Door '{name}': SceneTransitionData (action) is null.");
+            return;
+        }
+
         action.Execute();
-        PlayerDataManager.Instance.SaveData();
+        if (PlayerDataManager.Instance != null)
+            PlayerDataManager.Instance.SaveData();
+        else
+            Debug.LogWarning("PlayerDataManager.Instance is null.");
     }
 
     private void Update()
@@ -19,10 +28,15 @@ public class Door : MonoBehaviour, IInteractable
         {
             Interact();
         }
+        else if (isPlayerInRange && needInteract && player.input.Player.Interact.WasPressedThisFrame())
+        {
+            Interact();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"Door '{name}': OnTriggerEnter2D with {collision.gameObject.name} (tag={collision.tag})");
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
@@ -31,6 +45,7 @@ public class Door : MonoBehaviour, IInteractable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log($"Door '{name}': OnTriggerExit2D with {collision.gameObject.name}");
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;
