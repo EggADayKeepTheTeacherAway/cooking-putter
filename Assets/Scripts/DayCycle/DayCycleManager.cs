@@ -19,8 +19,6 @@ public class DayCycleManager : MonoBehaviour
     [Header("Scene")]
     public string restaurantSceneName = "RestaurantScene";
 
-    private bool firstCycle = true;
-
     private void Awake()
     {
         if (Instance == null)
@@ -102,7 +100,7 @@ public class DayCycleManager : MonoBehaviour
         currentTime = 11;
         RefreshClock();
 
-        Debug.Log("Clock reset to 12");
+        Debug.Log("New Day Started!");
     }
 
     public int GetDisplayedHour()
