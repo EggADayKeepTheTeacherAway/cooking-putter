@@ -75,7 +75,20 @@ public class Player : Entity
     {
         if (scene.name == "TownScene")
         {
-            transform.position = SceneTransitionManager.Instance.playerLastPosition;
+            // New-day forced spawn
+            if (SceneTransitionManager.Instance.overrideSpawnPosition)
+            {
+                transform.position =
+                    SceneTransitionManager.Instance.forcedSpawnPosition;
+
+                SceneTransitionManager.Instance.overrideSpawnPosition = false;
+            }
+            else
+            {
+                // Normal transition
+                transform.position =
+                    SceneTransitionManager.Instance.playerLastPosition;
+            }
         }
     }
 

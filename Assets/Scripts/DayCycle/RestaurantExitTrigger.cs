@@ -12,6 +12,9 @@ public class RestaurantExitTrigger : MonoBehaviour
 
                 Debug.Log("New day started");
             }
+            SceneTransitionManager.Instance.SetForcedSpawnPosition(
+                SceneTransitionManager.Instance.RestaurantTownSpawnPosition
+            );
         }
     }
 }
