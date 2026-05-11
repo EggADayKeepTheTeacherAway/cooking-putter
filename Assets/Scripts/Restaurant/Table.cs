@@ -12,6 +12,8 @@ public class Table : MonoBehaviour
     public int seatAmount { get; private set; }
 
     public bool isTaken { get; private set; } = false;
+    public int DirtyDishCount { get; private set; }
+    public bool HasDirtyDishes => DirtyDishCount > 0;
 
 
     private void Awake()
@@ -29,6 +31,16 @@ public class Table : MonoBehaviour
     public void Take() => isTaken = true;
 
     public void UnTake() => isTaken = false;
+
+    public void RegisterDirtyDish()
+    {
+        DirtyDishCount++;
+    }
+
+    public void ClearDirtyDish()
+    {
+        DirtyDishCount = Mathf.Max(0, DirtyDishCount - 1);
+    }
 
 
     public Seat GetRandomSeat()
