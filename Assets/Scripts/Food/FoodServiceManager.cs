@@ -27,10 +27,10 @@ public class FoodServiceManager : MonoBehaviour
     public event Action OnOrdersUpdated;
 
     [SerializeField] private Transform serviceWindowPosition; // Where food displays for serving
-    [SerializeField] private Vector3 customerPreviewOffset = new Vector3(0f, 1.3f, 0f);
+    [SerializeField] private Vector3 customerPreviewOffset = new Vector3(0f, 1.4f, 0f);
     [SerializeField] private Vector3 servicePreviewOffset = Vector3.zero;
     [SerializeField] private Vector3 carriedPreviewOffset = new Vector3(0f, 0.9f, 0f);
-    [SerializeField] private Vector3 foodOnTableOffset = new Vector3(0f, 0.3f, 0f);
+    [SerializeField] private Vector3 foodOnTableOffset = new Vector3(0f, -0.8f, 0f);
     [SerializeField] private bool requirePickupRange = true;
     [SerializeField] private float pickupDistance = 1.4f;
     [SerializeField] private float previewScale = 1.5f;
@@ -41,16 +41,16 @@ public class FoodServiceManager : MonoBehaviour
     [SerializeField] private Sprite bubbleSprite;
     [SerializeField] private Color bubbleColor = new Color(1f,1f,1f,1f);
     [SerializeField] private Vector3 bubbleOffset = Vector3.zero;
-    [SerializeField] private float bubbleScale = 1.0f;
+    [SerializeField] private float bubbleScale = 0.1f;
     [SerializeField] private string bubbleSortingLayerName = "Foreground";
     [SerializeField] private int bubbleSortingOrderOffset = -1;
     [SerializeField] private string foodOnTableSortingLayerName = "Customer";
     [SerializeField] private int foodOnTableSortingOrder = 0;
     [SerializeField] private string dirtyDishSortingLayerName = "Customer";
-    [SerializeField] private int dirtyDishSortingOrder = 1;
-    [SerializeField] private float dirtyDishScale = 1.6f;
+    [SerializeField] private int dirtyDishSortingOrder = 0;
+    [SerializeField] private float dirtyDishScale = 1f;
     [SerializeField] private ItemData dirtyDishItem; // Reference to Dirty Dish item (ItemData)
-    [SerializeField] private Vector3 dishStackOffset = new Vector3(0f, 0.4f, 0f); // Vertical offset per stacked dish
+    [SerializeField] private Vector3 dishStackOffset = new Vector3(0f, 0.1f, 0f); // Vertical offset per stacked dish
     [SerializeField] private int maxDirtyDishesCarried = 4;
 
     public bool HasCarriedFood => carriedFood != null;
@@ -525,9 +525,17 @@ public class FoodServiceManager : MonoBehaviour
 
             spriteRenderer.sortingOrder = dirtyDishSortingOrder;
             foodObject.transform.localScale = Vector3.one * dirtyDishScale;
+
+            Table table = customer.GetTable();
+            if (table != null)
+            {
+                table.RegisterDirtyDish();
+            }
+
             // mark as dirty dish for interaction
             var dd = foodObject.AddComponent<DirtyDish>();
             dd.owner = customer;
+            dd.table = table;
             dd.item = dirtyDishItem;
             // ensure there's a collider for clicks
             if (foodObject.GetComponent<Collider2D>() == null)
@@ -575,6 +583,12 @@ public class FoodServiceManager : MonoBehaviour
         {
             Debug.Log($"Cannot pick up more dirty dishes. Max carried dishes is {maxDirtyDishesCarried}.");
             return false;
+        }
+
+        if (dd.table != null)
+        {
+            dd.table.ClearDirtyDish();
+            dd.table = null;
         }
 
         // parent to carrier and position with stack offset
@@ -672,6 +686,13 @@ public class FoodServiceManager : MonoBehaviour
 
         if (foodOnTableObjects.TryGetValue(customer, out var foodObject) && foodObject != null)
         {
+            var dirtyDish = foodObject.GetComponent<DirtyDish>();
+            if (dirtyDish != null && dirtyDish.table != null)
+            {
+                dirtyDish.table.ClearDirtyDish();
+                dirtyDish.table = null;
+            }
+
             Destroy(foodObject);
         }
 
