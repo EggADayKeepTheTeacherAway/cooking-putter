@@ -9,7 +9,7 @@ public class DayCycleManager : MonoBehaviour
 
     [Header("Time")]
     [Range(0, 11)]
-    public int currentTime = 11; // Start at 12
+    public int currentTime = 0; // Start at 12
 
     [Header("Clock UI")]
     public Image clockImage;
