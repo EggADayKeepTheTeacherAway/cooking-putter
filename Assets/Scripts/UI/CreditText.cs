@@ -5,6 +5,9 @@ public class CreditText : MonoBehaviour
 {
     [SerializeField] private float rollSpeed = 4.5f;
     [SerializeField] private Transform checkTransform;
+    [SerializeField] private GameObject jumpScare;
+
+    [SerializeField] private GameObject playerChar;
 
     private RectTransform rectTransform;
     private RectTransform checkRect;
@@ -19,10 +22,10 @@ public class CreditText : MonoBehaviour
     {
         rectTransform.anchoredPosition += Vector2.up * rollSpeed * Time.deltaTime;
 
-        // When the bottom child scrolls above the center (y > 0 = above canvas center)
         if (checkRect.position.y >= Screen.height)
         {
-            SceneManager.LoadScene("MainMenu");
+            playerChar.SetActive(false);
+            jumpScare.SetActive(true);
         }
     }
 }

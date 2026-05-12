@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip townBGM;
     [SerializeField] private AudioClip restaurantBGM;
     [SerializeField] private AudioClip forestBGM;
+    [SerializeField] private AudioClip creditBGM;
 
     private float maximumVolume = 0.4f;
     private Coroutine bgmCoroutine;
@@ -63,6 +64,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "ForestScene":
                 PlayBGM(forestBGM);
+                break;
+            case "CreditScene":
+                PlayBGM(creditBGM);
                 break;
         }
     }

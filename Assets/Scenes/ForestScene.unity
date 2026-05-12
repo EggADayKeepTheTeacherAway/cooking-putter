@@ -9393,6 +9393,7 @@ MonoBehaviour:
   townBGM: {fileID: 8300000, guid: 6f0edae0439d23f4a90c6869bd8897e7, type: 3}
   restaurantBGM: {fileID: 8300000, guid: 2c0f8f523d7961b4cb4c5006a12fdfc4, type: 3}
   forestBGM: {fileID: 8300000, guid: 1988944c9f08a314faf74804d0d9bacb, type: 3}
+  creditBGM: {fileID: 8300000, guid: e5ec46712e856734c8e1fd7b364cfd2a, type: 3}
 --- !u!4 &654271401
 Transform:
   m_ObjectHideFlags: 0
