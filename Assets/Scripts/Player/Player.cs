@@ -1,12 +1,25 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.LowLevel;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class Player : Entity
 {
+    [Header("Collision Detector")]
     [SerializeField] private Transform playerHead;
     [SerializeField] private float interactLine;
     [SerializeField] private LayerMask interactableObjectLayer;
+    [SerializeField] private Transform playerFoot;
+
+    [Header("Sound")]
+    [SerializeField] private AudioSource audioSource;
+    [Header("SFX name")]
+    [SerializeField] private string roadFootStep;
+    [SerializeField] private string grassFootStep;
+    [SerializeField] private bool ignoredRoadCheck;
+    [SerializeField] private Tilemap roadTilemap;
+
 
     public float runSpeedModifier = 1.5f;
 
@@ -22,6 +35,9 @@ public class Player : Entity
     // Use PlayerDataManager instead of local storage
     public int money => PlayerDataManager.Instance.money;
     public List<InventoryEntry> inventory => PlayerDataManager.Instance.inventory;
+
+    public AudioSource AudioSource => audioSource;
+
     private bool controlsLocked = false;
     protected override void Awake()
     {
@@ -152,5 +168,19 @@ public class Player : Entity
     private void OnApplicationQuit()
     {
         PlayerDataManager.Instance.SaveData();
+    }
+
+    public void PlayFootStepSound()
+    {
+        string soundName = IsOnRoad() || ignoredRoadCheck ? roadFootStep : grassFootStep;
+        AudioManager.Instance.PlaySFX(soundName, audioSource);
+    }
+    public bool IsOnRoad()
+    {
+        if (ignoredRoadCheck) return true;
+        if (roadTilemap == null) return false;
+
+        Vector3Int cellPos = roadTilemap.WorldToCell(playerFoot.position);
+        return roadTilemap.GetTile(cellPos) != null;
     }
 }

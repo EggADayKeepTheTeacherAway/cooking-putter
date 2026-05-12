@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f439ddcb0806f04db6cdc0f37cb5d0a, type: 3}
+  m_Name: AUDIODATABASE
+  m_EditorClassIdentifier: Assembly-CSharp::AudioDatabaseSO
+  player:
+  - audioName: footstep_concrete
+    clip: {fileID: 8300000, guid: 2793b5c59ff297540bd079c95fde31c2, type: 3}
+    maxVolume: 0.5
+  - audioName: footstep_grass
+    clip: {fileID: 8300000, guid: d47e8ff0912182740b8204079ff832d1, type: 3}
+    maxVolume: 1
+  env:
+  - audioName: door
+    clip: {fileID: 8300000, guid: 6b33de69ce04783479a851e3a4dd54c0, type: 3}
+    maxVolume: 0.4
+  uiAudio:
+  - audioName: button_click
+    clip: {fileID: 8300000, guid: d77f2c70bb4709d40b4cab91bc439deb, type: 3}
+    maxVolume: 1
