@@ -55,9 +55,9 @@ public class Fridge : MonoBehaviour, IInteractable
         Debug.Log("Fridge closed");
     }
 
-    public void OnTriggerExit2D(Collider2D collision)
+    public void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
             CloseInventory();
         }

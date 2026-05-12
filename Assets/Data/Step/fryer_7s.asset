@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe1163ad00f45142b8444f65895f919, type: 3}
   m_Name: fryer_7s
   m_EditorClassIdentifier: Assembly-CSharp::Step
-  station: 
+  station: Fryer
   duration: 0

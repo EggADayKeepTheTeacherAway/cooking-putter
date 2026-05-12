@@ -24,7 +24,7 @@ public class Player : Entity
     // Use PlayerDataManager instead of local storage
     public int money => PlayerDataManager.Instance.money;
     public List<InventoryEntry> inventory => PlayerDataManager.Instance.inventory;
-    public Food carriedFood { get; private set; }
+    public BaseFood carriedFood { get; private set; }
 
     protected override void Awake()
     {
@@ -38,6 +38,8 @@ public class Player : Entity
         moveState = new Player_MoveState(this, stateMachine, "move");
 
         stateMachine.Initialize(idleState);
+
+        carriedFood = null;
     }
 
     protected override void Update()
@@ -146,7 +148,7 @@ public class Player : Entity
         }
 
         var required = new Dictionary<ItemData, int>();
-        foreach (var ingredient in food.ingredients)
+        foreach (var ingredient in food.Ingredients)
         {
             if (required.ContainsKey(ingredient)) required[ingredient]++;
             else required[ingredient] = 1;
@@ -166,7 +168,7 @@ public class Player : Entity
             PlayerDataManager.Instance.RemoveItem(item.Key, item.Value);
         }
 
-        carriedFood = food;
+        carriedFood = new BaseFood(food);
         var previewObj = new GameObject(food.FoodName);
         previewObj.transform.SetParent(this.transform);
         previewObj.transform.localPosition = new Vector3(0f, 1.5f, 0f);
@@ -181,10 +183,10 @@ public class Player : Entity
         bubbleObj.transform.SetParent(previewObj.transform);
         bubbleObj.transform.localPosition = new Vector3(0f, -0.03f, 0f);
         bubbleObj.transform.localScale = Vector3.one * 0.08f;
-        
+
         var bubbleSr = bubbleObj.AddComponent<SpriteRenderer>();
         bubbleSr.sprite = bubble;
         bubbleSr.sortingLayerName = "Foreground";
-        Debug.Log($"Carrying {food.name}");
+        Debug.Log($"Carrying {food.FoodName}");
     }
 }
