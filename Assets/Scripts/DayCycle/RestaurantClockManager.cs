@@ -69,24 +69,30 @@ public class RestaurantTimerManager : MonoBehaviour
     {
         Debug.Log("Restaurant Night Ended!");
 
-        // Play bell
         audioSource.PlayOneShot(bellRingSFX);
 
-        // Wait for sound to finish
         yield return new WaitForSeconds(bellRingSFX.length);
 
-        // Reset daytime clock
+        Debug.Log("Trying to show result UI");
+
+        Debug.Log(ResultUI.Instance);
+
+        ResultUI.Instance.Show(OnResultFinished);
+    }
+    private void OnResultFinished()
+    {
+        PlayerDataManager.Instance.AdvanceDay();
+        PlayerDataManager.Instance.SaveData();
+
         if (DayCycleManager.Instance != null)
         {
             DayCycleManager.Instance.ResetToTwelve();
         }
 
-        // Force spawn point
         SceneTransitionManager.Instance.SetForcedSpawnPosition(
             SceneTransitionManager.Instance.RestaurantTownSpawnPosition
         );
 
-        // Transition back to town
         SceneTransitionManager.Instance.StartTransition("TownScene");
     }
     private void EndRestaurantNight()
