@@ -2048,9 +2048,10 @@ MonoBehaviour:
   - {fileID: -5607651147091066767, guid: 32929c096eaee6046a690e8f511a49f3, type: 3}
   - {fileID: -494781468325602121, guid: 32929c096eaee6046a690e8f511a49f3, type: 3}
   - {fileID: 3473149755711360889, guid: 32929c096eaee6046a690e8f511a49f3, type: 3}
-  secondsPerHour: 10
+  secondsPerHour: 30
   audioSource: {fileID: 1364231153}
   bellRingSFX: {fileID: 8300000, guid: 1755f700a11880a4393cbb1b302724b3, type: 3}
+  player: {fileID: 1050675533}
 --- !u!4 &461067835
 Transform:
   m_ObjectHideFlags: 0
