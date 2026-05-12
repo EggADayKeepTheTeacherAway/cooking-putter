@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Omelette
   m_EditorClassIdentifier: Assembly-CSharp::Food
   foodName: Omelette
-  sprite: {fileID: 0}
+  sprite: {fileID: -4719407065779388043, guid: 9d559c2bf435b794c9c2888e36affea6, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 844f4b8db4c75d6448e658093ad8026a, type: 2}
+  - {fileID: 11400000, guid: 844f4b8db4c75d6448e658093ad8026a, type: 2}

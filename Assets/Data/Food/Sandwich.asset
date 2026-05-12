@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
   m_Name: Sandwich
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  foodName: 
-  sprite: {fileID: 0}
-  ingredients: []
+  foodName: Sandwich
+  sprite: {fileID: -7135540818809487110, guid: 4aade15417f80ef45b5c3ad40215a148, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 672e7f49b1d96da4db9754519f651310, type: 2}
+  - {fileID: 11400000, guid: cd13561c7d1e38d4491afeacc6ce10bb, type: 2}
+  - {fileID: 11400000, guid: 0fdfb00e6d5938447a04ef000159f3c2, type: 2}
+  - {fileID: 11400000, guid: e19bb80f1b520f645ad1f786ed2ffd5a, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fruit Salad
   m_EditorClassIdentifier: Assembly-CSharp::Food
   foodName: Fruit Salad
-  sprite: {fileID: 0}
+  sprite: {fileID: 517802332289794550, guid: ff620f457454e6b4dab060c59ec2392c, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 2b1bff69f0d231d4888a7678c5234013, type: 2}
   - {fileID: 11400000, guid: b7a02e2b791d91145a4a5724bda25773, type: 2}

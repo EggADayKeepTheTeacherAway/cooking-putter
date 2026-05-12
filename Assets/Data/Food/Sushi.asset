@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
   m_Name: Sushi
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  foodName: 
-  sprite: {fileID: 0}
-  ingredients: []
+  foodName: Sushi
+  sprite: {fileID: 609855222940722255, guid: 60bd5e15f24910145a54ed99809155f1, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 3dcd14dc8ebd563479062badf655b356, type: 2}
+  - {fileID: 11400000, guid: c7ace8a0ff4bcb14cab214eb68603b83, type: 2}
+  - {fileID: 11400000, guid: 844f4b8db4c75d6448e658093ad8026a, type: 2}

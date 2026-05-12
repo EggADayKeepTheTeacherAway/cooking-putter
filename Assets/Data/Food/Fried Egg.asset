@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Fried Egg
   m_EditorClassIdentifier: Assembly-CSharp::Food
   foodName: Fried Egg
-  sprite: {fileID: 0}
-  ingredients: []
+  sprite: {fileID: 6452401071156887674, guid: bd83f338e27ac6b41a9fa6745e85c629, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 844f4b8db4c75d6448e658093ad8026a, type: 2}

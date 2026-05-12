@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
   m_Name: Spaghetti
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  foodName: 
-  sprite: {fileID: 0}
-  ingredients: []
+  foodName: Spaghetti
+  sprite: {fileID: 3641020774568724472, guid: b85d58e417e666149819407de9a35ebf, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: a94228113a8c17746b266902cd012a78, type: 2}
+  - {fileID: 11400000, guid: e19bb80f1b520f645ad1f786ed2ffd5a, type: 2}

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
   m_Name: Lemon Pie
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  foodName: 
-  sprite: {fileID: 0}
-  ingredients: []
+  foodName: Lemon Pie
+  sprite: {fileID: -2336984427158002131, guid: 880a38c76418136498468f41e5ae9b72, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 290e10f78d6dece46bfac6a970cd120f, type: 2}
+  - {fileID: 11400000, guid: 290e10f78d6dece46bfac6a970cd120f, type: 2}
+  - {fileID: 11400000, guid: e750f519a92ad67489d6263fff7af816, type: 2}

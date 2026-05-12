@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
   m_Name: Fries
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  foodName: 
-  sprite: {fileID: 0}
-  ingredients: []
+  foodName: Fries
+  sprite: {fileID: 3052366912710038843, guid: cca57ccf5b685e84b9c97a549a1d7d52, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 5676c4f6caa9e554ea19e89233c9d8cd, type: 2}
+  - {fileID: 11400000, guid: 5676c4f6caa9e554ea19e89233c9d8cd, type: 2}
