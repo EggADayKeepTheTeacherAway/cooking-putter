@@ -30,6 +30,8 @@ public class Player : Entity
     public int money => PlayerDataManager.Instance.money;
     public List<InventoryEntry> inventory => PlayerDataManager.Instance.inventory;
 
+    public AudioSource AudioSource => audioSource;
+
     protected override void Awake()
     {
         base.Awake();
@@ -127,5 +129,7 @@ public class Player : Entity
     {
         PlayerDataManager.Instance.SaveData();
     }
+
+    public void PlayFootStepSound() => AudioManager.Instance.PlaySFX(roadFootStep, audioSource);
 
 }

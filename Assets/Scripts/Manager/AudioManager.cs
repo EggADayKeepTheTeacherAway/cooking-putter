@@ -82,13 +82,12 @@ public class AudioManager : MonoBehaviour
     {
         AudioClipData data = audioDB.Get(soundName);
         if (data == null) return;
-
         if (data.clip == null) return;
-
+        if (sfxSource.isPlaying) return;
         sfxSource.clip = data.clip;
         sfxSource.pitch = Random.Range(0.95f, 1.1f);
         sfxSource.volume = data.maxVolume;
-        sfxSource.PlayOneShot(data.clip);
+        sfxSource.Play();
     }
 
     public void PlayGlobalSFX(string soundName)
