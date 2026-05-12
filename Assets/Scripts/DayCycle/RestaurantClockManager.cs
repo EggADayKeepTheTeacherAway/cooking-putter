@@ -21,6 +21,7 @@ public class RestaurantTimerManager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip bellRingSFX;
+    [SerializeField] private Player player;
     private float timer;
 
     private void Start()
@@ -68,25 +69,32 @@ public class RestaurantTimerManager : MonoBehaviour
     private IEnumerator EndRestaurantNightCo()
     {
         Debug.Log("Restaurant Night Ended!");
-
-        // Play bell
+        player.LockControls();
         audioSource.PlayOneShot(bellRingSFX);
 
-        // Wait for sound to finish
         yield return new WaitForSeconds(bellRingSFX.length);
 
-        // Reset daytime clock
+        Debug.Log("Trying to show result UI");
+
+        Debug.Log(ResultUI.Instance);
+
+        ResultUI.Instance.Show(OnResultFinished);
+    }
+    private void OnResultFinished()
+    {
+        player.UnlockControls();
+        PlayerDataManager.Instance.AdvanceDay();
+        PlayerDataManager.Instance.SaveData();
+
         if (DayCycleManager.Instance != null)
         {
             DayCycleManager.Instance.ResetToTwelve();
         }
 
-        // Force spawn point
         SceneTransitionManager.Instance.SetForcedSpawnPosition(
             SceneTransitionManager.Instance.RestaurantTownSpawnPosition
         );
 
-        // Transition back to town
         SceneTransitionManager.Instance.StartTransition("TownScene");
     }
     private void EndRestaurantNight()

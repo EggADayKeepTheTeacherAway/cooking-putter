@@ -22,7 +22,7 @@ public class Player : Entity
     // Use PlayerDataManager instead of local storage
     public int money => PlayerDataManager.Instance.money;
     public List<InventoryEntry> inventory => PlayerDataManager.Instance.inventory;
-
+    private bool controlsLocked = false;
     protected override void Awake()
     {
         base.Awake();
@@ -36,17 +36,37 @@ public class Player : Entity
 
         stateMachine.Initialize(idleState);
     }
+    public void LockControls()
+    {
+        controlsLocked = true;
 
+        moveInput = Vector2.zero;
+        currentVelocity = Vector2.zero;
+
+        rb.linearVelocity = Vector2.zero;
+    }
+
+    public void UnlockControls()
+    {
+        controlsLocked = false;
+    }
     protected override void Update()
     {
         base.Update();
 
+        if (controlsLocked)
+            return;
         UpdateFacingDirection(moveInput);
         HandleInteraction();
     }
     
     private void FixedUpdate()
     {
+        if (controlsLocked)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
         rb.linearVelocity = currentVelocity;
     }
 
