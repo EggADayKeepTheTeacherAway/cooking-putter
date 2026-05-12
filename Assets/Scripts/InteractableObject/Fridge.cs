@@ -22,11 +22,6 @@ public class Fridge : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        ToggleInventory();
-    }
-
-    public void ToggleInventory()
-    {
         if (!isInventoryOpen)
             OpenInventory();
         else
@@ -35,11 +30,20 @@ public class Fridge : MonoBehaviour, IInteractable
 
     public void OpenInventory()
     {
+        if (player.carriedFood != null)
+        {
+            Debug.LogWarning("Already carry food");
+            return;
+        }
+
+        if (shopInventory != null)
+            shopInventory.GenerateInventoryUI();
+
         if (fridgePanel != null)
             fridgePanel.SetActive(true);
 
         isInventoryOpen = true;
-        Debug.Log("Inventory opened");
+        Debug.Log("Fridge opened");
     }
 
     public void CloseInventory()
@@ -48,7 +52,7 @@ public class Fridge : MonoBehaviour, IInteractable
             fridgePanel.SetActive(false);
 
         isInventoryOpen = false;
-        Debug.Log("Inventory closed");
+        Debug.Log("Fridge closed");
     }
 
     public void OnTriggerExit2D(Collider2D collision)

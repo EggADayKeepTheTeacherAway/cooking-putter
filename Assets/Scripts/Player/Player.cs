@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class Player : Entity
     [SerializeField] private Transform playerHead;
     [SerializeField] private float interactLine;
     [SerializeField] private LayerMask interactableObjectLayer;
+    [SerializeField] private Sprite bubble;
 
     public float runSpeedModifier = 1.5f;
 
@@ -22,6 +24,7 @@ public class Player : Entity
     // Use PlayerDataManager instead of local storage
     public int money => PlayerDataManager.Instance.money;
     public List<InventoryEntry> inventory => PlayerDataManager.Instance.inventory;
+    public Food carriedFood { get; private set; }
 
     protected override void Awake()
     {
@@ -132,5 +135,56 @@ public class Player : Entity
     private void OnApplicationQuit()
     {
         PlayerDataManager.Instance.SaveData();
+    }
+
+    public void PickUpFood(Food food)
+    {
+        if(carriedFood != null)
+        {
+            Debug.LogWarning("Already carry food");
+            return;
+        }
+
+        var required = new Dictionary<ItemData, int>();
+        foreach (var ingredient in food.ingredients)
+        {
+            if (required.ContainsKey(ingredient)) required[ingredient]++;
+            else required[ingredient] = 1;
+        }
+
+        foreach (var item in required)
+        {
+            if (!PlayerDataManager.Instance.HasItem(item.Key, item.Value))
+            {
+                Debug.LogWarning("Not enough ingredient");
+                return;
+            }
+        }
+
+        foreach (var item in required)
+        {
+            PlayerDataManager.Instance.RemoveItem(item.Key, item.Value);
+        }
+
+        carriedFood = food;
+        var previewObj = new GameObject(food.FoodName);
+        previewObj.transform.SetParent(this.transform);
+        previewObj.transform.localPosition = new Vector3(0f, 1.5f, 0f);
+        previewObj.transform.localScale = Vector3.one * 3;
+
+        var foodSr = previewObj.AddComponent<SpriteRenderer>();
+        foodSr.sortingLayerName = "Foreground";
+        foodSr.sortingOrder = 1;
+        foodSr.sprite = food.Icon;
+
+        var bubbleObj = new GameObject($"{food.FoodName}Bubble");
+        bubbleObj.transform.SetParent(previewObj.transform);
+        bubbleObj.transform.localPosition = new Vector3(0f, -0.03f, 0f);
+        bubbleObj.transform.localScale = Vector3.one * 0.08f;
+        
+        var bubbleSr = bubbleObj.AddComponent<SpriteRenderer>();
+        bubbleSr.sprite = bubble;
+        bubbleSr.sortingLayerName = "Foreground";
+        Debug.Log($"Carrying {food.name}");
     }
 }
