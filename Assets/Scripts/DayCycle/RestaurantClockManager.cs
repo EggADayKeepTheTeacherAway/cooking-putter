@@ -1,0 +1,113 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
+
+public class RestaurantTimerManager : MonoBehaviour
+{
+    [Header("Clock")]
+    [Range(0, 11)]
+    public int currentTime = 11; // Start at 12
+
+    [Header("Clock UI")]
+    [SerializeField] private Image clockImage;
+
+    [Header("Clock Sprites")]
+    [SerializeField] private Sprite[] clockSprites;
+
+    [Header("Timer")]
+    [SerializeField] private float secondsPerHour = 30f;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip bellRingSFX;
+    private float timer;
+
+    private void Start()
+    {
+        timer = secondsPerHour;
+
+        RefreshClock();
+    }
+
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0f)
+        {
+            timer = secondsPerHour;
+
+            AdvanceHour();
+        }
+    }
+
+    private void AdvanceHour()
+    {
+        // 12 -> 1
+        if (currentTime == 11)
+        {
+            currentTime = 0;
+        }
+        else
+        {
+            currentTime++;
+        }
+
+        RefreshClock();
+
+        Debug.Log("Restaurant Hour: "
+            + GetDisplayedHour());
+
+        // Returned to 12 again
+        if (currentTime == 11)
+        {
+            EndRestaurantNight();
+        }
+    }
+    private IEnumerator EndRestaurantNightCo()
+    {
+        Debug.Log("Restaurant Night Ended!");
+
+        // Play bell
+        audioSource.PlayOneShot(bellRingSFX);
+
+        // Wait for sound to finish
+        yield return new WaitForSeconds(bellRingSFX.length);
+
+        // Reset daytime clock
+        if (DayCycleManager.Instance != null)
+        {
+            DayCycleManager.Instance.ResetToTwelve();
+        }
+
+        // Force spawn point
+        SceneTransitionManager.Instance.SetForcedSpawnPosition(
+            SceneTransitionManager.Instance.RestaurantTownSpawnPosition
+        );
+
+        // Transition back to town
+        SceneTransitionManager.Instance.StartTransition("TownScene");
+    }
+    private void EndRestaurantNight()
+    {
+        StartCoroutine(EndRestaurantNightCo());
+    }
+
+    private void RefreshClock()
+    {
+        if (clockImage != null &&
+            clockSprites.Length > currentTime)
+        {
+            clockImage.sprite =
+                clockSprites[currentTime];
+        }
+    }
+
+    private int GetDisplayedHour()
+    {
+        return currentTime == 11
+            ? 12
+            : currentTime + 1;
+    }
+}

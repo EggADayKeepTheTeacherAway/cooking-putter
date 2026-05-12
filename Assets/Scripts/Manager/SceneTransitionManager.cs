@@ -17,7 +17,14 @@ public class SceneTransitionManager : MonoBehaviour
     public System.Action<string> OnSceneTransitioning;
 
     public Vector3 playerLastPosition { get; private set; }
+    [SerializeField] private Vector3 restaurantTownSpawnPosition;
 
+    public bool overrideSpawnPosition = false;
+
+    public Vector3 forcedSpawnPosition;
+
+    public Vector3 RestaurantTownSpawnPosition
+        => restaurantTownSpawnPosition;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -42,6 +49,12 @@ public class SceneTransitionManager : MonoBehaviour
 
     public void SetPlayerLastPosition(Vector3 playerPos) => playerLastPosition = playerPos;
 
+    public void SetForcedSpawnPosition(Vector3 pos)
+    {
+        forcedSpawnPosition = pos;
+
+        overrideSpawnPosition = true;
+    }
     private IEnumerator TransitionCo(string sceneName)
     {
         isTransitioning = true;

@@ -8,4 +8,7 @@ public class Food : ScriptableObject
     [SerializeField] private Sprite sprite;
     [SerializeField] private List<ItemData> ingredients;
 
+    public string FoodName => foodName;
+    public Sprite Icon => sprite;
+
 }

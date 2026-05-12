@@ -73,16 +73,27 @@ public class Player : Entity
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log($"Scene loaded: {scene.name}, last pos: {SceneTransitionManager.Instance.playerLastPosition}");
         if (scene.name == "TownScene")
         {
-            transform.position = SceneTransitionManager.Instance.playerLastPosition;
+            // New-day forced spawn
+            if (SceneTransitionManager.Instance.overrideSpawnPosition)
+            {
+                transform.position =
+                    SceneTransitionManager.Instance.forcedSpawnPosition;
+
+                SceneTransitionManager.Instance.overrideSpawnPosition = false;
+            }
+            else
+            {
+                // Normal transition
+                transform.position =
+                    SceneTransitionManager.Instance.playerLastPosition;
+            }
         }
     }
 
     private void OnChangeScene(string sceneName)
     {
-        Debug.Log($"Scene unloaded: {sceneName}, saving pos: {transform.position}");
         if (sceneName != "TownScene")
         {
             SceneTransitionManager.Instance.SetPlayerLastPosition(transform.position);

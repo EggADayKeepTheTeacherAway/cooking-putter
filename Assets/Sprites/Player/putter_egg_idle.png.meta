@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: e30eb90d7766c974999afe37c27af404
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7887826181984537272
+    second: putter_egg_idle_0
+  - first:
+      213: -5356676045890098447
+    second: putter_egg_idle_1
+  - first:
+      213: 5327204886290594823
+    second: putter_egg_idle_2
+  - first:
+      213: 2296359072826262806
+    second: putter_egg_idle_3
+  - first:
+      213: -6646279514127167736
+    second: putter_egg_idle_4
+  - first:
+      213: 8787052884527603834
+    second: putter_egg_idle_5
+  - first:
+      213: -8987999951417087718
+    second: putter_egg_idle_6
+  - first:
+      213: 5572004362758275010
+    second: putter_egg_idle_7
+  - first:
+      213: 6705367769425922270
+    second: putter_egg_idle_8
+  - first:
+      213: -1279608995516907666
+    second: putter_egg_idle_9
+  - first:
+      213: -7991763557691154910
+    second: putter_egg_idle_10
+  - first:
+      213: 5353299140267749579
+    second: putter_egg_idle_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: putter_egg_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1098
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84539c401efc88290800000000000000
+      internalID: -7887826181984537272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1098
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa60e3648349a5b0800000000000000
+      internalID: -5356676045890098447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1098
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c731d8e980ee940800000000000000
+      internalID: 5327204886290594823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1098
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6150e8cf86e4edf10800000000000000
+      internalID: 2296359072826262806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 551
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f8e72defba3c3a0800000000000000
+      internalID: -6646279514127167736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 551
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70e6dcea02e1f970800000000000000
+      internalID: 8787052884527603834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_6
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 551
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a196e862aa5344380800000000000000
+      internalID: -8987999951417087718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_7
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 551
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf3229327cb35d40800000000000000
+      internalID: 5572004362758275010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed84cf0b5704e0d50800000000000000
+      internalID: 6705367769425922270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_9
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 4
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ff1d2f56aed3ee0800000000000000
+      internalID: -1279608995516907666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 4
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e18eee26d871190800000000000000
+      internalID: -7991763557691154910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putter_egg_idle_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4
+        width: 640
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc03010843dba4a40800000000000000
+      internalID: 5353299140267749579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 19bcac0c18bb2f24b9b2405a1426063f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":640.0,"y":547.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      putter_egg_idle_0: -7887826181984537272
+      putter_egg_idle_1: -5356676045890098447
+      putter_egg_idle_10: -7991763557691154910
+      putter_egg_idle_11: 5353299140267749579
+      putter_egg_idle_2: 5327204886290594823
+      putter_egg_idle_3: 2296359072826262806
+      putter_egg_idle_4: -6646279514127167736
+      putter_egg_idle_5: 8787052884527603834
+      putter_egg_idle_6: -8987999951417087718
+      putter_egg_idle_7: 5572004362758275010
+      putter_egg_idle_8: 6705367769425922270
+      putter_egg_idle_9: -1279608995516907666
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
