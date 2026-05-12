@@ -10,7 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
-  m_Name: Pad Kra Pao
+  m_Name: Fries
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  foodName: Pad Kra Pao
-  sprite: {fileID: -7463561415026108531, guid: 53057f9df72cd984fabb27fccfedfef8, type: 3}
+  foodName: Fries
+  sprite: {fileID: 3052366912710038843, guid: cca57ccf5b685e84b9c97a549a1d7d52, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 5676c4f6caa9e554ea19e89233c9d8cd, type: 2}
+  - {fileID: 11400000, guid: 5676c4f6caa9e554ea19e89233c9d8cd, type: 2}
+  steps:
+  - {fileID: 11400000, guid: 82b1e4ac8b316924f90f1e875f9c933d, type: 2}

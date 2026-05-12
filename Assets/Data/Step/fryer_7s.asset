@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
-  m_Name: Human Flesh
-  m_EditorClassIdentifier: Assembly-CSharp::Food
-  foodName: Human Flesh
-  sprite: {fileID: 8271880157828539760, guid: cf6ca1fdef7c6a3468790d8fb27f2635, type: 3}
+  m_Script: {fileID: 11500000, guid: dfe1163ad00f45142b8444f65895f919, type: 3}
+  m_Name: fryer_7s
+  m_EditorClassIdentifier: Assembly-CSharp::Step
+  station: Fryer
+  duration: 0
