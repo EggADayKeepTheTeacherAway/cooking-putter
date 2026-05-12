@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f362654f2092d4f818354911b2e490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayCycleManager
-  currentTime: 11
+  currentTime: 0
   clockImage: {fileID: 0}
   clockSprites:
   - {fileID: 1534544555328498800, guid: 32929c096eaee6046a690e8f511a49f3, type: 3}

@@ -1136,22 +1136,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClockCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2473900140507574957, guid: 3006ba22d4bdade40ae99c6426f861cb, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 3.611
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473900140507574957, guid: 3006ba22d4bdade40ae99c6426f861cb, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 3.611
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473900140507574957, guid: 3006ba22d4bdade40ae99c6426f861cb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 47.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473900140507574957, guid: 3006ba22d4bdade40ae99c6426f861cb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -46.2
-      objectReference: {fileID: 0}
     - target: {fileID: 5857651610550398979, guid: 3006ba22d4bdade40ae99c6426f861cb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5820,10 +5804,6 @@ PrefabInstance:
       propertyPath: clockImage
       value: 
       objectReference: {fileID: 838646627}
-    - target: {fileID: 3547462032298726355, guid: a75bf519d4c56d3408c245da71fb8fb9, type: 3}
-      propertyPath: currentTime
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
