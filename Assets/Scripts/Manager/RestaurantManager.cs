@@ -87,7 +87,7 @@ public class RestaurantManager : MonoBehaviour
 
     public List<Table> GetAvailableTables(int amountOfCustomers)
     {
-        return tables.FindAll(table => !table.isTaken && table.seatAmount >= amountOfCustomers);
+        return tables.FindAll(table => !table.isTaken && !table.HasDirtyDishes && table.seatAmount >= amountOfCustomers);
     }
 
     public Table AssignedTable(int amountOfCustomers)

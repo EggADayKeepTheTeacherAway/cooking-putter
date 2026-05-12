@@ -38,6 +38,7 @@ public class Player : Entity
 
     public AudioSource AudioSource => audioSource;
 
+    private bool controlsLocked = false;
     protected override void Awake()
     {
         base.Awake();
@@ -51,17 +52,37 @@ public class Player : Entity
 
         stateMachine.Initialize(idleState);
     }
+    public void LockControls()
+    {
+        controlsLocked = true;
 
+        moveInput = Vector2.zero;
+        currentVelocity = Vector2.zero;
+
+        rb.linearVelocity = Vector2.zero;
+    }
+
+    public void UnlockControls()
+    {
+        controlsLocked = false;
+    }
     protected override void Update()
     {
         base.Update();
 
+        if (controlsLocked)
+            return;
         UpdateFacingDirection(moveInput);
         HandleInteraction();
     }
     
     private void FixedUpdate()
     {
+        if (controlsLocked)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
         rb.linearVelocity = currentVelocity;
     }
 
@@ -90,7 +111,20 @@ public class Player : Entity
     {
         if (scene.name == "TownScene")
         {
-            transform.position = SceneTransitionManager.Instance.playerLastPosition;
+            // New-day forced spawn
+            if (SceneTransitionManager.Instance.overrideSpawnPosition)
+            {
+                transform.position =
+                    SceneTransitionManager.Instance.forcedSpawnPosition;
+
+                SceneTransitionManager.Instance.overrideSpawnPosition = false;
+            }
+            else
+            {
+                // Normal transition
+                transform.position =
+                    SceneTransitionManager.Instance.playerLastPosition;
+            }
         }
     }
 

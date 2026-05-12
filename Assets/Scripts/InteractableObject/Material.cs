@@ -13,6 +13,12 @@ public class Material : MonoBehaviour, IInteractable
     [SerializeField] private Sprite activeSprite;
     [SerializeField] private Sprite inactiveSprite;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip gatherSfx;
+    [SerializeField, Range(0f, 1f)] private float gatherSfxVolume = 1f;
+
+
     [Header("Collection Popup")]
     [SerializeField] private GameObject collectionPopup; // Assign a UI Canvas child object here
     [SerializeField] private float popupDisplayTime = 1.5f;
@@ -58,11 +64,30 @@ public class Material : MonoBehaviour, IInteractable
             }
         }
 
+        PlayGatherSound();
+
         Debug.Log($"Collected {dropAmount}x {itemToDrop.itemName}!");
 
         ShowCollectionPopup();
 
         SetInactiveState();
+    }
+
+    private void PlayGatherSound()
+    {
+        if (gatherSfx == null){ 
+            Debug.LogWarning("Material.PlayGatherSound: gatherSfx not assigned");
+            return; 
+        }
+
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(gatherSfx, gatherSfxVolume);
+        }
+        else
+        {
+            AudioSource.PlayClipAtPoint(gatherSfx, transform.position, gatherSfxVolume);
+        }
     }
 
     private void ShowCollectionPopup()

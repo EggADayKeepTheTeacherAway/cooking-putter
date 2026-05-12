@@ -32,6 +32,10 @@ public class Customer_EattingState : CustomerState
         if (stateTimer <= 0 && !finishedEating)
         {
             finishedEating = true;
+            
+            // Change food to dirty dish
+            FoodServiceManager.GetOrCreateInstance().ChangeFoodToDirtyDish(customer);
+            
             customer.GetGroup().FinishedEatting();
         }
     }
@@ -45,6 +49,23 @@ public class Customer_EattingState : CustomerState
 
     private void OnGroupFinishedEatting()
     {
+        if (customer != customer.GetGroup().customers[0])
+        {
+            stateMachine.ChangeState(customer.exitState);
+            return;
+        }
+
+        int customerCount = customer.GetGroup().customers.Count;
+
+        int totalPayment = 0;
+
+        for (int i = 0; i < customerCount; i++)
+        {
+            totalPayment += Random.Range(50, 101);
+        }
+
+        PlayerDataManager.Instance.AddMoney(totalPayment);
+
         stateMachine.ChangeState(customer.exitState);
     }
 }

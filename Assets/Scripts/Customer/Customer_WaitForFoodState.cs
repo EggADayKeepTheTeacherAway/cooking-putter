@@ -35,7 +35,19 @@ public class Customer_WaitForFoodState : CustomerState
 
     private void OrderedFood()
     {
+        if (RestaurantManager.Instance == null)
+        {
+            Debug.LogError("RestaurantManager.Instance not found.");
+            return;
+        }
+
         Food[] foodList = RestaurantManager.Instance.GetAvailableFoodList();
+
+        if (foodList == null || foodList.Length == 0)
+        {
+            Debug.LogError("No food is assigned in RestaurantManager.");
+            return;
+        }
 
         int randomFoodIndex = Random.Range(0, foodList.Length);
 
@@ -43,8 +55,8 @@ public class Customer_WaitForFoodState : CustomerState
 
         customer.OnOrderedFood?.Invoke(selectedFood);
 
-        // TODO Remove this line of code when serve feature is implemented
-        customer.OnRecievedFood?.Invoke(selectedFood);
+        // Queue the order in the Food Service Manager instead of immediately serving
+        FoodServiceManager.GetOrCreateInstance().OrderFood(customer, selectedFood);
     }
 
 }

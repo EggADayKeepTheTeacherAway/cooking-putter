@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pad Kra Pao
   m_EditorClassIdentifier: Assembly-CSharp::Food
   foodName: Pad Kra Pao
-  sprite: {fileID: 0}
+  sprite: {fileID: -7463561415026108531, guid: 53057f9df72cd984fabb27fccfedfef8, type: 3}
