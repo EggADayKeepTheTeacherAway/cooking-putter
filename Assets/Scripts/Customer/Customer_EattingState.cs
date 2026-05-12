@@ -49,6 +49,12 @@ public class Customer_EattingState : CustomerState
 
     private void OnGroupFinishedEatting()
     {
+        if (customer != customer.GetGroup().customers[0])
+        {
+            stateMachine.ChangeState(customer.exitState);
+            return;
+        }
+
         int customerCount = customer.GetGroup().customers.Count;
 
         int totalPayment = 0;
@@ -57,7 +63,9 @@ public class Customer_EattingState : CustomerState
         {
             totalPayment += Random.Range(50, 101);
         }
+
         PlayerDataManager.Instance.AddMoney(totalPayment);
+
         stateMachine.ChangeState(customer.exitState);
     }
 }

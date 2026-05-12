@@ -24,7 +24,6 @@ public class DayCycleManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private AudioClip bellRingSFX;
-
     private void Awake()
     {
         if (Instance == null)
@@ -78,16 +77,23 @@ public class DayCycleManager : MonoBehaviour
     private IEnumerator EndDayCo()
     {
         Debug.Log("Day Ended!");
+        Player player = FindFirstObjectByType<Player>();
 
+        if (player != null)
+        {
+            player.LockControls();
+        }
         ResetEndOfDayVariables();
 
         audioSource.PlayOneShot(bellRingSFX);
 
-        yield return new WaitForSeconds(bellRingSFX.length);
+        OpeningRestaurantUI.Instance.Show();
 
+        yield return new WaitForSeconds(3f);
         // Reset clock back to 12
         currentTime = 11;
-
+        OpeningRestaurantUI.Instance.Hide();
+        player.UnlockControls();
         // Go to restaurant
         SceneTransitionManager.Instance.StartTransition(
             restaurantSceneName

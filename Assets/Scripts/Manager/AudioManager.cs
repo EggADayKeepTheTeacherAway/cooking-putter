@@ -8,6 +8,9 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Source")]
     [SerializeField] private AudioSource bgmSource;
+    [SerializeField] private AudioDatabaseSO audioDB;
+    [SerializeField] private AudioSource sfxSource;
+
 
     [Header("Fade Settings")]
     [SerializeField] private float startDelay = 0.8f;
@@ -73,6 +76,32 @@ public class AudioManager : MonoBehaviour
             StopCoroutine(bgmCoroutine);
 
         bgmCoroutine = StartCoroutine(FadeInBGM(clip));
+    }
+
+    public void PlaySFX(string soundName, AudioSource sfxSource)
+    {
+        AudioClipData data = audioDB.Get(soundName);
+        if (data == null) return;
+        if (data.clip == null) return;
+        if (sfxSource.isPlaying) return;
+        sfxSource.clip = data.clip;
+        sfxSource.pitch = Random.Range(0.95f, 1.1f);
+        sfxSource.volume = data.maxVolume;
+        sfxSource.Play();
+    }
+
+    public void PlayGlobalSFX(string soundName)
+    {
+        AudioClipData data = audioDB.Get(soundName);
+
+        if (data == null) return;
+
+        if (data.clip == null) return;
+
+        sfxSource.clip = data.clip;
+        sfxSource.pitch = Random.Range(0.95f, 1.1f);
+        sfxSource.volume = data.maxVolume;
+        sfxSource.PlayOneShot(data.clip);
     }
 
     private IEnumerator FadeInBGM(AudioClip newClip)

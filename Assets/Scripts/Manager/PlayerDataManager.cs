@@ -10,7 +10,8 @@ public class PlayerDataManager : MonoBehaviour
     public List<InventoryEntry> inventory = new List<InventoryEntry>();
 
     private bool hasInitialized = false;
-
+    public int currentDay = 1;
+    public int todayRevenue = 0;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -76,6 +77,7 @@ public class PlayerDataManager : MonoBehaviour
     public void AddMoney(int amount)
     {
         money += amount;
+        todayRevenue += amount;
         MoneyPopupUI.Instance.Show(amount);
     }
 
@@ -88,11 +90,17 @@ public class PlayerDataManager : MonoBehaviour
         }
         return false;
     }
-
+    public void AdvanceDay()
+    {
+        currentDay++;
+        todayRevenue = 0;
+    }
     // Save to PlayerPrefs (permanent save)
     public void SaveData()
     {
         PlayerPrefs.SetInt("PlayerMoney", money);
+        PlayerPrefs.SetInt("PlayerDay", currentDay);
+        PlayerPrefs.SetInt("TodayRevenue", todayRevenue);
         string inventoryJson = JsonUtility.ToJson(new InventoryData { items = inventory });
         PlayerPrefs.SetString("PlayerInventory", inventoryJson);
         
@@ -100,10 +108,13 @@ public class PlayerDataManager : MonoBehaviour
         Debug.Log("Player data saved to disk!");
     }
 
+
     // Load from PlayerPrefs (restore from permanent save)
     public void LoadData()
     {
         money = PlayerPrefs.GetInt("PlayerMoney", 1000);
+        currentDay = PlayerPrefs.GetInt("PlayerDay", 1);
+        todayRevenue = PlayerPrefs.GetInt("TodayRevenue", 0);
         string inventoryJson = PlayerPrefs.GetString("PlayerInventory", "");
         if (!string.IsNullOrEmpty(inventoryJson))
         {

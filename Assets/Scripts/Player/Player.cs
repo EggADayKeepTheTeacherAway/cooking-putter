@@ -1,14 +1,27 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.LowLevel;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class Player : Entity
 {
+    [Header("Collision Detector")]
     [SerializeField] private Transform playerHead;
     [SerializeField] private float interactLine;
     [SerializeField] private LayerMask interactableObjectLayer;
     [SerializeField] private Sprite bubble;
+    [SerializeField] private Transform playerFoot;
+
+    [Header("Sound")]
+    [SerializeField] private AudioSource audioSource;
+    [Header("SFX name")]
+    [SerializeField] private string roadFootStep;
+    [SerializeField] private string grassFootStep;
+    [SerializeField] private bool ignoredRoadCheck;
+    [SerializeField] private Tilemap roadTilemap;
+
 
     public float runSpeedModifier = 1.5f;
 
@@ -26,6 +39,9 @@ public class Player : Entity
     public List<InventoryEntry> inventory => PlayerDataManager.Instance.inventory;
     public BaseFood carriedFood { get; private set; }
 
+    public AudioSource AudioSource => audioSource;
+
+    private bool controlsLocked = false;
     protected override void Awake()
     {
         base.Awake();
@@ -41,17 +57,37 @@ public class Player : Entity
 
         carriedFood = null;
     }
+    public void LockControls()
+    {
+        controlsLocked = true;
 
+        moveInput = Vector2.zero;
+        currentVelocity = Vector2.zero;
+
+        rb.linearVelocity = Vector2.zero;
+    }
+
+    public void UnlockControls()
+    {
+        controlsLocked = false;
+    }
     protected override void Update()
     {
         base.Update();
 
+        if (controlsLocked)
+            return;
         UpdateFacingDirection(moveInput);
         HandleInteraction();
     }
     
     private void FixedUpdate()
     {
+        if (controlsLocked)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
         rb.linearVelocity = currentVelocity;
     }
 
@@ -188,5 +224,20 @@ public class Player : Entity
         bubbleSr.sprite = bubble;
         bubbleSr.sortingLayerName = "Foreground";
         Debug.Log($"Carrying {food.FoodName}");
+    }
+
+    public void PlayFootStepSound()
+    {
+        string soundName = IsOnRoad() || ignoredRoadCheck ? roadFootStep : grassFootStep;
+        AudioManager.Instance.PlaySFX(soundName, audioSource);
+    }
+    
+    public bool IsOnRoad()
+    {
+        if (ignoredRoadCheck) return true;
+        if (roadTilemap == null) return false;
+
+        Vector3Int cellPos = roadTilemap.WorldToCell(playerFoot.position);
+        return roadTilemap.GetTile(cellPos) != null;
     }
 }

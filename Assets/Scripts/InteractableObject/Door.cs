@@ -5,6 +5,10 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] private Player player;
     [SerializeField] private SceneTransitionData action;
     [SerializeField] private bool needInteract = true;
+
+    [Header("Sound")]
+    [SerializeField] private string openDoorSFX;
+
     private bool isPlayerInRange = false;
 
     public void Interact()
@@ -15,7 +19,9 @@ public class Door : MonoBehaviour, IInteractable
             return;
         }
 
+
         action.Execute();
+
         if (PlayerDataManager.Instance != null)
             PlayerDataManager.Instance.SaveData();
         else
@@ -30,6 +36,8 @@ public class Door : MonoBehaviour, IInteractable
         }
         else if (isPlayerInRange && needInteract && player.input.Player.Interact.WasPressedThisFrame())
         {
+            AudioManager.Instance.PlayGlobalSFX(openDoorSFX);
+
             Interact();
         }
     }
