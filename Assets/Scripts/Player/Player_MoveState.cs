@@ -3,8 +3,8 @@ using UnityEngine;
 public class Player_MoveState : PlayerState
 {
     private float footstepTimer = 0f;
-    private float walkFootstepInterval = 0.2f;
-    private float runFootstepInterval = 2f;
+    private float walkFootstepInterval = 0.5f;
+    private float runFootstepInterval = 0.2f;
 
     private float walkingAnimationSpeed = 1f;
     private float runningAnimationSpeed = 2.5f;

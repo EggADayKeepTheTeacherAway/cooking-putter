@@ -130,6 +130,6 @@ public class Player : Entity
         PlayerDataManager.Instance.SaveData();
     }
 
-    public void PlayFootStepSound() => AudioManager.Instance.PlaySFX(roadFootStep, audioSource);
+    public void PlayFootStepSound() => AudioManager.Instance.PlaySFX(grassFootStep, audioSource);
 
 }
