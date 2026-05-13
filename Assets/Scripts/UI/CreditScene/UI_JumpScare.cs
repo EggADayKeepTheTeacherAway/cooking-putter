@@ -7,8 +7,12 @@ public class UI_JumpScare : MonoBehaviour
     [SerializeField] private float maximumSize = 1000f;
 
     [SerializeField] private RectTransform rectTransform;
+    [SerializeField] private string jumpScareSound = "jumpscare";
 
-    
+    private void OnEnable()
+    {
+        AudioManager.Instance.PlayGlobalSFX(jumpScareSound);
+    }
 
     void Update()
     {

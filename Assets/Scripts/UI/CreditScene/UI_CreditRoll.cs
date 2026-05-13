@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CreditText : MonoBehaviour
+public class UI_CreditRoll : MonoBehaviour
 {
     [SerializeField] private float rollSpeed = 4.5f;
-    [SerializeField] private Transform checkTransform;
     [SerializeField] private GameObject jumpScare;
 
     [SerializeField] private GameObject playerChar;
 
-    private RectTransform rectTransform;
-    private RectTransform checkRect;
+    [SerializeField] private RectTransform rectTransform;
+    [SerializeField] private RectTransform checkRect;
+
+    private float initialRollSpeed;
 
     private void Awake()
     {
-        rectTransform = GetComponent<RectTransform>();
-        checkRect = checkTransform.GetComponent<RectTransform>();
+        initialRollSpeed = rollSpeed;
     }
 
     private void Update()
@@ -28,4 +28,8 @@ public class CreditText : MonoBehaviour
             jumpScare.SetActive(true);
         }
     }
+
+    public void IncreaseRollSpeed() => rollSpeed *= 3f;
+
+    public void ResetRollSpeed() => rollSpeed = initialRollSpeed;
 }
