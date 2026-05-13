@@ -136,6 +136,24 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenCookBook"",
+                    ""type"": ""Button"",
+                    ""id"": ""0d523032-f804-459b-8869-5e907c4906ce"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CloseCookBook"",
+                    ""type"": ""Button"",
+                    ""id"": ""6a418fa4-e4a5-41d0-a4e9-9b280183a105"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -391,6 +409,28 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                     ""action"": ""CloseInventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""339fd5a4-cc5c-4a6e-8cc1-ea1a6b527629"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenCookBook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""36d1fc4d-8b41-4151-a88f-057557c77218"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseCookBook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -415,6 +455,8 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_OpenInventory = m_Player.FindAction("OpenInventory", throwIfNotFound: true);
         m_Player_CloseInventory = m_Player.FindAction("CloseInventory", throwIfNotFound: true);
+        m_Player_OpenCookBook = m_Player.FindAction("OpenCookBook", throwIfNotFound: true);
+        m_Player_CloseCookBook = m_Player.FindAction("CloseCookBook", throwIfNotFound: true);
     }
 
     ~@PlayerInputSet()
@@ -500,6 +542,8 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_OpenInventory;
     private readonly InputAction m_Player_CloseInventory;
+    private readonly InputAction m_Player_OpenCookBook;
+    private readonly InputAction m_Player_CloseCookBook;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -531,6 +575,14 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/CloseInventory".
         /// </summary>
         public InputAction @CloseInventory => m_Wrapper.m_Player_CloseInventory;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/OpenCookBook".
+        /// </summary>
+        public InputAction @OpenCookBook => m_Wrapper.m_Player_OpenCookBook;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/CloseCookBook".
+        /// </summary>
+        public InputAction @CloseCookBook => m_Wrapper.m_Player_CloseCookBook;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -572,6 +624,12 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
             @CloseInventory.started += instance.OnCloseInventory;
             @CloseInventory.performed += instance.OnCloseInventory;
             @CloseInventory.canceled += instance.OnCloseInventory;
+            @OpenCookBook.started += instance.OnOpenCookBook;
+            @OpenCookBook.performed += instance.OnOpenCookBook;
+            @OpenCookBook.canceled += instance.OnOpenCookBook;
+            @CloseCookBook.started += instance.OnCloseCookBook;
+            @CloseCookBook.performed += instance.OnCloseCookBook;
+            @CloseCookBook.canceled += instance.OnCloseCookBook;
         }
 
         /// <summary>
@@ -598,6 +656,12 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
             @CloseInventory.started -= instance.OnCloseInventory;
             @CloseInventory.performed -= instance.OnCloseInventory;
             @CloseInventory.canceled -= instance.OnCloseInventory;
+            @OpenCookBook.started -= instance.OnOpenCookBook;
+            @OpenCookBook.performed -= instance.OnOpenCookBook;
+            @OpenCookBook.canceled -= instance.OnOpenCookBook;
+            @CloseCookBook.started -= instance.OnCloseCookBook;
+            @CloseCookBook.performed -= instance.OnCloseCookBook;
+            @CloseCookBook.canceled -= instance.OnCloseCookBook;
         }
 
         /// <summary>
@@ -699,5 +763,19 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCloseInventory(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OpenCookBook" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOpenCookBook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CloseCookBook" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCloseCookBook(InputAction.CallbackContext context);
     }
 }
