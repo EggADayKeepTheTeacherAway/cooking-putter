@@ -7285,6 +7285,8 @@ GameObject:
   - component: {fileID: 692484793}
   - component: {fileID: 692484794}
   - component: {fileID: 692484795}
+  - component: {fileID: 692484796}
+  - component: {fileID: 692484797}
   m_Layer: 0
   m_Name: RestaurantManager
   m_TagString: Untagged
@@ -7351,8 +7353,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e64291d7165a412190b01d238b39078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodServiceManager
+--- !u!114 &692484796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692484789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4919662b2e4e13aa48104c784aa912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FoodOrderVisuals
   customerPreviewOffset: {x: 0, y: 1.4, z: 0}
-  carriedPreviewOffset: {x: 0, y: 0.9, z: 0}
   foodOnTableOffset: {x: 0, y: -0.8, z: 0}
   previewScale: 1.5
   foodOnTableScale: 1.6
@@ -7366,10 +7379,23 @@ MonoBehaviour:
   bubbleSortingOrderOffset: -1
   foodOnTableSortingLayerName: Customer
   foodOnTableSortingOrder: 1
+--- !u!114 &692484797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692484789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e342d8346e4923ac8dcf36848054d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DirtyDishService
   dirtyDishSortingLayerName: Customer
   dirtyDishSortingOrder: 0
   dirtyDishScale: 1
   dirtyDishItem: {fileID: 11400000, guid: 373b01048dcca4b239c08c8ec484c3b1, type: 2}
+  carriedPreviewOffset: {x: 0, y: 0.9, z: 0}
   dishStackOffset: {x: 0, y: 0.1, z: 0}
   maxDirtyDishesCarried: 4
 --- !u!114 &692484794
@@ -12074,9 +12100,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3994847169410038924, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1983525442}
-    - targetCorrespondingSourceObject: {fileID: 3994847169410038924, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1983525443}
     - targetCorrespondingSourceObject: {fileID: 3994847169410038924, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1983525445}
@@ -20165,20 +20188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c8f162672b244a9a96aa7f30979e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDishInteraction
---- !u!114 &1983525443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875224313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5df9935e870a842c995e2e96a1123c32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ServeInput
-  serveDistance: 1.6
-  playerTransform: {fileID: 1983525439}
 --- !u!114 &1983525445
 MonoBehaviour:
   m_ObjectHideFlags: 0

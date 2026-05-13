@@ -26,6 +26,6 @@ public class ServiceFood : MonoBehaviour, IInteractable
             return;
         }
 
-        FoodServiceManager.GetOrCreateInstance().TryPickupNextFoodForPlayer(player);
+        FoodServiceManager.GetOrCreateInstance().TryPickupNextOrderForPlayer(player);
     }
 }

@@ -25,6 +25,6 @@ public class PlayerFoodServing : MonoBehaviour
 
     private bool TryServeFood()
     {
-        return FoodServiceManager.GetOrCreateInstance().TryServePlayerCarriedFood(player, servingDistance);
+        return FoodServiceManager.GetOrCreateInstance().TryServeCarriedFood(player, servingDistance);
     }
 }

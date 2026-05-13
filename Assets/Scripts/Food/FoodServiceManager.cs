@@ -13,48 +13,14 @@ public class FoodServiceManager : MonoBehaviour
     public static FoodServiceManager Instance { get; private set; }
 
     private Queue<(Customer customer, Food food)> pendingOrders = new();
-    private readonly Dictionary<Customer, GameObject> customerOrderPreviews = new();
-    private readonly Dictionary<Customer, GameObject> foodOnTableObjects = new();
-    private readonly List<GameObject> carriedDishObjects = new();
-    private readonly List<ItemData> carriedDishItems = new();
-    private Transform carriedDishCarrier;
     private Customer carriedOrderCustomer;
+    private FoodOrderVisuals visuals;
+    private DirtyDishService dirtyDishes;
     
     // Invoked whenever the pending orders change (enqueue/dequeue/clear).
     public event Action OnOrdersUpdated;
 
-    [SerializeField] private Vector3 customerPreviewOffset = new Vector3(0f, 1.4f, 0f);
-    [SerializeField] private Vector3 carriedPreviewOffset = new Vector3(0f, 0.9f, 0f);
-    [SerializeField] private Vector3 foodOnTableOffset = new Vector3(0f, -0.8f, 0f);
-    [SerializeField] private float previewScale = 1.5f;
-    [SerializeField] private float foodOnTableScale = 1.6f;
-    [SerializeField] private string previewSortingLayerName = "Foreground";
-    [SerializeField] private int previewSortingOrder = 100;
-    [Header("Bubble Background")]
-    [SerializeField] private Sprite bubbleSprite;
-    [SerializeField] private Color bubbleColor = new Color(1f,1f,1f,1f);
-    [SerializeField] private Vector3 bubbleOffset = Vector3.zero;
-    [SerializeField] private float bubbleScale = 0.1f;
-    [SerializeField] private string bubbleSortingLayerName = "Foreground";
-    [SerializeField] private int bubbleSortingOrderOffset = -1;
-    [SerializeField] private string foodOnTableSortingLayerName = "Customer";
-    [SerializeField] private int foodOnTableSortingOrder = 0;
-    [SerializeField] private string dirtyDishSortingLayerName = "Customer";
-    [SerializeField] private int dirtyDishSortingOrder = 0;
-    [SerializeField] private float dirtyDishScale = 1f;
-    [SerializeField] private ItemData dirtyDishItem; // Reference to Dirty Dish item (ItemData)
-    [SerializeField] private Vector3 dishStackOffset = new Vector3(0f, 0.1f, 0f); // Vertical offset per stacked dish
-    [SerializeField] private int maxDirtyDishesCarried = 4;
-
-    public bool HasCarriedFood
-    {
-        get
-        {
-            Player player = FindFirstObjectByType<Player>();
-            return player != null && player.carriedFood != null;
-        }
-    }
-    public bool HasCarriedDirtyDish => carriedDishObjects.Count > 0;
+    public bool HasCarriedDirtyDish => dirtyDishes != null && dirtyDishes.HasCarriedDirtyDish;
 
     private void Awake()
     {
@@ -64,6 +30,17 @@ public class FoodServiceManager : MonoBehaviour
             return;
         }
         Instance = this;
+        visuals = GetComponent<FoodOrderVisuals>();
+        if (visuals == null)
+        {
+            visuals = gameObject.AddComponent<FoodOrderVisuals>();
+        }
+
+        dirtyDishes = GetComponent<DirtyDishService>();
+        if (dirtyDishes == null)
+        {
+            dirtyDishes = gameObject.AddComponent<DirtyDishService>();
+        }
     }
 
     public static FoodServiceManager GetOrCreateInstance()
@@ -96,7 +73,7 @@ public class FoodServiceManager : MonoBehaviour
 
         pendingOrders.Enqueue((customer, food));
         OnOrderQueued(customer, food);
-        SpawnCustomerOrderPreview(customer, food);
+        visuals?.SpawnCustomerOrderPreview(customer, food);
         OnOrdersUpdated?.Invoke();
     }
 
@@ -115,7 +92,7 @@ public class FoodServiceManager : MonoBehaviour
         var (customer, food) = pendingOrders.Dequeue();
         customer.OnRecievedFood?.Invoke(food);
         OnOrderServed(customer, food);
-        RemoveCustomerOrderPreview(customer);
+        visuals?.RemoveCustomerOrderPreview(customer);
         OnOrdersUpdated?.Invoke();
         return true;
     }
@@ -159,36 +136,13 @@ public class FoodServiceManager : MonoBehaviour
         // Serve the food
         customer.OnRecievedFood?.Invoke(food);
         OnOrderServed(customer, food);
-        RemoveCustomerOrderPreview(customer);
-        SpawnFoodOnTable(customer, food);
+        visuals?.RemoveCustomerOrderPreview(customer);
+        visuals?.SpawnFoodOnTable(customer, food);
         OnOrdersUpdated?.Invoke();
         return true;
     }
 
-    public bool TryPickupNextFoodForPlayer(Transform carrier, bool ignorePickupRange = false)
-    {
-        if (carrier == null)
-        {
-            Debug.LogWarning("Cannot pick up food without a valid carrier transform.");
-            return false;
-        }
-
-        Player player = carrier.GetComponent<Player>();
-        if (player == null)
-        {
-            player = carrier.GetComponentInParent<Player>();
-        }
-
-        if (player == null)
-        {
-            Debug.LogWarning("Cannot pick up food without a Player component.");
-            return false;
-        }
-
-        return TryPickupNextFoodForPlayer(player);
-    }
-
-    public bool TryPickupNextFoodForPlayer(Player player)
+    public bool TryPickupNextOrderForPlayer(Player player)
     {
         if (player == null)
         {
@@ -236,13 +190,7 @@ public class FoodServiceManager : MonoBehaviour
         return false;
     }
 
-    public bool TryServeCarriedFoodFromPlayer(Vector2 playerPosition, float maxDistance)
-    {
-        Player player = FindFirstObjectByType<Player>();
-        return TryServePlayerCarriedFood(player, maxDistance);
-    }
-
-    public bool TryServePlayerCarriedFood(Player player, float maxDistance)
+    public bool TryServeCarriedFood(Player player, float maxDistance)
     {
         if (player == null || player.carriedFood == null)
         {
@@ -320,109 +268,20 @@ public class FoodServiceManager : MonoBehaviour
     {
         pendingOrders.Clear();
         carriedOrderCustomer = null;
-        ClearAllPreviews();
+        visuals?.ClearAllPreviews();
         OnOrdersUpdated?.Invoke();
     }
 
     // Called when an order is added to the queue
     private void OnOrderQueued(Customer customer, Food food)
     {
-        // You can add UI updates, sounds, or animations here
         Debug.Log($"Order queued: {customer.name} ordered {food.FoodName}. Pending: {pendingOrders.Count}");
     }
 
     // Called when an order is successfully served
     private void OnOrderServed(Customer customer, Food food)
     {
-        // You can add UI updates, sounds, or animations here
         Debug.Log($"Order served: {customer.name} received {food.FoodName}");
-    }
-
-    private void SpawnCustomerOrderPreview(Customer customer, Food food)
-    {
-        if (customer == null || food == null || food.Icon == null) return;
-
-        RemoveCustomerOrderPreview(customer);
-
-        var preview = CreatePreviewObject($"{food.FoodName} Preview", food.Icon, customerPreviewOffset, customer.transform, previewScale);
-        customerOrderPreviews[customer] = preview;
-        
-        // Ensure the preview stays on top by moving it to world space if parenting to customer
-        if (preview != null)
-        {
-            // Make sure sorting order is very high to render above UI
-            var sr = preview.GetComponent<SpriteRenderer>();
-            if (sr != null)
-            {
-                sr.sortingOrder = 150; // Very high to ensure visibility
-            }
-        }
-    }
-
-    private GameObject CreatePreviewObject(string objectName, Sprite icon, Vector3 offset, Transform parent, float scale, bool createBubble = true)
-    {
-        return CreateFoodObjectWithSorting(objectName, icon, offset, parent, scale, previewSortingLayerName, previewSortingOrder, createBubble);
-    }
-
-    private GameObject CreateFoodObjectWithSorting(string objectName, Sprite icon, Vector3 offset, Transform parent, float scale, string sortingLayerName, int sortingOrder, bool createBubble = true)
-    {
-        var preview = new GameObject(objectName);
-        preview.transform.SetParent(parent);
-        
-        if (parent != null)
-        {
-            preview.transform.localPosition = offset;
-        }
-        else
-        {
-            preview.transform.position = offset;
-        }
-        
-        preview.transform.localScale = Vector3.one * scale;
-
-        // Create optional bubble background behind the icon
-        if (createBubble && bubbleSprite != null)
-        {
-            var bubble = new GameObject(objectName + " Bubble");
-            bubble.transform.SetParent(preview.transform);
-            if (parent != null)
-            {
-                bubble.transform.localPosition = bubbleOffset;
-            }
-            else
-            {
-                bubble.transform.position = offset + bubbleOffset;
-            }
-            bubble.transform.localScale = Vector3.one * scale * bubbleScale;
-
-            var bubbleSr = bubble.AddComponent<SpriteRenderer>();
-            bubbleSr.sprite = bubbleSprite;
-            bubbleSr.color = bubbleColor;
-            if (!string.IsNullOrWhiteSpace(bubbleSortingLayerName)) bubbleSr.sortingLayerName = bubbleSortingLayerName;
-            bubbleSr.sortingOrder = sortingOrder + bubbleSortingOrderOffset;
-        }
-
-        var spriteRenderer = preview.AddComponent<SpriteRenderer>();
-        spriteRenderer.sprite = icon;
-        if (!string.IsNullOrWhiteSpace(sortingLayerName))
-        {
-            spriteRenderer.sortingLayerName = sortingLayerName;
-        }
-        spriteRenderer.sortingOrder = sortingOrder;
-
-        return preview;
-    }
-
-    private void RemoveCustomerOrderPreview(Customer customer)
-    {
-        if (customer == null) return;
-
-        if (customerOrderPreviews.TryGetValue(customer, out var preview) && preview != null)
-        {
-            Destroy(preview);
-        }
-
-        customerOrderPreviews.Remove(customer);
     }
 
     private (Customer customer, Food food) FindNearestMatchingOrder(Vector2 center, float maxDistance, Food targetFood, string targetFoodName)
@@ -499,265 +358,28 @@ public class FoodServiceManager : MonoBehaviour
             : foodName.Replace(" ", string.Empty).Trim().ToLowerInvariant();
     }
 
-    private void SpawnFoodOnTable(Customer customer, Food food)
-    {
-        if (customer == null || food == null || food.Icon == null) return;
-
-        Vector3 foodPosition = GetFoodOnTablePosition(customer);
-
-        GameObject foodObject = CreateFoodObjectWithSorting($"{food.FoodName} OnTable", food.Icon, foodPosition, null, foodOnTableScale, foodOnTableSortingLayerName, foodOnTableSortingOrder);
-        // remove bubble background for placed food so it doesn't show on table
-        RemoveBubbleFromObject(foodObject);
-
-        // Store reference to update later when eating is finished
-        foodOnTableObjects[customer] = foodObject;
-    }
-
     public void ChangeFoodToDirtyDish(Customer customer)
     {
-        if (customer == null) return;
-        
-        if (!foodOnTableObjects.TryGetValue(customer, out var foodObject) || foodObject == null)
-        {
-            Debug.LogWarning($"ChangeFoodToDirtyDish: no spawned food object found for customer {customer?.name}");
-            return;
-        }
-
-        // ensure bubble background removed when converting to dirty dish
-        RemoveBubbleFromObject(foodObject);
-
-        if (dirtyDishItem == null || dirtyDishItem.itemIcon == null)
-        {
-            Debug.LogWarning("DirtyDish item not assigned or has no icon. Falling back to gray tint.");
-        }
-
-        var spriteRenderer = foodObject.GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
-        {
-            if (dirtyDishItem != null && dirtyDishItem.itemIcon != null)
-            {
-                spriteRenderer.sprite = dirtyDishItem.itemIcon;
-                Debug.Log($"Changed {customer.name}'s food to dirty dish (sprite swap)");
-            }
-            else
-            {
-                // Fallback: tint the existing sprite to indicate dirty dish
-                spriteRenderer.color = new Color(0.7f, 0.7f, 0.7f, 1f);
-                Debug.Log($"Changed {customer.name}'s food to dirty dish (tinted fallback)");
-            }
-
-            if (!string.IsNullOrWhiteSpace(dirtyDishSortingLayerName))
-            {
-                spriteRenderer.sortingLayerName = dirtyDishSortingLayerName;
-            }
-
-            spriteRenderer.sortingOrder = dirtyDishSortingOrder;
-            foodObject.transform.localScale = Vector3.one * dirtyDishScale;
-
-            Table table = customer.GetTable();
-            if (table != null)
-            {
-                table.RegisterDirtyDish();
-            }
-
-            // mark as dirty dish for interaction
-            var dd = foodObject.AddComponent<DirtyDish>();
-            dd.owner = customer;
-            dd.table = table;
-            dd.item = dirtyDishItem;
-            int interactLayer = LayerMask.NameToLayer("Interact");
-            if (interactLayer >= 0)
-            {
-                foodObject.layer = interactLayer;
-            }
-
-            // ensure there's a collider for clicks
-            if (foodObject.GetComponent<Collider2D>() == null)
-            {
-                var col = foodObject.AddComponent<CircleCollider2D>();
-                col.isTrigger = false;
-            }
-        }
+        dirtyDishes?.ChangeFoodToDirtyDish(customer);
     }
 
-    private void RemoveBubbleFromObject(GameObject obj)
-    {
-        if (obj == null) return;
-        // If no bubble sprite configured, nothing to remove
-        if (bubbleSprite == null) return;
-
-        foreach (Transform child in obj.transform)
-        {
-            if (child == null) continue;
-            var sr = child.GetComponent<SpriteRenderer>();
-            if (sr != null)
-            {
-                if (sr.sprite == bubbleSprite || child.name.EndsWith(" Bubble"))
-                {
-                    Destroy(child.gameObject);
-                    return;
-                }
-            }
-            else if (child.name.EndsWith(" Bubble"))
-            {
-                Destroy(child.gameObject);
-                return;
-            }
-        }
-    }
-
-    // Player picks up a dirty dish GameObject
     public bool PickupDirtyDish(GameObject dishObject, Transform carrier)
     {
-        if (dishObject == null || carrier == null) return false;
-        var dd = dishObject.GetComponent<DirtyDish>();
-        if (dd == null) return false;
-
-        if (carriedDishObjects.Count >= maxDirtyDishesCarried)
-        {
-            Debug.Log($"Cannot pick up more dirty dishes. Max carried dishes is {maxDirtyDishesCarried}.");
-            return false;
-        }
-
-        if (dd.table != null)
-        {
-            dd.table.ClearDirtyDish();
-            dd.table = null;
-        }
-
-        // parent to carrier and position with stack offset
-        dishObject.transform.SetParent(carrier);
-        Vector3 stackPosition = carriedPreviewOffset + dishStackOffset * carriedDishObjects.Count;
-        dishObject.transform.localPosition = stackPosition;
-        dishObject.transform.localScale = Vector3.one * dirtyDishScale;
-
-        foreach (var col in dishObject.GetComponentsInChildren<Collider2D>(true))
-        {
-            col.enabled = false;
-        }
-
-        carriedDishObjects.Add(dishObject);
-        carriedDishItems.Add(dd.item);
-        carriedDishCarrier = carrier;
-
-        // remove mapping from table so it won't be considered on-table anymore
-        if (dd.owner != null)
-        {
-            foodOnTableObjects.Remove(dd.owner);
-            dd.owner = null;
-        }
-
-        Debug.Log($"Picked up dirty dish: {dd.item?.itemName}. Carrying {carriedDishObjects.Count} dishes.");
-        return true;
+        return dirtyDishes != null && dirtyDishes.PickupDirtyDish(dishObject, carrier);
     }
 
-    // Try to drop all carried dirty dishes into sink
     public bool TryDropCarriedDishAtSink(SinkBehaviour sink)
     {
-        if (sink == null) return false;
-        if (carriedDishObjects.Count == 0) return false;
-
-        // inform sink how many dishes we're dropping
-        sink.Fill();
-
-        // destroy all carried objects and clear state
-        foreach (var dish in carriedDishObjects)
-        {
-            Destroy(dish);
-        }
-        carriedDishObjects.Clear();
-        carriedDishItems.Clear();
-        carriedDishCarrier = null;
-
-        Debug.Log("Dropped all dirty dishes into sink");
-        return true;
-    }
-
-    private Vector3 GetFoodOnTablePosition(Customer customer)
-    {
-        if (customer == null)
-        {
-            return Vector3.zero;
-        }
-
-        if (customer.seat == null)
-        {
-            return customer.transform != null ? customer.transform.position : Vector3.zero;
-        }
-
-        Vector3 seatPosition = customer.seat.GetSeatPos();
-        Vector3 tableOffset = foodOnTableOffset;
-
-        if (customer.seat.seatType == SeatType.Top)
-        {
-            tableOffset.y = -Mathf.Abs(tableOffset.y);
-        }
-        else if (customer.seat.seatType == SeatType.Bottom)
-        {
-            tableOffset.y = Mathf.Abs(tableOffset.y);
-        }
-
-        return seatPosition + tableOffset;
-    }
-
-    private void ClearAllPreviews()
-    {
-        foreach (var preview in customerOrderPreviews.Values)
-        {
-            if (preview != null)
-            {
-                Destroy(preview);
-            }
-        }
-
-        customerOrderPreviews.Clear();
+        return dirtyDishes != null && dirtyDishes.TryDropCarriedDishAtSink(sink);
     }
 
     public void RemoveFoodFromTable(Customer customer)
     {
-        if (customer == null) return;
-
-        if (foodOnTableObjects.TryGetValue(customer, out var foodObject) && foodObject != null)
-        {
-            var dirtyDish = foodObject.GetComponent<DirtyDish>();
-            if (dirtyDish != null && dirtyDish.table != null)
-            {
-                dirtyDish.table.ClearDirtyDish();
-                dirtyDish.table = null;
-            }
-
-            Destroy(foodObject);
-        }
-
-        foodOnTableObjects.Remove(customer);
+        visuals?.RemoveFoodFromTable(customer);
     }
 
-    // Called by SinkBehaviour after washing completes to remove one carried dirty dish
     public void PickupCleanedDishFromWashingStation(Transform station)
     {
-        if (carriedDishObjects.Count == 0)
-        {
-            Debug.LogWarning("PickupCleanedDishFromWashingStation: no dirty dishes to clean.");
-            return;
-        }
-
-        int lastIndex = carriedDishObjects.Count - 1;
-        var dish = carriedDishObjects[lastIndex];
-        var item = carriedDishItems[lastIndex];
-
-        if (dish != null)
-        {
-            Destroy(dish);
-        }
-
-        carriedDishObjects.RemoveAt(lastIndex);
-        carriedDishItems.RemoveAt(lastIndex);
-
-        if (carriedDishObjects.Count == 0)
-        {
-            carriedDishCarrier = null;
-        }
-
-        Debug.Log($"PickupCleanedDishFromWashingStation: cleaned one dirty dish ({item?.itemName}). Remaining: {carriedDishObjects.Count}");
+        dirtyDishes?.PickupCleanedDishFromWashingStation(station);
     }
 }
