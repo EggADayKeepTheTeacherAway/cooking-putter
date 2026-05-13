@@ -27,3 +27,6 @@ MonoBehaviour:
   - audioName: button_click
     clip: {fileID: 8300000, guid: d77f2c70bb4709d40b4cab91bc439deb, type: 3}
     maxVolume: 1
+  - audioName: jumpscare
+    clip: {fileID: 8300000, guid: 5e3782988780f574592c0d8ca7469c0a, type: 3}
+    maxVolume: 0.5
