@@ -15,6 +15,9 @@ public class RestaurantManager : MonoBehaviour
     [SerializeField] private Transform noTablePoint;
 
 
+    [SerializeField] private GameObject endLetterUI;
+    [SerializeField] private GameObject endLetter;
+
     [SerializeField] private Customer foodCriticPrefab;
     private Customer foodCritic;
     private bool foodCriticSpawned = false;
@@ -30,6 +33,8 @@ public class RestaurantManager : MonoBehaviour
     private List<CustomerGroup> customerGroups;
 
     private bool isSpawnCustomer = true;
+
+    public int initialDay;
 
     public CustomerSpawner Spawner => spawner;
 
@@ -47,7 +52,9 @@ public class RestaurantManager : MonoBehaviour
 
         tables = new List<Table>();
         customerGroups = new List<CustomerGroup>();
-        
+
+        initialDay = PlayerDataManager.Instance.currentDay;
+
         // Auto-load foods if not assigned in Inspector
         if (foodList == null || foodList.Length == 0)
         {
@@ -89,11 +96,86 @@ public class RestaurantManager : MonoBehaviour
         }
     }
 
-    public Food[] GetAvailableFoodList() => foodList;
+    public void SpawnEndLetter(Customer c)
+    {
+        Camera cam = Camera.main;
+
+        if (cam == null)
+        {
+            Debug.LogWarning("Main Camera not found.");
+            return;
+        }
+
+        Vector3 topPosition =
+            cam.ViewportToWorldPoint(new Vector3(0.5f, 1.2f, 10f));
+
+        GameObject letter = Instantiate(endLetter);
+
+        letter.transform.position = topPosition;
+    }
+
+
+    public void ShowEndLetter()
+    {
+        endLetterUI.SetActive(true);
+    }
+
+    public Food[] GetAvailableFoodList()
+    {
+        List<Food> availableFoods = new();
+
+        foreach (Food food in foodList)
+        {
+            if (food == null)
+                continue;
+
+            if (CanCookFood(food))
+            {
+                availableFoods.Add(food);
+            }
+        }
+
+        return availableFoods.ToArray();
+    }
+
+
+    private bool CanCookFood(Food food)
+    {
+        if (food == null)
+            return false;
+
+        Dictionary<ItemData, int> requiredIngredients = new();
+
+        foreach (ItemData ingredient in food.Ingredients)
+        {
+            if (ingredient == null)
+                continue;
+
+            if (requiredIngredients.ContainsKey(ingredient))
+            {
+                requiredIngredients[ingredient]++;
+            }
+            else
+            {
+                requiredIngredients[ingredient] = 1;
+            }
+        }
+
+        foreach (var pair in requiredIngredients)
+        {
+            if (!PlayerDataManager.Instance.HasItem(pair.Key, pair.Value))
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 
     private void SpawnCustomerCheck()
     {
-        if (PlayerDataManager.Instance.currentDay == PlayerDataManager.Instance.foodCriticDay)
+        if (PlayerDataManager.Instance.currentDay == PlayerDataManager.Instance.foodCriticDay && PlayerDataManager.Instance.currentDay == initialDay)
         {
             isSpawnCustomer = false;
             SpawnFoodCritic();

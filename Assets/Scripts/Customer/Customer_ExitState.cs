@@ -26,15 +26,22 @@ public class Customer_ExitState : CustomerState
         WalkToExit();
     }
 
+    private bool transformed;
+
     public override void Update()
     {
         base.Update();
 
-        if (stateTimer <= 0)
+        if (!transformed && stateTimer <= 0)
         {
-            PhasingSeagul.Instance?.SpawnSpecialCustomer(customer);
-        }
+            transformed = true;
 
+            customer.OnReachedTarget -= OnMovementFinished;
+
+            PhasingSeagul.Instance?.SpawnSpecialCustomer(customer);
+
+            return;
+        }
     }
 
     private void WalkToExit()
