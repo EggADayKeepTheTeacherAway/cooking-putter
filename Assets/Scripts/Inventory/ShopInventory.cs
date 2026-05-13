@@ -48,7 +48,9 @@ public class ShopInventory : MonoBehaviour
             ItemData itemData = entry.item;
             if (itemData == null)
             {
-                Debug.LogWarning("ShopInventory: ItemData is null, skipping entry");
+                Debug.LogWarning(
+                    $"Null item at quantity {entry.quantity}"
+                );
                 continue;
             }
 

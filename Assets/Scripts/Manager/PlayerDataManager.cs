@@ -14,6 +14,8 @@ public class PlayerDataManager : MonoBehaviour
     public int todayRevenue = 0;
     private void Awake()
     {
+        PlayerPrefs.DeleteAll();
+
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
