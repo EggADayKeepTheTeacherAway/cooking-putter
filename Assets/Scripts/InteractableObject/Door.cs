@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
+    private const string ANIM_PARAM_OPEN = "IsOpen";
+
     [SerializeField] private Player player;
     [SerializeField] private SceneTransitionData action;
     [SerializeField] private bool needInteract = true;
@@ -9,17 +11,61 @@ public class Door : MonoBehaviour, IInteractable
     [Header("Sound")]
     [SerializeField] private string openDoorSFX;
 
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private float animationDuration = 0.5f;
+
+    private bool isInteracting = false;
     private bool isPlayerInRange = false;
+
+    private void Start()
+    {
+        if (animator == null)
+            animator = GetComponent<Animator>();
+
+        if (animator == null)
+            Debug.LogError($"Door '{name}': Animator component not found!");
+    }
+
 
     public void Interact()
     {
+        if (isInteracting)
+            return;
+
         if (action == null)
         {
             Debug.LogWarning($"Door '{name}': SceneTransitionData (action) is null.");
             return;
         }
+        
+        isInteracting = true;
 
+        if (!string.IsNullOrEmpty(openDoorSFX))
+        {
+            AudioManager.Instance.PlayGlobalSFX(openDoorSFX);
+        }
 
+        // Trigger animation
+        PlayOpenAnimation();
+    }
+
+    private void PlayOpenAnimation()
+    {
+        if (animator == null)
+        {
+            Debug.LogError($"Door '{name}': Animator is null, executing transition immediately.");
+            ExecuteTransition();
+            return;
+        }
+
+        animator.SetBool(ANIM_PARAM_OPEN, true);
+
+        ExecuteTransition();
+    }
+
+    private void ExecuteTransition()
+    {
         action.Execute();
 
         if (PlayerDataManager.Instance != null)
@@ -36,15 +82,13 @@ public class Door : MonoBehaviour, IInteractable
         }
         else if (isPlayerInRange && needInteract && player.input.Player.Interact.WasPressedThisFrame())
         {
-            AudioManager.Instance.PlayGlobalSFX(openDoorSFX);
-
             Interact();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log($"Door '{name}': OnTriggerEnter2D with {collision.gameObject.name} (tag={collision.tag})");
+        //Debug.Log($"Door '{name}': OnTriggerEnter2D with {collision.gameObject.name} (tag={collision.tag})");
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
@@ -53,7 +97,7 @@ public class Door : MonoBehaviour, IInteractable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log($"Door '{name}': OnTriggerExit2D with {collision.gameObject.name}");
+        //Debug.Log($"Door '{name}': OnTriggerExit2D with {collision.gameObject.name}");
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;
