@@ -3424,6 +3424,55 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8749662037187223890, guid: 5431131495423024ebc79cf1ee3d6a2e, type: 3}
   m_PrefabInstance: {fileID: 498671985}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &524132273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524132275}
+  - component: {fileID: 524132274}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &524132274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524132273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31f84976596d134c826622b5aababd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneManager
+  transitionEffect: {fileID: 0}
+  fadeDuration: 0.5
+  restaurantTownSpawnPosition: {x: -12, y: 0, z: 0}
+  overrideSpawnPosition: 0
+  forcedSpawnPosition: {x: 0, y: 0, z: 0}
+--- !u!4 &524132275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524132273}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.25195, y: 2.50504, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &531014883
 GameObject:
   m_ObjectHideFlags: 0
@@ -20898,12 +20947,13 @@ SceneRoots:
   - {fileID: 1742125370}
   - {fileID: 949013464}
   - {fileID: 1723359294}
-  - {fileID: 692484791}
   - {fileID: 1155674149}
   - {fileID: 2112958486}
   - {fileID: 2003979560}
   - {fileID: 2030000927}
-  - {fileID: 461067835}
   - {fileID: 2116563525}
   - {fileID: 96521540}
   - {fileID: 1654794290}
+  - {fileID: 692484791}
+  - {fileID: 461067835}
+  - {fileID: 524132275}

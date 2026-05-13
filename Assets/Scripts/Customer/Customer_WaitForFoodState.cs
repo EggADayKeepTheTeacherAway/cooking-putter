@@ -55,6 +55,8 @@ public class Customer_WaitForFoodState : CustomerState
 
         customer.OnOrderedFood?.Invoke(selectedFood);
 
+        Debug.Log(selectedFood);
+
         // Queue the order in the Food Service Manager instead of immediately serving
         FoodServiceManager.GetOrCreateInstance().OrderFood(customer, selectedFood);
     }
