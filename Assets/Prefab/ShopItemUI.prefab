@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -5.9}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 120.799, y: 22.5569}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2166436244245185328
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -172,8 +172,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -2.9100037}
-  m_SizeDelta: {x: 60.5291, y: 26.035}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 20.7298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6088398066686555024
 CanvasRenderer:
@@ -263,7 +263,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.1}
-  m_SizeDelta: {x: 70, y: 70}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7827475633149326514
 CanvasRenderer:
@@ -415,7 +415,6 @@ MonoBehaviour:
   button: {fileID: 5459715587987082053}
   icon: {fileID: 868403298913772997}
   coinPrefab: {fileID: 1420309206557148603, guid: f1368113510685a42ad691a334fb7c2e, type: 3}
-  noMoneyText: {fileID: 0}
 --- !u!114 &8265911604115492676
 MonoBehaviour:
   m_ObjectHideFlags: 0
