@@ -226,6 +226,23 @@ public class Player : Entity
         Debug.Log($"Carrying {food.FoodName}");
     }
 
+    public void ClearCarriedFood()
+    {
+        if (carriedFood == null) return;
+
+        // Destroy the food preview object if exists
+        foreach (Transform child in transform)
+        {
+            if (child.name.Contains(carriedFood.GetFoodName()))
+            {
+                Destroy(child.gameObject);
+                break;
+            }
+        }
+
+        carriedFood = null;
+    }
+
     public void PlayFootStepSound()
     {
         string soundName = IsOnRoad() || ignoredRoadCheck ? roadFootStep : grassFootStep;

@@ -36,7 +36,7 @@ public class FoodServiceManager : MonoBehaviour
     [SerializeField] private float previewScale = 1.5f;
     [SerializeField] private float foodOnTableScale = 1.6f;
     [SerializeField] private string previewSortingLayerName = "Foreground";
-    [SerializeField] private int previewSortingOrder = 50;
+    [SerializeField] private int previewSortingOrder = 100;
     [Header("Bubble Background")]
     [SerializeField] private Sprite bubbleSprite;
     [SerializeField] private Color bubbleColor = new Color(1f,1f,1f,1f);
@@ -323,6 +323,17 @@ public class FoodServiceManager : MonoBehaviour
 
         var preview = CreatePreviewObject($"{food.FoodName} Preview", food.Icon, customerPreviewOffset, customer.transform, previewScale);
         customerOrderPreviews[customer] = preview;
+        
+        // Ensure the preview stays on top by moving it to world space if parenting to customer
+        if (preview != null)
+        {
+            // Make sure sorting order is very high to render above UI
+            var sr = preview.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.sortingOrder = 150; // Very high to ensure visibility
+            }
+        }
     }
 
     private void SpawnServiceWindowPreview(Food food)
@@ -697,5 +708,34 @@ public class FoodServiceManager : MonoBehaviour
         }
 
         foodOnTableObjects.Remove(customer);
+    }
+
+    // Called by SinkBehaviour after washing completes to remove one carried dirty dish
+    public void PickupCleanedDishFromWashingStation(Transform station)
+    {
+        if (carriedDishObjects.Count == 0)
+        {
+            Debug.LogWarning("PickupCleanedDishFromWashingStation: no dirty dishes to clean.");
+            return;
+        }
+
+        int lastIndex = carriedDishObjects.Count - 1;
+        var dish = carriedDishObjects[lastIndex];
+        var item = carriedDishItems[lastIndex];
+
+        if (dish != null)
+        {
+            Destroy(dish);
+        }
+
+        carriedDishObjects.RemoveAt(lastIndex);
+        carriedDishItems.RemoveAt(lastIndex);
+
+        if (carriedDishObjects.Count == 0)
+        {
+            carriedDishCarrier = null;
+        }
+
+        Debug.Log($"PickupCleanedDishFromWashingStation: cleaned one dirty dish ({item?.itemName}). Remaining: {carriedDishObjects.Count}");
     }
 }
