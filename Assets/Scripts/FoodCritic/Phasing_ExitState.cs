@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Customer_WaitingState : MonoBehaviour
+public class Phasing_ExitState : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

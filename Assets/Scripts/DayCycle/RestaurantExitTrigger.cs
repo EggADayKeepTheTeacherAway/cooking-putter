@@ -6,7 +6,7 @@ public class RestaurantExitTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (DayCycleManager.Instance != null)
+            if (DayCycleManager.Instance != null && DayCycleManager.Instance.isNight)
             {
                 DayCycleManager.Instance.ResetToTwelve();
 
