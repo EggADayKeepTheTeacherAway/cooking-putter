@@ -36,10 +36,9 @@ public class CustomerGroup
             table.ReturnSeat(c.seat);
         }
         customers.Remove(c);
-
-        if (customers.Count == 0)
+        if (customers.Count == 0 && table != null)
         {
-            if (table != null)
+            if (!table.HasDirtyDishes)
             {
                 table.UnTake();
             }
