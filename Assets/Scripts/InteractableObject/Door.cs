@@ -13,19 +13,9 @@ public class Door : MonoBehaviour, IInteractable
 
     [Header("Animation")]
     [SerializeField] private Animator animator;
-    [SerializeField] private float animationDuration = 0.5f;
 
     private bool isInteracting = false;
     private bool isPlayerInRange = false;
-
-    private void Start()
-    {
-        if (animator == null)
-            animator = GetComponent<Animator>();
-
-        if (animator == null)
-            Debug.LogError($"Door '{name}': Animator component not found!");
-    }
 
 
     public void Interact()
@@ -54,7 +44,6 @@ public class Door : MonoBehaviour, IInteractable
     {
         if (animator == null)
         {
-            Debug.LogError($"Door '{name}': Animator is null, executing transition immediately.");
             ExecuteTransition();
             return;
         }
