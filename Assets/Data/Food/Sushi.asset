@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
+  m_Name: Sushi
+  m_EditorClassIdentifier: Assembly-CSharp::Food
+  foodName: Sushi
+  sprite: {fileID: 609855222940722255, guid: 60bd5e15f24910145a54ed99809155f1, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 3dcd14dc8ebd563479062badf655b356, type: 2}
+  - {fileID: 11400000, guid: c7ace8a0ff4bcb14cab214eb68603b83, type: 2}
+  - {fileID: 11400000, guid: 844f4b8db4c75d6448e658093ad8026a, type: 2}
+  steps:
+  - {fileID: 11400000, guid: 342a88eb65dcb4a41841ee0bf931aa1b, type: 2}
+  - {fileID: 11400000, guid: 342a88eb65dcb4a41841ee0bf931aa1b, type: 2}
+  - {fileID: 11400000, guid: 23378321d526477419a8caf7029b83fb, type: 2}

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class DayCycleManager : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class DayCycleManager : MonoBehaviour
     [Header("Scene")]
     public string restaurantSceneName = "RestaurantScene";
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+
+    [SerializeField] private AudioClip bellRingSFX;
     private void Awake()
     {
         if (Instance == null)
@@ -69,15 +74,34 @@ public class DayCycleManager : MonoBehaviour
 
         Debug.Log("Current Hour: " + GetDisplayedHour());
     }
-
-    private void EndDay()
+    private IEnumerator EndDayCo()
     {
         Debug.Log("Day Ended!");
+        Player player = FindFirstObjectByType<Player>();
+
+        if (player != null)
+        {
+            player.LockControls();
+        }
         ResetEndOfDayVariables();
 
+        audioSource.PlayOneShot(bellRingSFX);
+
+        OpeningRestaurantUI.Instance.Show();
+
+        yield return new WaitForSeconds(3f);
         // Reset clock back to 12
         currentTime = 11;
-        SceneManager.LoadScene(restaurantSceneName);
+        OpeningRestaurantUI.Instance.Hide();
+        player.UnlockControls();
+        // Go to restaurant
+        SceneTransitionManager.Instance.StartTransition(
+            restaurantSceneName
+        );
+    }
+    private void EndDay()
+    {
+        StartCoroutine(EndDayCo());
     }
 
     private void ResetEndOfDayVariables()

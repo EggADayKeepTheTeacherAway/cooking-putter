@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class RestaurantTimerManager : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class RestaurantTimerManager : MonoBehaviour
     [Header("Timer")]
     [SerializeField] private float secondsPerHour = 30f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip bellRingSFX;
+    [SerializeField] private Player player;
     private float timer;
 
     private void Start()
@@ -61,18 +66,40 @@ public class RestaurantTimerManager : MonoBehaviour
             EndRestaurantNight();
         }
     }
-
-    private void EndRestaurantNight()
+    private IEnumerator EndRestaurantNightCo()
     {
         Debug.Log("Restaurant Night Ended!");
+        player.LockControls();
+        audioSource.PlayOneShot(bellRingSFX);
 
-        // Reset daytime clock to new day
+        yield return new WaitForSeconds(bellRingSFX.length);
+
+        Debug.Log("Trying to show result UI");
+
+        Debug.Log(ResultUI.Instance);
+
+        ResultUI.Instance.Show(OnResultFinished);
+    }
+    private void OnResultFinished()
+    {
+        player.UnlockControls();
+        PlayerDataManager.Instance.AdvanceDay();
+        PlayerDataManager.Instance.SaveData();
+
         if (DayCycleManager.Instance != null)
         {
             DayCycleManager.Instance.ResetToTwelve();
         }
 
-        SceneManager.LoadScene("TownScene");
+        SceneTransitionManager.Instance.SetForcedSpawnPosition(
+            SceneTransitionManager.Instance.RestaurantTownSpawnPosition
+        );
+
+        SceneTransitionManager.Instance.StartTransition("TownScene");
+    }
+    private void EndRestaurantNight()
+    {
+        StartCoroutine(EndRestaurantNightCo());
     }
 
     private void RefreshClock()
