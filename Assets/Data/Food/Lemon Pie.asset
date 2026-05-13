@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
+  m_Name: Lemon Pie
+  m_EditorClassIdentifier: Assembly-CSharp::Food
+  foodName: Lemon Pie
+  sprite: {fileID: -2336984427158002131, guid: 880a38c76418136498468f41e5ae9b72, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 290e10f78d6dece46bfac6a970cd120f, type: 2}
+  - {fileID: 11400000, guid: 290e10f78d6dece46bfac6a970cd120f, type: 2}
+  - {fileID: 11400000, guid: e750f519a92ad67489d6263fff7af816, type: 2}
+  steps:
+  - {fileID: 11400000, guid: 342a88eb65dcb4a41841ee0bf931aa1b, type: 2}
+  - {fileID: 11400000, guid: 51920be7e6cf7e7439ed28bbbc17f855, type: 2}

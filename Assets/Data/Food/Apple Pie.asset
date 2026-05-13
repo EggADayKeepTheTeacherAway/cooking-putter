@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
+  m_Name: Apple Pie
+  m_EditorClassIdentifier: Assembly-CSharp::Food
+  foodName: ApplePie
+  sprite: {fileID: 1109132893433667816, guid: fb03a8fba739685479dfbcfed77226a5, type: 3}
+  ingredients:
+  - {fileID: 11400000, guid: 2b1bff69f0d231d4888a7678c5234013, type: 2}
+  - {fileID: 11400000, guid: 2b1bff69f0d231d4888a7678c5234013, type: 2}
+  - {fileID: 11400000, guid: e750f519a92ad67489d6263fff7af816, type: 2}
+  steps:
+  - {fileID: 11400000, guid: 342a88eb65dcb4a41841ee0bf931aa1b, type: 2}
+  - {fileID: 11400000, guid: 51920be7e6cf7e7439ed28bbbc17f855, type: 2}
