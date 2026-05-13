@@ -43,11 +43,13 @@ public class PlayerDataManager : MonoBehaviour
             if (entry.item == item)
             {
                 entry.quantity += amount;
+                SaveData();
                 return;
             }
         }
 
         inventory.Add(new InventoryEntry { item = item, quantity = amount });
+        SaveData();
     }
 
     public void RemoveItem(ItemData item, int amount = 1)
@@ -83,6 +85,7 @@ public class PlayerDataManager : MonoBehaviour
         money += amount;
         todayRevenue += amount;
         MoneyPopupUI.Instance.Show(amount);
+        SaveData();
     }
 
     public bool TrySpendMoney(int amount)

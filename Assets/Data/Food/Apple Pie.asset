@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c4bc620db38df40a6361a72439a0ea, type: 3}
   m_Name: Apple Pie
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  foodName: ApplePie
+  foodName: Apple Pie
   sprite: {fileID: 1109132893433667816, guid: fb03a8fba739685479dfbcfed77226a5, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 2b1bff69f0d231d4888a7678c5234013, type: 2}

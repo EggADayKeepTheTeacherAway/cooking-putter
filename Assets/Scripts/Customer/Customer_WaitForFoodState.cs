@@ -45,19 +45,24 @@ public class Customer_WaitForFoodState : CustomerState
 
         if (foodList == null || foodList.Length == 0)
         {
-            Debug.LogError("No food is assigned in RestaurantManager.");
+            Debug.LogError("No food is assigned in RestaurantManager. Please populate the foodList or check Assets/Data/Food folder.");
             return;
         }
 
+        // Select a random food from the available list
         int randomFoodIndex = Random.Range(0, foodList.Length);
-
         selectedFood = foodList[randomFoodIndex];
 
+        if (selectedFood == null)
+        {
+            Debug.LogError("Selected food is null. Check RestaurantManager.foodList.");
+            return;
+        }
+
+        // Notify that a food was ordered
         customer.OnOrderedFood?.Invoke(selectedFood);
 
-        Debug.Log(selectedFood);
-
-        // Queue the order in the Food Service Manager instead of immediately serving
+        // Queue the order in the Food Service Manager
         FoodServiceManager.GetOrCreateInstance().OrderFood(customer, selectedFood);
     }
 

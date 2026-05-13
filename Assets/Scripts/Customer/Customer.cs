@@ -112,7 +112,7 @@ public class Customer : Entity
 
     public void ResetSortingOrder() => sr.sortingOrder = 5;
   
-    public void SetTopSortingOrder() => sr.sortingOrder = 1;
+    public void SetTopSortingOrder() => sr.sortingOrder = 2;
 
     public void SetBottomSortingOrder() => sr.sortingOrder = -1;
 

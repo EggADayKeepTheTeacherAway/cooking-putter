@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class RestaurantManager : MonoBehaviour
 {
     // 80% people choose smallest table 20% selfish
@@ -43,6 +47,36 @@ public class RestaurantManager : MonoBehaviour
 
         tables = new List<Table>();
         customerGroups = new List<CustomerGroup>();
+        
+        // Auto-load foods if not assigned in Inspector
+        if (foodList == null || foodList.Length == 0)
+        {
+            LoadFoodsFromProject();
+        }
+    }
+    
+    private void LoadFoodsFromProject()
+    {
+        #if UNITY_EDITOR
+        // Search for all Food ScriptableObjects in the Assets/Data/Food folder
+        string[] guids = AssetDatabase.FindAssets("t:Food", new[] { "Assets/Data/Food" });
+        
+        if (guids.Length > 0)
+        {
+            foodList = new Food[guids.Length];
+            for (int i = 0; i < guids.Length; i++)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guids[i]);
+                foodList[i] = AssetDatabase.LoadAssetAtPath<Food>(path);
+            }
+            Debug.Log($"RestaurantManager: Loaded {foodList.Length} foods from Assets/Data/Food");
+        }
+        else
+        {
+            Debug.LogWarning("RestaurantManager: No Food assets found in Assets/Data/Food folder!");
+            foodList = new Food[0];
+        }
+        #endif
     }
 
     private void Update()

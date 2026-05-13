@@ -72,7 +72,7 @@ public class RestaurantTimerManager : MonoBehaviour
         player.LockControls();
         audioSource.PlayOneShot(bellRingSFX);
 
-        yield return new WaitForSeconds(bellRingSFX.length);
+        yield return new WaitForSeconds(1f);
 
         Debug.Log("Trying to show result UI");
 
