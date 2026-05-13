@@ -20,6 +20,8 @@ public class RestaurantManager : MonoBehaviour
 
     private List<CustomerGroup> customerGroups;
 
+    private bool isSpawnCustomer = true;
+
     public CustomerSpawner Spawner => spawner;
 
     public Vector2 NoTablePoint => noTablePoint.position;
@@ -40,10 +42,32 @@ public class RestaurantManager : MonoBehaviour
 
     private void Update()
     {
-        SpawnCustomer();
+        SpawnCustomerCheck();
+
+        if (isSpawnCustomer)
+        {
+            SpawnCustomer();
+        }
     }
 
     public Food[] GetAvailableFoodList() => foodList;
+
+    private void SpawnCustomerCheck()
+    {
+        if (PlayerDataManager.Instance.currentDay == PlayerDataManager.Instance.foodCriticDay)
+        {
+            isSpawnCustomer = false;
+        }
+        else if (DayCycleManager.Instance == null || !DayCycleManager.Instance.isNight)
+        {
+            isSpawnCustomer = false;
+        }
+
+        else
+        {
+            isSpawnCustomer = true;
+        }
+    }
 
     private bool SpawnCustomer()
     {

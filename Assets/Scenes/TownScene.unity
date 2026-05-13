@@ -920,13 +920,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3116730013142694708, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493476302380387124, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4312990825288704819, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312990825288704819, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5052206316391875732, guid: b3ae902904efcfb499a4a91f5099c0c0, type: 3}
       propertyPath: m_Pivot.x
@@ -1135,10 +1139,6 @@ PrefabInstance:
     - target: {fileID: 274170450480703011, guid: 3006ba22d4bdade40ae99c6426f861cb, type: 3}
       propertyPath: m_Name
       value: ClockCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473900140507574957, guid: 3006ba22d4bdade40ae99c6426f861cb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -46.19995
       objectReference: {fileID: 0}
     - target: {fileID: 5857651610550398979, guid: 3006ba22d4bdade40ae99c6426f861cb, type: 3}
       propertyPath: m_Pivot.x

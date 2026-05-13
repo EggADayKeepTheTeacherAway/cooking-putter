@@ -55,6 +55,9 @@ public class Door : MonoBehaviour, IInteractable
 
     private void ExecuteTransition()
     {
+        isPlayerInRange = false;
+        isInteracting = false;
+
         action.Execute();
 
         if (PlayerDataManager.Instance != null)
@@ -73,6 +76,12 @@ public class Door : MonoBehaviour, IInteractable
         {
             Interact();
         }
+    }
+
+    private void OnDisable()
+    {
+        isPlayerInRange = false;
+        isInteracting = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
