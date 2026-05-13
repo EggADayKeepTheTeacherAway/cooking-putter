@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfe1163ad00f45142b8444f65895f919, type: 3}
-  m_Name: grill_8s
+  m_Name: boil_10s
   m_EditorClassIdentifier: Assembly-CSharp::Step
-  station: Grill
-  audio: {fileID: 8300000, guid: ac293fd15a50edd448222bd06a932e70, type: 3}
-  duration: 8
+  station: Stove
+  audio: {fileID: 8300000, guid: bebf6db742814784f890fb1f033fad1a, type: 3}
+  duration: 10
