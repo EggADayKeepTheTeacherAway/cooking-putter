@@ -23,21 +23,17 @@ public class UI_Sun : MonoBehaviour
     {
         float time = Time.time;
 
-        // Smooth left/right rotation
         float rotation =
             Mathf.Sin(time * rotationSpeed) * rotationAmount;
 
-        // Slight random floating movement
         float offsetX =
             (Mathf.PerlinNoise(time * moveSpeed, 0f) - 0.5f) * moveAmount;
 
         float offsetY =
             (Mathf.PerlinNoise(0f, time * moveSpeed) - 0.5f) * moveAmount;
 
-        // Apply rotation
         sun.rotation = Quaternion.Euler(0f, 0f, rotation);
 
-        // Apply movement
         sun.anchoredPosition =
             startPos + new Vector2(offsetX, offsetY);
     }
