@@ -99,6 +99,13 @@ public class SinkBehaviour : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        var manager = FoodServiceManager.GetOrCreateInstance();
+        if (manager.HasCarriedDirtyDish)
+        {
+            manager.TryDropCarriedDishAtSink(this);
+            return;
+        }
+
         if (washingCoroutine != null)
         {
             Debug.LogWarning("Already washing");

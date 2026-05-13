@@ -25,58 +25,6 @@ public class PlayerFoodServing : MonoBehaviour
 
     private bool TryServeFood()
     {
-        // Find nearest customer within serving distance
-        Customer[] allCustomers = FindObjectsByType<Customer>(FindObjectsSortMode.None);
-        
-        Customer nearestCustomer = null;
-        float nearestDistance = servingDistance;
-        
-        foreach (Customer customer in allCustomers)
-        {
-            if (customer == null) continue;
-            
-            float distance = Vector2.Distance(transform.position, customer.transform.position);
-            if (distance < nearestDistance)
-            {
-                nearestDistance = distance;
-                nearestCustomer = customer;
-            }
-        }
-        
-        if (nearestCustomer == null)
-        {
-            Debug.Log("No nearby customer to serve food to. Move closer to a customer.");
-            return false;
-        }
-        
-        // Check if this customer has an order for this food
-        var pendingOrders = FoodServiceManager.GetOrCreateInstance().GetPendingOrders();
-        bool hasMatchingOrder = false;
-        Food orderedFood = null;
-        
-        foreach (var (customer, food) in pendingOrders)
-        {
-            if (customer == nearestCustomer && player.carriedFood != null && food.FoodName == player.carriedFood.GetFoodName())
-            {
-                hasMatchingOrder = true;
-                orderedFood = food;
-                break;
-            }
-        }
-        
-        if (!hasMatchingOrder)
-        {
-            Debug.Log($"Customer {nearestCustomer.name} didn't order {player.carriedFood.GetFoodName()}.");
-            return false;
-        }
-        
-        // Serve the food using FoodServiceManager
-        FoodServiceManager.GetOrCreateInstance().ServeOrderToCustomer(nearestCustomer, orderedFood);
-        
-        // Clear carried food
-        player.DiscardFood();
-        
-        Debug.Log($"Served {orderedFood.FoodName} to {nearestCustomer.name}");
-        return true;
+        return FoodServiceManager.GetOrCreateInstance().TryServePlayerCarriedFood(player, servingDistance);
     }
 }

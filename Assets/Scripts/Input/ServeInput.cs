@@ -1,11 +1,11 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 // Handles player input for serving orders
 public class ServeInput : MonoBehaviour
 {
     [SerializeField] private float serveDistance = 1.6f;
     [SerializeField] private Transform playerTransform;
+    private Player player;
 
     private void Awake()
     {
@@ -21,13 +21,11 @@ public class ServeInput : MonoBehaviour
                 playerTransform = transform;
             }
         }
-    }
 
-    private void Update()
-    {
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        player = playerTransform.GetComponent<Player>();
+        if (player == null)
         {
-            HandleServeKey();
+            player = FindFirstObjectByType<Player>();
         }
     }
 
@@ -41,13 +39,13 @@ public class ServeInput : MonoBehaviour
     {
         var manager = FoodServiceManager.GetOrCreateInstance();
 
-        if (manager.HasCarriedFood)
+        if (player != null && player.carriedFood != null)
         {
-            manager.TryServeCarriedFoodFromPlayer(playerTransform.position, serveDistance);
+            manager.TryServePlayerCarriedFood(player, serveDistance);
         }
         else
         {
-            manager.TryPickupNextFoodForPlayer(playerTransform, false);
+            manager.TryPickupNextFoodForPlayer(player);
         }
     }
 }

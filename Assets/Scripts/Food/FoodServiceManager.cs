@@ -18,21 +18,14 @@ public class FoodServiceManager : MonoBehaviour
     private readonly List<GameObject> carriedDishObjects = new();
     private readonly List<ItemData> carriedDishItems = new();
     private Transform carriedDishCarrier;
-    private GameObject serviceWindowPreview;
-    private GameObject carriedFoodPreview;
-    private Food carriedFood;
-    private Transform carriedBy;
+    private Customer carriedOrderCustomer;
     
     // Invoked whenever the pending orders change (enqueue/dequeue/clear).
     public event Action OnOrdersUpdated;
 
-    [SerializeField] private Transform serviceWindowPosition; // Where food displays for serving
     [SerializeField] private Vector3 customerPreviewOffset = new Vector3(0f, 1.4f, 0f);
-    [SerializeField] private Vector3 servicePreviewOffset = Vector3.zero;
     [SerializeField] private Vector3 carriedPreviewOffset = new Vector3(0f, 0.9f, 0f);
     [SerializeField] private Vector3 foodOnTableOffset = new Vector3(0f, -0.8f, 0f);
-    [SerializeField] private bool requirePickupRange = true;
-    [SerializeField] private float pickupDistance = 1.4f;
     [SerializeField] private float previewScale = 1.5f;
     [SerializeField] private float foodOnTableScale = 1.6f;
     [SerializeField] private string previewSortingLayerName = "Foreground";
@@ -53,7 +46,14 @@ public class FoodServiceManager : MonoBehaviour
     [SerializeField] private Vector3 dishStackOffset = new Vector3(0f, 0.1f, 0f); // Vertical offset per stacked dish
     [SerializeField] private int maxDirtyDishesCarried = 4;
 
-    public bool HasCarriedFood => carriedFood != null;
+    public bool HasCarriedFood
+    {
+        get
+        {
+            Player player = FindFirstObjectByType<Player>();
+            return player != null && player.carriedFood != null;
+        }
+    }
     public bool HasCarriedDirtyDish => carriedDishObjects.Count > 0;
 
     private void Awake()
@@ -97,7 +97,6 @@ public class FoodServiceManager : MonoBehaviour
         pendingOrders.Enqueue((customer, food));
         OnOrderQueued(customer, food);
         SpawnCustomerOrderPreview(customer, food);
-        RefreshServiceWindowPreview();
         OnOrdersUpdated?.Invoke();
     }
 
@@ -117,7 +116,6 @@ public class FoodServiceManager : MonoBehaviour
         customer.OnRecievedFood?.Invoke(food);
         OnOrderServed(customer, food);
         RemoveCustomerOrderPreview(customer);
-        RefreshServiceWindowPreview();
         OnOrdersUpdated?.Invoke();
         return true;
     }
@@ -162,12 +160,7 @@ public class FoodServiceManager : MonoBehaviour
         customer.OnRecievedFood?.Invoke(food);
         OnOrderServed(customer, food);
         RemoveCustomerOrderPreview(customer);
-        if (carriedFood == food)
-        {
-            ClearCarriedPreview();
-        }
         SpawnFoodOnTable(customer, food);
-        RefreshServiceWindowPreview();
         OnOrdersUpdated?.Invoke();
         return true;
     }
@@ -180,29 +173,32 @@ public class FoodServiceManager : MonoBehaviour
             return false;
         }
 
-        if (HasCarriedFood)
+        Player player = carrier.GetComponent<Player>();
+        if (player == null)
+        {
+            player = carrier.GetComponentInParent<Player>();
+        }
+
+        if (player == null)
+        {
+            Debug.LogWarning("Cannot pick up food without a Player component.");
+            return false;
+        }
+
+        return TryPickupNextFoodForPlayer(player);
+    }
+
+    public bool TryPickupNextFoodForPlayer(Player player)
+    {
+        if (player == null)
+        {
+            Debug.LogWarning("Cannot pick up food without a valid player.");
+            return false;
+        }
+
+        if (player.carriedFood != null)
         {
             Debug.Log("Player is already carrying food.");
-            return false;
-        }
-
-        if (!ignorePickupRange && requirePickupRange && serviceWindowPosition == null)
-        {
-            Debug.LogWarning("Service window position is not assigned on FoodServiceManager. Assign serviceWindowPosition to enforce pickup range.");
-            return false;
-        }
-
-        if (!ignorePickupRange && requirePickupRange && !IsWithinPickupRange(carrier.position))
-        {
-            if (serviceWindowPosition != null)
-            {
-                float distance = Vector2.Distance(carrier.position, serviceWindowPosition.position);
-                Debug.Log($"Move closer to the service window to pick up food. Current distance: {distance:F2}, required: {pickupDistance:F2}");
-            }
-            else
-            {
-                Debug.Log("Move closer to the service window to pick up food.");
-            }
             return false;
         }
 
@@ -221,48 +217,75 @@ public class FoodServiceManager : MonoBehaviour
             {
                 Debug.LogWarning($"Skipping order for {next.customer.name} with no Food assigned.");
                 pendingOrders.Dequeue();
-                RefreshServiceWindowPreview();
                 continue;
             }
 
-            carriedFood = next.food;
-            carriedBy = carrier;
+            carriedOrderCustomer = next.customer;
 
-            SpawnCarriedPreview(carrier, carriedFood);
-            RefreshServiceWindowPreview();
-            Debug.Log($"Picked up food: {carriedFood.FoodName}");
-            return true;
+            if (player.PickUpServiceFood(next.food))
+            {
+                Debug.Log($"Picked up food: {next.food.FoodName} for {carriedOrderCustomer.name}");
+                return true;
+            }
+
+            carriedOrderCustomer = null;
+            return false;
         }
 
         Debug.Log("No valid pending orders to pick up.");
         return false;
     }
 
-    public bool IsWithinPickupRange(Vector2 position)
-    {
-        if (serviceWindowPosition == null) return false;
-
-        float sq = ((Vector2)serviceWindowPosition.position - position).sqrMagnitude;
-        return sq <= pickupDistance * pickupDistance;
-    }
-
     public bool TryServeCarriedFoodFromPlayer(Vector2 playerPosition, float maxDistance)
     {
-        if (!HasCarriedFood)
+        Player player = FindFirstObjectByType<Player>();
+        return TryServePlayerCarriedFood(player, maxDistance);
+    }
+
+    public bool TryServePlayerCarriedFood(Player player, float maxDistance)
+    {
+        if (player == null || player.carriedFood == null)
         {
             Debug.Log("Player is not carrying food.");
             return false;
         }
 
-        Customer targetCustomer = FindNearestMatchingCustomer(playerPosition, maxDistance, carriedFood);
-        if (targetCustomer == null)
+        if (!player.carriedFood.IsDone())
+        {
+            Debug.Log("Carried food is not ready to serve.");
+            return false;
+        }
+
+        Vector2 playerPosition = player.transform.position;
+        Food carriedFood = player.carriedFood.SourceFood;
+        string carriedFoodName = player.carriedFood.GetFoodName();
+
+        bool hasSpecificCarriedOrder = TryGetCarriedOrderCustomerInRange(playerPosition, maxDistance, carriedFood, carriedFoodName, out Customer targetCustomer);
+        Food orderedFood = null;
+
+        if (targetCustomer != null)
+        {
+            orderedFood = FindPendingFoodForCustomer(targetCustomer, carriedFood, carriedFoodName);
+        }
+        else if (!hasSpecificCarriedOrder)
+        {
+            (targetCustomer, orderedFood) = FindNearestMatchingOrder(playerPosition, maxDistance, carriedFood, carriedFoodName);
+        }
+
+        if (targetCustomer == null || orderedFood == null)
         {
             Debug.Log("No nearby customer is waiting for this food.");
             return false;
         }
 
-        bool served = ServeOrderToCustomer(targetCustomer, carriedFood);
-        return served;
+        if (!ServeOrderToCustomer(targetCustomer, orderedFood))
+        {
+            return false;
+        }
+
+        player.DiscardFood();
+        carriedOrderCustomer = null;
+        return true;
     }
 
     /// <summary>
@@ -296,7 +319,7 @@ public class FoodServiceManager : MonoBehaviour
     public void ClearAllOrders()
     {
         pendingOrders.Clear();
-        ClearCarriedPreview();
+        carriedOrderCustomer = null;
         ClearAllPreviews();
         OnOrdersUpdated?.Invoke();
     }
@@ -334,36 +357,6 @@ public class FoodServiceManager : MonoBehaviour
                 sr.sortingOrder = 150; // Very high to ensure visibility
             }
         }
-    }
-
-    private void SpawnServiceWindowPreview(Food food)
-    {
-        if (food == null || food.Icon == null) return;
-
-        ClearServiceWindowPreview();
-
-        var parent = serviceWindowPosition != null ? serviceWindowPosition : transform;
-        var offset = serviceWindowPosition != null ? servicePreviewOffset : Vector3.zero;
-        serviceWindowPreview = CreatePreviewObject($"{food.FoodName} Service Preview", food.Icon, offset, parent, previewScale, false);
-    }
-
-    private void RefreshServiceWindowPreview()
-    {
-        ClearServiceWindowPreview();
-
-        if (HasCarriedFood) return;
-        if (pendingOrders.Count <= 0) return;
-
-        var next = pendingOrders.Peek();
-        SpawnServiceWindowPreview(next.food);
-    }
-
-    private void SpawnCarriedPreview(Transform carrier, Food food)
-    {
-        if (food == null || food.Icon == null || carrier == null) return;
-
-        ClearCarriedPreviewObject();
-        carriedFoodPreview = CreatePreviewObject($"{food.FoodName} Carried", food.Icon, carriedPreviewOffset, carrier, previewScale);
     }
 
     private GameObject CreatePreviewObject(string objectName, Sprite icon, Vector3 offset, Transform parent, float scale, bool createBubble = true)
@@ -432,54 +425,78 @@ public class FoodServiceManager : MonoBehaviour
         customerOrderPreviews.Remove(customer);
     }
 
-    private void ClearServiceWindowPreview()
-    {
-        if (serviceWindowPreview != null)
-        {
-            Destroy(serviceWindowPreview);
-            serviceWindowPreview = null;
-        }
-    }
-
-    private void ClearCarriedPreview()
-    {
-        if (carriedFoodPreview != null)
-        {
-            Destroy(carriedFoodPreview);
-            carriedFoodPreview = null;
-        }
-
-        carriedFood = null;
-        carriedBy = null;
-    }
-
-    private void ClearCarriedPreviewObject()
-    {
-        if (carriedFoodPreview != null)
-        {
-            Destroy(carriedFoodPreview);
-            carriedFoodPreview = null;
-        }
-    }
-
-    private Customer FindNearestMatchingCustomer(Vector2 center, float maxDistance, Food targetFood)
+    private (Customer customer, Food food) FindNearestMatchingOrder(Vector2 center, float maxDistance, Food targetFood, string targetFoodName)
     {
         Customer nearest = null;
+        Food nearestFood = null;
         float bestSq = maxDistance * maxDistance;
 
         foreach (var (customer, food) in pendingOrders)
         {
-            if (customer == null || food != targetFood) continue;
+            if (customer == null || !IsMatchingFood(food, targetFood, targetFoodName)) continue;
 
             float sq = ((Vector2)customer.transform.position - center).sqrMagnitude;
             if (sq <= bestSq)
             {
                 bestSq = sq;
                 nearest = customer;
+                nearestFood = food;
             }
         }
 
-        return nearest;
+        return (nearest, nearestFood);
+    }
+
+    private bool TryGetCarriedOrderCustomerInRange(Vector2 center, float maxDistance, Food targetFood, string targetFoodName, out Customer targetCustomer)
+    {
+        targetCustomer = null;
+        if (carriedOrderCustomer == null) return false;
+
+        foreach (var (customer, food) in pendingOrders)
+        {
+            if (customer != carriedOrderCustomer || !IsMatchingFood(food, targetFood, targetFoodName)) continue;
+
+            float sq = ((Vector2)customer.transform.position - center).sqrMagnitude;
+            if (sq <= maxDistance * maxDistance)
+            {
+                targetCustomer = customer;
+                return true;
+            }
+
+            Debug.Log($"Move closer to {customer.name} to serve {targetFoodName}.");
+            return true;
+        }
+
+        carriedOrderCustomer = null;
+        return false;
+    }
+
+    private Food FindPendingFoodForCustomer(Customer targetCustomer, Food targetFood, string targetFoodName)
+    {
+        foreach (var (customer, food) in pendingOrders)
+        {
+            if (customer == targetCustomer && IsMatchingFood(food, targetFood, targetFoodName))
+            {
+                return food;
+            }
+        }
+
+        return null;
+    }
+
+    private bool IsMatchingFood(Food orderFood, Food carriedFood, string carriedFoodName)
+    {
+        if (orderFood == null) return false;
+        if (carriedFood != null && orderFood == carriedFood) return true;
+
+        return NormalizeFoodName(orderFood.FoodName) == NormalizeFoodName(carriedFoodName);
+    }
+
+    private string NormalizeFoodName(string foodName)
+    {
+        return string.IsNullOrWhiteSpace(foodName)
+            ? string.Empty
+            : foodName.Replace(" ", string.Empty).Trim().ToLowerInvariant();
     }
 
     private void SpawnFoodOnTable(Customer customer, Food food)
@@ -548,6 +565,12 @@ public class FoodServiceManager : MonoBehaviour
             dd.owner = customer;
             dd.table = table;
             dd.item = dirtyDishItem;
+            int interactLayer = LayerMask.NameToLayer("Interact");
+            if (interactLayer >= 0)
+            {
+                foodObject.layer = interactLayer;
+            }
+
             // ensure there's a collider for clicks
             if (foodObject.GetComponent<Collider2D>() == null)
             {
@@ -688,7 +711,6 @@ public class FoodServiceManager : MonoBehaviour
         }
 
         customerOrderPreviews.Clear();
-        ClearServiceWindowPreview();
     }
 
     public void RemoveFoodFromTable(Customer customer)
