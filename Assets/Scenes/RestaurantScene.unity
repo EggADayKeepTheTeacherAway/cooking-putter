@@ -1857,7 +1857,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2d19f851be804405933cd19b9621030, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SinkBehaviour
+  m_EditorClassIdentifier: Assembly-CSharp::Sink
   changeSinkSprite: 1
   fullSinkSprite: {fileID: -3155626277344638799, guid: 18832f0675d073c4eaa571722c918598, type: 3}
   fullSinkPositionOffset: {x: 0, y: 0, z: 0}
@@ -7353,6 +7353,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e64291d7165a412190b01d238b39078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodServiceManager
+--- !u!114 &692484794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692484789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d43c3c56b233144bdfecba31497be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoneyPopupUI
+  popupRoot: {fileID: 2116563521}
+  popupText: {fileID: 1508111132}
+  audioSource: {fileID: 576367698}
+  cashSfx: {fileID: 8300000, guid: deb2f3f742d2a7e4d921c8a16bda5fed, type: 3}
+--- !u!114 &692484795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692484789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2ace2579abbcb46a821fdd441683f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResultUI
+  panel: {fileID: 140054537}
+  dayText: {fileID: 1488053023}
+  revenueText: {fileID: 30383819}
 --- !u!114 &692484796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7392,43 +7423,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DirtyDishService
   dirtyDishSortingLayerName: Customer
-  dirtyDishSortingOrder: 0
+  dirtyDishSortingOrder: 1
   dirtyDishScale: 1
   dirtyDishItem: {fileID: 11400000, guid: 373b01048dcca4b239c08c8ec484c3b1, type: 2}
   carriedPreviewOffset: {x: 0, y: 0.9, z: 0}
   dishStackOffset: {x: 0, y: 0.1, z: 0}
   maxDirtyDishesCarried: 4
---- !u!114 &692484794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692484789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d43c3c56b233144bdfecba31497be9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoneyPopupUI
-  popupRoot: {fileID: 2116563521}
-  popupText: {fileID: 1508111132}
-  audioSource: {fileID: 576367698}
-  cashSfx: {fileID: 8300000, guid: deb2f3f742d2a7e4d921c8a16bda5fed, type: 3}
---- !u!114 &692484795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692484789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca2ace2579abbcb46a821fdd441683f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ResultUI
-  panel: {fileID: 140054537}
-  dayText: {fileID: 1488053023}
-  revenueText: {fileID: 30383819}
 --- !u!1001 &693964663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7743,9 +7743,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 716952433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6983f3f871d6147f09bc46b72d263302, type: 3}
+  m_Script: {fileID: 11500000, guid: a2d19f851be804405933cd19b9621030, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SinkBehaviour
+  m_EditorClassIdentifier: Assembly-CSharp::Sink
   changeSinkSprite: 1
   fullSinkSprite: {fileID: 0}
   fullSinkPositionOffset: {x: 0, y: 0, z: 0}
@@ -20171,11 +20171,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!4 &1983525439 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5593267826812436477, guid: 09af29232692ff848a8fde97f8befa20, type: 3}
-  m_PrefabInstance: {fileID: 1050675532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1983525442
 MonoBehaviour:
   m_ObjectHideFlags: 0

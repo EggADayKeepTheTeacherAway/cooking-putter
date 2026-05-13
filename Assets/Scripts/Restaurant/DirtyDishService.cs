@@ -9,7 +9,7 @@ public class DirtyDishService : MonoBehaviour
     private FoodOrderVisuals visuals;
 
     [SerializeField] private string dirtyDishSortingLayerName = "Customer";
-    [SerializeField] private int dirtyDishSortingOrder = 0;
+    [SerializeField] private int dirtyDishSortingOrder = 2;
     [SerializeField] private float dirtyDishScale = 1f;
     [SerializeField] private ItemData dirtyDishItem;
     [SerializeField] private Vector3 carriedPreviewOffset = new Vector3(0f, 0.9f, 0f);
@@ -139,7 +139,7 @@ public class DirtyDishService : MonoBehaviour
         return true;
     }
 
-    public bool TryDropCarriedDishAtSink(SinkBehaviour sink)
+    public bool TryDropCarriedDishAtSink(Sink sink)
     {
         if (sink == null || carriedDishObjects.Count == 0) return false;
 

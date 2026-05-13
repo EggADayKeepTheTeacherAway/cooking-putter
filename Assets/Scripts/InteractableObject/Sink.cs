@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class SinkBehaviour : MonoBehaviour, IInteractable
+public class Sink : MonoBehaviour, IInteractable
 {
     [Header("Sink Visual")]
     [SerializeField] private bool changeSinkSprite = true;
@@ -58,7 +58,7 @@ public class SinkBehaviour : MonoBehaviour, IInteractable
             }
             else
             {
-                Debug.LogWarning("SinkBehaviour.Fill called but fullSinkSprite is not assigned.");
+                Debug.LogWarning("Sink.Fill called but fullSinkSprite is not assigned.");
             }
         }
 

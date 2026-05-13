@@ -368,7 +368,7 @@ public class FoodServiceManager : MonoBehaviour
         return dirtyDishes != null && dirtyDishes.PickupDirtyDish(dishObject, carrier);
     }
 
-    public bool TryDropCarriedDishAtSink(SinkBehaviour sink)
+    public bool TryDropCarriedDishAtSink(Sink sink)
     {
         return dirtyDishes != null && dirtyDishes.TryDropCarriedDishAtSink(sink);
     }
