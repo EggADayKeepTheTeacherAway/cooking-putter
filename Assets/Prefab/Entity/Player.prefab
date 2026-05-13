@@ -235,13 +235,14 @@ MonoBehaviour:
   interactableObjectLayer:
     serializedVersion: 2
     m_Bits: 64
-  bubble: {fileID: 0}
+  bubble: {fileID: -7959383132838621803, guid: d86546c7260ef458caecfe4d668072ff, type: 3}
   playerFoot: {fileID: 7245681980809575486}
   audioSource: {fileID: 7017830588644924938}
   roadFootStep: footstep_concrete
   grassFootStep: footstep_grass
   ignoredRoadCheck: 0
   roadTilemap: {fileID: 0}
+  tickSprite: {fileID: 21300000, guid: f21de7c2009d4444593a0242fe48cf61, type: 3}
   runSpeedModifier: 1.5
 --- !u!50 &4449289451147719731
 Rigidbody2D:

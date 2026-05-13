@@ -167,6 +167,7 @@ public class FoodOrderVisuals : MonoBehaviour
             bubbleSr.color = bubbleColor;
             if (!string.IsNullOrWhiteSpace(bubbleSortingLayerName)) bubbleSr.sortingLayerName = bubbleSortingLayerName;
             bubbleSr.sortingOrder = sortingOrder + bubbleSortingOrderOffset;
+
         }
 
         var spriteRenderer = preview.AddComponent<SpriteRenderer>();

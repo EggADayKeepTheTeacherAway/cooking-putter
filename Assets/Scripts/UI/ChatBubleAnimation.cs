@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LetterIndicator : MonoBehaviour
+public class ChatBubleAnimation : MonoBehaviour
 {
     [Header("Floating")]
     [SerializeField] private float moveAmount = 0.1f;

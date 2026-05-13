@@ -22,8 +22,14 @@ public class Player : Entity
     [SerializeField] private bool ignoredRoadCheck;
     [SerializeField] private Tilemap roadTilemap;
 
-
     public float runSpeedModifier = 1.5f;
+    
+    [Header("Food UI")]
+    [SerializeField] private Sprite tickSprite;
+
+    private GameObject carriedFoodPreview;
+    private GameObject tickObject;
+
 
     public Player_IdleState idleState { get; private set; }
 
@@ -75,8 +81,14 @@ public class Player : Entity
     {
         base.Update();
 
+        if (tickObject != null && carriedFood != null)
+        {
+            tickObject.SetActive(carriedFood.IsDone());
+        }
+
         if (controlsLocked)
             return;
+        
         UpdateFacingDirection(moveInput);
         HandleInteraction();
     }
@@ -153,6 +165,8 @@ public class Player : Entity
 
     private void HandleInteraction()
     {
+        if (carriedFood != null && carriedFood.IsDone()) return;
+
         RaycastHit2D hit = ObjectDetected();
         if (hit.collider != null && input.Player.Interact.WasPressedThisFrame())
         {
@@ -232,38 +246,51 @@ public class Player : Entity
 
     private void SpawnCarriedFoodPreview(Food food)
     {
-        var previewObj = new GameObject(food.FoodName);
-        previewObj.transform.SetParent(this.transform);
-        previewObj.transform.localPosition = new Vector3(0f, 1.5f, 0f);
-        previewObj.transform.localScale = Vector3.one * 3;
+        carriedFoodPreview = new GameObject(food.FoodName);
+        carriedFoodPreview.transform.SetParent(this.transform);
+        carriedFoodPreview.transform.localPosition = new Vector3(0f, 1.5f, 0f);
+        carriedFoodPreview.transform.localScale = Vector3.one * 3;
 
-        var foodSr = previewObj.AddComponent<SpriteRenderer>();
+        var foodSr = carriedFoodPreview.AddComponent<SpriteRenderer>();
         foodSr.sortingLayerName = "Foreground";
         foodSr.sortingOrder = 1;
         foodSr.sprite = food.Icon;
 
         var bubbleObj = new GameObject($"{food.FoodName}Bubble");
-        bubbleObj.transform.SetParent(previewObj.transform);
+        bubbleObj.transform.SetParent(carriedFoodPreview.transform);
         bubbleObj.transform.localPosition = new Vector3(0f, -0.03f, 0f);
         bubbleObj.transform.localScale = Vector3.one * 0.08f;
 
         var bubbleSr = bubbleObj.AddComponent<SpriteRenderer>();
         bubbleSr.sprite = bubble;
         bubbleSr.sortingLayerName = "Foreground";
+        bubbleSr.sortingOrder = 0;
+
+        tickObject = new GameObject("DoneTick");
+        tickObject.transform.SetParent(carriedFoodPreview.transform);
+        tickObject.transform.localPosition = new Vector3(0.031f, 0.0251f, 0f);
+
+        tickObject.transform.localScale = new Vector3(
+            0.8575131f,
+            0.749206f,
+            0.5905753f
+        );
+
+        var tickSr = tickObject.AddComponent<SpriteRenderer>();
+        tickSr.sprite = tickSprite;
+        tickSr.sortingLayerName = "Foreground";
+        tickSr.sortingOrder = 2;
+
+        tickObject.SetActive(carriedFood != null && carriedFood.IsDone());
     }
 
     public void DiscardFood()
     {
         if (carriedFood == null) return;
 
-        // Destroy the food preview object if exists
-        foreach (Transform child in transform)
+        if (carriedFoodPreview != null)
         {
-            if (child.name.Contains(carriedFood.GetFoodName()))
-            {
-                Destroy(child.gameObject);
-                break;
-            }
+            Destroy(carriedFoodPreview);
         }
 
         carriedFood = null;
