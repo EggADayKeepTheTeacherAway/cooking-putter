@@ -6,6 +6,9 @@ public class Fridge : MonoBehaviour, IInteractable
     [SerializeField] private Transform contentParent;
     [SerializeField] private GameObject itemUIPrefab;
     [SerializeField] private Player player;
+    [SerializeField] private SpriteRenderer fridgeSr;
+    [SerializeField] private Sprite openSprite;
+    [SerializeField] private Sprite closeSprite;
 
     private bool isInventoryOpen = false;
     private ShopInventory shopInventory;
@@ -15,6 +18,7 @@ public class Fridge : MonoBehaviour, IInteractable
         if (fridgePanel != null)
             fridgePanel.SetActive(false);
         
+        fridgeSr.sprite = closeSprite;
         shopInventory = gameObject.AddComponent<ShopInventory>();
         shopInventory.itemUIPrefab = itemUIPrefab;
         shopInventory.contentParent = contentParent;
@@ -41,7 +45,12 @@ public class Fridge : MonoBehaviour, IInteractable
 
         if (fridgePanel != null)
             fridgePanel.SetActive(true);
+        
         isInventoryOpen = true;
+        if (fridgeSr != null)
+        {
+            if (openSprite != null) fridgeSr.sprite = openSprite;
+        }
         Debug.Log("Fridge opened");
     }
 
@@ -51,6 +60,10 @@ public class Fridge : MonoBehaviour, IInteractable
             fridgePanel.SetActive(false);
 
         isInventoryOpen = false;
+        if (fridgeSr != null)
+        {
+            if (closeSprite != null) fridgeSr.sprite = closeSprite;;
+        }
         Debug.Log("Fridge closed");
     }
 

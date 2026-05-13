@@ -5,6 +5,8 @@ public class Customer_ExitState : CustomerState
 {
     private Seat seat;
 
+    private float phasinTimer = 2;
+
     public Customer_ExitState(Customer customer, StateMachine stateMachine, string animParam) : base(customer, stateMachine, animParam)
     {
     }
@@ -19,7 +21,20 @@ public class Customer_ExitState : CustomerState
 
         customer.ResetSortingOrder();
 
+        stateTimer = phasinTimer;
+
         WalkToExit();
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+        if (stateTimer <= 0)
+        {
+            PhasingSeagul.Instance?.SpawnSpecialCustomer(customer);
+        }
+
     }
 
     private void WalkToExit()

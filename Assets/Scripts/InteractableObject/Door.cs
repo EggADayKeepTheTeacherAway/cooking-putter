@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
@@ -13,32 +14,17 @@ public class Door : MonoBehaviour, IInteractable
 
     [Header("Animation")]
     [SerializeField] private Animator animator;
-    [SerializeField] private float animationDuration = 0.5f;
+
+    [SerializeField] private float transitionDelay = 0.5f;
 
     private bool isInteracting = false;
     private bool isPlayerInRange = false;
-
-    private void Start()
-    {
-        if (animator == null)
-            animator = GetComponent<Animator>();
-
-        if (animator == null)
-            Debug.LogError($"Door '{name}': Animator component not found!");
-    }
-
 
     public void Interact()
     {
         if (isInteracting)
             return;
 
-        if (action == null)
-        {
-            Debug.LogWarning($"Door '{name}': SceneTransitionData (action) is null.");
-            return;
-        }
-        
         isInteracting = true;
 
         if (!string.IsNullOrEmpty(openDoorSFX))
@@ -46,20 +32,17 @@ public class Door : MonoBehaviour, IInteractable
             AudioManager.Instance.PlayGlobalSFX(openDoorSFX);
         }
 
-        // Trigger animation
-        PlayOpenAnimation();
+        StartCoroutine(OpenDoorRoutine());
     }
 
-    private void PlayOpenAnimation()
+    private IEnumerator OpenDoorRoutine()
     {
-        if (animator == null)
+        if (animator != null)
         {
-            Debug.LogError($"Door '{name}': Animator is null, executing transition immediately.");
-            ExecuteTransition();
-            return;
+            animator.SetBool(ANIM_PARAM_OPEN, true);
         }
 
-        animator.SetBool(ANIM_PARAM_OPEN, true);
+        yield return new WaitForSeconds(transitionDelay);
 
         ExecuteTransition();
     }
@@ -70,25 +53,38 @@ public class Door : MonoBehaviour, IInteractable
 
         if (PlayerDataManager.Instance != null)
             PlayerDataManager.Instance.SaveData();
-        else
-            Debug.LogWarning("PlayerDataManager.Instance is null.");
     }
 
     private void Update()
     {
+        if (player == null)
+            return;
+
         if (isPlayerInRange && !needInteract)
         {
             Interact();
         }
-        else if (isPlayerInRange && needInteract && player.input.Player.Interact.WasPressedThisFrame())
+        else if (isPlayerInRange &&
+                 needInteract &&
+                 player.input.Player.Interact.WasPressedThisFrame())
         {
             Interact();
+        }
+    }
+
+    private void OnDisable()
+    {
+        isPlayerInRange = false;
+        isInteracting = false;
+
+        if (animator != null)
+        {
+            animator.SetBool(ANIM_PARAM_OPEN, false);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log($"Door '{name}': OnTriggerEnter2D with {collision.gameObject.name} (tag={collision.tag})");
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
@@ -97,7 +93,6 @@ public class Door : MonoBehaviour, IInteractable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //Debug.Log($"Door '{name}': OnTriggerExit2D with {collision.gameObject.name}");
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;

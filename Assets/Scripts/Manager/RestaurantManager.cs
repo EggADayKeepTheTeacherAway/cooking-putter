@@ -14,6 +14,11 @@ public class RestaurantManager : MonoBehaviour
     [SerializeField] private RandomTimer spawnDelay;
     [SerializeField] private Transform noTablePoint;
 
+
+    [SerializeField] private Customer foodCriticPrefab;
+    private Customer foodCritic;
+    private bool foodCriticSpawned = false;
+
     private float spawnTimer;
 
     private static RestaurantManager instance;
@@ -23,6 +28,8 @@ public class RestaurantManager : MonoBehaviour
     private List<Table> tables;
 
     private List<CustomerGroup> customerGroups;
+
+    private bool isSpawnCustomer = true;
 
     public CustomerSpawner Spawner => spawner;
 
@@ -74,10 +81,32 @@ public class RestaurantManager : MonoBehaviour
 
     private void Update()
     {
-        SpawnCustomer();
+        SpawnCustomerCheck();
+
+        if (isSpawnCustomer)
+        {
+            SpawnCustomer();
+        }
     }
 
     public Food[] GetAvailableFoodList() => foodList;
+
+    private void SpawnCustomerCheck()
+    {
+        if (PlayerDataManager.Instance.currentDay == PlayerDataManager.Instance.foodCriticDay)
+        {
+            isSpawnCustomer = false;
+            SpawnFoodCritic();
+        }
+        else if (DayCycleManager.Instance == null || !DayCycleManager.Instance.isNight)
+        {
+            isSpawnCustomer = false;
+        }
+        else
+        {
+            isSpawnCustomer = true;
+        }
+    }
 
     private bool SpawnCustomer()
     {
@@ -115,6 +144,29 @@ public class RestaurantManager : MonoBehaviour
         }
 
         return true;
+    }
+
+    private void SpawnFoodCritic()
+    {
+        if (foodCriticSpawned) return;
+        foodCriticSpawned = true;
+
+        foodCritic = Instantiate(foodCriticPrefab, transform.position, Quaternion.identity);
+
+        CustomerGroup group = new CustomerGroup(new List<Customer> { foodCritic });
+        Table t = AssignedTable(1);
+
+        if (t != null)
+        {
+            group.AssignedTable(t);
+            t.Take();
+        }
+
+        foodCritic.SetGroup(group);
+        foodCritic.gameObject.SetActive(true);
+        foodCritic.Initialize();
+
+        customerGroups.Add(group);
     }
 
     public void RegisterTable(Table table) => tables.Add(table);
