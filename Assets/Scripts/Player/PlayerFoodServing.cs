@@ -74,7 +74,7 @@ public class PlayerFoodServing : MonoBehaviour
         FoodServiceManager.GetOrCreateInstance().ServeOrderToCustomer(nearestCustomer, orderedFood);
         
         // Clear carried food
-        player.ClearCarriedFood();
+        player.DiscardFood();
         
         Debug.Log($"Served {orderedFood.FoodName} to {nearestCustomer.name}");
         return true;

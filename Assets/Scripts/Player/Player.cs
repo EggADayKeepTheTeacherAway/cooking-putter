@@ -226,7 +226,7 @@ public class Player : Entity
         Debug.Log($"Carrying {food.FoodName}");
     }
 
-    public void ClearCarriedFood()
+    public void DiscardFood()
     {
         if (carriedFood == null) return;
 

@@ -1718,7 +1718,7 @@ GameObject:
   - component: {fileID: 242329631}
   - component: {fileID: 242329632}
   - component: {fileID: 242329633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SinkBehaviour
   changeSinkSprite: 1
-  fullSinkSprite: {fileID: 0}
+  fullSinkSprite: {fileID: -3155626277344638799, guid: 18832f0675d073c4eaa571722c918598, type: 3}
   fullSinkPositionOffset: {x: 0, y: 0, z: 0}
   positionMoveSpeed: 0
   counterSpriteRenderer: {fileID: 0}
@@ -7371,7 +7371,7 @@ MonoBehaviour:
   bubbleSortingLayerName: Foreground
   bubbleSortingOrderOffset: -1
   foodOnTableSortingLayerName: Customer
-  foodOnTableSortingOrder: 0
+  foodOnTableSortingOrder: 1
   dirtyDishSortingLayerName: Customer
   dirtyDishSortingOrder: 0
   dirtyDishScale: 1
@@ -7941,8 +7941,10 @@ GameObject:
   m_Component:
   - component: {fileID: 780921807}
   - component: {fileID: 780921806}
-  m_Layer: 0
-  m_Name: trash_0
+  - component: {fileID: 780921809}
+  - component: {fileID: 780921808}
+  m_Layer: 6
+  m_Name: TrashBin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8015,12 +8017,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780921805}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.42, y: 3.98, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.3, y: 3.98, z: 0}
   m_LocalScale: {x: 2.2708814, y: 2.2708814, z: 2.2708814}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1742125370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &831991376
 GameObject:
@@ -15737,6 +15739,7 @@ Transform:
   - {fileID: 930644265}
   - {fileID: 2114058559}
   - {fileID: 1657826478}
+  - {fileID: 780921807}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1747882219 stripped
@@ -21344,22 +21347,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 432367718024040016, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingLayer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 432367718024040016, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingOrder
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 432367718024040016, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 702366407
-      objectReference: {fileID: 0}
-    - target: {fileID: 432367718024040016, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3219750983493531600, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
       propertyPath: m_Name
       value: Table-2-Seats
@@ -21403,30 +21390,6 @@ PrefabInstance:
     - target: {fileID: 4723626924919214495, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919688856487008072, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingLayer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919688856487008072, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919688856487008072, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 702366407
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822313252560604028, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingLayer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822313252560604028, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822313252560604028, guid: 090f92550ed1a7e4d9e017572843dea9, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 702366407
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21618,6 +21581,4 @@ SceneRoots:
   - {fileID: 2116563525}
   - {fileID: 96521540}
   - {fileID: 1857431217}
-  - {fileID: 1316772307}
   - {fileID: 780921807}
-  - {fileID: 831991380}
