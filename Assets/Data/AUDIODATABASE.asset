@@ -15,10 +15,10 @@ MonoBehaviour:
   player:
   - audioName: footstep_concrete
     clip: {fileID: 8300000, guid: 2793b5c59ff297540bd079c95fde31c2, type: 3}
-    maxVolume: 0.5
+    maxVolume: 0.3
   - audioName: footstep_grass
     clip: {fileID: 8300000, guid: d47e8ff0912182740b8204079ff832d1, type: 3}
-    maxVolume: 1
+    maxVolume: 0.4
   env:
   - audioName: door
     clip: {fileID: 8300000, guid: 6b33de69ce04783479a851e3a4dd54c0, type: 3}
