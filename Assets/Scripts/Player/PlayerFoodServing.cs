@@ -21,10 +21,7 @@ public class PlayerFoodServing : MonoBehaviour
             Debug.Log("Attempting to serve food");
             TryServeFood();
         }
-        else
-        {
-            Debug.Log($"carriedFood: {player.carriedFood}, IsDone: {player.carriedFood?.IsDone()}, Interact: {player.input.Player.Interact.WasPressedThisFrame()}");
-        }
+       
     }
 
     private bool TryServeFood()

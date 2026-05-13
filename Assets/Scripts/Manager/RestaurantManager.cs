@@ -15,6 +15,9 @@ public class RestaurantManager : MonoBehaviour
     [SerializeField] private Transform noTablePoint;
 
 
+    [SerializeField] private GameObject endLetterUI;
+    [SerializeField] private GameObject endLetter;
+
     [SerializeField] private Customer foodCriticPrefab;
     private Customer foodCritic;
     private bool foodCriticSpawned = false;
@@ -93,6 +96,29 @@ public class RestaurantManager : MonoBehaviour
         }
     }
 
+    public void SpawnEndLetter(Customer c)
+    {
+        Camera cam = Camera.main;
+
+        if (cam == null)
+        {
+            Debug.LogWarning("Main Camera not found.");
+            return;
+        }
+
+        Vector3 topPosition =
+            cam.ViewportToWorldPoint(new Vector3(0.5f, 1.2f, 10f));
+
+        GameObject letter = Instantiate(endLetter);
+
+        letter.transform.position = topPosition;
+    }
+
+
+    public void ShowEndLetter()
+    {
+        endLetterUI.SetActive(true);
+    }
 
     public Food[] GetAvailableFoodList()
     {
