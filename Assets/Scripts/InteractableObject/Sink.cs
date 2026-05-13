@@ -10,10 +10,6 @@ public class SinkBehaviour : MonoBehaviour, IInteractable
     [SerializeField] private Vector3 fullSinkPositionOffset = Vector3.zero;
     [SerializeField] private float positionMoveSpeed = 0f;
 
-    [Header("Dirty Dish Counter Visual")]
-    [SerializeField] private SpriteRenderer counterSpriteRenderer;
-    [SerializeField] private Sprite fullCounterSprite;
-
     [Header("Washing")]
     [SerializeField] private GameObject progressBarRoot;
     [SerializeField] private Transform progressFill;
@@ -27,13 +23,11 @@ public class SinkBehaviour : MonoBehaviour, IInteractable
     private Vector3 targetPosition;
     private Coroutine washingCoroutine;
     private Sprite fallbackSprite;
-    private Sprite counterDefaultSprite;
 
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         if (sr != null) defaultSprite = sr.sprite;
-        if (counterSpriteRenderer != null) counterDefaultSprite = counterSpriteRenderer.sprite;
         defaultPosition = transform.position;
 
         ResolveProgressBarReferences();
@@ -68,18 +62,6 @@ public class SinkBehaviour : MonoBehaviour, IInteractable
             }
         }
 
-        if (counterSpriteRenderer != null)
-        {
-            if (fullCounterSprite != null)
-            {
-                counterSpriteRenderer.sprite = fullCounterSprite;
-            }
-            else
-            {
-                Debug.LogWarning("SinkBehaviour.Fill called but fullCounterSprite is not assigned.");
-            }
-        }
-
         isFull = true;
 
         // Move sink to full position
@@ -99,11 +81,6 @@ public class SinkBehaviour : MonoBehaviour, IInteractable
         if (changeSinkSprite && sr != null)
         {
             sr.sprite = defaultSprite;
-        }
-
-        if (counterSpriteRenderer != null)
-        {
-            counterSpriteRenderer.sprite = counterDefaultSprite;
         }
 
         isFull = false;

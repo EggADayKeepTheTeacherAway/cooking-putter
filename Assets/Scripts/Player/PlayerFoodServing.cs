@@ -26,7 +26,7 @@ public class PlayerFoodServing : MonoBehaviour
     private bool TryServeFood()
     {
         // Find nearest customer within serving distance
-        Customer[] allCustomers = FindObjectsOfType<Customer>();
+        Customer[] allCustomers = FindObjectsByType<Customer>(FindObjectsSortMode.None);
         
         Customer nearestCustomer = null;
         float nearestDistance = servingDistance;
