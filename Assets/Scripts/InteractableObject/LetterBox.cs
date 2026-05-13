@@ -9,7 +9,7 @@ public class LetterBox : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        if (!isShowingIndicator && PlayerDataManager.Instance.currentDay == PlayerDataManager.Instance.foodCriticDay)
+        if (!isShowingIndicator && PlayerDataManager.Instance.currentDay - 1 == PlayerDataManager.Instance.foodCriticDay)
         {
             indicator.SetActive(true);
             isShowingIndicator = true;
