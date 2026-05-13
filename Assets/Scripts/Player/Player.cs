@@ -205,6 +205,33 @@ public class Player : Entity
         }
 
         carriedFood = new BaseFood(food);
+        SpawnCarriedFoodPreview(food);
+        Debug.Log($"Carrying {food.FoodName}");
+    }
+
+    public bool PickUpServiceFood(Food food)
+    {
+        if (food == null)
+        {
+            Debug.LogWarning("Cannot carry null food");
+            return false;
+        }
+
+        if(carriedFood != null)
+        {
+            Debug.LogWarning("Already carry food");
+            return false;
+        }
+
+        carriedFood = new BaseFood(food);
+        carriedFood.MarkDone();
+        SpawnCarriedFoodPreview(food);
+        Debug.Log($"Carrying service food {food.FoodName}");
+        return true;
+    }
+
+    private void SpawnCarriedFoodPreview(Food food)
+    {
         var previewObj = new GameObject(food.FoodName);
         previewObj.transform.SetParent(this.transform);
         previewObj.transform.localPosition = new Vector3(0f, 1.5f, 0f);
@@ -223,7 +250,6 @@ public class Player : Entity
         var bubbleSr = bubbleObj.AddComponent<SpriteRenderer>();
         bubbleSr.sprite = bubble;
         bubbleSr.sortingLayerName = "Foreground";
-        Debug.Log($"Carrying {food.FoodName}");
     }
 
     public void DiscardFood()
