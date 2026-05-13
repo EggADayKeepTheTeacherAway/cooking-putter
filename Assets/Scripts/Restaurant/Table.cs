@@ -40,6 +40,11 @@ public class Table : MonoBehaviour
     public void ClearDirtyDish()
     {
         DirtyDishCount = Mathf.Max(0, DirtyDishCount - 1);
+
+        if (DirtyDishCount <= 0)
+        {
+            UnTake();
+        }
     }
 
 
