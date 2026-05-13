@@ -11,9 +11,13 @@ public class PlayerDataManager : MonoBehaviour
 
     private bool hasInitialized = false;
     public int currentDay = 1;
+    public int foodCriticDay = 2;
+
     public int todayRevenue = 0;
     private void Awake()
     {
+        PlayerPrefs.DeleteAll();
+
         if (instance != null && instance != this)
         {
             Destroy(gameObject);

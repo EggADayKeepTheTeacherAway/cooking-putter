@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfe1163ad00f45142b8444f65895f919, type: 3}
-  m_Name: fryer_7s
+  m_Name: assemble_0_2s
   m_EditorClassIdentifier: Assembly-CSharp::Step
-  station: Fryer
-  duration: 0
+  station: Counter
+  audio: {fileID: 8300000, guid: a1642ed9badd1834da2e6fc02adce401, type: 3}
+  duration: 0.2

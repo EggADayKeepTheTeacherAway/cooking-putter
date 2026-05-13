@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfe1163ad00f45142b8444f65895f919, type: 3}
-  m_Name: counter_3s
+  m_Name: fry_5s
   m_EditorClassIdentifier: Assembly-CSharp::Step
-  station: Counter
-  duration: 3
+  station: Stove
+  audio: {fileID: 8300000, guid: 424f3e1de44d82a4a9ee11cd706be894, type: 3}
+  duration: 5

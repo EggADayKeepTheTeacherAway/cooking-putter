@@ -24,6 +24,10 @@ public class DayCycleManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private AudioClip bellRingSFX;
+
+    public bool isNight { get; private set; }
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -94,6 +98,8 @@ public class DayCycleManager : MonoBehaviour
         currentTime = 11;
         OpeningRestaurantUI.Instance.Hide();
         player.UnlockControls();
+
+        isNight = true;
         // Go to restaurant
         SceneTransitionManager.Instance.StartTransition(
             restaurantSceneName
@@ -123,6 +129,8 @@ public class DayCycleManager : MonoBehaviour
     {
         currentTime = 11;
         RefreshClock();
+
+        isNight = false;
 
         Debug.Log("New Day Started!");
     }

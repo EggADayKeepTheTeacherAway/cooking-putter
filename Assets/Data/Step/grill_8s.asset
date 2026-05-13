@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: grill_8s
   m_EditorClassIdentifier: Assembly-CSharp::Step
   station: Grill
+  audio: {fileID: 8300000, guid: ac293fd15a50edd448222bd06a932e70, type: 3}
   duration: 8

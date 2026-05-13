@@ -7,6 +7,10 @@ public class Station : MonoBehaviour, IInteractable
     [SerializeField] private Player player;
     [SerializeField] private GameObject progressBarRoot;
     [SerializeField] private Transform progressFill;
+    [SerializeField] private SpriteRenderer stationSr;
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Sprite activeSprite;
+    [SerializeField] private AudioSource audioSource;
     private Coroutine cookingCoroutine = null;
 
     public void Interact()
@@ -34,19 +38,28 @@ public class Station : MonoBehaviour, IInteractable
             return;
         }
 
-        if (player.carriedFood.CurrentStep().GetStationName() != stationName)
+        if (player.carriedFood.CurrentStep().Station != stationName)
         {
             Debug.LogWarning("Wrong station to process");
             return;
         }
+
+        audioSource.clip = player.carriedFood.CurrentStep().Audio;
+        audioSource.loop = true;
+        audioSource.priority = 120;
+        audioSource.Play();
         cookingCoroutine = StartCoroutine(ProcessCooking());
+        if (stationSr != null)
+        {
+            if (activeSprite != null) stationSr.sprite = activeSprite;
+        }
 
     }
 
     private IEnumerator ProcessCooking()
     {
         var step = player.carriedFood.CurrentStep();
-        float duration = step.GetDuration();
+        float duration = step.Duration;
 
         if (progressBarRoot != null) progressBarRoot.SetActive(true);
 
@@ -92,6 +105,11 @@ public class Station : MonoBehaviour, IInteractable
         if (cookingCoroutine != null)
         {
             StopCoroutine(cookingCoroutine);
+            if (stationSr != null)
+            {
+                if (defaultSprite != null) stationSr.sprite = defaultSprite;
+            }
+            audioSource.Stop();
             cookingCoroutine = null;
         }
     }
