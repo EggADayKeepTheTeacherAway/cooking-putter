@@ -175,7 +175,7 @@ public class RestaurantManager : MonoBehaviour
 
     private void SpawnCustomerCheck()
     {
-        if (PlayerDataManager.Instance.currentDay == PlayerDataManager.Instance.foodCriticDay && PlayerDataManager.Instance.currentDay == initialDay)
+        if (PlayerDataManager.Instance.currentDay == PlayerDataManager.Instance.foodCriticDay && PlayerDataManager.Instance.currentDay == initialDay && DayCycleManager.Instance.isNight)
         {
             isSpawnCustomer = false;
             SpawnFoodCritic();
