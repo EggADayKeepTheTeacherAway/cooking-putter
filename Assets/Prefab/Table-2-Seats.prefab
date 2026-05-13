@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 702366407
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8539616988422254501, guid: 68128d35ed5048a409a41248686a907d, type: 3}
@@ -239,6 +239,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4723626924919214495}
     m_Modifications:
+    - target: {fileID: 330452665326260677, guid: a841ea5535488644c9177a055c3a5741, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5865760789013996159, guid: a841ea5535488644c9177a055c3a5741, type: 3}
       propertyPath: m_Name
       value: TopSeat

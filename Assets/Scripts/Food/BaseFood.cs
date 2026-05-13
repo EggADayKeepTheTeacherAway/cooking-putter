@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BaseFood : IFood
 {
+    private Food sourceFood;
     private Sprite sprite;
     private List<ItemData> ingredients;
     private List<Step> steps;
@@ -12,11 +13,14 @@ public class BaseFood : IFood
 
     public BaseFood(Food food)
     {
+        sourceFood = food;
         foodName = food.FoodName;
         sprite = food.Icon;
         ingredients = food.Ingredients;
         steps = food.Steps;
     }
+
+    public Food SourceFood => sourceFood;
 
     public List<ItemData> GetIngredients()
     {
@@ -41,6 +45,11 @@ public class BaseFood : IFood
     public void NextStep()
     {
         if (isDone) return;
+        if (steps == null || steps.Count == 0)
+        {
+            MarkDone();
+            return;
+        }
 
         currentStep += 1;
         if (currentStep >= steps.Count)
@@ -48,9 +57,15 @@ public class BaseFood : IFood
 
     } 
 
+    public void MarkDone()
+    {
+        currentStep = steps != null ? steps.Count : 0;
+        isDone = true;
+    }
+
     public Step CurrentStep()
     {
-        if (currentStep >= steps.Count) return null;
+        if (steps == null || currentStep >= steps.Count) return null;
         return steps[currentStep];
     }
 

@@ -9,7 +9,8 @@ public class RestaurantExitTrigger : MonoBehaviour
             if (DayCycleManager.Instance != null)
             {
                 DayCycleManager.Instance.ResetToTwelve();
-
+                PlayerDataManager.Instance.AdvanceDay();
+                PlayerDataManager.Instance.SaveData();
                 Debug.Log("New day started");
             }
             SceneTransitionManager.Instance.SetForcedSpawnPosition(

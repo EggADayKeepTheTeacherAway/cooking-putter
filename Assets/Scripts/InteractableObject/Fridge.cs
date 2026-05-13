@@ -41,7 +41,6 @@ public class Fridge : MonoBehaviour, IInteractable
 
         if (fridgePanel != null)
             fridgePanel.SetActive(true);
-
         isInventoryOpen = true;
         Debug.Log("Fridge opened");
     }
