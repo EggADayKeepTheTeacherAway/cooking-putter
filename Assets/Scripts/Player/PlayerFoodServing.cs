@@ -16,10 +16,14 @@ public class PlayerFoodServing : MonoBehaviour
 
     private void Update()
     {
-        // Check if player is carrying cooked food and presses interact
         if (player.carriedFood != null && player.carriedFood.IsDone() && player.input.Player.Interact.WasPressedThisFrame())
         {
+            Debug.Log("Attempting to serve food");
             TryServeFood();
+        }
+        else
+        {
+            Debug.Log($"carriedFood: {player.carriedFood}, IsDone: {player.carriedFood?.IsDone()}, Interact: {player.input.Player.Interact.WasPressedThisFrame()}");
         }
     }
 

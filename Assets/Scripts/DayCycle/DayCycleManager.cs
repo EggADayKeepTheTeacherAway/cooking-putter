@@ -39,6 +39,8 @@ public class DayCycleManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        isNight = true;
     }
 
     private void Start()

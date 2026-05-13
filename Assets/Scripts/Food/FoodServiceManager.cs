@@ -204,9 +204,15 @@ public class FoodServiceManager : MonoBehaviour
             return false;
         }
 
+        Debug.Log($"carriedOrderCustomer: {carriedOrderCustomer}");
+        Debug.Log($"pendingOrders count: {pendingOrders.Count}");
+        Debug.Log($"carriedFood: {player.carriedFood.GetFoodName()}");
+
         Vector2 playerPosition = player.transform.position;
         Food carriedFood = player.carriedFood.SourceFood;
         string carriedFoodName = player.carriedFood.GetFoodName();
+
+        Debug.Log($"SourceFood: {carriedFood}, FoodName: {carriedFoodName}");
 
         bool hasSpecificCarriedOrder = TryGetCarriedOrderCustomerInRange(playerPosition, maxDistance, carriedFood, carriedFoodName, out Customer targetCustomer);
         Food orderedFood = null;
