@@ -5,7 +5,7 @@ public class Customer_ExitState : CustomerState
 {
     private Seat seat;
 
-    private float phasinTimer = 2;
+    private float phasinTimer = 0.7f;
 
     public Customer_ExitState(Customer customer, StateMachine stateMachine, string animParam) : base(customer, stateMachine, animParam)
     {

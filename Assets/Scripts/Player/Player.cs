@@ -92,7 +92,12 @@ public class Player : Entity
         UpdateFacingDirection(moveInput);
         HandleInteraction();
     }
-    
+
+    private void LateUpdate()
+    {
+        sr.sortingOrder = Mathf.RoundToInt(-transform.position.y * 10);
+    }
+
     private void FixedUpdate()
     {
         if (controlsLocked)
@@ -149,7 +154,7 @@ public class Player : Entity
     {
         if (sceneName != "TownScene")
         {
-            SceneTransitionManager.Instance.SetPlayerLastPosition(transform.position);
+            SceneTransitionManager.Instance.SetPlayerLastPosition(new Vector3(transform.position.x - 1, transform.position.y, transform.position.z));
         }
     }
     private void OnDrawGizmos()
@@ -165,10 +170,10 @@ public class Player : Entity
 
     private void HandleInteraction()
     {
-        if (carriedFood != null && carriedFood.IsDone()) return;
+        if (!input.Player.Interact.WasPressedThisFrame()) return;
 
         RaycastHit2D hit = ObjectDetected();
-        if (hit.collider != null && input.Player.Interact.WasPressedThisFrame())
+        if (hit.collider != null)
         {
             hit.collider.GetComponent<IInteractable>()?.Interact();
         }

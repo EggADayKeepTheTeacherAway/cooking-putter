@@ -17,6 +17,8 @@ public class SceneTransitionManager : MonoBehaviour
     public System.Action<string> OnSceneTransitioning;
 
     public Vector3 playerLastPosition { get; private set; }
+    public bool isLastDoorNeedInteract { get; private set; }
+
     [SerializeField] private Vector3 restaurantTownSpawnPosition;
 
     public bool overrideSpawnPosition = false;
