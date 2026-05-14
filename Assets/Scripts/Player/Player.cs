@@ -170,10 +170,10 @@ public class Player : Entity
 
     private void HandleInteraction()
     {
-        if (carriedFood != null && carriedFood.IsDone()) return;
+        if (!input.Player.Interact.WasPressedThisFrame()) return;
 
         RaycastHit2D hit = ObjectDetected();
-        if (hit.collider != null && input.Player.Interact.WasPressedThisFrame())
+        if (hit.collider != null)
         {
             hit.collider.GetComponent<IInteractable>()?.Interact();
         }

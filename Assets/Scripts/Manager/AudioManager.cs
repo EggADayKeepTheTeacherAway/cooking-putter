@@ -60,7 +60,7 @@ public class AudioManager : MonoBehaviour
                 break;
             case "RestaurantScene":
                 PlayBGM(restaurantBGM);
-                maximumVolume = 0.4f;
+                maximumVolume = 0.2f;
                 break;
             case "ForestScene":
                 PlayBGM(forestBGM);
