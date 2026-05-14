@@ -34,6 +34,11 @@ public class Material : MonoBehaviour, IInteractable
         }
     }
 
+    private void LateUpdate()
+    {
+        sr.sortingOrder = Mathf.RoundToInt(-transform.position.y * 10);
+    }
+
     public void Interact()
     {
         if (!canInteract) return;

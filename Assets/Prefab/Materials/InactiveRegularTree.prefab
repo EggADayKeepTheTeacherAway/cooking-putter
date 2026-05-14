@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7528190578878187934}
   - component: {fileID: 8697510031636105169}
+  - component: {fileID: 3346652388470814779}
   m_Layer: 0
   m_Name: InactiveRegularTree
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1610675863
-  m_SortingLayer: 4
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5354429476588687777, guid: 7eb68c63fbd4a1940aa2f52edf8d7272, type: 3}
@@ -91,3 +92,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &3346652388470814779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8723688840782343126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fcb0f7653f6e64a9e2914aeab79b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SortingOrderManager

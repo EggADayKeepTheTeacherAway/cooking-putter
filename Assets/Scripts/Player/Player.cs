@@ -92,7 +92,14 @@ public class Player : Entity
         UpdateFacingDirection(moveInput);
         HandleInteraction();
     }
-    
+
+    private void LateUpdate()
+    {
+        // Higher Y = lower sorting order (further back)
+        // Lower Y = higher sorting order (further front)
+        sr.sortingOrder = Mathf.RoundToInt(-transform.position.y * 10);
+    }
+
     private void FixedUpdate()
     {
         if (controlsLocked)
