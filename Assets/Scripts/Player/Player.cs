@@ -154,7 +154,7 @@ public class Player : Entity
     {
         if (sceneName != "TownScene")
         {
-            SceneTransitionManager.Instance.SetPlayerLastPosition(transform.position);
+            SceneTransitionManager.Instance.SetPlayerLastPosition(new Vector3(transform.position.x - 1, transform.position.y, transform.position.z));
         }
     }
     private void OnDrawGizmos()
